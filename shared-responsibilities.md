@@ -63,7 +63,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 |--------------------------------|-------------------------------------------------|-----------------------|
 | `Manage platform permissions`  | Allow administrators to control access to manage resources in the {{site.data.keyword.cloud_notm}}. | Grant, revoke, and manage access to service instances by using IAM. |
 | `Manage service permissions`   | Allow administrators to control access to work with the {{site.data.keyword.sysdigsecure_full_notm}}. | Grant, revoke, and manage access to monitoring features by using IAM. |
-| `Control monitoring data access` | Allow administrators to control access to metrics data and metadata through {{site.data.keyword.sysdigsecure_short}} teams. | Grant, revoke, and manage access to monitoring data by using IAM and team definitions. |
+| `Control data access` | Allow administrators to control access to data and metadata through {{site.data.keyword.sysdigsecure_short}} teams. | Grant, revoke, and manage access to data by using IAM and team definitions. |
 {: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
 
 [Learn more about controlling access through IAM](/docs/workload-protection?topic=workload-protection-iam). [Learn more about controlling access using {{site.data.keyword.sysdigsecure_short}} teams](/docs/workload-protection?topic=workload-protection-iam_grant_team).
