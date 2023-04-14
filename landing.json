@@ -1,0 +1,28 @@
+{
+    "title": " IBM Cloud Security and Compliance Center Workload Protection",
+    "lastupdated": "2023-04-14",
+    "introduction": "Use IBM Cloud Security and Compliance Center Workload Protection to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run.",
+    "section_devtools": {
+      "api": "/apidocs/workload-protection",
+      "cli": "/docs/workload-protection-cli-plugin",
+      "terraform": ""
+    },
+    "section_recommended": [
+          {
+            "title": "Getting started with IBM Cloud Security and Compliance Center Workload Protection",
+            "description": "Use the IBM Cloud Security and Compliance Center Workload Protection CLI to configure your account to detect and respond to software vulnerabilities.",
+            "href": "/docs/workload-protection?topic=workload-protection-getting-started"
+          },
+          {
+            "title": "See what's new",
+            "description": "Read about the latest changes to IBM Cloud Security and Compliance Center Workload Protection. ",
+            "href": "/docs/workload-protection?topic=workload-protection-release-notes"
+          }
+    ],
+    "section_learn": {
+      "developer": "https://developer.ibm.com/depmodels/cloud/",
+      "architecture": "https://www.ibm.com/cloud/architecture",
+      "training": "https://www.ibm.com/training/cloud",
+      "community": "https://community.ibm.com/community/user/publiccloud/home"
+    }
+  }

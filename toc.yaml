@@ -1,0 +1,143 @@
+toc:
+  properties:
+    subcollection: workload-protection
+    service-name: sysdig-secure
+    version: 2
+    category: security
+    audience: service
+    href: /docs/workload-protection
+    console-page: /observe/security
+    path: workload-protection
+    label: Security and Compliance Center Workload Protection
+
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - topic: getting-started.md
+        navtitle: Getting started
+      - topic: key_features.md
+        navtitle: Key features
+      - topic: about.md
+        navtitle: About
+      - topic: kspm.md
+        navtitle: About KSPM
+      - topic: releasenotes.md
+        navtitle: Release notes
+
+  - navgroup:
+      id: howto
+      topics:
+      - topicgroup:
+          label: Managing instances
+          topics:
+             - topic: instance_provision.md
+               navtitle: Provisioning an instance
+             - topic: instance_remove.md
+               navtitle: Deleting an instance
+
+      - topicgroup:
+          label: Managing keys
+          topics:
+             - secure_token.md
+
+      - topicgroup:
+          label: Managing the agent
+          topics:
+          - topic: agent-deploy-kube-helm.md
+            navtitle: Manage the Kubernetes cluster by using a HELM chart
+          - topic: agent-deploy-openshift-helm.md
+            navtitle: Manage the Openshift cluster by using a HELM chart
+
+      - topicgroup:
+          label: Controlling access
+          topics:
+          - iam.md
+
+      - topicgroup:
+          label: Enhancing security
+          topics:
+          - topic: architecture-workload-isolation.md
+            navtitle: Architecture and workload isolation
+
+      - topicgroup:
+          label: Secure UI
+          topics:
+          - instance_launch.md
+
+      - topicgroup:
+          label: Alerts
+          topics:
+          - notifications.md
+          - topic: notifications_api.md
+
+      - topicgroup:
+          label: Insights
+          topics:
+          - insights.md
+
+      - topicgroup:
+          label: Vulnerabilities
+          topics:
+          - pipeline.md
+          - runtime.md
+          - reporting.md
+
+      - topicgroup:
+          label: Posture
+          topics:
+          - compliance.md
+          - identity_and_access.md
+
+      - topicgroup:
+          label: Policies
+          topics:
+          - vulnerability_policies.md
+          - threat_detection.md
+          - manage_policies.md
+          - manage_rules.md
+          - runtime_tuning.md
+          - image_profiles.md
+
+      - topicgroup:
+          label: Network
+          topics:
+          - netsec_policy.md
+          - network_config_ts.md
+
+      - topicgroup:
+          label: Events
+          topics:
+          - event_forwarding.md
+          - audit_logging.md
+
+      - topicgroup:
+          label: Investigate
+          topics:
+          - activity_audit.md
+          - captures.md
+          - rapid_response.md
+
+      - topicgroup:
+          label: Integrations
+          topics:
+          - integrations.md
+
+  - navgroup:
+      id: reference
+      topics:
+      - regions.md
+      - endpoints.md
+      - pricing.md
+      - topic: shared-responsibilities.md
+        navtitle: Understanding your responsibilities
+
+      - topicgroup:
+          label: Additional documentation
+          topics:
+          - sysdig_doc.md
+
+  - navgroup:
+        id: help
+        topics:
+        - gettinghelp.md
