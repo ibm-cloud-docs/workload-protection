@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-04-15"
 
 keywords:
 
@@ -27,14 +27,14 @@ Or, you can view KSPM as a distinct domain, because Kubernetes doesn’t always 
 
 Regardless of how you choose to think about the relationship between KSPM and CSPM, what is important is understanding that KSPM addresses the security and compliance risks of Kubernetes. CSPM helps manage risks in other types of cloud-native environments. If you use Kubernetes, you need a security tool that offers specific KSPM functions such as {{site.data.keyword.sysdigsecure_full_notm}}.
 
-## What Is Kubernetes security posture management?
+## What is Kubernetes security posture management?
 {: #whatis_kspm}
 
 Kubernetes security posture management, or KSPM, is the use of security automation tools to discover and fix security and compliance issues within a Kubernetes component.
 
 For example, KSPM can detect misconfigurations in a Kubernetes RBAC role definition that grants users permissions that they should not have. For example, the ability to create new pods. Or, a KSPM tool can alert you to an insecure Kubernetes network configuration that allows communication between pods in different namespaces. Communication between pods in different namespaces would not be a typical setting.
 
-## Why Is Kubernetes security posture management important?
+## Why is Kubernetes security posture management important?
 {: #why_kspm}
 
 As part of a broader Kubernetes security strategy, KSPM addresses several important security considerations.

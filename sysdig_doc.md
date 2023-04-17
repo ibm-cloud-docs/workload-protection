@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-04-15"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Sysig Secure documentation
+# Sysdig Secure documentation
 {: #sysdig_doc}
 
 More documentation is available for {{site.data.keyword.sysdigsecure_full}} functionality.

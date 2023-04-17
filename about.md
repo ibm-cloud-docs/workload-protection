@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-04-15"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: workload-protection
 # About {{site.data.keyword.cloud_notm}} Security and Compliance
 {: #about}
 
-In {{site.data.keyword.cloud_notm}}, {{site.data.keyword.compliance_full}} is a unified and centralize framework to manage the security and compliance of applications, workloads and infrastructure in {{site.data.keyword.cloud_notm}}, in other clouds, and on-prem. It includes a workload protection platform (WPP) that focuses on management and security controls for workloads. It also includes a compliance platform (CP) that focuses on management and compliance  controls that are required to meet industry standards and laws. Both platforms offer alerting on violations, and assist with remediation tasks.
+In {{site.data.keyword.cloud_notm}}, {{site.data.keyword.compliance_full}} is a unified and centralized framework to manage the security and compliance of applications, workloads and infrastructure in {{site.data.keyword.cloud_notm}}, in other clouds, and on-prem. It includes a workload protection platform (WPP) that focuses on management and security controls for workloads. It also includes a compliance platform (CP) that focuses on management and compliance  controls that are required to meet industry standards and laws. Both platforms offer alerting on violations, and assist with remediation tasks.
 {: shortdesc}
 
 
@@ -23,7 +23,7 @@ Cloud Security defines the collection of policies and controls, practices, and t
 
 Cloud Compliance defines the collection of policies and controls, practices, and technologies that are designed to address industry regulatory standards, and national and international laws.
 
-Across all industries, in particluar highly regulated industries such as financial services, achieving continuous security and compliance within a cloud environment is an important step toward protecting resources, data and workloads. By default, {{site.data.keyword.cloud_notm}} follow best practices for security and compliance, and take active steps to protect the integrity of their servers and services. But what else can you do to protect your infrastructure and your workloads?
+Across all industries, in particluar highly regulated industries such as financial services, achieving continuous security and compliance within a cloud environment is an important step toward protecting resources, data and workloads. By default, {{site.data.keyword.cloud_notm}} follows best practices for security and compliance, and takes active steps to protect the integrity of their servers and services. But what else can you do to protect your infrastructure and your workloads?
 
 You can use the {{site.data.keyword.sysdigsecure_full_notm}} service to protect and gain visibility of resources, data, applications, and workloads across multiple environments. You can manage workloads and resources that run on {{site.data.keyword.cloud_notm}}, on other clouds, and on-prem. You can use this service to secure your builds, detect and respond to runtime threats, and continuously manage cloud configurations, permissions, and compliance.
 
