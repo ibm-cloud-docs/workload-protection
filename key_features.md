@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-04-15"
 
 keywords:
 
@@ -21,10 +21,10 @@ subcollection: workload-protection
 
 
 
-## Provides a unified and centralize framework to manage the security and compliance of applications, workloads and infrastructure
+## Provides a unified and centralized framework to manage the security and compliance of applications, workloads and infrastructure
 {: #feature_1}
 
-- Provides a unified and centralize framework to manage the security and compliance of applications, workloads and infrastructure and protect workloads and resources that run on {{site.data.keyword.cloud_notm}}, in other clouds, and on-prem. Presents relevant performance and security data in one location.
+- Provides a unified and centralized framework to manage the security and compliance of applications, workloads and infrastructure and protect workloads and resources that run on {{site.data.keyword.cloud_notm}}, in other clouds, and on-prem. Presents relevant performance and security data in one location.
 
 - Is built on open standards for cloud native security and control, including Falco, the open source standard for cloud threat detection, and Open Policy Agent (OPA), the open source standard for policy-as-code.
 
@@ -36,7 +36,7 @@ subcollection: workload-protection
 
 - Includes Kubernetes Security Posture Management (KSPM) to help you secure Kubernetes clusters or Openshift clusters, and the workloads running within it.
 
-- Offers alerting on violations, and assist with remediation tasks.
+- Offers alerting on violations, and assists with remediation tasks.
 
 
 ## Offers host and image scanning, auditing, and runtime vulnerability management capabilities
@@ -48,7 +48,7 @@ subcollection: workload-protection
 
 - Logs user actions, container activity, and command arguments.
 
-- Enforces security policies and block attacks.
+- Enforces security policies and blocks attacks.
 
 ## Provides posture management for a distributed environment
 {: #feature_3}
