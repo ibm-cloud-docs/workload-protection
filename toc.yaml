@@ -132,6 +132,13 @@ toc:
         navtitle: Understanding your responsibilities
 
       - topicgroup:
+          label: API
+          links:
+          - link:
+              label: API Reference
+              href: https://{DomainName}/apidocs/workload-protection
+
+      - topicgroup:
           label: Additional documentation
           topics:
           - sysdig_doc.md
