@@ -38,6 +38,8 @@ toc:
       - topicgroup:
           label: Managing keys
           topics:
+             - topic: access_key.md
+               navtitle: Manage access keys
              - secure_token.md
 
       - topicgroup:

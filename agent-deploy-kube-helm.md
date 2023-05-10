@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-05-08"
 
 
 keywords:
@@ -65,6 +65,22 @@ Complete the following steps:
     ```
     {: pre}
 
+    If you get the following error:
+
+    ```text
+    helm repo add sysdig https://charts.sysdig.com    --debug
+    Error: context deadline exceeded
+    helm.go:84: [debug] context deadline exceeded
+    ```
+    {: screen}
+
+    Run the following command and retry adding the Helm repository.
+
+    ```sh
+    rm $HOME/Library/Preferences/helm/repositories.lock
+    ```
+    {: pre}
+
 3. Update the repos to retrieve the latest versions of all Helm charts.
 
     ```sh
@@ -82,21 +98,7 @@ Complete the following steps:
 5. Verify the Helm chart `sysdig/sysdig-deploy` is listed.
 
 
-If you get the following error:
 
-```text
-helm repo add sysdig https://charts.sysdig.com    --debug
-Error: context deadline exceeded
-helm.go:84: [debug] context deadline exceeded
-```
-{: screen}
-
-Run the following command and try again.
-
-```sh
-rm $HOME/Library/Preferences/helm/repositories.lock
-```
-{: pre}
 
 
 
@@ -113,12 +115,10 @@ global:
     name: CLUSTER_NAME
   sysdig:
     accessKey: SERVICE_ACCESS_KEY
-    secureAPIToken: SECURE_TOKEN
   kspm:
     deploy: true
 agent:
   image:
-    tag: AGENT_TAG
     registry: icr.io
   slim:
     enabled: true
@@ -127,20 +127,15 @@ agent:
     kmoduleImage:
       repository: ext/sysdig/agent-kmodule
   collectorSettings:
-    collectorHost: INGESTION_ENDPOINT    # for example, ingest.us-east.security-compliance-secure.cloud.ibm.com
+    collectorHost: INGESTION_ENDPOINT
 nodeAnalyzer:
   nodeAnalyzer:
     deploy: true
-    apiEndpoint: API_ENDPOINT   # for example, us-east.security-compliance-secure.cloud.ibm.com
+    apiEndpoint: API_ENDPOINT
     benchmarkRunner:
       deploy: false
 kspmCollector:
-  apiEndpoint: API_ENDPOINT    # for example, us-east.security-compliance-secure.cloud.ibm.com
-admissionController:
-  enabled: true
-  sysdig:
-    url: WEB_UI_ENDPOINT    # for example, https://ingest.us-east.security-compliance-secure.cloud.ibm.com
-  clusterName: CLUSTER_NAME
+  apiEndpoint: API_ENDPOINT
 ```
 {: codeblock}
 
@@ -148,87 +143,58 @@ Where
 
 - `CLUSTER_NAME` is the name of the cluster where you are deploying the agent.
 - `SERVICE_ACCESS_KEY` is the {{site.data.keyword.sysdigsecure_short}} instance access key.
-- `SECURE_TOKEN` is the Secure API token.
-- `AGENT_TAG` is the version of the agent that you plan to deploy.
-- `INGESTION_ENDPOINT` is the instance's ingestion endpoint.
-- `API_ENDPOINT` is the intance's API endpoint.
-- `WEB_UI_ENDPOINT` is the instance's web UI endpoint.
+- `INGESTION_ENDPOINT` is the instance's ingestion endpoint. For example, `ingest.us-east.security-compliance-secure.cloud.ibm.com`
+- `API_ENDPOINT` is the intance's API endpoint. For example, `us-east.security-compliance-secure.cloud.ibm.com`
 
 
-#### Sample of values yaml file to deploy the agent
-{: #agent-deploy-kube-helm-install-step2-1}
 
-For example, see the following sample of a values file that deploys the {{site.data.keyword.sysdigsecure_short}} agent only:
-
-```yaml
-global:
-  clusterConfig:
-    name: mycluster-us-east
-  sysdig:
-    accessKey: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-    secureAPIToken: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  kspm:
-    deploy: true
-agent:
-  image:
-    tag: 12.12.1
-    registry: icr.io
-  slim:
-    enabled: true
-    image:
-      repository: ext/sysdig/agent-slim
-    kmoduleImage:
-      repository: ext/sysdig/agent-kmodule
-  collectorSettings:
-    collectorHost: ingest.us-east.security-compliance-secure.cloud.ibm.com
-```
-{: screen}
-
-#### Sample of values yaml file to deploy the agent and the Node Analyzer
-{: #agent-deploy-kube-helm-install-step2-1}
-
-For example, see the following sample of a values file that deploys the {{site.data.keyword.sysdigsecure_short}} agent and the Node Analyzer component:
-
-```yaml
-global:
-  clusterConfig:
-    name: mycluster-us-east
-  sysdig:
-    accessKey: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-    secureAPIToken: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  kspm:
-    deploy: true
-agent:
-  image:
-    tag: 12.12.1
-    registry: icr.io
-  slim:
-    enabled: true
-    image:
-      repository: ext/sysdig/agent-slim
-    kmoduleImage:
-      repository: ext/sysdig/agent-kmodule
-  collectorSettings:
-    collectorHost: ingest.us-east.security-compliance-secure.cloud.ibm.com
-nodeAnalyzer:
-  nodeAnalyzer:
-    deploy: true
-    apiEndpoint: API_ENDPOINT   # for example, us-east.security-compliance-secure.cloud.ibm.com
-    benchmarkRunner:
-      deploy: false
-```
-{: screen}
-
-
-### Step 3. Install the helm chart
+### Step 3. Install the Helm chart
 {: #agent-deploy-kube-helm-install-step3}
 
-To deploy the agent, the Secure components, or both, you must install the `sysdig/sysdig-deploy` chart and use the variables yaml file that you configured in the previous step.
+To deploy the agent, the Secure components, or both, you must install the `sysdig/sysdig-deploy` chart. You can install the chart by using a variables yaml file like the one that you configured in the previous step, or you can configure the variables directly.
 
-Run the following command to install the agent by using the helm chart:
+Run the following command to install the agent by using the helm chart and the variables yaml file:
 
 ```sh
 helm install -n ibm-observe sysdig-agent sysdig/sysdig-deploy -f agent-values-monitor-secure.yaml
+```
+{: pre}
+
+
+Run the following command to install the agent by using the helm chart and setting the variables:
+
+```sh
+helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-namespace\
+    --set global.sysdig.accessKey=<SERVICE_ACCESS_KEY> \
+    --set agent.collectorSettings.collectorHost=<INGESTION_ENDPOINT> \
+    --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=<API_ENDPOINT> \
+    --set global.kspm.deploy=true \
+    --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
+    --set global.clusterConfig.name=<CLUSTER_NAME>
+    --set kspmCollector.apiEndpoint=<API_ENDPOINT>
+```
+{: pre}
+
+Where
+
+- `CLUSTER_NAME` is the name of the cluster where you are deploying the agent.
+- `SERVICE_ACCESS_KEY` is the {{site.data.keyword.sysdigsecure_short}} instance access key.
+- `INGESTION_ENDPOINT` is the instance's ingestion endpoint.
+- `API_ENDPOINT` is the intance's API endpoint.
+
+
+For example, for the US-East region, a sample Helm install looks as follows:
+
+```sh
+helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe \
+    --set global.sysdig.accessKey=<ENTER_YOUR_ACCESS_KEY> \
+    --set agent.collectorSettings.collectorHost=ingest.us-east.security-compliance-secure.cloud.ibm.com \
+    --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=us-east.security-compliance-secure.cloud.ibm.com  \
+    --set nodeAnalyzer.secure.vulnerabilityManagement.newEngineOnly=true \
+    --set global.kspm.deploy=true \
+    --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
+    --set global.clusterConfig.name=mycluster-au-syd
+    --set kspmCollector.apiEndpoint=us-east.security-compliance-secure.cloud.ibm.com
 ```
 {: pre}
 
