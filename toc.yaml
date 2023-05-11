@@ -78,22 +78,13 @@ toc:
           - insights.md
 
       - topicgroup:
-          label: Vulnerabilities
-          topics:
-          - pipeline.md
-          - runtime.md
-          - reporting.md
-
-      - topicgroup:
           label: Posture
           topics:
           - compliance.md
-          - identity_and_access.md
 
       - topicgroup:
           label: Policies
           topics:
-          - vulnerability_policies.md
           - threat_detection.md
           - manage_policies.md
           - manage_rules.md
