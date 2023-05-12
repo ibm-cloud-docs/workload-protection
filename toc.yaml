@@ -96,6 +96,7 @@ toc:
           topics:
           - netsec_policy.md
           - network_config_ts.md
+          - network_ts.md
 
       - topicgroup:
           label: Events
