@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-15"
+lastupdated: "2023-05-10"
 
 keywords:
 
@@ -27,7 +27,7 @@ Across all industries, in particluar highly regulated industries such as financi
 
 You can use the {{site.data.keyword.sysdigsecure_full_notm}} service to protect and gain visibility of resources, data, applications, and workloads across multiple environments. You can manage workloads and resources that run on {{site.data.keyword.cloud_notm}}, on other clouds, and on-prem. You can use this service to secure your builds, detect and respond to runtime threats, and continuously manage cloud configurations, permissions, and compliance.
 
-The {{site.data.keyword.sysdigsecure_full_notm}} service is a cloud workload protection tool (CWPT) that helps you monitor and protect your organization. Includes Cloud security posture management (CSPM), Kubernetes Security Posture Management (KSPM) and more. Use cloud security posture management features to secure the infrastructure where workloads are deployed. Use Kubernetes Security Posture Management features to secure Kubernetes clusters or Openshift clusters, and the workloads running within it.
+The {{site.data.keyword.sysdigsecure_full_notm}} service is a cloud workload protection tool (CWPT) that helps you monitor and protect your organization. Includes Cloud security posture management (CSPM), Kubernetes Security Posture Management (KSPM) and more. Use cloud security posture management features to secure the infrastructure where workloads are deployed. Use Kubernetes Security Posture Management features to secure Kubernetes clusters or {{site.data.keyword.redhat_openshift_notm}} clusters, and the workloads running within it.
 {: note}
 
 {{site.data.keyword.sysdigsecure_full_notm}} main goal is to provide the tools that will help you keep your organization secure and able to resist threats and attacks, while making sure that workloads are deployed successfully.
@@ -82,7 +82,7 @@ The {{site.data.keyword.sysdigsecure_full_notm}} service inspects cloud environm
 
 Kubernetes security posture management, or KSPM, is the use of security automation tools to discover and fix security and compliance issues within a Kubernetes component.
 
-- KSPM provides processes and technologies to help secure a Kubernetes cluster or an Openshift cluster, and the workloads running within it.
+- KSPM provides processes and technologies to help secure a Kubernetes cluster or a {{site.data.keyword.redhat_openshift_notm}} cluster, and the workloads running within it.
 
 - KSPM continuously analyzes and evaluates the security of cluster components and their configurations, identifies potential vulnerabilities, and monitors for and responds to security incidents.
 
@@ -91,3 +91,21 @@ KSPM is one part in a Kubernetes security strategy, but it isn't the only one. K
 You must deploy a broad set of security tools for Kubernetes, such as {{site.data.keyword.sysdigsecure_full_notm}}. As part of a broader Kubernetes security strategy, KSPM allows teams to validate the security of Kubernetes configurations to find and remediate mistakes that can trigger a breach. By running continuous, automatic scans of Kubernetes configurations, admins can mitigate one of the most common areas of attack, human error. At the same time, you can automate compliance in even the most complex Kubernetes clusters.
 
 For more information, see [About KSPM](/docs/workload-protection?topic=workload-protection-kspm).
+
+
+## Network policies for containerized workloads
+{: #about-nw}
+
+When clients provision a cluster, they can choose a networking setup so that certain cluster components can communicate with each other and with networks or services outside of the cluster. Examples of [networking configurations](https://cloud.ibm.com/docs/containers?topic=containers-plan_vpc_basics) are:
+
+* Worker-to-worker
+* Worker-to-master
+* User-to-master
+* Worker communication to other services or networks
+* External communication to apps that run on worker nodes.
+
+Clusters on Virtual Private Clouds (VPCs) run on secure, isolated virtual networks where traffic flow to and from worker nodes is controlled by applying rules defined through security groups (SGs). Traffic flow to and from the cluster subnets is controlled by ACLs. Clients can define container network policies to restrict egress and ingress traffic and communication between applications.
+
+With the [Network Security Policy tool](/docs/workload-protection?topic=workload-protection-netsec_policy) that is available through the {{site.data.keyword.sysdigsecure_full_notm}} service, clients can generate and fine-tune Kubernetes network policies based on the traffic allowed or denied, and track ingress and egress communication. For example, you can configure a "least-privilege" policy to protect your workloads or view existing network policies that have been applied to you workloads.
+
+{{site.data.keyword.sysdigsecure_short}} leverages native Kubernetes features and doesn't require any additional networking requirements other than the Container Network Interface (CNI). Through the UI, clients can view which policies are being applied in real time.
