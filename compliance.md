@@ -20,7 +20,6 @@ The {{site.data.keyword.sysdigsecure_full}} compliance feature persists environm
 
 Compliance lets you manage your risks by:
 
-<<<<<<< HEAD
 * Remediating.
 * Accepting the risk.
 
@@ -75,8 +74,4 @@ DevOps team members might need to review the environment's compliance posture in
 * Managing violations according to their severity.
 * Easily fixing violations.
 * Documenting exceptions and acceptable risk according to the risk management policies of their organization.
-=======
-For more information, see [Compliance](https://docs.sysdig.com/en/docs/sysdig-secure/posture/compliance/){: external}
 
-For more information on legacy compliance support, see [Compliance (Legacy)](https://docs.sysdig.com/en/docs/sysdig-secure/posture/compliance/legacy-versions/compliance-legacy/){: external}
->>>>>>> c05232d4f394591685e8d42d5784c76f159c8820
