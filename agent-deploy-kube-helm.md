@@ -170,8 +170,11 @@ helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-
     --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=<API_ENDPOINT> \
     --set global.kspm.deploy=true \
     --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
-    --set global.clusterConfig.name=<CLUSTER_NAME>
-    --set kspmCollector.apiEndpoint=<API_ENDPOINT>
+    --set global.clusterConfig.name=<CLUSTER_NAME> \
+    --set kspmCollector.apiEndpoint=<API_ENDPOINT> \
+    --set agent.image.registry=icr.io \
+    --set agent.slim.image.repository=ext/sysdig/agent-slim \
+    --set agent.slim.kmoduleImage.repository=ext/sysdig/agent-kmodule
 ```
 {: pre}
 
@@ -190,11 +193,13 @@ helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe \
     --set global.sysdig.accessKey=<ENTER_YOUR_ACCESS_KEY> \
     --set agent.collectorSettings.collectorHost=ingest.us-east.security-compliance-secure.cloud.ibm.com \
     --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=us-east.security-compliance-secure.cloud.ibm.com  \
-    --set nodeAnalyzer.secure.vulnerabilityManagement.newEngineOnly=true \
     --set global.kspm.deploy=true \
     --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
-    --set global.clusterConfig.name=mycluster-au-syd
-    --set kspmCollector.apiEndpoint=us-east.security-compliance-secure.cloud.ibm.com
+    --set global.clusterConfig.name=mycluster-au-syd \
+    --set kspmCollector.apiEndpoint=us-east.security-compliance-secure.cloud.ibm.com \
+    --set agent.image.registry=icr.io \
+    --set agent.slim.image.repository=ext/sysdig/agent-slim \
+    --set agent.slim.kmoduleImage.repository=ext/sysdig/agent-kmodule
 ```
 {: pre}
 

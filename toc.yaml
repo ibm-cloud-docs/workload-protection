@@ -78,18 +78,38 @@ toc:
           - insights.md
 
       - topicgroup:
-          label: Posture
+          label: Posture Management
           topics:
-          - compliance.md
+          - topic: posture-zones.md
+            navtitle: Managing zones
 
-      - topicgroup:
-          label: Policies
-          topics:
-          - threat_detection.md
-          - manage_policies.md
-          - manage_rules.md
-          - runtime_tuning.md
-          - image_profiles.md
+          - topicgroup:
+              label: Managing posture policies
+              topics:
+              - topic: posture-policies.md
+                navtitle: Managing Posture Policies
+              - topic: posture-requirements.md
+                navtitle: Managing requirements and requirement groups
+              - topic: posture-policy-create.md
+                navtitle: Creating a custom policy
+              - topic: posture-policy-create-template.md
+                navtitle: Creating a custom policy from a template
+
+          - topic: posture-controls.md
+            navtitle: Managing controls
+          - topic: posture-link-policy-to-zone.md
+            navtitle: Linking a policy to a zone
+
+          - topicgroup:
+              label: Compliance reporting
+              topics:
+              - topic: compliance.md
+                navtitle: Analyzing compliance postures from detection to remediation
+              - compliance-understanding.md
+              - compliance-evaluate.md
+              - compliance-reports.md
+              - compliance-api.md
+              - identity_and_access.md
 
       - topicgroup:
           label: Network

@@ -49,10 +49,6 @@ The {{site.data.keyword.sysdigsecure_full_notm}} service inspects cloud environm
 
 - Map misconfigurations in production to infrastructure as code (IaC) manifests.
 
-    Fix violations by opening a pull request to the source file.
-
-    The {{site.data.keyword.sysdigsecure_short}} is integrated with Git.
-
 - Provide control over cloud infrastructure configurations and ensure consistent implementation of policies across multiple cloud providers.
 
     Use out-of-the-box compliance controls.
