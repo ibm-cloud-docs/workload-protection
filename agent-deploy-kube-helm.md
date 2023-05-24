@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-05-08"
+lastupdated: "2023-05-24"
 
 
 keywords:
@@ -30,7 +30,10 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
 
 - Install the latest release of the version 3 [Helm CLI](https://github.com/helm/helm/releases){: external} on your local machine.
 
-    [Helm](https://helm.sh){: external} is a Kubernetes package manager that uses Helm charts to define, install, and upgrade complex Kubernetes apps in your cluster. Helm charts package the specifications to generate YAML files for Kubernetes resources that build your app. These Kubernetes resources are automatically applied in your cluster and assigned a version by Helm. You can also use Helm to specify and package your own app and let Helm generate the YAML files for your Kubernetes resources.
+   Helm 3.6 or later is required.
+   {: note}
+
+   [Helm](https://helm.sh){: external} is a Kubernetes package manager that uses Helm charts to define, install, and upgrade complex Kubernetes apps in your cluster. Helm charts package the specifications to generate YAML files for Kubernetes resources that build your app. These Kubernetes resources are automatically applied in your cluster and assigned a version by Helm. You can also use Helm to specify and package your own app and let Helm generate the YAML files for your Kubernetes resources.
 
 - Check that you have access and permissions to deploy the {{site.data.keyword.sysdigsecure_short}} agent on the cluster.
 

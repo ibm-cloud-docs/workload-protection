@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-05-08"
+lastupdated: "2023-05-24"
 
 
 keywords:
@@ -27,6 +27,9 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
 {: #agent-deploy-openshift-helm-prereqs}
 
 - Install the latest release of the version 3 [Helm CLI](https://github.com/helm/helm/releases){: external} on your local machine.
+
+   Helm 3.6 or later is required.
+   {: note}
 
 - [Install the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`), {{site.data.keyword.containershort_notm}} plug-in (`ibmcloud oc`), and {{site.data.keyword.registrylong_notm}} plug-in (`ibmcloud cr`)](/docs/openshift?topic=openshift-openshift-cli#cs_cli_install_steps).
 
@@ -208,7 +211,6 @@ helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-
     --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
     --set global.clusterConfig.name=<CLUSTER_NAME> \
     --set kspmCollector.apiEndpoint=<API_ENDPOINT> \
-    -set agent.collectorSettings.collectorHost=<load automatically collector host> \
     --set agent.image.registry=icr.io \
     --set agent.slim.image.repository=ext/sysdig/agent-slim \
     --set agent.slim.kmoduleImage.repository=ext/sysdig/agent-kmodule
