@@ -174,3 +174,8 @@ toc:
         id: help
         topics:
         - gettinghelp.md
+
+        - topicgroup:
+            label: Troubleshooting
+            topics:
+            - troubleshoot-01.md
