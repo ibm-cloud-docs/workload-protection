@@ -139,6 +139,7 @@ toc:
   - navgroup:
       id: reference
       topics:
+      - terminology.md
       - regions.md
       - endpoints.md
       - pricing.md
