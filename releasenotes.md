@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-06-12"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## 10 May 2023
+{: #workload-protection-may1023}
+{: release-note}
+
+Availability in additional regions
+:   {{site.data.keyword.sysdigsecure_full_notm}} is available for use in [multiple regions.](/docs/workload-protection?topic=workload-protection-regions)
 
 ## 14 April 2023
 {: #workload-protection-apr1423}
