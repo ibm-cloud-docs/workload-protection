@@ -46,9 +46,11 @@ toc:
           label: Managing the agent
           topics:
           - topic: agent-deploy-kube-helm.md
-            navtitle: Manage the Kubernetes cluster by using a HELM chart
+            navtitle: Manage the Kubernetes cluster by using a Helm chart
           - topic: agent-deploy-openshift-helm.md
-            navtitle: Manage the Openshift cluster by using a HELM chart
+            navtitle: Manage the Openshift cluster by using a Helm chart
+          - topic: deploy-wp-outside-cloud.md
+            navtitle: Deploying the agent in an outside Kubernetes or OpenShift cluster
 
       - topicgroup:
           label: Controlling access
