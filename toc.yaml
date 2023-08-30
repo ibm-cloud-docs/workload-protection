@@ -51,6 +51,8 @@ toc:
             navtitle: Manage the Openshift cluster by using a Helm chart
           - topic: deploy-wp-outside-cloud.md
             navtitle: Deploying the agent in an outside Kubernetes or OpenShift cluster
+          - topic: manage-linux-agent.md
+            navtitle: Protecting Linux hosts
 
       - topicgroup:
           label: Controlling access
