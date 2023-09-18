@@ -21,6 +21,8 @@ toc:
         navtitle: About
       - topic: kspm.md
         navtitle: About KSPM
+      - topic: pricing.md
+        navtitle: Pricing
       - topic: releasenotes.md
         navtitle: Release notes
 
