@@ -24,7 +24,7 @@ For an up-to-the-minute look at the metrics and tiers used to determine costs, c
 
 A free trial of {{site.data.keyword.sysdigsecure_short_notm}} is available for users who want to try the service out. It includes all of the capabilities of the paid plan and expires after 30 days unless you upgrade it to a paid plan.
 
-## How pricing works in {{site.data.keyword.sysdigsecure_short_notm}}
+## How pricing works in Workload Protection
 {: #pricing_plans-works}
 
 Your monthly charge is pro-rated based on the amount of time within that month you have had a resource deployed. You are not charged for time during a month when a resource was not deployed.
