@@ -16,13 +16,13 @@ subcollection: workload-protection
 # Pricing for for IBM Cloud Security and Compliance Center Workload Protection
 {: #pricing_plans}
 
-Pricing for {{site.data.keyword.sysdigsecure_full_notm}} is based on a graduated tier system in which costs decrease per-resource as you deploy more resources. Your cost depends on how many {{site.data.keyword.sysdigsecure_short_notm}} agents that you have and where those agents are deployed.
+Pricing for {{site.data.keyword.sysdigsecure_full_notm}} is based on a graduated tier system in which costs decrease per-resource as you deploy more resources. Your cost depends on how many {{site.data.keyword.sysdigsecure_short}} agents that you have and where those agents are deployed.
 {: shortdesc}
 
-For an up-to-the-minute look at the metrics and tiers used to determine costs, check out the [catalog page for {{site.data.keyword.sysdigsecure_short_notm}}](https://cloud.ibm.com/catalog/services/security-and-compliance-center-workload-protection).
+For an up-to-the-minute look at the metrics and tiers used to determine costs, check out the [catalog page for {{site.data.keyword.sysdigsecure_short}}](https://cloud.ibm.com/catalog/services/security-and-compliance-center-workload-protection).
 {: tip}
 
-A free trial of {{site.data.keyword.sysdigsecure_short_notm}} is available for users who want to try the service out. It includes all of the capabilities of the paid plan and expires after 30 days unless you upgrade it to a paid plan.
+A free trial of {{site.data.keyword.sysdigsecure_short}} is available for users who want to try the service out. It includes all of the capabilities of the paid plan and expires after 30 days unless you upgrade it to a paid plan.
 
 ## How pricing works in Workload Protection
 {: #pricing_plans-works}
