@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-09-27"
 
 keywords: IBM Cloud, deploy, Kubernetes, OpenShift
 
