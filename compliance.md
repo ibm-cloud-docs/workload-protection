@@ -18,7 +18,7 @@ subcollection: workload-protection
 The {{site.data.keyword.sysdigsecure_full}} compliance feature persists environment compliance information in an inventory, which enhances resource visibility and full-context prioritization. This information helps you drive remediation and resolution of compliance violations. {{site.data.keyword.sysdigsecure_short}} supports CSPM and KSPM.
 {: shortdesc}
 
-For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](cloud.ibm.com/docs/security-compliance?topic=security-compliance-setup-workload-protection).
+For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).
 {: tip}
 
 Compliance lets you manage your risks by:

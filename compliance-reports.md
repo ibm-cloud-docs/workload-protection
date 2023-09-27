@@ -18,7 +18,7 @@ subcollection: workload-protection
 To meet compliance goals, an organization might need to have reports to share with stakeholders, executives, or auditors to show the compliance or violations of the system at a specific point in time.
 {: shortdesc}
 
-For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](cloud.ibm.com/docs/security-compliance?topic=security-compliance-setup-workload-protection).
+For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).
 {: tip}
 
 You can download reports as CSV files.

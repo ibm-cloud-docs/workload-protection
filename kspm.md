@@ -18,7 +18,7 @@ subcollection: workload-protection
 {{site.data.keyword.sysdigsecure_full}} implements Kubernetes security posture management (KSPM). You need to understand KSPM and how it applies to monitoring your Kubernetes environment.
 {: shortdesc}
 
-For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](cloud.ibm.com/docs/security-compliance?topic=security-compliance-setup-workload-protection).
+For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).
 {: tip}
 
 Cloud security posture management, or CSPM, uses automation to detect and remediate security and compliance issues in the cloud.
