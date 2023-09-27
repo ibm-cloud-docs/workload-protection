@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-05-15"
+lastupdated: "2023-09-26"
 
 keywords:
 
@@ -17,6 +17,9 @@ subcollection: workload-protection
 
 You can use the {{site.data.keyword.sysdigsecure_full}} Posture Controls library to see the logic that is used to determine compliance results.
 {: shortdesc}
+
+For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](cloud.ibm.com/docs/security-compliance?topic=security-compliance-setup-workload-protection).
+{: tip}
 
 A control describes a rule, for example `/etc/docker/certs.d/*/* owned by root:root`, the code that is run to evaluate it, and a remediation playbook to fix the violation that might be detected.
 

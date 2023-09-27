@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-09-26"
 
 keywords:
 
@@ -18,6 +18,9 @@ subcollection: workload-protection
 
 In architectures that are focused on container and microservices, you can use {{site.data.keyword.sysdigsecure_full}} to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions, and compliance from source to run.
 {: shortdesc}
+
+For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](cloud.ibm.com/docs/security-compliance?topic=security-compliance-setup-workload-protection).
+{: tip}
 
 
 ## Before you begin
@@ -95,7 +98,7 @@ After you provision an instance of the {{site.data.keyword.sysdigsecure_full_not
 
 Choose 1 of the following options:
 1. [Configure an agent for Kubernetes](/docs/workload-protection?topic=workload-protection-agent-deploy-kube-helm).
-2. [Configire an agent for Red Hat OpenShift](/docs/workload-protection?topic=workload-protection-agent-deploy-openshift-helm).
+2. [Configire an agent for {{site.data.keyword.redhat_openshift_notm}}](/docs/workload-protection?topic=workload-protection-agent-deploy-openshift-helm).
 
 
 ## Step 4. Launch the web UI

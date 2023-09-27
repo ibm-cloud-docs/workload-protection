@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-08-30"
+lastupdated: "2023-08-19"
 
 keywords: workload protection, deploy, linux
 
@@ -146,7 +146,7 @@ To look for errors, issue:
     ```
     {: pre}
 
-  * For Debian and Ubuntu Linux distributions, run the following commands:
+  * For RHEL, CentOS, and Fedora Linux distributions, run the following commands:
 
     ```sh
     yum -y install draios-agent
@@ -271,28 +271,40 @@ ps -ef | grep sysdig
 
 {{site.data.keyword.sysdigsecure_short}} provides host and image scanning in Linux hosts, detecting all installed packages and associated vulnerabilities sorted by severity and prioritizing those with a fix available.
 
-You need to run the host analyzer as a container. To install the host scanning component in a non-Kubernetes environment, you can use:
+After installing the Host Analyzer, review the detected vulnerabilities in your host accessing **Scanning/Hosts** in the {{site.data.keyword.sysdigsecure_short}}. The first scan starts shortly after installation.
+
+It is possible to run the Host Analyzer by using either Docker or as a package.
+
+### Install using Docker
+{: manage-linux-agent-identify-vulnerabilities-docker}
+
+To install the Host Analyzer, issue:
 
 ```sh
-docker run -d \
--v /:/host:ro \ 
---privileged \
--e HOST_BASE=/host \ 
--e AM_COLLECTOR_ENDPOINT=https://<workload_protection_api_endpoint>/inte rnal/scanning/scanning-analysis-collector \
--e ACCESS_KEY=<Workload Protection agent access key> \ 
--e SCHEDULE=@dailydefault \ 
-quay.io/sysdig/host-analyzer:latest \
+docker run --detach
+-e HOST_FS_MOUNT_PATH=/host
+-e SYSDIG_ACCESS_KEY=<ACCESS_KEY>
+-e SYSDIG_API_URL=<COLLECTOR_ENDPOINT>
+-e SCAN_ON_START=true
+-v /:/host:ro --uts=host --net=host
+quay.io/sysdig/vuln-host-scanner:$(curl -L -s https://download.sysdig.com/scanning/sysdig-host-scanner/latest_version.txt)
 ```
 {: pre}
 
 Where:
 
+Where:
 * **ACCESS_KEY** is the ingestion key for the instance.
-* **COLLECTOR_ENDPOINT** is the public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get the endpoint you need to use see [API endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_rest_api).
-  - For example, if you have {{site.data.keyword.sysdigsecure_short}} service in `eu-gb`, the `COLLECTOR_ENDPOINT` would be `https://eu-gb.security-compliance-secure.cloud.ibm.com/internal/scanning/scanni ng-analysis-collector`.
-* **SCHEDULE**, by default, is set to run the scan daily. You can define the schedule usin a crontab string such as “5 4 * * *” (for more examples, check out [crontab guru](https://crontab.guru/). The first scan will start shortly after the installation.
+* **COLLECTOR_ENDPOINT** is the public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get the endpoint you need to use, check out [API endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_rest_api).
+  - For example, if you have {{site.data.keyword.sysdigsecure_short}} service in EU-GB, the **COLLECTOR_ENDPOINT** would be `https://eu-gb.security-compliance-secure.cloud.ibm.com/internal/scanning/scanning-analysis-collector`.
+* **SCAN_ON_START** forces a first scan when the Host Scanner initializes.
 
-After installing the Host Analyzer, review the detected vulnerabilities in your host accessing **Scanning/Hosts** in the {{site.data.keyword.sysdigsecure_short}}. The first scan starts shortly after installation.
+### Install as a package
+{: manage-linux-agent-identify-vulnerabilities-package}
+
+It is also possible to install the Host Analyzer on non-Kubernetes hosts using packages. 
+
+To do this, follow the instructions in the Sysdig tutorial [Vulnerability Host Scanner](https://docs.sysdig.com/en/docs/installation/sysdig-secure/install-agent-components/hosts/packages/vulnerability-host-scanner/){: external}, following all of the [Installation](https://docs.sysdig.com/en/docs/installation/sysdig-secure/install-agent-components/hosts/packages/vulnerability-host-scanner/#installation) steps for RPM-based operating systems and substituting the [{{site.data.keyword.sysdigsecure_short}} API endpoint](https://cloud.ibm.com/apidocs/workload-protection#endpoint-url) for the`<api-url>` in Step 3.
 
 ## Scanning for compliance and benchmarks in Linux hosts with KSPM Analyzer
 {: manage-linux-agent-scanning-kpsm}

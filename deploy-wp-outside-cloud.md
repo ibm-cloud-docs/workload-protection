@@ -84,6 +84,8 @@ Once you have a sufficient version of Helm and the permission to run commands on
     --set global.sysdig.accessKey=<SERVICE_ACCESS_KEY> \
     --set agent.collectorSettings.collectorHost=<INGESTION_ENDPOINT> \ 
     --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=<API_ENDPOINT> \
+    --set nodeAnalyzer.nodeAnalyzer.runtimeScanner.settings.eveEnabled=true \
+    --set nodeAnalyzer.secure.vulnerabilityManagement.newEngineOnly=true \
     --set global.kspm.deploy=true \
     --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \ 
     --set global.clusterConfig.name=<CLUSTER_NAME> \
@@ -98,7 +100,7 @@ Where:
 * `INGESTION_ENDPOINT` is the instance's ingestion endpoint.
 * `API_ENDPOINT` is the intance's API endpoint.
 
-    **b.** To install using a Helm values file, first create a file named `agent-values-workloadprotection.yaml` (or something similar). The following yaml is a template that you can use to configure the {{site.data.keyword.sysdigsecure_short}} agent. You can customize the file by removing or commenting with `#` the sections that are not required for your agent deployment.
+    **b.** To install using a Helm values file, first create a file named `agent-values-monitor-secure.yaml` (or something similar). The following yaml is a template that you can use to configure the {{site.data.keyword.sysdigsecure_short}} agent. You can customize the file by removing or commenting with `#` the sections that are not required for your agent deployment.
 
 ```yaml
 global:
@@ -114,7 +116,11 @@ agent:
   collectorSettings:
     collectorHost: INGESTION_ENDPOINT
 nodeAnalyzer:
+  secure: vulnerabilityManagement:
+    newEngineOnly: true
   nodeAnalyzer:
+    runtimeScanner:
+      settings: eveEnabled: true
     deploy: true
     apiEndpoint: API_ENDPOINT
     benchmarkRunner:
@@ -141,23 +147,23 @@ helm install -n ibm-observe sysdig-agent sysdig/sysdig-deploy -f agent-values-mo
 ## Update an agent
 {: deploy-wp-outside-cloud-update-agent}
 
-To update the agent, you can perform a very similar process to installing the agent, updating either the command or the values file and then issuing a command that begins with `helm upgrade` instead of `helm install`.
+To update the agent version by using Helm, complete the following steps:
 
-The following is an example of a command that uses the “--set” method:
+1. Update the chart.
 
-```sh
-helm upgrade sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-namespace \
-    --set global.sysdig.accessKey=<SERVICE_ACCESS_KEY> \
-    --set agent.collectorSettings.collectorHost=<INGESTION_ENDPOINT> \ 
-    --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=<API_ENDPOINT> \
-    --set global.kspm.deploy=true \
-    --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \ 
-    --set global.clusterConfig.name=<CLUSTER_NAME> \
-    --set kspmCollector.apiEndpoint=<API_ENDPOINT>
-```
-{: pre}
+    ```sh
+    helm repo update
+    ```
+    {: pre}
 
-If you used a Helm values file, you can edit the file to update any necessary values and then run `helm upgrade -n ibm-observe sysdig-agent sysdig/sysdig-deploy -f agent-values-workloadprotection.yaml` to upgrade.
+2. Find the values yaml file that you used to deploy the agent and modify the `agent.image.tag` with the version of the agent that you want to deploy.
+
+3. Upgrade the agent.
+
+    ```sh
+    helm upgrade -n ibm-observe sysdig-agent sysdig/sysdig-deploy -f agent-values-monitor-secure.yaml
+    ```
+    {: pre}
 
 ## Remove an agent
 {: deploy-wp-outside-cloud-remove-agent}
