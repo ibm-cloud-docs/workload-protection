@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-05-24"
+lastupdated: "2023-09-27"
 
 
 keywords:
@@ -168,7 +168,11 @@ agent:
   collectorSettings:
     collectorHost: INGESTION_ENDPOINT
 nodeAnalyzer:
+  secure: vulnerabilityManagement:
+    newEngineOnly: true
   nodeAnalyzer:
+    runtimeScanner: settings:
+      eveEnabled: true
     deploy: true
     apiEndpoint: API_ENDPOINT
     benchmarkRunner:
@@ -207,6 +211,8 @@ helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-
     --set global.sysdig.accessKey=<SERVICE_ACCESS_KEY> \
     --set agent.collectorSettings.collectorHost=<INGESTION_ENDPOINT> \
     --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=<API_ENDPOINT> \
+    --set nodeAnalyzer.nodeAnalyzer.runtimeScanner.settings.eveEnabled=true \
+    --set nodeAnalyzer.secure.vulnerabilityManagement.newEngineOnly=true \
     --set global.kspm.deploy=true \
     --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
     --set global.clusterConfig.name=<CLUSTER_NAME> \
