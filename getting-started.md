@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-09-26"
+lastupdated: "2023-09-29"
 
 keywords:
 
@@ -18,10 +18,6 @@ subcollection: workload-protection
 
 In architectures that are focused on container and microservices, you can use {{site.data.keyword.sysdigsecure_full}} to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions, and compliance from source to run.
 {: shortdesc}
-
-For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).
-{: tip}
-
 
 ## Before you begin
 {: #getting-started-prereqs}
@@ -143,3 +139,8 @@ See the following table for tasks that you can run to secure your environment:
 | [Define a policy](docs/workload-protection?topic=workload-protection-manage_policies)                     | You can configure a policy on a resource and define what to do when 1 or more rules that are included in the policy are noncompliant.  \n Secure includes a number of pre-defined policies that you can use. |
 | [Configure a benchmark task](https://docs.sysdig.com/en/docs/sysdig-secure/posture/compliance/legacy-versions/benchmarks-legacy/configure-benchmark-tasks/){: external}        | You can use [Compliance dashboards and metrics](https://docs.sysdig.com/en/docs/sysdig-secure/home/secure-dashboards/){: external} to monitor the status of your sources based on the benchmark task that you configure.|
 {: caption="Table 1. Tasks to secure your environment" caption-side="bottom"}
+
+## Next steps
+{: #getting-started-secure-next-step}
+
+To get the most out of {{site.data.keyword.sysdigsecure_short}}, connect your instance to {{site.data.keyword.compliance_short}}. By creating a connection, you can view all of the compliance results that are returned by {{site.data.keyword.sysdigsecure_short}}, but you can validate and view your I{{site.data.keyword.cloud_notm}} results all in the same place. For more information, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).
