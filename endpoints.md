@@ -103,8 +103,8 @@ To send metrics by using a private endpoint, you must [enable virtual routing an
 
 The following table lists the *Private Collector endpoints* that are available for each region:
 
-| Region      | Private ingestion endpoint       | Private IP addresses       | {{site.data.keyword.sysdigsecure_full_notm}} agent ports   |
-|-------------|----------------------------------|----------------------------|-----------|
+| Region      | Private ingestion endpoint       | Private IP addresses       | Workload Protection  \n  agent ports   | Prometheus  \n  Remote Write  \n Ports|
+|-------------|----------------------------------|----------------------------|-----------|---------|
 | Dallas (`US-South`)  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170  \n 166.9.48.41  \n 166.9.17.11   \n  \n 166.9.228.45 `(*)`  \n 166.9.229.45 `(*)`  \n 166.9.230.44 `(*)`   | TCP 6443  | TCP 443  |
 | Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71   \n  \n  166.9.248.88 `(*)`  \n 166.9.248.120 `(*)`  \n 166.9.248.152 `(*)`     | TCP 6443  | TCP 443  |
 | London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71   \n  \n  166.9.244.29 `(*)`  \n 166.9.244.59 `(*)`                       |  TCP 6443 | TCP 443  |
