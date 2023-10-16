@@ -115,7 +115,7 @@ The following table lists the *Private Collector endpoints* that are available f
 | Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38  \n 166.9.40.35  \n 166.9.42.48  \n  \n  166.9.249.112 `(*)`  \n 166.9.249.141 `(*)`  \n 166.9.249.177 `(*)`         | TCP 6443  |  TCP 443  |
 | Toronto (`CA-TOR`)  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20  \n 166.9.76.23  \n 166.9.78.21  \n  \n  166.9.247.153 `(*)`  \n 166.9.247.185 `(*)`  \n 166.9.247.205 `(*)`    | TCP 6443  |  TCP 443  |
 | Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53  \n  \n  166.9.231.240 `(*)`  \n 166.9.232.28 `(*)`  \n 166.9.233.17 `(*)`       | TCP 6443  |  TCP 443  |
-{: caption="Table 4. List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.sysdigsecure_full_notm}}" caption-side="top"}
+{: caption="Table 4. List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 `(*)` Indicates IP addresses that are in plan to be supported. These IP addresses should be added to an allowlist in advance to avoid service interruptions. Current IP addresses will be deprecated. A notification will be sent before the current IP addresses are deprecated.
 {: note}
