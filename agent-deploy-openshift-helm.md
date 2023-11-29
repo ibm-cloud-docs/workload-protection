@@ -170,9 +170,15 @@ agent:
 nodeAnalyzer:
   secure: vulnerabilityManagement:
     newEngineOnly: true
+  secure: 
+    vulnerabilityManagement:
+      newEngineOnly: true
   nodeAnalyzer:
     runtimeScanner: settings:
       eveEnabled: true
+    runtimeScanner: 
+      settings:
+        eveEnabled: true
     deploy: true
     apiEndpoint: API_ENDPOINT
     benchmarkRunner:
