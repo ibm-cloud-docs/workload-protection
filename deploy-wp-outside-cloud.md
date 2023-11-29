@@ -111,16 +111,28 @@ global:
   kspm:
     deploy: true
 agent:
+  image:
+    registry: icr.io
   slim:
     enabled: true
+    image:
+      repository: ext/sysdig/agent-slim
+    kmoduleImage:
+      repository: ext/sysdig/agent-kmodule
   collectorSettings:
     collectorHost: INGESTION_ENDPOINT
 nodeAnalyzer:
   secure: vulnerabilityManagement:
     newEngineOnly: true
+  secure: 
+    vulnerabilityManagement:
+      newEngineOnly: true
   nodeAnalyzer:
-    runtimeScanner:
-      settings: eveEnabled: true
+    runtimeScanner: settings:
+      eveEnabled: true
+    runtimeScanner: 
+      settings:
+        eveEnabled: true
     deploy: true
     apiEndpoint: API_ENDPOINT
     benchmarkRunner:
