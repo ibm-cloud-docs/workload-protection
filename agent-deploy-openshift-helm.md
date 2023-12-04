@@ -168,14 +168,10 @@ agent:
   collectorSettings:
     collectorHost: INGESTION_ENDPOINT
 nodeAnalyzer:
-  secure: vulnerabilityManagement:
-    newEngineOnly: true
   secure: 
     vulnerabilityManagement:
       newEngineOnly: true
   nodeAnalyzer:
-    runtimeScanner: settings:
-      eveEnabled: true
     runtimeScanner: 
       settings:
         eveEnabled: true
