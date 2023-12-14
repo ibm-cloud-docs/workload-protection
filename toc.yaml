@@ -66,6 +66,8 @@ toc:
           topics:
           - topic: architecture-workload-isolation.md
             navtitle: Architecture and workload isolation
+          - topic: cbr.md
+            navtitle: Protecting resources with context-based restrictions
 
       - topicgroup:
           label: Secure UI
