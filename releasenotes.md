@@ -4,7 +4,7 @@ copyright:
   years:  2023, 2024
 lastupdated: "2023-01-18"
 
-keywords:  release notes, IBM Cloud
+keywords:  release notes, IBM Cloud, workload protection
 
 subcollection: workload-protection
 
@@ -41,7 +41,7 @@ Deprecation of version 1 of the scanning engine
 {: release-note}
 
 New vulnerability scanning engine available
-:   {{site.data.keyword.sysdigsecure_short}} announces the new vulnerability scanning engine is now available.
+:   {{site.data.keyword.sysdigsecure_short}} announces that the new vulnerability scanning engine is now available.
 
 ## May 2023
 {: #workload-protection-may23}
