@@ -24,7 +24,7 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 {: #workload-protection-jan24}
 
 ### 18 January 2024
-{: #workload-protection-jan1624}
+{: #workload-protection-jan1824}
 {: release-note}
 
 Deprecation of Sysdig Secure + Monitor plan in IBM Cloud Monitoring
