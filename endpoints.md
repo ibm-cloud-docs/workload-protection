@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-05-03"
+lastupdated: "2023-10-16"
 
 keywords:
 
@@ -103,18 +103,22 @@ To send metrics by using a private endpoint, you must [enable virtual routing an
 
 The following table lists the *Private Collector endpoints* that are available for each region:
 
-| Region      | Private ingestion endpoint       | Private IP addresses       | {{site.data.keyword.sysdigsecure_full_notm}} agent ports   |
-|-------------|----------------------------------|----------------------------|-----------|
-| `US-SOUTH`  | `ingest.private.us-south.security-compliance-secure.cloud.ibm.com`   | 166.9.14.170  \n 166.9.48.41  \n 166.9.17.11   | TCP 6443  |
-| `EU-DE`     | `ingest.private.eu-de.security-compliance-secure.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71     | TCP 6443  |
-| `EU-GB`     | `ingest.private.eu-gb.security-compliance-secure.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71                       |  TCP 6443 |
-| `JP-OSA`    | `ingest.private.jp-osa.security-compliance-secure.cloud.ibm.com`     | 166.9.72.14  \n 166.9.71.15  \n 166.9.70.14 | TCP 6443 |
-| `JP-TOK`    | `ingest.private.jp-tok.security-compliance-secure.cloud.ibm.com`     | 166.9.44.38  \n 166.9.40.35  \n 166.9.42.48       | TCP 6443  |
-| `US-EAST`   | `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53      | TCP 6443  |
-| `AU-SYD`    | `ingest.private.au-syd.security-compliance-secure.cloud.ibm.com`     | 166.9.56.32  \n 166.9.52.27  \n 166.9.54.27     |  TCP 6443 |
-| `CA-TOR`  | `ingest.private.ca-tor.security-compliance-secure.cloud.ibm.com`   | 166.9.77.20  \n 166.9.76.23  \n 166.9.78.21   | TCP 6443  |
-| `BR-SAO`  | `ingest.private.br-sao.security-compliance-secure.cloud.ibm.com`   | 166.9.84.19  \n 166.9.83.18  \n 166.9.82.19   | TCP 6443  |
-{: caption="Table 4. List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.sysdigsecure_full_notm}}" caption-side="top"}
+| Region      | Private ingestion endpoint       | Private IP addresses       | Workload Protection  \n  agent ports   | Prometheus  \n  Remote Write  \n Ports|
+|-------------|----------------------------------|----------------------------|-----------|---------|
+| Dallas (`US-South`)  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170  \n 166.9.48.41  \n 166.9.17.11   \n  \n 166.9.228.45 `(*)`  \n 166.9.229.45 `(*)`  \n 166.9.230.44 `(*)`   | TCP 6443  | TCP 443  |
+| Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71   \n  \n  166.9.248.88 `(*)`  \n 166.9.248.120 `(*)`  \n 166.9.248.152 `(*)`     | TCP 6443  | TCP 443  |
+| London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71   \n  \n  166.9.244.29 `(*)`  \n 166.9.244.59 `(*)`                       |  TCP 6443 | TCP 443  |
+| Madrid (`EU-ES`)     | `ingest.private.eu-es.monitoring.cloud.ibm.com`      | 166.9.96.31  \n 166.9.95.31  \n 166.9.94.31   \n  \n  166.9.226.17 `(*)`  \n 166.9.227.16 `(*)`   \n 166.9.225.16 `(*)`         |  TCP 6443 | TCP 443  |
+| Osaka (`JP-OSA`)    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     | 166.9.72.14  \n 166.9.71.15  \n 166.9.70.14   \n  \n  166.9.247.44 `(*)`  \n 166.9.247.77 `(*)`  \n 166.9.247.109 `(*)`  | TCP 6443 |  TCP 443  |
+| Sao Paulo (`BR-SAO`)  | `ingest.private.br-sao.monitoring.cloud.ibm.com`   | 166.9.84.19  \n 166.9.83.18  \n 166.9.82.19   \n  \n  166.9.246.77 `(*)`  \n 166.9.246.108 `(*)`  \n 166.9.246.133 `(*)`   | TCP 6443  |  TCP 443  |
+| Sydney (`AU-SYD`)    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32  \n 166.9.52.27   \n 166.9.54.27  \n  \n  166.9.244.114 `(*)`  \n 166.9.244.144 `(*)`  \n 166.9.244.177 `(*)`      |  TCP 6443 |  TCP 443  |
+| Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38  \n 166.9.40.35  \n 166.9.42.48  \n  \n  166.9.249.112 `(*)`  \n 166.9.249.141 `(*)`  \n 166.9.249.177 `(*)`         | TCP 6443  |  TCP 443  |
+| Toronto (`CA-TOR`)  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20  \n 166.9.76.23  \n 166.9.78.21  \n  \n  166.9.247.153 `(*)`  \n 166.9.247.185 `(*)`  \n 166.9.247.205 `(*)`    | TCP 6443  |  TCP 443  |
+| Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53  \n  \n  166.9.231.240 `(*)`  \n 166.9.232.28 `(*)`  \n 166.9.233.17 `(*)`       | TCP 6443  |  TCP 443  |
+{: caption="Table 4. List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
+
+`(*)` Indicates IP addresses that are in plan to be supported. These IP addresses should be added to an allowlist in advance to avoid service interruptions. Current IP addresses will be deprecated. A notification will be sent before the current IP addresses are deprecated.
+{: note}
 
 
 ### Public Collector endpoints

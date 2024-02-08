@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-12-08"
 
 keywords:
 
@@ -13,37 +13,30 @@ subcollection: workload-protection
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Pricing
+# Pricing for for IBM Cloud Security and Compliance Center Workload Protection
 {: #pricing_plans}
 
-Different service plans are available for {{site.data.keyword.sysdigsecure_full_notm}}.
+Pricing for {{site.data.keyword.sysdigsecure_full_notm}} is based on a graduated tier system in which costs decrease per-resource as you deploy more resources. Your cost depends on how many {{site.data.keyword.sysdigsecure_short}} agents that you have and where those agents are deployed.
 {: shortdesc}
 
-The following service plans are available:
+For an up-to-the-minute look at the metrics and tiers used to determine costs, check out the [catalog page for {{site.data.keyword.sysdigsecure_short}}](https://cloud.ibm.com/catalog/services/security-and-compliance-center-workload-protection).
+{: tip}
 
-| Plans                                      | Plan ID                                | Plan Name                   |
-|--------------------------------------------|----------------------------------------|-----------------------------|
-| `Free Trial`                               | `0eae605c-7258-4bb7-8cb7-a4b96d5c94c3` | `lite`                      |
-| `Graduated tier`                           | `00497f9a-f093-436b-98d7-c81845399516` | `graduated-tier`            |
-{: caption="Table 1. Service plans" caption-side="top"}
+A free trial of {{site.data.keyword.sysdigsecure_short}} is available for users who want to try the service out. It includes all of the capabilities of the paid plan and expires after 30 days unless you upgrade it to a paid plan.
 
-A `Free Trial` {{site.data.keyword.sysdigsecure_full_notm}} instance expires after 30 days. In a `Graduated tier` plan, data is accessible and retained for 90 days.
+## How pricing works in Workload Protection
+{: #pricing_plans-works}
 
-## Estimating your cost
-{: #price_estimate}
+Your monthly charge is pro-rated based on the amount of time within that month you have had a resource deployed. You are not charged for time during a month when a resource was not deployed.
+{: tip}
 
-Cost is $0.07639 for each node hour.
+There are three usage metrics used to determine pricing. All are calculated **per month**:
 
-To estimate your approximate cost, use the following formula.
+1. **Node hours**: this metric is used for agents deployed on nodes in Kubernetes clusters inside IBM Cloud (typically, one agent is deployed per node). Although the metric is calculated per hour, bills are issued monthly, so it is helpful to remember that a month with 30 days has 720 hours.
+2. **Multi-cloud cloud security posture management (CSPM) compute instances**: this metric is used for agents deployed on clouds other than {{site.data.keyword.cloud_notm}} and is calculated per month.
+3. **VM Node Hours (Virtual Machine Node Hours)**: this metric is used for agents deployed on standalone nodes outside any container platforms. Although the metric is calculated per hour, bills are issued monthly.
 
-```text
-Number of agents x hours the agents run in a day x the number of days in a month x $0.07639
-```
-{: codeblock}
+All pricing plans use a **graduated tiered** system, in which you are charged based on the number of resources that are deployed. For example, if the first tier is 10 cents for the first 250 resources, and five cents for the next 250 resources, and you have 300 resources, you would pay USD 27.50 per month; USD 25 for the resources in the first tier, and USD 2.50 for the resources in the next tier. For more information about pricing, check out [How you're charged](/docs/billing-usage?topic=billing-usage-charges).
 
-For example, if you are running one agent for 24 hours a day and the month has 30 days, the estimated cost is approximately $55.
-
-```text
-1 x 24 x 30 x $0.07639
-```
-{: codeblock}
+The {{site.data.keyword.sysdigsecure_short}} agent and the {{site.data.keyword.mon_short}} agent cannot be deployed on the same cluster. However, you can access {{site.data.keyword.sysdigsecure_short}} functionality through {{site.data.keyword.mon_short}} by selecting the **Graduated Tier - Sysdig Secure + Monitor** plan. For more information, check out [Service plans](/docs/monitoring?topic=monitoring-service_plans).
+{: note}

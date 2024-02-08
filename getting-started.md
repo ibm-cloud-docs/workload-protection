@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-09-29"
 
 keywords:
 
@@ -19,7 +19,6 @@ subcollection: workload-protection
 In architectures that are focused on container and microservices, you can use {{site.data.keyword.sysdigsecure_full}} to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions, and compliance from source to run.
 {: shortdesc}
 
-
 ## Before you begin
 {: #getting-started-prereqs}
 
@@ -31,7 +30,7 @@ In architectures that are focused on container and microservices, you can use {{
 ## Step 1. Manage user access
 {: #getting-started-step1}
 
-Every user that accesses the {{site.data.keyword.sysdigsecure_full_notm}} service in your account must be assigned an access policy with an IAM user role defined. The policy determines the actions that the user can run within the context of the service or instance you selected. The allowable actions are customized and defined as operations that are allowed to be run on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-iam#iam).
+Every user that accesses the {{site.data.keyword.sysdigsecure_short}} service in your account must be assigned an access policy with an IAM user role defined. The policy determines the actions that the user can run within the context of the service or instance you selected. The allowable actions are customized and defined as operations that are allowed to be run on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-iam#iam).
 
 When a user is granted permissions in the {{site.data.keyword.cloud_notm}} to work with the {{site.data.keyword.sysdigsecure_full_notm}} service, the user is automatically granted a service role. This role determines the actions that a user has permissions to run. For more information, see [Controlling access through IAM](/docs/workload-protection?topic=workload-protection-iam).
 
@@ -95,7 +94,7 @@ After you provision an instance of the {{site.data.keyword.sysdigsecure_full_not
 
 Choose 1 of the following options:
 1. [Configure an agent for Kubernetes](/docs/workload-protection?topic=workload-protection-agent-deploy-kube-helm).
-2. [Configire an agent for Red Hat OpenShift](/docs/workload-protection?topic=workload-protection-agent-deploy-openshift-helm).
+2. [Configire an agent for {{site.data.keyword.redhat_openshift_notm}}](/docs/workload-protection?topic=workload-protection-agent-deploy-openshift-helm).
 
 
 ## Step 4. Launch the web UI
@@ -137,6 +136,10 @@ See the following table for tasks that you can run to secure your environment:
 | [Scan container images](/docs/workload-protection?topic=workload-protection-scan_kube)             | You can scan container images for vulnerabilities, and other violations.  |
 | [Configure an image scanning alert](/docs/workload-protection?topic=workload-protection-alert-config) | You can set up a runtime `Scanning Alert` to detect if an image is impacted by newly discovered vulnerabilities. You can scan a repository that hosts container images for vulnerabilities, secrets, and license violations. Then, you can configure an alert on the repository to receive notifications on issues that need your attention.  |
 | [Configure a rule](/docs/workload-protection?topic=workload-protection-manage_rules)                  | You can create a `Detection Rule` to detect and respond to anomalous runtime activity.  \n You can create a rule to specify which image versions can be used. |
-| [Define a policy](docs/workload-protection?topic=workload-protection-manage_policies)                     | You can configure a policy on a resource and define what to do when 1 or more rules that are included in the policy are noncompliant.  \n Secure includes a number of pre-defined policies that you can use. |
 | [Configure a benchmark task](https://docs.sysdig.com/en/docs/sysdig-secure/posture/compliance/legacy-versions/benchmarks-legacy/configure-benchmark-tasks/){: external}        | You can use [Compliance dashboards and metrics](https://docs.sysdig.com/en/docs/sysdig-secure/home/secure-dashboards/){: external} to monitor the status of your sources based on the benchmark task that you configure.|
 {: caption="Table 1. Tasks to secure your environment" caption-side="bottom"}
+
+## Next steps
+{: #getting-started-secure-next-step}
+
+To get the most out of {{site.data.keyword.sysdigsecure_short}}, connect your instance to {{site.data.keyword.compliance_short}}. By creating a connection, you can view all of the compliance results that are returned by {{site.data.keyword.sysdigsecure_short}}, but you can validate and view your I{{site.data.keyword.cloud_notm}} results all in the same place. For more information, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).

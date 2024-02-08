@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-05-12"
+lastupdated: "2023-09-26"
 
 keywords:
 
@@ -18,10 +18,14 @@ subcollection: workload-protection
 The {{site.data.keyword.sysdigsecure_full}} compliance feature persists environment compliance information in an inventory, which enhances resource visibility and full-context prioritization. This information helps you drive remediation and resolution of compliance violations. {{site.data.keyword.sysdigsecure_short}} supports CSPM and KSPM.
 {: shortdesc}
 
+For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).
+{: tip}
+
 Compliance lets you manage your risks by:
 
 * Remediating.
 * Accepting the risk.
+* Opening Pull requests in your code repository, if integration is enabled.
 
 The resources in your [zones](/docs/workload-protection?topic=workload-protection-zones) are evaluated against compliance policies and any violations are collected as tiles on the **Compliance** page in the {{site.data.keyword.sysdigsecure_full}} UI.  This evaluation is done once daily.
 
@@ -45,6 +49,8 @@ The basic steps you will follow are:
 4. [Remediate the issues.](/docs/workload-protection?topic=workload-protection-evaluate-remediate) The remediation flow lets you to understand the issue and review suggested patches that {{site.data.keyword.sysdigsecure_full_notm}} creates to resolve the problem. You can also choose to apply the patch manually or by using your Git repository.
 
     - Manual patches can be applied by copying the provided patch code and applying it to your environment.
+
+    - Remediating using a Git code repository involves selecting the relevant Git source. {{site.data.keyword.sysdigsecure_full_notm}} will create a pull request integrating the patch, as well as checking code formatting. The PR can be reviewed before merging.
 
     Alternately, you can "accept the risk", either temporarily or permanently, and remove the violation from being flagged by the system.
 
@@ -74,4 +80,3 @@ DevOps team members might need to review the environment's compliance posture in
 * Managing violations according to their severity.
 * Easily fixing violations.
 * Documenting exceptions and acceptable risk according to the risk management policies of their organization.
-

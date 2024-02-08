@@ -21,6 +21,8 @@ toc:
         navtitle: About
       - topic: kspm.md
         navtitle: About KSPM
+      - topic: pricing.md
+        navtitle: Pricing
       - topic: releasenotes.md
         navtitle: Release notes
 
@@ -68,6 +70,8 @@ toc:
           topics:
           - topic: architecture-workload-isolation.md
             navtitle: Architecture and workload isolation
+          - topic: cbr.md
+            navtitle: Protecting resources with context-based restrictions
 
       - topicgroup:
           label: Secure UI
@@ -150,7 +154,6 @@ toc:
       - terminology.md
       - regions.md
       - endpoints.md
-      - pricing.md
       - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
 

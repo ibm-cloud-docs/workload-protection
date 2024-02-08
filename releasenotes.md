@@ -4,7 +4,7 @@ copyright:
   years:  2023, 2024
 lastupdated: "2024-02-08"
 
-keywords:  release notes, IBM Cloud
+keywords:  release notes, IBM Cloud, workload protection
 
 subcollection: workload-protection
 
@@ -33,7 +33,7 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 {: #workload-protection-jan24}
 
 ### 18 January 2024
-{: #workload-protection-jan1624}
+{: #workload-protection-jan1824}
 {: release-note}
 
 Deprecation of Sysdig Secure + Monitor plan in IBM Cloud Monitoring
@@ -41,7 +41,6 @@ Deprecation of Sysdig Secure + Monitor plan in IBM Cloud Monitoring
 
 Deprecation of version 1 of the scanning engine
 :   As of 18 January 2024, Version 1 of the scanning engine in Workload Protection is deprecated. The functionality is replaced by a new scanning engine with better performance and more capabilities. Any new instances that are created starting today are automically configured to use the new engine. If you are currently working with an existing instance, you must migrate to the new engine by 18 January, 2025. When you migrate, you must also move from the legacy node-analyzer to the new one. In some cases, uninstalling and reinstalling by using Helm is the simplest approach. If you are working with a pipeline or registry scanning, you will need to start using the new scanning components. [Learn more about scanning engines](https://docs.sysdig.com/en/docs/sysdig-secure/scanning/new-scanning-engine/){: external}.
-
 
 ## September 2023
 {: #workload-protection-sep23}
@@ -52,6 +51,7 @@ Deprecation of version 1 of the scanning engine
 
 New vulnerability scanning engine available
 :   {{site.data.keyword.sysdigsecure_short}} announces the new vulnerability scanning engine is now available.
+
 
 ## May 2023
 {: #workload-protection-may23}
