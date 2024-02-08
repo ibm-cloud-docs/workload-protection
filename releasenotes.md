@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2023-01-18"
+lastupdated: "2024-02-08"
 
 keywords:  release notes, IBM Cloud, workload protection
 
@@ -19,6 +19,15 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## February 2024
+{: #workload-protection-feb24}
+
+### 8 February 2024
+{: #workload-protection-jan1624}
+{: release-note}
+
+{{site.data.keyword.sysdigsecure_short}} announces the ability to [deploy and manage an agent on Satellite using a Helm chart](/docs/workload-protection?topic=workload-protection-agent-deploy-satellite).
 
 ## January 2024
 {: #workload-protection-jan24}
@@ -41,7 +50,8 @@ Deprecation of version 1 of the scanning engine
 {: release-note}
 
 New vulnerability scanning engine available
-:   {{site.data.keyword.sysdigsecure_short}} announces that the new vulnerability scanning engine is now available.
+:   {{site.data.keyword.sysdigsecure_short}} announces the new vulnerability scanning engine is now available.
+
 
 ## May 2023
 {: #workload-protection-may23}
