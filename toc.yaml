@@ -45,10 +45,18 @@ toc:
       - topicgroup:
           label: Managing the agent
           topics:
+          - topic: agent-helm-parameters.md
+            navtitle: Configurable parameters
           - topic: agent-deploy-kube-helm.md
-            navtitle: Manage the Kubernetes cluster by using a HELM chart
+            navtitle: On a Kubernetes cluster
           - topic: agent-deploy-openshift-helm.md
-            navtitle: Manage the Openshift cluster by using a HELM chart
+            navtitle: On a Red Hat OpenShift cluster
+          - topic: deploy-wp-outside-cloud.md
+            navtitle: On an outside Kubernetes or OpenShift cluster
+          - topic: agent-deploy-satellite.md
+            navtitle: On IBM Satellite
+          - topic: manage-linux-agent.md
+            navtitle: On Linux hosts
 
       - topicgroup:
           label: Controlling access
