@@ -29,8 +29,8 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 
 {{site.data.keyword.sysdigsecure_short}} announces the ability to [deploy and manage an agent on Satellite using a Helm chart](/docs/workload-protection?topic=workload-protection-agent-deploy-satellite).
 
-### 20 February 2024
-{: #workload-protection-feb2024}
+### 21 February 2024
+{: #workload-protection-feb2124}
 {: release-note}
 
 {{site.data.keyword.sysdigsecure_short}} announces support for [Inventory](/docs/workload-protection?topic=workload-protection-inventory), a detailed view of all your resources across your multi-cloud environments (AWS, Azure and Google Public Cloud), Kubernetes environments (such as IKS, ROKS, or any other Kubernetes platform) as well as your container images.

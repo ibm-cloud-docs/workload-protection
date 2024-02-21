@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-02-20"
+lastupdated: "2024-02-21"
 
 keywords: workload protection, inventory, resources
 
