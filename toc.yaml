@@ -88,6 +88,11 @@ toc:
           label: Insights
           topics:
           - insights.md
+      
+      - topicgroup:
+          label: Inventory
+          topics:
+          - inventory.md
 
       - topicgroup:
           label: Posture Management
