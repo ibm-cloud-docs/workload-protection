@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-09-29"
+  years:  2023, 2024
+lastupdated: "2024-03-27"
 
 keywords:
 
@@ -30,7 +30,7 @@ In architectures that are focused on container and microservices, you can use {{
 ## Step 1. Manage user access
 {: #getting-started-step1}
 
-Every user that accesses the {{site.data.keyword.sysdigsecure_short}} service in your account must be assigned an access policy with an IAM user role defined. The policy determines the actions that the user can run within the context of the service or instance you selected. The allowable actions are customized and defined as operations that are allowed to be run on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-iam#iam).
+Every user that accesses the {{site.data.keyword.sysdigsecure_full_notm}} service in your account must be assigned an access policy with an IAM user role defined. The policy determines the actions that the user can run within the context of the service or instance you selected. The allowable actions are customized and defined as operations that are allowed to be run on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-iam).
 
 When a user is granted permissions in the {{site.data.keyword.cloud_notm}} to work with the {{site.data.keyword.sysdigsecure_full_notm}} service, the user is automatically granted a service role. This role determines the actions that a user has permissions to run. For more information, see [Controlling access through IAM](/docs/workload-protection?topic=workload-protection-iam).
 
@@ -131,12 +131,11 @@ See the following table for tasks that you can run to secure your environment:
 
 | Action                              | Descripion                  |
 |-------------------------------------|------------------------------|
-| [Integrate scanning into your CI/CD Pipeline](https://docs.sysdig.com/en/docs/sysdig-secure/scanning/integrate-with-cicd-tools/){: external} | You can integrate scanning into your CI/CD Pipeline to analyze images that are available on the CI/CD worker nodes. |
+| [Integrate scanning into your CI/CD Pipeline](https://docs.sysdig.com/en/docs/sysdig-secure/vulnerabilities/pipeline/){: external} | You can integrate scanning into your CI/CD Pipeline to analyze images that are available on the CI/CD worker nodes. |
 | [Configure a notification channel](/docs/workload-protection?topic=workload-protection-notifications#notifications_create) | You can configure a notification channel to get notified about events, anomalies, or security incidents that require attention. |
-| [Scan container images](/docs/workload-protection?topic=workload-protection-scan_kube)             | You can scan container images for vulnerabilities, and other violations.  |
-| [Configure an image scanning alert](/docs/workload-protection?topic=workload-protection-alert-config) | You can set up a runtime `Scanning Alert` to detect if an image is impacted by newly discovered vulnerabilities. You can scan a repository that hosts container images for vulnerabilities, secrets, and license violations. Then, you can configure an alert on the repository to receive notifications on issues that need your attention.  |
+| [Scan container images](/docs/workload-protection?topic=workload-protection-pipeline)             | You can scan container images for vulnerabilities, and other violations.  |
 | [Configure a rule](/docs/workload-protection?topic=workload-protection-manage_rules)                  | You can create a `Detection Rule` to detect and respond to anomalous runtime activity.  \n You can create a rule to specify which image versions can be used. |
-| [Configure a benchmark task](https://docs.sysdig.com/en/docs/sysdig-secure/posture/compliance/legacy-versions/benchmarks-legacy/configure-benchmark-tasks/){: external}        | You can use [Compliance dashboards and metrics](https://docs.sysdig.com/en/docs/sysdig-secure/home/secure-dashboards/){: external} to monitor the status of your sources based on the benchmark task that you configure.|
+| [Review your Compliance results](https://docs.sysdig.com/en/docs/sysdig-secure/posture/compliance/){: external}        | The Compliance module relies on persisting the resources in an inventory; this enhanced resource visibility and full-context prioritization drives remediation and resolution of violations.|
 {: caption="Table 1. Tasks to secure your environment" caption-side="bottom"}
 
 ## Next steps
