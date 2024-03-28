@@ -93,6 +93,13 @@ toc:
           label: Inventory
           topics:
           - inventory.md
+      
+      - topicgroup:
+          label: Vulnerabilities
+          topics:
+          - pipeline.md
+          - runtime.md
+          - reporting.md
 
       - topicgroup:
           label: Posture Management
@@ -128,6 +135,15 @@ toc:
               - compliance-api.md
               - identity_and_access.md
 
+      - topicgroup:
+          label: Threat detection policies
+          topics:
+          - vulnerability_policies.md
+          - threat_detection.md
+          - manage_rules.md
+          - runtime_tuning.md
+          - image_profiles.md
+      
       - topicgroup:
           label: Network
           topics:
