@@ -132,6 +132,15 @@ toc:
               - identity_and_access.md
 
       - topicgroup:
+          label: Threat detection policies
+          topics:
+          - vulnerability_policies.md
+          - threat_detection.md
+          - manage_rules.md
+          - runtime_tuning.md
+          - image_profiles.md
+      
+      - topicgroup:
           label: Network
           topics:
           - netsec_policy.md
