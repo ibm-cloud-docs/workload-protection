@@ -89,6 +89,13 @@ toc:
           label: Inventory
           topics:
           - inventory.md
+      
+      - topicgroup:
+          label: Vulnerabilities
+          topics:
+          - pipeline.md
+          - runtime.md
+          - reporting.md
 
       - topicgroup:
           label: Posture Management
