@@ -41,6 +41,7 @@ The following table lists the endpoints that are available for each region:
 | `AU-SYD`    | `https://au-syd.security-compliance-secure.cloud.ibm.com`        | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78       | https (TLS) 443 |
 | `CA-TOR`    | `https://ca-tor.security-compliance-secure.cloud.ibm.com`        | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237       | https (TLS) 443 |
 | `BR-SAO`    | `https://br-sao.security-compliance-secure.cloud.ibm.com`        | 163.107.66.98  \n 163.109.67.242  \n 169.57.141.43       | https (TLS) 443 |
+| `EU-ES`    | `https://eu-es.security-compliance-secure.cloud.ibm.com`        | 13.120.68.187  \n 13.122.68.140  \n 13.121.68.91       | https (TLS) 443 |
 {: caption="Table 1. List of endpoints" caption-side="top"}
 
 
@@ -66,6 +67,7 @@ To make API calls, you might need to define a firewall rule in your host.
 | `AU-SYD`    | `https://private.au-syd.security-compliance-secure.cloud.ibm.com/api`        |
 | `CA-TOR`    | `https://private.ca-tor.security-compliance-secure.cloud.ibm.com/api`        |
 | `BR-SAO`    | `https://private.br-sao.security-compliance-secure.cloud.ibm.com/api`        |
+| `EU-ES`     | `https://private.eu-es.security-compliance-secure.cloud.ibm.com`             |
 {: caption="Table 2. Private REST API endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service" caption-side="top"}
 
 
@@ -84,6 +86,7 @@ To make API calls, you might need to define a firewall rule in your host.
 | `AU-SYD`    | `https://au-syd.security-compliance-secure.cloud.ibm.com/api`        |
 | `CA-TOR`    | `https://ca-tor.security-compliance-secure.cloud.ibm.com/api`        |
 | `BR-SAO`    | `https://br-sao.security-compliance-secure.cloud.ibm.com/api`        |
+| `EU-ES`     | `https://eu-es.security-compliance-secure.cloud.ibm.com`             |
 {: caption="Table 3. Public REST API endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service" caption-side="top"}
 
 
