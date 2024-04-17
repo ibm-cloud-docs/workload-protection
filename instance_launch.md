@@ -23,14 +23,15 @@ After you provision an instance of the {{site.data.keyword.sysdigsecure_full_not
 ## Grant IAM policies to a user to view data
 {: #launch_step1}
 
-**Note:** You must be an administrator of the {{site.data.keyword.sysdigsecure_full_notm}} service, an administrator of the {{site.data.keyword.sysdigsecure_full_notm}} instance, or have account IAM permissions to grant other users policies.
+You must be an administrator of the {{site.data.keyword.sysdigsecure_full_notm}} service, an administrator of the {{site.data.keyword.sysdigsecure_full_notm}} instance, or have account IAM permissions to grant other users policies.
+{: note}
 
-The following table lists the minimum policies that a user must have to be able to launch the {{site.data.keyword.sysdigsecure_full_notm}} web UI, and view data:
+The following table lists the minimum policies that a user must be able to launch the {{site.data.keyword.sysdigsecure_full_notm}} web UI, and view data:
 
 | Service                        | Role                      | Permission granted     |
 |--------------------------------|---------------------------|------------------------|
 | `{{site.data.keyword.sysdigsecure_full_notm}}` | Platform role: Viewer     | Allows the user to view the list of service instances in the Observability Security dashboard. |
-| `{{site.data.keyword.sysdigsecure_full_notm}}` | Service role: Writer      | Allows the user to launch the Web UI and permissions to operate the service.  |
+| `{{site.data.keyword.sysdigsecure_full_notm}}` | Service role: Writer      | Allows the user to launch the web UI and permissions to operate the service.  |
 {: caption="Table 1. IAM policies" caption-side="top"}
 
 For more information about configuring these policies for a user, see [Granting permissions to launch the monitoring UI or to make REST API calls](/docs/workload-protection?topic=workload-protection-iam).
@@ -38,7 +39,7 @@ For more information about configuring these policies for a user, see [Granting 
 ## Launch the Secure web UI through the {{site.data.keyword.cloud_notm}} UI
 {: #launch_step2}
 
-You launch the Web UI within the context of an {{site.data.keyword.sysdigsecure_full_notm}} instance, from the {{site.data.keyword.cloud_notm}} UI.
+You launch the web UI within the context of an {{site.data.keyword.sysdigsecure_full_notm}} instance, from the {{site.data.keyword.cloud_notm}} UI.
 
 Complete the following steps to launch the web UI:
 
