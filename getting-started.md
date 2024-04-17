@@ -88,13 +88,13 @@ To provision an instance through the CLI, see [Provisioning a Monitoring instanc
 ## Step 3. Connect a data source by configuring an agent
 {: #getting-started-secure-step3}
 
-After you provision an instance of the {{site.data.keyword.sysdigsecure_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you can deploy the agent on your cluster. The agent collects data that you can use for intrusion detection, posture management, vulnerability scanning, and incident response capabilites.
+After you provision an instance of the {{site.data.keyword.sysdigsecure_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you can deploy the agent on your cluster. The agent collects data that you can use for intrusion detection, posture management, vulnerability scanning, and incident response capabilities.
 
 ![Agents that can be configured to provide data to {{site.data.keyword.sysdigsecure_full_notm}}](images/Agent-Collection.svg "Agents that can be configured to provide data to {{site.data.keyword.sysdigsecure_full_notm}}"){: caption="Figure 1. Agents that can be configured to provide data to {{site.data.keyword.sysdigsecure_full_notm}}" caption-side="bottom"}
 
 Choose 1 of the following options:
 1. [Configure an agent for Kubernetes](/docs/workload-protection?topic=workload-protection-agent-deploy-kube-helm).
-2. [Configire an agent for {{site.data.keyword.redhat_openshift_notm}}](/docs/workload-protection?topic=workload-protection-agent-deploy-openshift-helm).
+2. [Configure an agent for {{site.data.keyword.redhat_openshift_notm}}](/docs/workload-protection?topic=workload-protection-agent-deploy-openshift-helm).
 
 
 ## Step 4. Launch the web UI
@@ -129,7 +129,7 @@ Complete the following steps to launch the monitoring UI:
 
 See the following table for tasks that you can run to secure your environment:
 
-| Action                              | Descripion                  |
+| Action                              | Description                  |
 |-------------------------------------|------------------------------|
 | [Integrate scanning into your CI/CD Pipeline](https://docs.sysdig.com/en/docs/sysdig-secure/vulnerabilities/pipeline/){: external} | You can integrate scanning into your CI/CD Pipeline to analyze images that are available on the CI/CD worker nodes. |
 | [Configure a notification channel](/docs/workload-protection?topic=workload-protection-notifications#notifications_create) | You can configure a notification channel to get notified about events, anomalies, or security incidents that require attention. |
