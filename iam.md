@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-04-14"
+  years:  2023, 2024
+lastupdated: "2024-04-18"
 
 keywords:
 
@@ -11,7 +11,6 @@ subcollection: workload-protection
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Controlling access through IAM
 {: #iam}
@@ -22,7 +21,7 @@ subcollection: workload-protection
 **Users in an account must be assigned a platform role to manage instances and to launch the UI from the {{site.data.keyword.cloud_notm}}. In addition, users must have a service role that defines the permissions to work with {{site.data.keyword.sysdigsecure_full_notm}}.**
 {: important}
 
-The policy determines the actions the user can perform within the context of the selected service or instance. The actions are customized and defined with operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles.
+The policy determines the actions that the user can perform within the context of the selected service or instance. The actions are customized and defined with operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles.
 
 *Policies* enable access to be granted at different levels. Some of the options include the following:
 
@@ -35,8 +34,8 @@ The policy determines the actions the user can perform within the context of the
 
 *Roles* define the actions that a user or serviceID can run. There are different types of roles in the {{site.data.keyword.cloud_notm}}:
 
-* *Platform management roles* enables users to perform tasks on service resources at the platform level, for example assigning user access for the service, creating or deleting service IDs, creating instances, assigning policies for your service to other users, and binding instances to applications.
-* *Service access roles* enables users to be assigned varying levels of permission when calling the service's API or running actions in the monitoring UI.
+* *Platform management roles* enable users to perform tasks on service resources at the platform level, for example assigning user access for the service, creating or deleting service IDs, creating instances, assigning policies for your service to other users, and binding instances to applications.
+* *Service access roles* enable users to be assigned varying levels of permission when calling the service's API or running actions in the monitoring UI.
 
 To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use **access groups**. You can assign a single policy to the group instead of assigning the same access multiple times for each individual user or service ID.
 {: tip}
@@ -45,14 +44,13 @@ To organize a set of users and service IDs into a single entity that makes it ea
 ## Managing access by using access groups
 {: #iam_groups}
 
-To manage access groups, you must be the account owner, administrator or editor on all Identity and Access-enabled services in the account, or the assigned administrator or editor for the IAM Access Groups Service.
+To manage access groups, you must be the account owner, administrator, or editor on all Identity and Access-enabled services in the account, or the assigned administrator or editor for the IAM Access Groups Service.
 {: note}
 
 Use the following actions to manage IAM access groups in the {{site.data.keyword.cloud_notm}}:
 
-* [Creating an access group](/docs/account?topic=account-groups#create_ag).
-* [Assigning access to a group](/docs/account?topic=account-groups#access_ag).
-
+* [Creating an access group](/docs/account?topic=account-groups&interface=ui#create_ag).
+* [Assigning access to a group](/docs/account?topic=account-groups&interface=ui#access_ag).
 
 ## Managing access by assigning policies directly to users
 {: #iam_users}
@@ -61,17 +59,16 @@ To manage access or assign new access to users by using IAM policies, you must b
 
 Use the following actions to manage IAM policies in the {{site.data.keyword.cloud_notm}}:
 
-* To grant permissions to a user, see [Assigning access](/docs/account?topic=account-assign-access-resources#assign_new_access).
-* To revoke permissions, see [Removing access](/docs/account?topic=account-assign-access-resources#removing_access).
-* To review a user's permissions, see [Reviewing your assigned access](/docs/account?topic=account-assign-access-resources#review_your_access).
-
+* To grant permissions to a user, see [Assigning access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).
+* To revoke permissions, see [Removing access](/docs/account?topic=account-assign-access-resources&interface=ui#removing-access-console).
+* To review a user's permissions, see [Reviewing assigned access](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
 
 ## {{site.data.keyword.cloud_notm}} platform roles
 {: #iam_platform}
 
 Users must be granted a platform role to allow them to view and manage the {{site.data.keyword.sysdigsecure_full_notm}} service in your account. You can grant permissions to work with all the instances in the {{site.data.keyword.cloud_notm}} account or you can restrict access to individual instances.
 
-The folling table identifies the platform role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run the specified platform actions:
+The following table identifies the platform role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run the specified platform actions:
 
 | Platform actions                                                        | Administrator                                     | Editor | Operator | Viewer  |
 |-------------------------------------------------------------------------|:-------------------------------------------------:|:-------:|:--------:|:------:|
@@ -86,8 +83,6 @@ The folling table identifies the platform role that you can grant a user in the 
 
 A user with an **administrator** role automatically has the service **manager** role permissions.
 {: note}
-
-
 
 ## {{site.data.keyword.cloud_notm}} service roles
 {: #iam_svcroles}
@@ -111,7 +106,6 @@ The following table identifies the service role that you can grant a user in the
 | `View events`                                   | ![Checkmark icon](/images/checkmark-icon.svg)      | ![Checkmark icon](/images/checkmark-icon.svg)                    | ![Checkmark icon](/images/checkmark-icon.svg)    |
 {: caption="Table 2. Service roles and actions" caption-side="top"}
 
-
 ## IAM actions
 {: #iam_actions}
 
@@ -124,8 +118,6 @@ The following table identifies the IAM actions that are assigned to the platform
 | Service           | `writer`          | `sysdig-secure.launch.user` </br>`sysdig-secure.launch.viewer` |
 | Service           | `reader`          | `sysdig-secure.launch.viewer` |
 {: caption="Table 3. IAM actions assigned to platform and service roles" caption-side="top"}
-
-
 
 ## How do I know which access policies are set for me?
 {: #iam_accesspolicy}

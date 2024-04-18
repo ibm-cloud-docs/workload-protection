@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-05-03"
+  years:  2023, 2024
+lastupdated: "2024-04-18"
 
 keywords:
 
@@ -11,7 +11,6 @@ subcollection: workload-protection
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Regions
 {: #regions}
@@ -27,7 +26,6 @@ This image is an artistic representation and does not reflect actual political o
 {: note}
 
 You can create {{site.data.keyword.sysdigsecure_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} locations, which represent the geographic area where your {{site.data.keyword.sysdigsecure_full_notm}} requests are handled and processed.
-
 
 The following table lists the locations where the service is available:
 
@@ -46,7 +44,7 @@ The following table lists the locations where the service is available:
 
 Where
 * A *geography* is a geographic area or larger political body that contains one or more regions.
-* A *region* is a defined geographic territory. A region could be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
+* A *region* is a defined geographic territory. A region might be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
 * `N/A` means feature that is not applicable to that geography.
 
-`(*)` For more information, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
+`(*)` For more information, see [Enabling EU support for your account](/docs/account?topic=account-eu-supported).

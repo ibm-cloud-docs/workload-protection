@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-09-27"
-
+  years:  2023, 2024
+lastupdated: "2024-04-18"
 
 keywords:
 
@@ -13,15 +12,11 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Managing the {{site.data.keyword.sysdigsecure_short}} agent in {{site.data.keyword.redhat_openshift_notm}} by using a HELM chart
 {: #agent-deploy-openshift-helm}
 
-
 You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.sysdigsecure_short}} agent on a {{site.data.keyword.redhat_openshift_notm}} cluster.
 {: shortdesc}
-
-
 
 ## Before you begin
 {: #agent-deploy-openshift-helm-prereqs}
@@ -31,9 +26,9 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
    Helm 3.6 or later is required.
    {: note}
 
-- [Install the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`), {{site.data.keyword.containershort_notm}} plug-in (`ibmcloud oc`), and {{site.data.keyword.registrylong_notm}} plug-in (`ibmcloud cr`)](/docs/openshift?topic=openshift-openshift-cli#cs_cli_install_steps).
+- [Install the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`), {{site.data.keyword.containershort_notm}} plug-in (`ibmcloud oc`), and {{site.data.keyword.registrylong_notm}} plug-in (`ibmcloud cr`)](/docs/openshift?topic=openshift-cli-install).
 
-- [Install the {{site.data.keyword.redhat_openshift_notm}} (`oc`) and Kubernetes (`kubectl`) CLIs](/docs/openshift?topic=openshift-openshift-cli#cli_oc).
+- [Install the {{site.data.keyword.redhat_openshift_notm}} (`oc`) and Kubernetes (`kubectl`) CLIs](/docs/openshift?topic=openshift-cli-install#install-kubectl-cli).
 
 - Check that you have access and permissions to deploy the {{site.data.keyword.sysdigsecure_short}} agent on the cluster.
 
@@ -49,8 +44,7 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
 
 Complete the following steps to deploy an agent by using Helm:
 
-
-### Step 1. Setup the cluster context
+### Step 1. Set up the cluster context
 {: #agent-deploy-openshift-helm-install-step1}
 
 Complete the following steps:
@@ -71,7 +65,7 @@ Complete the following steps:
 
 3. In your browser, navigate to the address of your **Master URL** and append `/console`. For example, `https://c0.containers.cloud.ibm.com:23652/console`.
 
-4. From the {{site.data.keyword.redhat_openshift_notm}} web console menu bar, click your profile **IAM#user.name@email.com > Copy Login Command**. Display and copy the `oc login` token command into your command line to authenticate via the CLI.
+4. From the {{site.data.keyword.redhat_openshift_notm}} web console menu bar, click your profile **IAM#user.name@email.com > Copy Login Command**. Display and copy the `oc login` token command into your command line to authenticate from the CLI.
 
 5. Verify that the `oc` commands run properly with your cluster by checking the version.
 
@@ -292,6 +286,5 @@ Complete the following steps:
 
     In terms of Helm, `sysdig-agent` is the name of the release.
     {: tip}
-
 
     If you forget to include the namespace in the command, you get the following error: `Error: uninstall: Release not loaded: sysdig-agent: release: not found`.

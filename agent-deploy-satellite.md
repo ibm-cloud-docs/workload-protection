@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-02-08"
+lastupdated: "2024-04-18"
 
 keywords: workload protection, satellite, sysdig secure, manage
 
@@ -15,23 +15,22 @@ subcollection: workload-protection
 # Managing the {{site.data.keyword.sysdigsecure_short}} agent in a Satellite cluster by using a HELM chart
 {: #agent-deploy-satellite}
 
-
 You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.sysdigsecure_short}} components on your Satellite clusters.
 {: shortdesc}
 
 ## Before you begin
 {: #agent-deploy-satellite-prereqs}
 
-- [Install the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`), {{site.data.keyword.containershort_notm}} plug-in (`ibmcloud oc`), and {{site.data.keyword.registrylong_notm}} plug-in (`ibmcloud cr`)](/docs/openshift?topic=openshift-openshift-cli#cs_cli_install_steps)
+- [Install the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`), {{site.data.keyword.containershort_notm}} plug-in (`ibmcloud oc`), and {{site.data.keyword.registrylong_notm}} plug-in (`ibmcloud cr`)](/docs/openshift?topic=openshift-cli-install).
 
 - Install the latest release of the version 3 [Helm CLI](https://github.com/helm/helm/releases){: external} on your local machine.
 
    Helm 3.6 or later is required.
    {: note}
 
-   [Helm](https://helm.sh){: external} is a Kubernetes package manager that uses Helm charts to define, install, and upgrade complex Kubernetes apps in your cluster. Helm charts package the specifications to generate YAML files for Kubernetes resources that build your app. These Kubernetes resources are automatically applied in your cluster and assigned a version by Helm. You can also use Helm to specify and package your own app and let Helm generate the YAML files for your Kubernetes resources.
+   [Helm](https://helm.sh){: external} is a Kubernetes package manager that uses Helm charts to define, install, and upgrade complex Kubernetes apps in your cluster. Helm charts package the specifications to generate YAML files for Kubernetes resources that build your app. These Kubernetes resources are automatically applied in your cluster and assigned to a version by Helm. You can also use Helm to specify and package your own app and let Helm generate the YAML files for your Kubernetes resources.
 
-- [Install the Red Hat OpenShift (oc) and Kubernetes (kubectl) CLIs](/docs/openshift?topic=openshift-openshift-cli#cli_oc).
+- [Install the Red Hat OpenShift (oc) and Kubernetes (kubectl) CLIs](/docs/openshift?topic=openshift-cli-install#install-kubectl-cli).
 
 - Check that you have access and permissions to deploy the {{site.data.keyword.sysdigsecure_short}} agent on the cluster.
 
@@ -40,14 +39,14 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
     You can run the following command to create the namespace: `oc adm new-project --node-selector='' ibm-observe`
     {: tip}
 
-- Get your {{site.data.keyword.sysdigsecure_short}} `ingest` endpoint. This endpoint is different than the one being created in the next step. Access your Satellite location, then select **Link endpoints** and **System endpoints**. Copy the `system` endpoint starting with **satellite-sysdig-** that is pointing to `ingest.private.<region>.monitoring.cloud.ibm.com`. You use this endpoint later as `INGESTION_SATELLITE_ENDPOINT`.
+- Get your {{site.data.keyword.sysdigsecure_short}} `ingest` endpoint. This endpoint is different than the one being created in the next step. Access your Satellite location, then select **Link endpoints** and **System endpoints**. Copy the `system` endpoint starting with **satellite-sysdig-** that is pointing to `ingest.private.<region>.monitoring.cloud.ibm.com`. You can use this endpoint later as `INGESTION_SATELLITE_ENDPOINT`.
 
 Before deploying the {{site.data.keyword.sysdigsecure_short}} components, create a [Satellite link endpoint](#agent-deploy-satellite-link-create) for the {{site.data.keyword.sysdigsecure_short}} private API endpoint. 
 
 ## Create {{site.data.keyword.sysdigsecure_short}} Satellite link endpoint
 {: #agent-deploy-satellite-link-create}
 
-Create an HTTPS [Satellite Link via the console or CLI](/docs/satellite?topic=satellite-link-cloud-create) in order to connect securely to {{site.data.keyword.sysdigsecure_short}} private endpoints.
+Create an HTTPS [Satellite Link by using the console or CLI](/docs/satellite?topic=satellite-link-cloud-create) in order to connect securely to {{site.data.keyword.sysdigsecure_short}} private endpoints.
 
 1. Get your {{site.data.keyword.sysdigsecure_short}} [private endpoint](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_monitoring). For example, if your {{site.data.keyword.sysdigsecure_short}} instance is in `us-east` your endpoint would be `private.us-east.security-compliance-secure.cloud.ibm.com`.
 
@@ -55,22 +54,22 @@ Create an HTTPS [Satellite Link via the console or CLI](/docs/satellite?topic=sa
 
 3. Select **Cloud** to create an endpoint for a service, server, or app that runs outside of the location.
 
-4. Enter an endpoint name, the destination domain name (FQDN) that should be the {{site.data.keyword.sysdigsecure_short}} private endpoint defined in step 1 and destination port 443.
+4. Enter an endpoint name, the destination domain name (FQDN) that should be the {{site.data.keyword.sysdigsecure_short}} private endpoint that is defined in step 1 and destination port 443.
 
-5. Select HTTPS protocol.
+5. Select the HTTPS protocol.
 
 6. Click Create. Wait a few minutes for the **Satellite Link** connector component to assign a port to your endpoint.
 
-7. In the table row for your endpoint, copy the host name for your **Satellite Link** connector and the port for your endpoint in the **Address** field. You will need to use it in the following steps.
+7. In the table row for your endpoint, copy the hostname for your **Satellite Link** connector and the port for your endpoint in the **Address** field. You need to use it in the following steps.
 
-You will use this endpoint in following steps as `API_ENDPOINT`.
+You use this endpoint in the following steps as `API_ENDPOINT`.
 
 ## Deploy an agent
 {: #agent-deploy-satellite-helm-deploy}
 
 Complete the following steps to deploy an agent by using Helm:
 
-### Step 1. Setup the cluster context
+### Step 1. Set up the cluster context
 {: #agent-deploy-satellite-helm-install-step1}
 
 1. Log in to the account. If you have a federated account, include the `--sso` option.
@@ -106,7 +105,7 @@ Complete the following steps to deploy an agent by using Helm:
     ```
     {: screen}
 
-### Step 2. Setup the Sysdig Helm repository
+### Step 2. Set up the Sysdig Helm repository
 {: #agent-deploy-satellite-helm-install-step2}
 
 Add the {{site.data.keyword.sysdigsecure_short}} Helm repository to your Helm instance.
@@ -157,7 +156,7 @@ Complete the following steps:
     ```
     {: pre}
 
-5. Verify the Helm chart `sysdig/sysdig-deploy` is listed.
+5. Verify that the Helm chart `sysdig/sysdig-deploy` is listed.
 
 ### Step 3. Create the Helm values file
 {: #agent-deploy-satellite-helm-install-step3}
@@ -211,7 +210,7 @@ Where:
 - `SERVICE_ACCESS_KEY` is the {{site.data.keyword.sysdigsecure_short}} instance access key.
 - `INGESTION_SATELLITE_ENDPOINT` is the [Satellite endpoint extracted previously](#agent-deploy-satellite-link-create) that points to Ingest endpoint. For example, `c1bcda0323e0ef4b83aba-6b64a6ccc9c596bf59a86625d8fa2202-c111.us-east.satellite.appdomain.cloud`.
 - `INGESTION_SATELLITE_ENDPOINT_PORT` is the port from the [Satellite endpoint extracted previously](#agent-deploy-satellite-link-create) that points to `ingest` endpoint. For example, `30771`.
-- `API_ENDPOINT` is the [Satellite endpoint extracted previously](#agent-deploy-satellite-link-create) extracted previously that points to {{site.data.keyword.sysdigsecure_short}} private API endpoint. For example, `c1bcda0323e0ef4b83aba-6b64a6ccc9c596bf59a86625d8fa2202-c111.us-east.satellite.appdomain.cloud:31924`. In this case, both hostname and port are defined together.
+- `API_ENDPOINT` is the [Satellite endpoint extracted previously](#agent-deploy-satellite-link-create) that points to {{site.data.keyword.sysdigsecure_short}} private API endpoint. For example, `c1bcda0323e0ef4b83aba-6b64a6ccc9c596bf59a86625d8fa2202-c111.us-east.satellite.appdomain.cloud:31924`. In this case, both hostname and port are defined together.
 
 
 ### Step 4. Install the Helm chart
@@ -260,6 +259,7 @@ Where:
 
 ## Update an agent
 {: #agent-deploy-satellite-kube-helm-update}
+
 We recommend updating the {{site.data.keyword.sysdigsecure_short}} at least once every 2 months.
 
 To update the agent version by using Helm, complete the following steps:
