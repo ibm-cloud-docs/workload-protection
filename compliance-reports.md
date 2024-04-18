@@ -32,11 +32,11 @@ To download a report for a specific zone or policy, do the following:
 
 2. Hover over the Posture icon ![Posture icon](/images/posture.png "Posture") and click  **Compliance**.
 
-The compliance posture for each of your [zones](/docs/workload-protection?topic=workload-protection-zones) is displayed.
+The compliance posture for each of your [zones](/docs/workload-protection?topic=workload-protection-posture-zones) is displayed.
 
 3. Click the zone or policy for the report. The **Results** page will open.
 
-4. If desired, [filter the displayed results.](/docs/workload-protection?topic=workload-protection-details-filter)
+4. If desired, [filter the displayed results.](/docs/workload-protection?topic=workload-protection-compliance-understanding#details-filter)
 
 5. Click **Download Report**. The report will be downloaded to your local system.
 
@@ -49,11 +49,11 @@ To download a report for a specific control, do the following:
 
 2. Hover over the Posture icon ![Posture icon](/images/posture.png "Posture") and click  **Compliance**.
 
-The compliance posture for each of your [zones](/docs/workload-protection?topic=workload-protection-zones) is displayed.
+The compliance posture for each of your [zones](/docs/workload-protection?topic=workload-protection-posture-zones) is displayed.
 
 3. Click the zone or policy for the report. The **Results** page will open.
 
-4. If desired, [filter the displayed results.](/docs/workload-protection?topic=workload-protection-details-filter)
+4. If desired, [filter the displayed results.](/docs/workload-protection?topic=workload-protection-compliance-understanding#details-filter)
 
 5. Click the desired requirement or control and click the sub-requirement or control for the report.
 
