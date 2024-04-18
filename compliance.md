@@ -27,7 +27,7 @@ Compliance lets you manage your risks by:
 * Accepting the risk.
 * Opening Pull requests in your code repository, if integration is enabled.
 
-The resources in your [zones](/docs/workload-protection?topic=workload-protection-zones) are evaluated against compliance policies and any violations are collected as tiles on the **Compliance** page in the {{site.data.keyword.sysdigsecure_full}} UI.  This evaluation is done once daily.
+The resources in your [zones](/docs/workload-protection?topic=workload-protection-posture-zones) are evaluated against compliance policies and any violations are collected as tiles on the **Compliance** page in the {{site.data.keyword.sysdigsecure_full}} UI.  This evaluation is done once daily.
 
 You can use {{site.data.keyword.sysdigsecure_full_notm}} policies or create custom policies.
 
@@ -40,7 +40,7 @@ You can use the {{site.data.keyword.sysdigsecure_full_notm}} **Posture** > **Com
 
 The basic steps you will follow are:
 
-1. Use the [compliance page](/docs/workload-protection?topic=workload-protection-compliance-understanding) to see high-level posture performance indicators (PPIs) for each policy applied to your [zones.](/docs/workload-protection?topic=workload-protection-zones)
+1. Use the [compliance page](/docs/workload-protection?topic=workload-protection-compliance-understanding) to see high-level posture performance indicators (PPIs) for each policy applied to your [zones.](/docs/workload-protection?topic=workload-protection-posture-zones)
 
 2. Select a policy in the view to see its results.
 

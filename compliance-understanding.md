@@ -13,7 +13,7 @@ subcollection: workload-protection
 {{site.data.keyword.attribute-definition-list}}
 
 # Understanding your compliance posture
-{: #compliance-understading}
+{: #compliance-understanding}
 
 You can use the {{site.data.keyword.sysdigsecure_full}} UI to understand your environment's compliance posture.
 {: shortdesc}
@@ -27,11 +27,11 @@ To access the **Compliance** overview view, do the following:
 
 2. Hover over the Posture icon ![Posture icon](/images/posture.png "Posture") and click  **Compliance**.
 
-The compliance posture for each of your [zones](/docs/workload-protection?topic=workload-protection-zones) is displayed.
+The compliance posture for each of your [zones](/docs/workload-protection?topic=workload-protection-posture-zones) is displayed.
 
 ![Example compliance overview.](images/compliance_view.png "Example of a compliance view showing the compliance posture for various zones"){: caption="Figure 1. Example compliance view" caption-side="bottom"}
 
-Zones are listed alphabetically. The default _Entire Infrastructure_ zone is [automatically created by {{site.data.keyword.sysdigsecure_full_notm}}](/docs/workload-protection?topic=workload-protection-cspm-zones). You can define your own zones using the [Zones page.](/docs/workload-protection?topic=workload-protection-zones)
+Zones are listed alphabetically. The default _Entire Infrastructure_ zone is [automatically created by {{site.data.keyword.sysdigsecure_full_notm}}](/docs/workload-protection?topic=workload-protection-about#about-cspm). You can define your own zones using the [Zones page.](/docs/workload-protection?topic=workload-protection-posture-zones)
 
 Compliance posture information displayed includes:
 
