@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-05-14"
+  years:  2023, 2024
+lastupdated: "2024-04-18"
 
 keywords:
 
@@ -43,7 +43,7 @@ If remediation is possible using a patch, and Git integration is implemented, th
 ## Reviewing issues
 {: #review-issues}
 
-When you click a zone or policy on the [Compliance page](/docs/workload-protection?topic=workload-protection-compliance-understading) more information on the violations are displayed. By clicking a violation on the [control plane](/docs/workload-protection?topic=workload-protection-compliance-understanding#compliance-cp) the issues comprising the violation are displayed. By clicking an issue the resources that are passing, failing, or have temporary accepted exceptions are displayed.
+When you click a zone or policy on the [Compliance page](/docs/workload-protection?topic=workload-protection-compliance-understanding), more information about the violations is displayed. When you click a violation on the [control plane](/docs/workload-protection?topic=workload-protection-compliance-understanding#compliance-cp), the issues that comprise the violation are displayed. When you click an issue, the resources that are passing, failing, or have temporary accepted exceptions are displayed.
 
 By clicking an issue the available remediation options are displayed.
 

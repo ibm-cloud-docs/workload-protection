@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-04-14"
+  years:  2023, 2024
+lastupdated: "2024-04-18"
 
 
 keywords: IBM Cloud, launch web UI
@@ -33,8 +33,7 @@ The following table lists the minimum policies that a user must have to be able 
 | `{{site.data.keyword.sysdigsecure_full_notm}}` | Service role: Writer      | Allows the user to launch the Web UI and permissions to operate the service.  |
 {: caption="Table 1. IAM policies" caption-side="top"}
 
-For more information on how to configure these policies for a user, see [Granting permissions to launch the monitoring UI or to make REST API calls](/docs/workload-protection?topic=workload-protection-iam).
-
+For more information about configuring these policies for a user, see [Granting permissions to launch the monitoring UI or to make REST API calls](/docs/workload-protection?topic=workload-protection-iam).
 
 ## Launch the Secure web UI through the {{site.data.keyword.cloud_notm}} UI
 {: #launch_step2}

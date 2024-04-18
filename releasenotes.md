@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-01-16"
+lastupdated: "2024-04-18"
 
 keywords:  release notes, IBM Cloud, workload protection
 

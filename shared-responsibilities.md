@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-04-14"
+  years:  2023, 2024
+lastupdated: "2024-04-18"
 
 keywords: IBM Cloud, customer responsibilities, IBM responsibilities, terms and conditions
 
@@ -19,7 +19,6 @@ Learn about the management responsibilities and terms and conditions that you ha
 {: shortdesc}
 
 Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.sysdigsecure_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
-
 
 ## Incident and operations management
 {: #incident-and-ops}
@@ -52,7 +51,6 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | `Track versions of custom rules, policies, notifications, and teams`    |   | Use your own change management process to control versions of monitoring resources such as rules, policies, teams, and notifications. |
 {: caption="Table 2. Responsibilities for change management" caption-side="top"}
 
-
 ## Identity and access management
 {: #iam-responsibilities}
 
@@ -68,7 +66,6 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 
 [Learn more about controlling access through IAM](/docs/workload-protection?topic=workload-protection-iam). [Learn more about controlling access using {{site.data.keyword.sysdigsecure_short}} teams](/docs/workload-protection?topic=workload-protection-iam).
 
-
 ## Security and regulation compliance
 {: #security-compliance}
 
@@ -79,8 +76,6 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 |--------------------------------------------|-------------------------------------------------|-----------------------|
 | `Meet security and compliance objectives`  | Maintain controls that are commensurate to supported industry compliance standards, such as SOC. | Ensure that regulated data is not provided to the {{site.data.keyword.sysdigsecure_full_notm}} service. |
 {: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
-
-
 
 ## Disaster recovery
 {: #disaster-recovery}

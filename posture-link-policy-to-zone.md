@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-05-16"
+  years:  2023, 2024
+lastupdated: "2024-04-18"
 
 keywords:
 
@@ -18,7 +18,6 @@ subcollection: workload-protection
 You can use the {{site.data.keyword.sysdigsecure_full}} Posture Policies to manage policies in your environment.
 {: shortdesc}
 
-
 A new policy is not associated with a zone when the policy is created.
 
 Policies without a linked zone have a "Missing Zone" indicator.
@@ -32,4 +31,4 @@ To apply a policy to a zone, complete the following steps:
 
    * If the zone exists, add the policy by using the [Zones configuration page.](/docs/workload-protection?topic=workload-protection-zone-policy)
 
-   * If the zone does not exist, [create and configure the zone,](/docs/workload-protection?topic=workload-protection-posture-zones) and then add the policy by using the [Zones configuration page.](/docs/workload-protection?topic=workload-protection-zone-policy)
+   * If the zone does not exist, [create and configure the zone,](/docs/workload-protection?topic=workload-protection-posture-zones) and then add the policy by using the [Zones configuration page](/docs/workload-protection?topic=workload-protection-zone-policy).
