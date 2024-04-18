@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-09-26"
+  years:  2024
+lastupdated: "2024-04-18"
 
 keywords:
 
@@ -40,7 +40,7 @@ You can use the {{site.data.keyword.sysdigsecure_full_notm}} **Posture** > **Com
 
 The basic steps you will follow are:
 
-1. Use the [compliance page](/docs/workload-protection?topic=workload-protection-compliance-understanding) to see high-level posture performance indicators (PPIs) for each policy applied to your [zones.](/docs/workload-protection?topic=workload-protection-posture-zones)
+1. Use the [compliance page](/docs/workload-protection?topic=workload-protection-compliance-understanding) to see high-level posture performance indicators (PPIs) for each policy applied to your [zones](/docs/workload-protection?topic=workload-protection-posture-zones).
 
 2. Select a policy in the view to see its results.
 
