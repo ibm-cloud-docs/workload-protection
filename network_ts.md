@@ -49,7 +49,7 @@ To categorize unresolved IP addresses as being inside of outside a cluster, the 
 
 If the cluster subnets cannot be discovered automatically, a message that the cluster subnet is incomplete is displayed in the [network security policy tool.](/docs/workload-protection?topic=workload-protection-netsec_policy)
 
-To resolve this issue, [configure CIDR block entries for your environment.](#nw_cidr)
+To resolve this issue, [configure CIDR block entries for your environment.](/docs/workload-protection?topic=workload-protection-network_config_ts#nw_cidr)
 
 If configuring CIDR block entries for your environment doesn't resolve the issue, you might need to configure the agent to look for CIDR block ranges in other processes. Add the following to your agent `configmap` file:
 

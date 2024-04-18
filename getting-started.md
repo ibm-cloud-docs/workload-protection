@@ -39,7 +39,7 @@ Before you can provision an instance, you need to understand:
 * You must have permissions to create resources in the *Default* resource group.
 * Other {{site.data.keyword.cloud_notm}} users with `administrator` or `editor` permissions can manage the {{site.data.keyword.sysdigsecure_full_notm}} service in the {{site.data.keyword.cloud_notm}}. These users must also have platform permissions to create resources within the context of the resource group where they plan to provision the instance.
 
-To grant a user the administrator role for the service and to manage instances within a resource group in the account, the user must have an IAM policy for the {{site.data.keyword.sysdigsecure_full_notm}} service. For more information, see [Granting permissions to work with the {{site.data.keyword.sysdigsecure_full_notm}} service](/docs/workload-protection?topic=workload-protection-iam_grant).
+To grant a user the administrator role for the service and to manage instances within a resource group in the account, the user must have an IAM policy for the {{site.data.keyword.sysdigsecure_full_notm}} service. For more information, see [Granting permissions to work with the {{site.data.keyword.sysdigsecure_full_notm}} service](/docs/workload-protection?topic=workload-protection-iam).
 
 By default, users are automatically added as members of the **Secure Operations** team that is predefined for each {{site.data.keyword.sysdigsecure_full_notm}} instance. Users have full permissions to see all the data in the web UI.
 

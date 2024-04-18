@@ -32,4 +32,4 @@ To apply a policy to a zone, complete the following steps:
 
    * If the zone exists, add the policy by using the [Zones configuration page.](/docs/workload-protection?topic=workload-protection-zone-policy)
 
-   * If the zone does not exist, [create and configure the zone,](/docs/workload-protection?topic=workload-protection-create-zone) and then add the policy by using the [Zones configuration page.](/docs/workload-protection?topic=workload-protection-zone-policy)
+   * If the zone does not exist, [create and configure the zone,](/docs/workload-protection?topic=workload-protection-posture-zones) and then add the policy by using the [Zones configuration page.](/docs/workload-protection?topic=workload-protection-zone-policy)
