@@ -18,7 +18,7 @@ subcollection: workload-protection
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.sysdigsecure_full_notm}}. For a high-level view of the service types in {{site.data.keyword.cloud_notm}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
 {: shortdesc}
 
-Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.sysdigsecure_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
+Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.sysdigsecure_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
 
 
 ## Incident and operations management
@@ -29,8 +29,8 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for the set up and
 
 | Task              | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-------------------|-------------------------------------------------|-----------------------|
-| `Monitor incidents`  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [receive emails about platform notifications](/docs/overview?topic=overview-ui#email-prefsl). </br>Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
-| `Maintain {{site.data.keyword.cloud_notm}} high availability SLA`  | Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview/terms-of-use?topic=overview-slas). |   |
+| `Monitor incidents`  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [receive emails about platform notifications](/docs/overview?topic=overview-ui). </br>Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
+| `Maintain {{site.data.keyword.cloud_notm}} high availability SLA`  | Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview?topic=overview-slas). |   |
 | `Provide high availability capabilities` | Provide capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions (MZR), to meet local access and low latency requirements for each supported region.  | Use the list of [available regions](/docs/workload-protection?topic=workload-protection-endpoints) to plan for and create new instances of the service. |
 | `Monitor agents`   | Provide images and instructions for how to install agents in environments that you want to monitor, such as Kubernetes and Openshift. | Install and configure agents. </br>Monitor that the agents are running in your environment. |
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
@@ -66,7 +66,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | `Control data access` | Allow administrators to control access to data and metadata through {{site.data.keyword.sysdigsecure_short}} teams. | Grant, revoke, and manage access to data by using IAM and team definitions. |
 {: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
 
-[Learn more about controlling access through IAM](/docs/workload-protection?topic=workload-protection-iam). [Learn more about controlling access using {{site.data.keyword.sysdigsecure_short}} teams](/docs/workload-protection?topic=workload-protection-iam_grant_team).
+[Learn more about controlling access through IAM](/docs/workload-protection?topic=workload-protection-iam). [Learn more about controlling access using {{site.data.keyword.sysdigsecure_short}} teams](/docs/workload-protection?topic=workload-protection-iam).
 
 
 ## Security and regulation compliance

@@ -43,7 +43,7 @@ If you don't find an existing answer to a question, ask a new one.
 You can access Stack Overflow and IBM Developer Answers from the Support Center, or use the following links:
 
 * Go to [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to ask technical questions about the {{site.data.keyword.sysdigsecure_full_notm}} service.
-* Go to [IBM Developer Answers](https://developer.ibm.com/answers/topics/ibm-cloud/){: external} to ask general questions about the {{site.data.keyword.sysdigsecure_full_notm}} service and about getting started instructions.
+* Go to [IBM Developer Answers](https://developer.ibm.com/){: external} to ask general questions about the {{site.data.keyword.sysdigsecure_full_notm}} service and about getting started instructions.
 
 Tag your questions with **ibm-cloud** and **workload-protection**.
 {: important}

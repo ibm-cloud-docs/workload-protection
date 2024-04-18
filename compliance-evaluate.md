@@ -43,7 +43,7 @@ If remediation is possible using a patch, and Git integration is implemented, th
 ## Reviewing issues
 {: #review-issues}
 
-When you click a zone or policy on the [Compliance page](/docs/workload-protection?topic=workload-protection-compliance-understading) more information on the violations are displayed. By clicking a violation on the [control pane](/docs/workload-protection?topic=workload-protection-compliance-cp) the issues comprising the violation are displayed. By clicking an issue the resources that are passing, failing, or have temporary accepted exceptions are displayed.
+When you click a zone or policy on the [Compliance page](/docs/workload-protection?topic=workload-protection-compliance-understading) more information on the violations are displayed. By clicking a violation on the [control plane](/docs/workload-protection?topic=workload-protection-compliance-understanding#compliance-cp) the issues comprising the violation are displayed. By clicking an issue the resources that are passing, failing, or have temporary accepted exceptions are displayed.
 
 By clicking an issue the available remediation options are displayed.
 
