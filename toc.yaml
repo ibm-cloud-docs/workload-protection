@@ -58,7 +58,7 @@ toc:
           - topic: agent-deploy-satellite.md
             navtitle: On IBM Satellite
           - topic: powervs-linux.md
-            navtitale: On Linux hosts on PowerVS
+            navtitle: On Linux hosts on PowerVS
           - topic: manage-linux-agent.md
             navtitle: On Linux hosts
 
