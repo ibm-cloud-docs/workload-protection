@@ -2,9 +2,9 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-04-30"
 
-keywords:  release notes, IBM Cloud, workload protection
+keywords:  release notes, IBM Cloud
 
 subcollection: workload-protection
 
@@ -20,6 +20,15 @@ content-type: release-note
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
 
+## April 2024
+{: #workload-protection-feb24}
+
+### 29 April 2024
+{: #workload-protection-apr3024}
+{: release-note}
+
+{{site.data.keyword.sysdigsecure_short}} announces support for [Managing the Workload Protection agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).g
+
 ## February 2024
 {: #workload-protection-feb24}
 
@@ -29,8 +38,8 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 
 {{site.data.keyword.sysdigsecure_short}} announces the ability to [deploy and manage an agent on Satellite using a Helm chart](/docs/workload-protection?topic=workload-protection-agent-deploy-satellite).
 
-### 21 February 2024
-{: #workload-protection-feb2124}
+### 20 February 2024
+{: #workload-protection-feb2024}
 {: release-note}
 
 {{site.data.keyword.sysdigsecure_short}} announces support for [Inventory](/docs/workload-protection?topic=workload-protection-inventory), a detailed view of all your resources across your multi-cloud environments (AWS, Azure and Google Public Cloud), Kubernetes environments (such as IKS, ROKS, or any other Kubernetes platform) as well as your container images.
@@ -39,14 +48,15 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 {: #workload-protection-jan24}
 
 ### 18 January 2024
-{: #workload-protection-jan1824}
+{: #workload-protection-jan1624}
 {: release-note}
 
 Deprecation of Sysdig Secure + Monitor plan in IBM Cloud Monitoring
-:   As of 18 January 2024, the Graduated Tier - Sysdig Secure + Monitor plan in IBM Cloud Monitoring is deprecated. For current Workload Protection users, there is no change to functionality. However, if you are currently working with the Sysdig Secure through IBM Cloud Monitoring, you must move to a Workload Protection based plan by the 18 August 2024 to maintain the same functionality. For more information about the transition see [the frequently asked questions](/docs/monitoring?topic=monitoring-faq#faq_4).
+: As of 18 January 2024, the Graduated Tier - Sysdig Secure + Monitor plan in IBM Cloud Monitoring is deprecated. For current Workload Protection users, there is no change to functionality. However, if you are currently working with the Sysdig Secure through IBM Cloud Monitoring, you must move to a Workload Protection based plan by the 18 August 2024 to maintain the same functionality. For more information about the transition see [the frequently asked questions](/docs/monitoring?topic=monitoring-faq#faq_4).
 
 Deprecation of version 1 of the scanning engine
 :   As of 18 January 2024, Version 1 of the scanning engine in Workload Protection is deprecated. The functionality is replaced by a new scanning engine with better performance and more capabilities. Any new instances that are created starting today are automically configured to use the new engine. If you are currently working with an existing instance, you must migrate to the new engine by 18 January, 2025. When you migrate, you must also move from the legacy node-analyzer to the new one. In some cases, uninstalling and reinstalling by using Helm is the simplest approach. If you are working with a pipeline or registry scanning, you will need to start using the new scanning components. [Learn more about scanning engines](https://docs.sysdig.com/en/docs/sysdig-secure/scanning/new-scanning-engine/){: external}.
+
 
 ## September 2023
 {: #workload-protection-sep23}
@@ -57,7 +67,6 @@ Deprecation of version 1 of the scanning engine
 
 New vulnerability scanning engine available
 :   {{site.data.keyword.sysdigsecure_short}} announces the new vulnerability scanning engine is now available.
-
 
 ## May 2023
 {: #workload-protection-may23}

@@ -57,6 +57,8 @@ toc:
             navtitle: On an outside Kubernetes or OpenShift cluster
           - topic: agent-deploy-satellite.md
             navtitle: On IBM Satellite
+          - topic: powervs-linux.md
+            navtitale: On Linux hosts on PowerVS
           - topic: manage-linux-agent.md
             navtitle: On Linux hosts
 
