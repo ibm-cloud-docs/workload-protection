@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-02"
 
 keywords: linux, powervs, workload protection
 
