@@ -15,10 +15,10 @@ subcollection: workload-protection
 # Managing the Workload Protection agent in Linux on PowerVS
 {: #agent-deploy-linux-powervs}
 
-After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts on [PowerVS](/docs/power-iaas?topic=power-iaas-getting-started) to collect events and protect your workloads.
+After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts on [{{site.data.keyword.powerSysFull}}](/docs/power-iaas?topic=power-iaas-getting-started) to collect events and protect your workloads.
 {: shortdesc}
 
-{{site.data.keyword.sysdigsecure_short}} provides the following features to protect your standalone Linux hosts on PowerVS:
+{{site.data.keyword.sysdigsecure_short}} provides the following features to protect your standalone Linux hosts on {{site.data.keyword.powerSys_notm}}:
 
 - **Threat detection and response**: identify threats and suspicious activity based on application, network, and host activity by processing syscall events and investigate with detailed system captures.
 - **Posture management**: scan host configuration files for compliance and benchmarks such as CIS Linux Benchmark.
@@ -33,7 +33,7 @@ After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} s
 
 3. Make sure `dkms` is installed:
 
-- For RHEL or CentOS, run the following command:
+    - For RHEL or CentOS, run the following command:
 
     ```sh
     sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
@@ -50,7 +50,8 @@ After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} s
     {: pre}
 
 5. Trust the GPG key and configure the yum repository:
-- For RHEL or CentOS, run the following command:
+    
+    - For RHEL or CentOS, run the following command:
 
     ```sh
     sudo rpm --import https://download.sysdig.com/DRAIOS-GPG-KEY.public && sudo curl -s -o /etc/yum.repos.d/draios.repo https://download.sysdig.com/stable/rpm/draios.repo
@@ -58,7 +59,8 @@ After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} s
     {: pre}
 
 6. Install, configure, and restart the {{site.data.keyword.sysdigsecure_short}} agent by running the following commands:
-- For RHEL or CentOS, run the following command:
+    
+    - For RHEL or CentOS, run the following command:
     
     Install the agent package:
 
@@ -94,7 +96,7 @@ Wait a few seconds to make sure the agent is started and access to {{site.data.k
 ### Updating the agent
 {: #agent-deploy-linux-powervs-update-agent}
 
-Complete the following steps to update a {{site.data.keyword.sysdigsecure_short}} agent on Linux on PowerVS.
+Complete the following steps to update a {{site.data.keyword.sysdigsecure_short}} agent on Linux on {{site.data.keyword.powerSys_notm}}.
 
 ```sh
 sudo yum clean expire-cache
@@ -119,7 +121,7 @@ grep -i error /opt/draios/logs/draios.log
 ## Scanning vulnerabilities in Linux hosts on PowerVS
 {: #agent-deploy-linux-powervs-scanning}
 
-{{site.data.keyword.sysdigsecure_short}} provides a scanning component to identify vulnerabilities in your Linux hosts on PowerVS. It detects all installed packages and associated vulnerabilities sorted by severity and prioritizing those with a fix available.
+{{site.data.keyword.sysdigsecure_short}} provides a scanning component to identify vulnerabilities in your Linux hosts on {{site.data.keyword.powerSys_notm}}. It detects all installed packages and associated vulnerabilities sorted by severity and prioritizing those with a fix available.
 
 After installing the Host Scanner, review the detected vulnerabilities in your host accessing Vulnerabilities / Runtime and filter by `asset.type = host` in {{site.data.keyword.sysdigsecure_short}}. The first scan starts shortly after installation.
 
@@ -192,7 +194,7 @@ After a few minutes, access to {{site.data.keyword.sysdigsecure_short}} Vulnerab
 ## Running posture validation in Linux hosts on PowerVS
 {: #agent-deploy-linux-powervs-posture-validation}
 
-{{site.data.keyword.sysdigsecure_short}} allows you to evaluate your Linux hosts on PowerVS against several CIS benchmarks such as CIS Distribution Independent Linux Benchmark and compliance policies.
+{{site.data.keyword.sysdigsecure_short}} allows you to evaluate your Linux hosts on {{site.data.keyword.powerSys_notm}} against several CIS benchmarks such as CIS Distribution Independent Linux Benchmark and compliance policies.
 
 You must run the Kubernetes Security Posture Management (KSPM) analyzer as a container. Podman is an option.
 
@@ -212,4 +214,4 @@ To install the KSPM analyzer in a non-Kubernetes environment:
     ```
     {: pre}
 
-As soon as it is running, the KSPM Analyzer will evaluate Linux configuration files to identify failing controls from the enabled policies. You can see all results in **Posture/Compliance** in the **Entire Infrastructure** zone or define specific zones for your Linux hosts on PowerVS under **Policies/Zones**.
+As soon as it is running, the KSPM Analyzer will evaluate Linux configuration files to identify failing controls from the enabled policies. You can see all results in **Posture/Compliance** in the **Entire Infrastructure** zone or define specific zones for your Linux hosts on {{site.data.keyword.powerSys_notm}} under **Policies/Zones**.
