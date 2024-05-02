@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-02"
 
 keywords: linux, powervs, workload protection
 
@@ -42,7 +42,8 @@ After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} s
     {: pre}
 
 4. Install the kernel headers. When you install a {{site.data.keyword.sysdigsecure_short}} agent, the agent uses kernel header files.
-- For RHEL or CentOS, run the following command:
+    
+    - For RHEL or CentOS, run the following command:
 
     ```sh
     sudo yum -y install kernel-devel-$(uname -r)
