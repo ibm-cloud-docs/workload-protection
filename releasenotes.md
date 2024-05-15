@@ -23,7 +23,7 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 ## May 2024
 {: #workload-protection-may24}
 
-### 29 April 2024
+### 15 May 2024
 {: #workload-protection-may1524}
 {: release-note}
 
