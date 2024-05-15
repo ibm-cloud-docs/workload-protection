@@ -20,6 +20,15 @@ content-type: release-note
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
 
+## May 2024
+{: #workload-protection-may24}
+
+### 29 April 2024
+{: #workload-protection-may1524}
+{: release-note}
+
+{{site.data.keyword.sysdigsecure_short}} announces support for [Risks and attack path analysis](/docs/workload-protection?topic=workload-protection-risks).
+
 ## April 2024
 {: #workload-protection-apr24}
 
@@ -27,7 +36,7 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 {: #workload-protection-apr3024}
 {: release-note}
 
-{{site.data.keyword.sysdigsecure_short}} announces support for [Managing the Workload Protection agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).g
+{{site.data.keyword.sysdigsecure_short}} announces support for [Managing the Workload Protection agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
 
 ## February 2024
 {: #workload-protection-feb24}
