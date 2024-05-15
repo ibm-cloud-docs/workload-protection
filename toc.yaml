@@ -97,6 +97,11 @@ toc:
           - inventory.md
       
       - topicgroup:
+          label: Risks
+          topics:
+          - risks.md
+      
+      - topicgroup:
           label: Vulnerabilities
           topics:
           - pipeline.md
