@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-09-27"
+  years:  2023, 2024
+lastupdated: "2024-05-31"
 
 keywords: workload protection, deploy, linux
 
@@ -132,12 +132,14 @@ To look for errors, issue:
     {: pre}
 
     ```sh
-    echo customerid: ACCESS_KEY >> /opt/draios/etc/dragent.yaml echo tags: [TAGS] >> /opt/draios/etc/dragent.yaml
+    echo customerid: ACCESS_KEY >> /opt/draios/etc/dragent.yaml 
+    echo tags: [TAGS] >> /opt/draios/etc/dragent.yaml
     ```
     {: pre}
 
     ```sh
-    echo collector: COLLECTOR_URL >> /opt/draios/etc/dragent.yaml echo ssl: true >> /opt/draios/etc/dragent.yaml
+    echo collector: COLLECTOR_URL >> /opt/draios/etc/dragent.yaml 
+    echo ssl: true >> /opt/draios/etc/dragent.yaml
     ```
     {: pre}
 
@@ -154,12 +156,14 @@ To look for errors, issue:
     {: pre}
 
     ```sh
-    echo customerid: ACCESS_KEY >> /opt/draios/etc/dragent.yaml echo tags: [TAGS] >> /opt/draios/etc/dragent.yaml
+    echo customerid: ACCESS_KEY >> /opt/draios/etc/dragent.yaml 
+    echo tags: [TAGS] >> /opt/draios/etc/dragent.yaml
     ```
     {: pre}
 
     ```sh
-    echo collector: COLLECTOR_URL >> /opt/draios/etc/dragent.yaml echo ssl: true >> /opt/draios/etc/dragent.yaml
+    echo collector: COLLECTOR_URL >> /opt/draios/etc/dragent.yaml 
+    echo ssl: true >> /opt/draios/etc/dragent.yaml
     ```
     {: pre}
 
