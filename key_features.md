@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-15"
+lastupdated: "2023-05-03"
 
 keywords:
 
@@ -34,7 +34,7 @@ subcollection: workload-protection
 
 - Includes Cloud security posture management (CSPM) to help you secure the infrastructure where workloads are deployed.
 
-- Includes Kubernetes Security Posture Management (KSPM) to help you secure Kubernetes clusters or Openshift clusters, and the workloads running within it.
+- Includes Kubernetes Security Posture Management (KSPM) to help you secure Kubernetes clusters or {{site.data.keyword.redhat_openshift_notm}} clusters, and the workloads running within it.
 
 - Offers alerting on violations, and assists with remediation tasks.
 

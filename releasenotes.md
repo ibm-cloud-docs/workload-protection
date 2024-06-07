@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-04-18"
 
 keywords:  release notes, IBM Cloud
 
@@ -20,20 +20,17 @@ content-type: release-note
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
 
-## May 2024
-{: #workload-protection-may24}
+## April 2024
+{: #workload-protection-feb24}
 
-### 15 May 2024
-{: #workload-protection-may1524}
+### 16 April 2024
+{: #workload-protection-apr1624}
 {: release-note}
 
-{{site.data.keyword.sysdigsecure_short}} announces support for [Risks and attack path analysis](/docs/workload-protection?topic=workload-protection-risks).
-
-## April 2024
-{: #workload-protection-apr24}
+{{site.data.keyword.sysdigsecure_short}} announces support for [Risks](/docs/workload-protection?topic=workload-protection-risks), a module that consolidates all findings from your multi-cloud environment and includes an attack path analysis to help you prioritize the major detected risks.
 
 ### 29 April 2024
-{: #workload-protection-apr3024}
+{: #workload-protection-apr2924}
 {: release-note}
 
 {{site.data.keyword.sysdigsecure_short}} announces support for [Managing the Workload Protection agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).

@@ -91,7 +91,8 @@ The following table identifies the service role that you can grant a user in the
 
 | Actions                                       | Manager                                           | Writer                         | Reader |
 |-----------------------------------------------|---------------------------------------------------|--------------------------------|--------|
-| `Reset the access key`                           | ![Checkmark icon](/images/checkmark-icon.svg) |   |   |
+| `Manage access keys`                             | ![Checkmark icon](/images/checkmark-icon.svg) |   |   |
+| `Manage Secure API Tokens`                       | ![Checkmark icon](/images/checkmark-icon.svg) |   |   |
 | `Create, configure, and delete teams`            | ![Checkmark icon](/images/checkmark-icon.svg) |   |   |
 | `Configure and remove notifications channels`    | ![Checkmark icon](/images/checkmark-icon.svg) |   |   |
 | `Configure and remove agents`                    | ![Checkmark icon](/images/checkmark-icon.svg) |   |   |
@@ -101,8 +102,8 @@ The following table identifies the service role that you can grant a user in the
 | `Manage Activity Audit`                          | ![Checkmark icon](/images/checkmark-icon.svg) | ![Checkmark icon](/images/checkmark-icon.svg) | |
 | `Send container images to the scanning queue`    | ![Checkmark icon](/images/checkmark-icon.svg)  | ![Checkmark icon](/images/checkmark-icon.svg) | |
 | `Create, update and remove alerts`               | ![Checkmark icon](/images/checkmark-icon.svg)  | ![Checkmark icon](/images/checkmark-icon.svg) | |
-| `View reporst and image scanning results`        | ![Checkmark icon](/images/checkmark-icon.svg)  | ![Checkmark icon](/images/checkmark-icon.svg) | |
-| `View rules and policies`                        | ![Checkmark icon](/images/checkmark-icon.svg)      | ![Checkmark icon](/images/checkmark-icon.svg)                    | ![Checkmark icon](/images/checkmark-icon.svg)    |
+| `View reports and image scanning results`        | ![Checkmark icon](/images/checkmark-icon.svg)  | ![Checkmark icon](/images/checkmark-icon.svg) | |
+| `View platforms, frameworks, rules and policies` | ![Checkmark icon](/images/checkmark-icon.svg)      | ![Checkmark icon](/images/checkmark-icon.svg)                    | ![Checkmark icon](/images/checkmark-icon.svg)    |
 | `View events`                                   | ![Checkmark icon](/images/checkmark-icon.svg)      | ![Checkmark icon](/images/checkmark-icon.svg)                    | ![Checkmark icon](/images/checkmark-icon.svg)    |
 {: caption="Table 2. Service roles and actions" caption-side="top"}
 

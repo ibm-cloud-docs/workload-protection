@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-04-14"
+  years:  2023, 2024
+lastupdated: "2024-04-17"
 
-keywords: IBM Cloud, api token
+keywords:
 
 subcollection: workload-protection
 
@@ -12,18 +12,16 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-# Working with Sysdig Secure API token
+# Managing Secure API tokens
 {: #secure_token}
 
-You can use Sysdig Secure API tokens to authenticate with the {{site.data.keyword.sysdigsecure_full_notm}} service when you use Python scripts or the {{site.data.keyword.sysdigsecure_full_notm}} REST API to automate routine tasks and monitor notifications.
+You can use Secure API tokens to authenticate with the {{site.data.keyword.sysdigsecure_full}} service in REST API calls that you make to automate routine tasks and monitor notifications.
 {: shortdesc}
 
-Consider the following information for each instance of the {{site.data.keyword.sysdigsecure_full_notm}} service:
+Consider the following information for each instance of the {{site.data.keyword.sysdigsecure_short} service:
 
-* There is a Monitor API token per team.
+* There is a Secure API token per team.
 * If the token is compromised or your organization's security policies require resetting the token after certain conditions, a user with administration permissions can reset the API token.
-
 
 ## Getting the Sysdig Secure API token through the Security UI
 {: #secure_token_get}
@@ -39,7 +37,6 @@ After you get the token, you can run API calls and use this token in the `Author
 When you copy the token include the `Bearer` keyword: `Authorization: Bearer MONITOR_API_TOKEN`
 {: note}
 
-
 ## Resetting the Sysdig Secure API token through the Security UI
 {: #secure_token_reset}
 
@@ -49,12 +46,13 @@ Complete the following steps to reset the Sysdig Secure API token :
 2. Select the *User Profile* option.
 3. In the *Sysdig Secure API* section, click **Reset Token** to reset the API token.
 
-
+Remember to update the services and applications that use this token with the new value.
+{: note}
 
 ## Getting the Sysdig Secure API token by using the API
 {: #secure_token_get_api}
 
-You can use the Token API to get the Sysdig Secure API token .
+You can use the Token API to get the Sysdig Secure API token.
 
 For example, you can use the following cURL command to get the Sysdig Secure API token :
 
@@ -63,7 +61,6 @@ curl -X GET <SECURITY_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKE
 ```
 {: codeblock}
 
-
 ```text
 GET <SECURITY_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "TeamID: $TEAM_ID" -H "content-type: application/json"
 ```
@@ -71,16 +68,15 @@ GET <SECURITY_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "I
 
 Where
 
-* `<SECURITY_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [REST API endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.security-compliance-secure.cloud.ibm.com/api`
+* `<SECURITY_REST_API_ENDPOINT>` indicates the endpoint that is targeted by the REST API call. For more information, see [REST API endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is `https://us-south.security-compliance-secure.cloud.ibm.com/api`.
 
 * You can pass multiple headers by using `-H`.
 
     `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
-    `TeamID` defines the team for which you want to get the Sysdig Secure API token .
+    `TeamID` defines the team for which you want to get the Sysdig Secure API token.
 
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/workload-protection?topic=workload-protection-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM tokens](/docs/workload-protection?topic=workload-protection-using-curl#using-curl-headers-iam).
 
-
-When the authorization that is allowed in an instance is set to `IAM_ONLY`, you get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}` when you try to get the Sysdig Secure API token .
+When the authorization that is allowed in an instance is set to `IAM_ONLY`, you get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}` when you try to get the Sysdig Secure API token.
 {: note}

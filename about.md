@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-01-17"
+  years:  2023
+lastupdated: "2023-09-26"
 
 keywords:
 
@@ -43,6 +43,8 @@ Use **Kubernetes Security Posture Management (KSPM)** features to secure Kuberne
 
 The main goal of {{site.data.keyword.sysdigsecure_full_notm}} is to provide the tools that will help you keep your organization secure and able to resist threats and attacks, while making sure that workloads are successfully deployed.
 
+
+
 ## Cloud Security Posture Management (CSPM)
 {: #about-cspm}
 
@@ -82,6 +84,9 @@ The {{site.data.keyword.sysdigsecure_full_notm}} service inspects cloud environm
 - Integrate with DevOps tools to streamline the incident response process.
 
 - Show proof of your compliance through audit logs and container forensics data.
+
+
+
 
 ## Kubernetes Security Posture Management (KSPM)
 {: #about-kspm}

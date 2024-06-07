@@ -28,7 +28,7 @@ Policy
 
     A policy includes one or more controls to define a compliance standard, a benchmark, or a business policy.
 
-    Policies can be [reviewed and new policies created.](/docs/workload-protection?topic=workload-protection-posture-policies).
+    Policies can be [reviewed and new policies created](/docs/workload-protection?topic=workload-protection-posture-policies).
 
 Requirement
 :   A _requirement_ includes 1 or more controls.
