@@ -72,6 +72,13 @@ toc:
           - topic: manage-linux-agent.md
             navtitle: Protecting Linux hosts
       - topicgroup:
+          label: Cloud Security Posture Management (CSPM)
+          topics:
+          - topic: cspm-best-practices.md
+            navtitle: Best practices
+          - topic: cspm-implement.md
+            navtitle: Implementing using the UI and CLI
+      - topicgroup:
           label: Controlling access
           topics:
           - topic: iam.md
