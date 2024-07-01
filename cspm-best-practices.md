@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-01"
 
 keywords:
 
@@ -43,8 +43,8 @@ To apply a policy to a zone go to **Policies / Zones** and link the policy to th
 
 If you want to take control of the controls, requirements, or names of your posture policies, with {{site.data.keyword.sysdigsecure_short}}, you can create custom policies based on the existing or customized controls. 
 
-- Learn how to to create your own policy from scratch [here](/docs/workload-protection?topic=workload-protection-posture-policy-create).
-- Learn how to to create your own policy starting from an existing posture policy [here](/docs/workload-protection?topic=workload-protection-posture-policy-create-template).
+- Learn how to to create your own policy from scratch [Creating a custom policy](/docs/workload-protection?topic=workload-protection-posture-policy-create).
+- Learn how to to create your own policy starting from an existing posture policy [Creating a custom policy from a template](/docs/workload-protection?topic=workload-protection-posture-policy-create-template).
 
 ## Reviewing posture results and downloading reports
 {: #cspm-best-practices-review-reports}
@@ -80,7 +80,7 @@ For each resource, click on the resource card to access the **Posture** and **Co
 
 You can see all the available [Posture controls](/docs/workload-protection?topic=workload-protection-posture-controls) under Policies > Controls. Select the control you want to customize and select **Parameters**, then click on **Customize** and change the parameters based on your requirements.
 
-In addition to modifying the parameters of existing controls, you can duplicate and edit any control as described [here](https://docs.sysdig.com/en/docs/sysdig-secure/policies/posture-policies/posture-controls/#custom-controls).
+In addition to modifying the parameters of existing controls, you can duplicate and edit any control as described [Custom Controls](https://docs.sysdig.com/en/docs/sysdig-secure/policies/posture-policies/posture-controls/#custom-controls).
 
 ## Organize your accounts and resources
 {: #cspm-best-practices-organize}
@@ -92,4 +92,4 @@ You can [create your own scopes](https://cloud.ibm.com/docs/workload-protection?
 ## Next steps
 {: #cspm-best-practices-next-steps}
 
-To get the most of {{site.data.keyword.sysdigsecure_short}} enable CSPM following the steps described [here](link-to-how-to).
+To get the most of {{site.data.keyword.sysdigsecure_short}} enable CSPM following the steps described [Implementing CSPM (Cloud Security Posture Management) for {{site.data.keyword.cloud_notm}} using the UI and CLI](/docs/workload-protection?topic=workload-protection-cspm-implement).

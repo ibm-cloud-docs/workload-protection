@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-01"
 
 keywords:
 
@@ -22,9 +22,6 @@ The compliance module in {{site.data.keyword.sysdigsecure_full}} maintains a det
 The {{site.data.keyword.cloud_notm}} CSPM feature in {{site.data.keyword.sysdigsecure_short}} interacts with {{site.data.keyword.appconfig_short}} for gathering all your resource configuration details. The integration uses {{site.data.keyword.IBM_notm}} [IAM trusted profiles](/docs/account?topic=account-create-trusted-profile&interface=ui) for managing permissions. 
 
 You can easily integrate {{site.data.keyword.cloud_notm}} accounts to implement CSPM for new and for existing {{site.data.keyword.sysdigsecure_short}} instances.
-
-You can also implement CSPM for {{site.data.keyword.cloud_notm}} via UI as described in this [document](link-to-how-to-ui)
-{: note}
 
 ## Before you begin
 {: #cspm-implement-prereqs}
@@ -80,7 +77,7 @@ This section describes the steps you need to perform with the CLI and API in ord
 You can use the steps described here to also integrate a different {{site.data.keyword.cloud_notm}} account than the one where you have your {{site.data.keyword.sysdigsecure_short}} instance.
 
 Before you begin:
-- You need to have an {{site.data.keyword.sysdigsecure_short}} instance. If you don't have one, create one as described [here](/docs/workload-protection?topic=workload-protection-provision).
+- You need to have an {{site.data.keyword.sysdigsecure_short}} instance. If you don't have one, create one as described in [Provisioning an instance](/docs/workload-protection?topic=workload-protection-provision).
 - Get your {{site.data.keyword.sysdigsecure_short}} CRN. You can get this by going to the **Resource list** and clicking the service that you're targeting. In the **Details** section, copy the CRN. It will be referenced in this section as `workload-protection-instance-crn`. 
 - Get your {{site.data.keyword.sysdigsecure_short}} Name. You can get this by going to the **Resource list** and clicking the service that you're targeting. In the Details section, copy the **Name**. It will be referenced in this section as `workload-protection-instance-name`. 
 - Make sure you have the correct permissions to create trusted profiles, {{site.data.keyword.appconfig_short}} and {{site.data.keyword.sysdigsecure_short}} instances:
