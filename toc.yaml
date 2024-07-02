@@ -19,9 +19,7 @@ toc:
       - topic: key_features.md
         navtitle: Key features
       - topic: about.md
-        navtitle: About Posture Management
-      - topic: kspm.md
-        navtitle: KSPM
+        navtitle: About IBM Cloud Security Posture Management (CSPM)
       - topic: pricing.md
         navtitle: Pricing
       - topic: releasenotes.md

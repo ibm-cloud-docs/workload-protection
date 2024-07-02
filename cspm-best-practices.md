@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-07-02"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: workload-protection
 # Best Practices for working with Workload Protection for {{site.data.keyword.cloud_notm}} CSPM
 {: #cspm-best-practices}
 
-{{site.data.keyword.sysdigsecure_full}} now supports Cloud Security Posture Management (CSPM) for {{site.data.keyword.cloud_notm}} resources with the {{site.data.keyword.cloud_notm}} Framework for Financial Services, Digital Operational Resilience Act (DORA), CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark, PCI, and many other industrial related or best practices standards.
+{{site.data.keyword.sysdigsecure_full}} now supports Cloud Security Posture Management (CSPM) for {{site.data.keyword.cloud_notm}} resources with the {{site.data.keyword.cloud_notm}} Framework for Financial Services, Digital Operational Resilience Act (DORA), CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark, PCI, and other regulated industry standards.
 
 ## Managing posture policies
 {: #cspm-best-practices-manage-policies}
@@ -25,7 +25,7 @@ In {{site.data.keyword.sysdigsecure_short}}, posture policies are collections of
 ### Predefined compliance policies
 {: #cspm-best-practices-manage-policies-compliance}
 
-Predefined policies are updated regularly with fixes, new parameters and checks, and with new versions of the compliance program. You have available many predefined policies such as {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.cloud_notm}} Framework for Financial Services, Digital Operational Resilience Act (DORA), CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark, or PCI.
+With the new versions of the compliance programs including {{site.data.keyword.cloud_notm}} Framework for Financial Services, Digital Operational Resilience Act (DORA), CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark, the PCI standards and many others, the predefined policies are updated and new parameters and checks are added on a regular basis.
 
 When you start implementing CSPM for {{site.data.keyword.cloud_notm}}, your services will be evaluated against all available {{site.data.keyword.cloud_notm}} controls (All Posture Findings) and the CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark and you can apply other policies as described next.
 
@@ -35,8 +35,8 @@ When you start implementing CSPM for {{site.data.keyword.cloud_notm}}, your serv
 By default, {{site.data.keyword.sysdigsecure_short}} creates a scope for all of your connected {{site.data.keyword.cloud_notm}} services, clusters and workloads in a Zone called **Entire Infrastructure**. You can apply new posture policies to this zone or create a new zone to scope your resources.
 
 To apply a policy to a zone go to **Policies / Zones** and link the policy to the zone:
-- If the zone exists, add the policy by using the [Zones configuration page](/docs/workload-protection?topic=workload-protection-zone-policy).
-- If the zone does not exist, [create and configure the zone](/docs/workload-protection?topic=workload-protection-posture-zones), and then add the policy by using the Zones configuration page.
+- If the zone exists, add the policy by [Linking a policy to a zone](/docs/workload-protection?topic=workload-protection-posture-link-policy-to-zone).
+- If the zone does not exist, [create and configure the zone](/docs/workload-protection?topic=workload-protection-posture-zones), and then add the policy by linking a policy to a zone.
 
 ### Creating custom posture policies
 {: #cspm-best-practices-manage-policies-custom}
@@ -51,7 +51,7 @@ If you want to take control of the controls, requirements, or names of your post
 
 When you start implementing CSPM for {{site.data.keyword.cloud_notm}}, your services will be evaluated against all available {{site.data.keyword.cloud_notm}} controls and the CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark and you can apply other policies as described in previous sections.
 
-After the first completed scan (that can take some minutes after the integration) the Posture results will be shown under **Posture / Compliance**:
+After the first completed scan (that can take some minutes after the integration) the posture results will be shown under **Posture / Compliance**:
 
 1. Select the policy you want to review.
 2. Select the requirement(s) to analyze.
@@ -92,4 +92,4 @@ You can [create your own scopes](https://cloud.ibm.com/docs/workload-protection?
 ## Next steps
 {: #cspm-best-practices-next-steps}
 
-To get the most of {{site.data.keyword.sysdigsecure_short}} enable CSPM following the steps described [Implementing CSPM (Cloud Security Posture Management) for {{site.data.keyword.cloud_notm}} using the UI and CLI](/docs/workload-protection?topic=workload-protection-cspm-implement).
+To get the most of {{site.data.keyword.sysdigsecure_short}} enable CSPM following the steps described in [Implementing CSPM (Cloud Security Posture Management) for {{site.data.keyword.cloud_notm}} using the UI and CLI](/docs/workload-protection?topic=workload-protection-cspm-implement).

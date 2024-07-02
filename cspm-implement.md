@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-07-02"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: workload-protection
 
 The compliance module in {{site.data.keyword.sysdigsecure_full}} maintains a detailed inventory of resources, enabling prioritization based on full context, and facilitating the resolution of posture misconfigurations. The compliance module supports cloud and Kubernetes Security Posture Management (CSPM and KSPM, respectively) across hybrid cloud environments.
 
-{{site.data.keyword.sysdigsecure_short}} CSPN and KSPM provide compliance and configuration management of resources and critical workloads. Several predefined policies are supported, including {{site.data.keyword.cloud_notm}} Framework for Financial Services, Digital Operational Resilience Act (DORA) or CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark to achieve security and compliance for your environment. Custom policies are also supported.
+{{site.data.keyword.sysdigsecure_short}} CSPM and KSPM provide compliance and configuration management of resources and critical workloads. Several predefined policies are supported, including {{site.data.keyword.cloud_notm}} Framework for Financial Services, Digital Operational Resilience Act (DORA) or CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark to achieve security and compliance for your environment. Custom policies are also supported.
 
 The {{site.data.keyword.cloud_notm}} CSPM feature in {{site.data.keyword.sysdigsecure_short}} interacts with {{site.data.keyword.appconfig_short}} for gathering all your resource configuration details. The integration uses {{site.data.keyword.IBM_notm}} [IAM trusted profiles](/docs/account?topic=account-create-trusted-profile&interface=ui) for managing permissions. 
 
@@ -243,6 +243,9 @@ In this final step, you configure your {{site.data.keyword.sysdigsecure_short}} 
 - The {{site.data.keyword.appconfig_short}} CRN (`app-config-aggregator-CRN`) that you created in [Step 2](#cspm-implement-cli-step2).
 - The trusted profile for {{site.data.keyword.sysdigsecure_short}} to interact with {{site.data.keyword.appconfig_short}} (`ibmcspm-tp-wp-app-config-ID`) you created in [Step 1](#cspm-implement-cli-step1).
 - Your {{site.data.keyword.cloud_notm}} account ID (`<ibm-cloud-account-id>`). You can get it under **Manage > Account > Account Settings** in `ID`.
+
+If previously you have onboarded any other IBM Cloud account or add any other parameter, make sure to keep existing parameters. You can see the existing used paramaters of your instance by running `ibmcloud resource service-instance <workload-protection-instance-name> --output json` replacing `<workload-protection-instance-name>` by your {{site.data.keyword.sysdigsecure_short}} instance name.
+{: note}
 
 Run the following CLI command to update your {{site.data.keyword.sysdigsecure_short}} instance to onboard your {{site.data.keyword.cloud_notm}} Account. Replace `<workload-protection-instance-name>` by your {{site.data.keyword.sysdigsecure_short}} instance name, `<app-config-aggregator-CRN>` by your {{site.data.keyword.appconfig_short}} instance CRN and `<ibmcspm-tp-wp-app-config-ID>` by the trusted profile ID created in [Step 2](#cspm-implement-cli-step2) and `<ibm-cloud-account-id>` by your {{site.data.keyword.cloud_notm}} account ID.
 
