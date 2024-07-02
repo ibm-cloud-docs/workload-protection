@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-05-03"
+  years:  2023, 2024
+lastupdated: "2024-07-02"
 
 keywords:
 
@@ -12,77 +12,91 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-# Key features of {{site.data.keyword.sysdigsecure_full_notm}}
+# Key features of {{site.data.keyword.sysdigsecure_full}}
 {: #key-features}
 
-{{site.data.keyword.sysdigsecure_full}} offers functionality to protect workloads, get deep cloud and container visibility, posture management (compliance, benchmarks, CIEM), vulnerability scanning, forensics, and threat detection and blocking.
+{{site.data.keyword.sysdigsecure_full}} helps you accelerate your hybrid cloud adoption by addressing security and regulatory compliance. Easily identify vulnerabilities, validate compliance and permissions, block runtime threats and respond to incidents faster across any platform: Cloud or on-prem, hosts or VMs and containers or OpenShift/Kubernetes. A cloud-native application protection platform (CNAPP) powered by runtime insights.
 {: shortdesc}
 
 
-
-## Provides a unified and centralized framework to manage the security and compliance of applications, workloads and infrastructure
+## Cloud Security Posture Management (CSPM)
 {: #feature_1}
 
-- Provides a unified and centralized framework to manage the security and compliance of applications, workloads and infrastructure and protect workloads and resources that run on {{site.data.keyword.cloud_notm}}, in other clouds, and on-prem. Presents relevant performance and security data in one location.
+- Provides a unified and centralized platform to manage the security and compliance of applications, workloads and infrastructure that run on {{site.data.keyword.cloud_notm}}, in other clouds, and on-prem, covering managed services, hosts or VMs and containers, OpenShift or Kubernetes.
 
-- Is built on open standards for cloud native security and control, including Falco, the open source standard for cloud threat detection, and Open Policy Agent (OPA), the open source standard for policy-as-code.
+- Docens of out-of-the-box frameworks such as Financial Services, PCI, DORA, CIS or NIST allow to implement and validate the controls that are required to meet industry standards and laws.
 
-- Offers a workload protection platform (WPP) that focuses on management and security controls for workloads.
+- Cloud Security Posture Management (CSPM) to help you identify misconfigurations and validate compliance on the cloud across {{site.data.keyword.cloud_notm}}, AWS, Azure and GCP or inside hosts, VMs and Kubernetes, including VPC, VMware or PowerVS and IBM Z with Linux.
 
-- Offers a compliance platform (CP) that focuses on management and compliance  controls that are required to meet industry standards and laws.
+- Assisted remediation instructions to remediate the failing controls or ability to accept known risks.
 
-- Includes Cloud security posture management (CSPM) to help you secure the infrastructure where workloads are deployed.
+- Offers an inventory of all your Cloud assets (compute resources, managed services, identities and entitlements) and hosts, VMs and clusters, whether they are in the Cloud or on-prem.
 
-- Includes Kubernetes Security Posture Management (KSPM) to help you secure Kubernetes clusters or {{site.data.keyword.redhat_openshift_notm}} clusters, and the workloads running within it.
+- Advanced risk prioritization correlating misconfigurations, public exposure, in-use context (vulnerabilities, active permissions) and high confidence threat detection. Visualize risks through a correlation vector map providing security teams full situational awareness beyond just static posture evaluation.
 
-- Offers alerting on violations, and assists with remediation tasks.
+- Gain visibility into cloud identities and manage permissions through the Cloud Infrastructure Entitlement Management (CIEM) capabilities: identify inactive users or with excessive permissions. Optimize access policies to grant just enough privileges across users, groups, roles and machine identities.
+
+- Cloud Detection and Response (CDR) to investigate suspicious activity across overly privileged users accessing sensitive data. Gain real-time visibility by monitoring cloud security controls, detecting configuration changes and preventing drift across cloud accounts.
+
+- Analyze infrastructure as code (IaC) security posture including Terraform, CloudFormation, Helm charts or YAML manifests.
 
 
-## Offers host and image scanning, auditing, and runtime vulnerability management capabilities
+## Vulnerability Management
 {: #feature_2}
 
-- Filters and surfaces vulnerabilities in images, clusters, namespaces, or hosts.
+- Scanning for vulnerabilities on OS packages and 3rd-party libraries such as Java, Python, Golang, Javascript, or Ruby.
 
-- Alerts on unscanned images or images when the evaluation status changes with new vulnerabilities.
+- Implement scanning across your application lifecycle, from your CI/CD pipeline, container image registry or during runtime in hosts, VMs or Kubernetes/OpenShift clusters.
 
-- Logs user actions, container activity, and command arguments.
+- Adds in-use runtime context to filter out vulnerabilities exposed on running applications, reducing vulnerabilities to inmediately fix by 85% on average.
 
-- Enforces security policies and blocks attacks.
+- Additional filters for prioritization such as exploit available, fix available, etc.
 
-## Provides posture management for a distributed environment
+- Vulnerability management overview dashboard, advanced and customizable reporting, alerting of new vulnerabilities or unscanned images and routing to ticketing systems.
+
+- Advanced policies to customize vulnerability criteria and blocking per environment or any scope.
+
+- Evaluation of Dockerfile to detect secrets or misconfigurations during build.
+
+- Kubernetes Admission Controller to block vulnerabilities from being deployed to clusters.
+
+
+## Server Endpoint Detection and Response (EDR)
 {: #feature_3}
 
-- Schedules customized benchmark tests to run across cloud, hosts, services, or clusters.
+- Instruments hosts, VMs and Kubernetes/OpenShift clusters through eBPF to inspect all system activity through system calls with minimal performance footprint.
 
-- Controls compliance at cloud, orchestrator, and container level.
+- Multiple thousands of OOTB policies updated weekly by our Threat Research team. Rules can be customized or you can create new ones using the Falco language. Falco is the open source Cloud-native standard for runtime security.
 
-- Tracks and optimizes cloud users permissions and entitlements.
+- In addition to rules, behavioral analysis allows detection of common threats and malware such as crypto mining activities and workload profiling to automatically define expected behavior can extend detection capabilities.
 
-- Exports results to SIEM, logging clusters, or other tools.
+- Preemptive blocking, preventing blacklisted or malicious binaries from execution, including identified malware or drifted binaries in a container image.
 
-## Provides runtime detection and data enrichment
+- Advanced remediation, allowing to automatically execute corrective actions including killing processes, killing or pausing containers, etc.
+
+- FIM (File Integrity Monitoring) detection rules that can be defined per scope (path, filename, cmd, user, etc) and detect at source all possible activities (read, write a file, write a directory, etc).
+
+## Kubernetes Workload Protection and Network Segmentation (CWPP)
 {: #feature_4}
 
-- Identifies and blocks threats in real-time, based on application, container, and network activity.
+- {{site.data.keyword.sysdigsecure_full_notm}} is a full Kubernetes Workload Protection Platform including vulnerability scanning, host and container detection/prevention, posture and compliance (KSPM), all built for Kubernetes and OpenShift.
 
-- Instruments Kernel to track all app, container, host, and network system calls.
+- Audit and detect anomalous or forbidden activity at the orchestration layer, by integrating with the Kubernetes audit events.
 
-- Views security policy violations based on orchestrated services.
+- Gain visibility into network communication between pods, to generate and validate least privilege network security policies for network segmentation.
 
-- Manages multi-cloud events by using single and multiple accounts.
 
-## Supports incident response and forensics
+## Incident response and forensics
 {: #feature_5}
 
-- Protects distributed, dynamic, and ephemeral services with a single-service policy with no manual configuration.
+- Automates the collection and correlation of events, posture, and vulnerabilities to identities across hosts, VMs, containers and Cloud activity.
 
-- Creates detailed system captures for any policy violation or incident, so you can respond to malicious activity.
+- Attack Path Analysis provides attack chain visualization and empowers security analysts to rapidly understand the relationships between resources, and their implications for the attack chain across any cloud environment.
 
-- Drills-down from policy violations into captures of pre- and post-attack activity.
+- Understand suspicious identity behaviors such as unusual logins, impossible travel scenarios, and malicious IP addresses. With this context, teams can rapidly understand the who, what, where, and how of threat actors in their infrastructure.
 
-- Views SCAP files to see all system activity before, during, and after any security event.
+- Record for audit and investigation all executed commands (and the process tree), file changes or network connections, across hosts and containers.
 
-- Creates detailed system captures for any policy violation or incident so you can respond to on malicious activity.
+- Trigger the capture of all system activity (SCAP) with any policy violation, to perform in-depth investigation and reconstruction of attacker activity, even if the container is long gone.
 
-- Integrates alerting and incident response.
+- Forward security events to your SIEM or other security response and alerting tools.

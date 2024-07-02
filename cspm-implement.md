@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Implementing CSPM (Cloud Security Posture Management) for {{site.data.keyword.cloud_notm}} using the UI and CLI
+# Implementing CSPM (Cloud Security Posture Management) for {{site.data.keyword.cloud_notm}}
 {: #cspm-implement}
 
 The compliance module in {{site.data.keyword.sysdigsecure_full}} maintains a detailed inventory of resources, enabling prioritization based on full context, and facilitating the resolution of posture misconfigurations. The compliance module supports cloud and Kubernetes Security Posture Management (CSPM and KSPM, respectively) across hybrid cloud environments.
@@ -26,13 +26,13 @@ You can easily integrate {{site.data.keyword.cloud_notm}} accounts to implement 
 ## Before you begin
 {: #cspm-implement-prereqs}
 
-Before you get started, you have the following requirements:
+Before you get started, make sure you have the following requirements completed:
 
-- You have at least assigned the `Manager` role for the [{{site.data.keyword.appconfig_short}} service](/docs/app-configuration?topic=app-configuration-ac-service-access-management). This is required to enable service configuration reading that is required for {{site.data.keyword.cloud_notm}} CSPM.
+- You have assigned at least the `Manager` role to the [{{site.data.keyword.appconfig_short}} service](/docs/app-configuration?topic=app-configuration-ac-service-access-management). This is required for the CSPM to enable service configuration.
 - You already have a {{site.data.keyword.sysdigsecure_short}} instance or enough permissions to create a new instance.
 - Permissions to create and manage trusted profiles.
 
-## Integrating to an existing {{site.data.keyword.sysdigsecure_short}} instance using the UI
+## Integrating with an existing {{site.data.keyword.sysdigsecure_short}} instance
 {: #cspm-implement-ui-existing}
 {: ui}
 
@@ -40,12 +40,12 @@ To enable CSPM for your {{site.data.keyword.cloud_notm}} account from your exist
 
 1. Go to the **Resource list** and select your {{site.data.keyword.sysdigsecure_short}} instance. You can find your {{site.data.keyword.sysdigsecure_short}} instances under the **Security** section.
 2. Select **Sources** and go to the **IBM Cloud Account** tab.
-3. In this tab, click on **Add**. Introduce the trusted profile name, {{site.data.keyword.appconfig_short}} name, and plan you would like to use.
+3. In this tab, click on **Add**. Introduce the trusted profile name, {{site.data.keyword.appconfig_short}} name, and select the plan.
 4. Finally, click on **Add** to have CSPM on your {{site.data.keyword.cloud_notm}} account. 
 
-Once you provision your instance, results are displayed a few minutes after the connection is established, varying by the scale of the resources.
+Once you provision your instance, results are displayed a few minutes after the connection is established, depending on the number of resources.
 
-## Integrating to a new {{site.data.keyword.sysdigsecure_short}} instance via UI
+## Integrating to a new {{site.data.keyword.sysdigsecure_short}} instance
 {: #cspm-implement-ui-new}
 {: ui}
 
@@ -54,9 +54,9 @@ To enable CSPM for your {{site.data.keyword.cloud_notm}} account when provisioni
 1. Select the trusted profile name that will be used for connecting to {{site.data.keyword.appconfig_short}} service and collecting resource definitions for running the posture validations.
 2. Select the {{site.data.keyword.appconfig_short}} instance name and plan. By default the **Basic** plan is selected.
 
-Once you provision your instance, results are displayed about 5-10 minutes after the connection, varying by the scale of the resources.
+Once you provision your instance, results are displayed about 5-10 minutes after the connection, depeding on the number of resources.
 
-## Disabling CSPM for {{site.data.keyword.cloud_notm}} via UI
+## Disabling CSPM on the {{site.data.keyword.cloud_notm}} account
 {: #cspm-implement-ui-disable}
 {: ui}
 
@@ -68,18 +68,18 @@ To disable CSPM for your {{site.data.keyword.cloud_notm}} account, follow the ne
 
 Your account will be disabled for CSPM in the selected {{site.data.keyword.sysdigsecure_short}} instance.
 
-## Integrating your account using the CLI
+## Integrating your account
 {: #cspm-implement-cli}
 {: cli}
 
-This section describes the steps you need to perform with the CLI and API in order to manually onboard an {{site.data.keyword.cloud_notm}} account into {{site.data.keyword.sysdigsecure_short}} for implementing CSPM.
+This section describes the steps you need to perform with the CLI and API in order to manually onboard an {{site.data.keyword.cloud_notm}} account onto {{site.data.keyword.sysdigsecure_short}} for implementing CSPM.
 
 You can use the steps described here to also integrate a different {{site.data.keyword.cloud_notm}} account than the one where you have your {{site.data.keyword.sysdigsecure_short}} instance.
 
 Before you begin:
-- You need to have an {{site.data.keyword.sysdigsecure_short}} instance. If you don't have one, create one as described in [Provisioning an instance](/docs/workload-protection?topic=workload-protection-provision).
+- You need to have a {{site.data.keyword.sysdigsecure_short}} instance. If you don't have one, create one as described in [Provisioning an instance](/docs/workload-protection?topic=workload-protection-provision).
 - Get your {{site.data.keyword.sysdigsecure_short}} CRN. You can get this by going to the **Resource list** and clicking the service that you're targeting. In the **Details** section, copy the CRN. It will be referenced in this section as `workload-protection-instance-crn`. 
-- Get your {{site.data.keyword.sysdigsecure_short}} Name. You can get this by going to the **Resource list** and clicking the service that you're targeting. In the Details section, copy the **Name**. It will be referenced in this section as `workload-protection-instance-name`. 
+- Get your {{site.data.keyword.sysdigsecure_short}} name. You can get this by going to the **Resource list** and clicking the service that you're targeting. In the Details section, copy the **Name**. It will be referenced in this section as `workload-protection-instance-name`. 
 - Make sure you have the correct permissions to create trusted profiles, {{site.data.keyword.appconfig_short}} and {{site.data.keyword.sysdigsecure_short}} instances:
   - Account owner.
   - Administrator role on all account management services.
@@ -94,16 +94,16 @@ This integration requires the following four steps:
 4. Configure the {{site.data.keyword.appconfig_short}} instance for collecting service configurations.
 5. Onboard your {{site.data.keyword.cloud_notm}} account to your {{site.data.keyword.sysdigsecure_short}} instance.
 
-### Step 1: create a trusted profile for {{site.data.keyword.sysdigsecure_short}} interaction with {{site.data.keyword.appconfig_short}}
+### Step 1: Create a trusted profile for {{site.data.keyword.sysdigsecure_short}} interaction with {{site.data.keyword.appconfig_short}}
 {: #cspm-implement-cli-step1}
 {: cli}
 
-In this step, your {{site.data.keyword.sysdigsecure_short}} instance must already have been created. The {{site.data.keyword.sysdigsecure_short}} instance CRN is used for creating and configuring the trusted profile to interact with {{site.data.keyword.appconfig_short}}.
+Before this step, your {{site.data.keyword.sysdigsecure_short}} instance must already have been created. The {{site.data.keyword.sysdigsecure_short}} instance CRN is used for creating and configuring the trusted profile to interact with {{site.data.keyword.appconfig_short}}.
 
 - It requires the following access policies:
   - Enterprise (`Viewer` + `Usage Report Viewer`) for validating the type of account.
   - {{site.data.keyword.appconfig_short}} (`Manager` + `Configuration Aggregator Reader`)
-- CRN (Trust Relationship – {{site.data.keyword.cloud_notm}} Services) is the{{site.data.keyword.sysdigsecure_short}} CRN
+- CRN (Trust Relationship – {{site.data.keyword.cloud_notm}} Services) is the {{site.data.keyword.sysdigsecure_short}} CRN
   - For example: `crn:v1:bluemix:public:sysdig-secure:us-south:a/1560be5426584bf8a43e75xxxxxxxxxx:299e4ca4-d96c-4fba-9691-xxxxxxxx::` 
 
 You can create this trusted profile with the following CLI commands:
@@ -136,7 +136,7 @@ ibmcloud iam trusted-profile-policy-create ibmcspm-wp-app-config -r Manager,"Con
 ```
 {: pre}
 
-### Step 2: create {{site.data.keyword.appconfig_short}} instance
+### Step 2: Create {{site.data.keyword.appconfig_short}} instance
 {: #cspm-implement-cli-step2}
 {: cli}
 
@@ -157,13 +157,13 @@ ibmcloud resource service-instance-create "ibmcspm-app-config" "apprapp" "basic"
 Note that the CRN (`ID` from the output) is referenced as `app-config-aggregator-CRN`. Likewise, instance ID (`GUID` from the output) is referenced as `app-config-aggregator-ID`. Save those values as they will be used in the following steps.
 {: important}
 
-### Step 3: trusted profile for {{site.data.keyword.appconfig_short}} for collecting service configuration
+### Step 3: Trusted profile for {{site.data.keyword.appconfig_short}} for collecting service configuration
 {: #cspm-implement-cli-step3}
 {: cli}
 
 In this step, you'll be creating the trusted profile that your {{site.data.keyword.appconfig_short}} instance uses to collect all service configurations to perform {{site.data.keyword.cloud_notm}} CSPM. Make sure you have the {{site.data.keyword.appconfig_short}} CRN (`app-config-aggregator-CRN`) you created in Step 2.
 
-To configure correctly the trusted profile, we need the previous step because we use the {{site.data.keyword.appconfig_short}} instance CRN.
+To configure the trusted profile correctly, you need the {{site.data.keyword.appconfig_short}} instance CRN from the previous step.
 
 - It requires the following Access Policies:
   - All Account Management services (`Viewer` + `Service Configuration Reader`)
@@ -201,7 +201,7 @@ ibmcloud iam trusted-profile-policy-create ibmcspm-app-config-aggregator -r View
 ```
 {: pre}
 
-### Step 4: configure the {{site.data.keyword.appconfig_short}} instance for collecting service configurations
+### Step 4: Configure the {{site.data.keyword.appconfig_short}} instance for collecting service configurations
 {: #cspm-implement-cli-step4}
 {: cli}
 
@@ -209,7 +209,7 @@ In this step, you configure {{site.data.keyword.appconfig_short}} to start colle
 - The {{site.data.keyword.appconfig_short}} GUID (`app-config-aggregator-ID`) you created in [Step 2](#cspm-implement-cli-step2).
 - The trusted profile for {{site.data.keyword.appconfig_short}} for collecting service configuration (`ibmcspm-tp-app-config-aggregator-ID`) that you created in [Step 3](#cspm-implement-cli-step3).
 
-For this following action, we need to perform a HTTP `PUT` request. We are using `curl` to perform the request.
+For the following action, run an HTTP `PUT` request using `curl`.
 
 First, get your IAM API token by running the following command:
 
@@ -234,7 +234,7 @@ You should receive the output with the configuration you have set, similar to:
 ```
 {: pre}
 
-### Step 5: onboard your {{site.data.keyword.cloud_notm}} account to your {{site.data.keyword.sysdigsecure_short}} instance
+### Step 5: Onboard your {{site.data.keyword.cloud_notm}} account to your {{site.data.keyword.sysdigsecure_short}} instance
 {: #cspm-implement-cli-step5}
 {: cli}
 
@@ -260,8 +260,8 @@ ibmcloud resource service-instance-update "<workload-protection-instance-name>" 
 Verifying the integration by following the next steps: 
 - In your {{site.data.keyword.sysdigsecure_short}} instance, select **Sources / {{site.data.keyword.cloud_notm}} Account**. You should see your {{site.data.keyword.cloud_notm}} account with the `Active` status. The status can take a few minutes to be updated.
 - Access to your {{site.data.keyword.sysdigsecure_short}} instance by clicking in **Open dashboard**, your account will be listed under **Integrations / Cloud Accounts**. 
-- In your {{site.data.keyword.sysdigsecure_short}}, access **Inventory** and review the list of {{site.data.keyword.cloud_notm}} resources of your account. You have available many predefined filters you can use or the search box to filter by resource type or resource name. By clicking in each resource, you can review the resource configuration, the Posture controls applied against it and the results of the evaluation.
-- By accessing to **Posture / Compliance**, you can review the results of the available frameworks (such as {{site.data.keyword.cloud_notm}} Framework for Financial Services) of your {{site.data.keyword.cloud_notm}} resources.
+- In your {{site.data.keyword.sysdigsecure_short}}, access **Inventory** and review the list of {{site.data.keyword.cloud_notm}} resources of your account. You have many predefined filters available that you can choose from. Alternatively, you can use the search box to filter by resource type or resource name. By clicking in each resource, you can review the resource configuration, the posture controls applied against it and the results of the evaluation.
+- By accessing **Posture / Compliance**, you can review the results of the available frameworks (such as {{site.data.keyword.cloud_notm}} Framework for Financial Services) of your {{site.data.keyword.cloud_notm}} resources.
 
 ## Disabling CSPM for {{site.data.keyword.cloud_notm}} with the CLI
 {: #cspm-implement-disable}
