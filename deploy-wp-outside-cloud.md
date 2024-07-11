@@ -82,13 +82,15 @@ Once you have a sufficient version of Helm and the permission to run commands on
 ```sh
     helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-namespace \
     --set global.sysdig.accessKey=<SERVICE_ACCESS_KEY> \
-    --set agent.collectorSettings.collectorHost=<INGESTION_ENDPOINT> \ 
+    --set agent.collectorSettings.collectorHost=<INGESTION_ENDPOINT> \
     --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=<API_ENDPOINT> \
-    --set nodeAnalyzer.nodeAnalyzer.runtimeScanner.settings.eveEnabled=true \
+    --set nodeAnalyzer.nodeAnalyzer.runtimeScanner.deploy=false \
+    --set nodeAnalyzer.nodeAnalyzer.hostScanner.scanOnStart=true \
     --set nodeAnalyzer.secure.vulnerabilityManagement.newEngineOnly=true \
     --set global.kspm.deploy=true \
-    --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \ 
-    --set global.clusterConfig.name=<CLUSTER_NAME> \
+    --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
+    --set clusterScanner.enabled=true \
+    --set global.clusterConfig.name=iks-ctolon \
     --set kspmCollector.apiEndpoint=<API_ENDPOINT>
 ```
 {: pre}
@@ -111,14 +113,6 @@ global:
   kspm:
     deploy: true
 agent:
-  image:
-    registry: icr.io
-  slim:
-    enabled: true
-    image:
-      repository: ext/sysdig/agent-slim
-    kmoduleImage:
-      repository: ext/sysdig/agent-kmodule
   collectorSettings:
     collectorHost: INGESTION_ENDPOINT
 nodeAnalyzer:
@@ -126,15 +120,16 @@ nodeAnalyzer:
     vulnerabilityManagement:
       newEngineOnly: true
   nodeAnalyzer:
-    runtimeScanner: 
-      settings:
-        eveEnabled: true
     deploy: true
+    runtimeScanner: 
+      deploy: false
     apiEndpoint: API_ENDPOINT
     benchmarkRunner:
       deploy: false
 kspmCollector:
   apiEndpoint: API_ENDPOINT
+clusterScanner:
+  enabled: true
 ```
 {: codeblock}
 

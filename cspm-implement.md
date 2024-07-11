@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-02"
+lastupdated: "2024-07-11"
 
 keywords:
 
@@ -101,7 +101,7 @@ This integration requires the following four steps:
 Before this step, your {{site.data.keyword.sysdigsecure_short}} instance must already have been created. The {{site.data.keyword.sysdigsecure_short}} instance CRN is used for creating and configuring the trusted profile to interact with {{site.data.keyword.appconfig_short}}.
 
 - It requires the following access policies:
-  - Enterprise (`Viewer` + `Usage Report Viewer`) for validating the type of account.
+  - Enterprise account (`Viewer` + `Usage Report Viewer`) for validating the type of account.
   - {{site.data.keyword.appconfig_short}} (`Manager` + `Configuration Aggregator Reader`)
 - CRN (Trust Relationship – {{site.data.keyword.cloud_notm}} Services) is the {{site.data.keyword.sysdigsecure_short}} CRN
   - For example: `crn:v1:bluemix:public:sysdig-secure:us-south:a/1560be5426584bf8a43e75xxxxxxxxxx:299e4ca4-d96c-4fba-9691-xxxxxxxx::` 
@@ -122,7 +122,7 @@ ibmcloud iam trusted-profile-identity-create ibmcspm-wp-app-config --id workload
 ```
 {: pre}
 
-Create the policy for the trusted profile for enterprise:
+Create the policy for the trusted profile for the enterprise account:
 
 ```sh
 ibmcloud iam trusted-profile-policy-create ibmcspm-wp-app-config -r Viewer,"Usage Report Viewer" --service-name enterprise
@@ -187,7 +187,7 @@ ibmcloud iam trusted-profile-identity-create ibmcspm-app-config-aggregator --id 
 ```
 {: pre}
 
-Create the Policy for the trusted profile for enterprise:
+Create the Policy for the trusted profile for the enterprise account:
 
 ```sh
 ibmcloud iam trusted-profile-policy-create ibmcspm-app-config-aggregator -r Viewer,"Service Configuration Reader" --service-name "All Account Management services"
