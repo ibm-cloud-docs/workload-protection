@@ -212,7 +212,8 @@ toc:
       id: reference
       topics:
       - terminology.md
-      - regions.md
+      - topic: regions.md
+        navtitle: Regions
       - endpoints.md
       - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
