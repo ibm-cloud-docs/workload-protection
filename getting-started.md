@@ -43,8 +43,6 @@ To grant a user the administrator role for the service and to manage instances w
 
 By default, users are automatically added as members of the **Secure Operations** team that is predefined for each {{site.data.keyword.sysdigsecure_full_notm}} instance. Users have full permissions to see all the data in the web UI.
 
-An administrator can restrict access to data by managing users in teams and controlling what data is visible. For example, to restrict users being able to view permissions, an administrator can create a default team with limited scope and visibility. Then, manually assign users to other teams. For more information, see [Working with teams](/docs/workload-protection?topic=workload-protection-teams#teams).
-{: note}
 
 
 ## Step 2. Provision an instance

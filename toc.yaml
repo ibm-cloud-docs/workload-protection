@@ -33,11 +33,9 @@ toc:
              - topic: instance_provision.md
                navtitle: Provisioning an instance
              - topic: terraform-setup.md
-               navtitle: Using Terraform - (Not April GA)
              - topic: instance_remove.md
                navtitle: Deleting an instance
              - topic: instance_upgrade.md
-               navtitle: Changing the service plan - (Not April GA)
       - topicgroup:
           label: Configuring registries (WIP)
           topics:
@@ -86,11 +84,8 @@ toc:
           - topic: iam_grant.md
             navtitle: Granting permissions to work with Workload Protection - (Not April GA)
           - topic: iam_grant_team.md
-            navtitle: Granting permissions - (Not April GA)
           - topic: teams.md
-            navtitle: Working with teams - (Not April GA)
           - topic: team_id.md
-            navtitle: Getting the ID of a team - (Not April GA)
       - topicgroup:
           label: Logging and monitoring
           topics:
@@ -99,33 +94,25 @@ toc:
           label: Enhancing security
           topics:
           - topic: data-security.md
-            navtitle:  Data security - (Not April GA)
           - topic: service-connection.md
-            navtitle:  Service Connection - (Not April GA)
           - topic: architecture-workload-isolation.md
             navtitle: Architecture and workload isolation
           - topic: cbr.md
             navtitle: Protecting resources with context-based restrictions
           - topic: ha-dr.md
-            navtitle: High availability  - (Not April GA)
       - topicgroup:
           label: Secure UI
           topics:
           - instance_launch.md
           - topic: get_web_url.md
-            navtitle: Get web URL  - (Not April GA)
       - topicgroup:
           label: Alerts
           topics:
           - notifications.md
           - topic: notifications_api.md
-            navtitle: Managing notifications using the API - (Not April GA)
           - topic: pd_sms.md
-            navtitle: PagerDuty - (Not April GA)
           - topic: eventnotif.md
-            navtitle: Event Notifications - (Not April GA)
           - topic: eventnotif_sms.md
-            navtitle: Event Notifications SMS - (Not April GA)
       - topicgroup:
           label: Insights
           topics:
@@ -138,12 +125,6 @@ toc:
           label: Risks
           topics:
           - risks.md
-      - topicgroup:
-          label: Vulnerabilities - (Not April GA)
-          topics:
-          - pipeline.md
-          - runtime.md
-          - reporting.md
       - topicgroup:
           label: Posture Management
           topics:
