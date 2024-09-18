@@ -55,4 +55,3 @@ You can use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM
 
 * Service roles that define levels of access for viewing data and managing features, such as dashboards, teams, and alerts, can be assigned to users. These roles grant access to manage the instance and its resource.
 
-Within an instance, you can [define teams](/docs/workload-protection?topic=workload-protection-teams) to group users and control what data and resources are available for members of a team. User access can also be granted through [IAM policies.](/docs/workload-protection?topic=workload-protection-iam#iam_users)

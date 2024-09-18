@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-08-14"
 
 keywords: IBM Cloud, deploy, Kubernetes, OpenShift
 
@@ -14,13 +14,13 @@ subcollection: workload-protection
 
 
 # Deploying the agent in an outside Kubernetes or OpenShift cluster
-{: #deploy-wp-outside-cloud}
+{: deploy-wp-outside-cloud}
 
 In addition to its ability to run in {{site.data.keyword.cloud_notm}}, the centralized security and compliance framework that {{site.data.keyword.sysdigsecure_full}} provides can also be run in other clouds and on premises by using Helm charts to install the Workload Protect agent onto Kubernetes or OpenShift clusters.
 {: shortdesc}
 
 ## Before you begin
-{: #deploy-wp-outside-cloud-before-begin}
+{: deploy-wp-outside-cloud-before-begin}
 
 * Install the latest release of the version 3 [Helm CLI](https://github.com/helm/helm/releases){: external} on your local machine.
 
@@ -37,7 +37,7 @@ In addition to its ability to run in {{site.data.keyword.cloud_notm}}, the centr
     {: tip}
 
 ## Deploy an agent
-{: #deploy-wp-outside-cloud-deploy-agent}
+{: deploy-wp-outside-cloud-deploy-agent}
 
 Once you have a sufficient version of Helm and the permission to run commands on the cluster, you can use Helm to install, upgrade and delete the {{site.data.keyword.sysdigsecure_short}} on Kubernetes or OpenShift.
 
@@ -82,13 +82,15 @@ Once you have a sufficient version of Helm and the permission to run commands on
 ```sh
     helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-namespace \
     --set global.sysdig.accessKey=<SERVICE_ACCESS_KEY> \
-    --set agent.collectorSettings.collectorHost=<INGESTION_ENDPOINT> \ 
+    --set agent.collectorSettings.collectorHost=<INGESTION_ENDPOINT> \
     --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=<API_ENDPOINT> \
-    --set nodeAnalyzer.nodeAnalyzer.runtimeScanner.settings.eveEnabled=true \
+    --set nodeAnalyzer.nodeAnalyzer.runtimeScanner.deploy=false \
+    --set nodeAnalyzer.nodeAnalyzer.hostScanner.scanOnStart=true \
     --set nodeAnalyzer.secure.vulnerabilityManagement.newEngineOnly=true \
     --set global.kspm.deploy=true \
-    --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \ 
-    --set global.clusterConfig.name=<CLUSTER_NAME> \
+    --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
+    --set clusterScanner.enabled=true \
+    --set global.clusterConfig.name=iks-ctolon \
     --set kspmCollector.apiEndpoint=<API_ENDPOINT>
 ```
 {: pre}
@@ -111,14 +113,6 @@ global:
   kspm:
     deploy: true
 agent:
-  image:
-    registry: icr.io
-  slim:
-    enabled: true
-    image:
-      repository: ext/sysdig/agent-slim
-    kmoduleImage:
-      repository: ext/sysdig/agent-kmodule
   collectorSettings:
     collectorHost: INGESTION_ENDPOINT
 nodeAnalyzer:
@@ -126,15 +120,16 @@ nodeAnalyzer:
     vulnerabilityManagement:
       newEngineOnly: true
   nodeAnalyzer:
-    runtimeScanner: 
-      settings:
-        eveEnabled: true
     deploy: true
+    runtimeScanner: 
+      deploy: false
     apiEndpoint: API_ENDPOINT
     benchmarkRunner:
       deploy: false
 kspmCollector:
   apiEndpoint: API_ENDPOINT
+clusterScanner:
+  enabled: true
 ```
 {: codeblock}
 
@@ -153,7 +148,7 @@ helm install -n ibm-observe sysdig-agent sysdig/sysdig-deploy -f agent-values-mo
 {: pre}
 
 ## Update an agent
-{: #deploy-wp-outside-cloud-update-agent}
+{: deploy-wp-outside-cloud-update-agent}
 
 To update the agent version by using Helm, complete the following steps:
 
@@ -174,7 +169,7 @@ To update the agent version by using Helm, complete the following steps:
     {: pre}
 
 ## Remove an agent
-{: #deploy-wp-outside-cloud-remove-agent}
+{: deploy-wp-outside-cloud-remove-agent}
 
 To delete the agent by using Helm, you must uninstall the chart.
 

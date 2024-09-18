@@ -36,7 +36,7 @@ To resolve this issue, assign a label to the namespace. It will take a few minut
 
 
 
-<!-- NEED TO ADD A SAMPLE , like kube-system -->
+
 
 
 

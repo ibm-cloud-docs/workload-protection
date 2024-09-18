@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-05-31"
+  years:  2023
+lastupdated: "2023-08-19"
 
 keywords: workload protection, deploy, linux
 

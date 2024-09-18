@@ -2,9 +2,9 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-05-15"
+lastupdated: "2024-04-16"
 
-keywords: risks, posture, workload protection
+keywords:
 
 subcollection: workload-protection
 

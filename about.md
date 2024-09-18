@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-01-17"
+lastupdated: "2024-09-03"
 
 keywords:
 
@@ -12,107 +12,48 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# About Posture Management
+# About IBM Cloud Security Posture Management (CSPM)
 {: #about}
 
-For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).
-{: tip}
+In {{site.data.keyword.cloud_notm}}, {{site.data.keyword.sysdigsecure_full}} automates compliance checks for [{{site.data.keyword.cloud_notm}} Framework for Financial Services](/docs/framework-financial-services?topic=framework-financial-services-about), Digital Operational Resilience Act (DORA), CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark, PCI and many other industry related or best practices standards. With a detailed inventory of your {{site.data.keyword.cloud_notm}} resources and prioritization based on full context it facilitates the resolution and management of collected violations.
 
-Posture Management is a practice that you can use to keep your organization safe on-prem and cross-cloud. In {{site.data.keyword.cloud}}, you can use {{site.data.keyword.sysdigsecure_short}}, a unified and centralized framework to manage the security and compliance of applications, workloads, and infrastructure in {{site.data.keyword.cloud_notm}}, in other clouds, and on-prem.
-{: shortdesc}
-
-Posture Management provides the framework that includes controls, guidelines, benchmarks, and standards for managing infrastructures, including Infrastructure as a Service (IaaS), Software as a Service (SaaS), and Platform as a Service (PaaS). Posture Management helps you in the identification and remediation of risk within your organization.
-
-Cloud Security defines the collection of policies and controls, practices, and technologies that are designed to address unauthorized access, online attacks, and threats. For more information, see [An overview of cloud security](https://www.ibm.com/topics/cloud-security).
-
-Cloud Compliance defines the collection of policies and controls, practices, and technologies that are designed to address industry regulatory standards, and national and international laws.
-
-Across all industries, in particluar in highly regulated industries such as financial services, achieving continuous security and compliance within a cloud environment is an important step toward protecting resources, data and workloads. By default, {{site.data.keyword.cloud_notm}} follows best practices for security and compliance, and takes active steps to protect the integrity of their servers and services. But what else can you do to protect your infrastructure and your workloads?
-
-You can use the {{site.data.keyword.sysdigsecure_full_notm}} service to protect and gain visibility to resources, data, applications, and workloads across multiple environments. You can manage workloads and resources that run on {{site.data.keyword.cloud_notm}}, on other clouds, and on-prem. You can use this service to secure your builds, detect and respond to runtime threats, and continuously manage cloud configurations, permissions, and compliance.
-
-{{site.data.keyword.sysdigsecure_full_notm}} offers functionality to protect workloads and get deep cloud and container visibility. It has features to implement and manage security and compliance posture management, vulnerability scanning, forensics, threat detection and blocking, and more. It offers a workload protection platform (WPP) that focuses on management and security controls for workloads. It also includes a compliance platform (CP) that focuses on management and compliance controls that are required to meet industry standards and laws. Both platforms offer alerting on violations, and assist with remediation tasks.
-
-The {{site.data.keyword.sysdigsecure_full_notm}} service is a cloud workload protection tool (CWPT) that helps you monitor and protect your organization. {{site.data.keyword.sysdigsecure_full_notm}} includes Cloud Security Posture Management (CSPM), Kubernetes Security Posture Management (KSPM) and more.
-
-Use **Cloud security posture management (CSPM)** features to secure the infrastructure where workloads are deployed.
+The {{site.data.keyword.sysdigsecure_short}} posture module supports compliance validation on {{site.data.keyword.cloud_notm}}, multi-cloud environments (Amazon Web Services, Azure and Google Cloud), inside hosts, virtual machines (VSIs for VPC, VMware, PowerVS and IBM Z with Linux), Kubernetes, and OpenShift.
 {: note}
 
-Use **Kubernetes Security Posture Management (KSPM)** features to secure Kubernetes clusters or {{site.data.keyword.redhat_openshift_notm}} clusters, and the workloads running within them.
-{: note}
+The posture module brings many features for your CSPM in your hybrid environments:
 
-The main goal of {{site.data.keyword.sysdigsecure_full_notm}} is to provide the tools that will help you keep your organization secure and able to resist threats and attacks, while making sure that workloads are successfully deployed.
+- Unified and centralized view to manage security and compliance of applications, workloads and infrastructure running on {{site.data.keyword.cloud_notm}}, in other cloud providers and on-premise, covering managed services, hosts, virtual machines and containers and Kubernetes or OpenShift clusters.
 
-## Cloud Security Posture Management (CSPM)
-{: #about-cspm}
+- Many predefined frameworks such as Financial Services, PCI, DORA, CIS or NIST allow to implement and validate the controls that are required to meet industry standards and laws.
 
-Cloud Security Posture Management (CSPM) is a framework that includes the policies and controls, the practices, and the technologies to detect and remediate security issues, and compliance risks across multi-cloud environments in your organization. It is focused on securing cloud infrastructures where workloads are deployed. In addition, it addresses security and compliance of Infrastructure as a Service (IaaS), Software as a Service (SaaS), and Platform as a Service (PaaS).
+- Inventory of all your cloud assests (compute resources, managed services, identities, and entitlements) and hosts, virtual machines, clusters and all Kubernetes or OpenShift resources, whether they are in the cloud or on-premises.
 
-The {{site.data.keyword.sysdigsecure_full_notm}} service includes CSPM functionality to continuously monitor infrastructures in your organization where workloads are deployed.
+- A risk acceptance flow for removing the violation from the failed controls with options for the reason and expiration period for the acceptance. Risk can be accepted at one resource level or globally for all resources from one control.
 
-The {{site.data.keyword.sysdigsecure_full_notm}} service inspects cloud environments across multiple environments to continuously:
+- Detailed remediation instructions to fix failing controls.
 
-- Scan, detect and alert about misconfigurations, malware, secrets, and software configuration vulnerabilities. Empower DevOps to fix these issues fast.
+- Ability to create custom policies, controls, and control parameters.
 
-- Provide fixes and guidance on how to remediate security findings.
+## Available pre-defined policies for IBM Cloud CSPM in {{site.data.keyword.sysdigsecure_short}}
 
-- Map misconfigurations in production to infrastructure as code (IaC) manifests.
+The following posture policies are available for you to use to implement CSPM for your {{site.data.keyword.cloud_notm}} resources:
 
-    Fix violations by opening a pull request to the source file.
+| Policy  | Description |
+|:---------|:------------|
+| CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark | Validate that your resource configurations meet the baseline requirements that are identified by the Center for Internet Security. |
+| {{site.data.keyword.cloud_notm}} Framework for Financial Services | [{{site.data.keyword.cloud_notm}} for Financial Services™](/docs/framework-financial-services?topic=framework-financial-services-about) is an open platform that brings together independent software vendors (ISVs), Software as a Service (SaaS) providers, and financial services institutions in a single ecosystem. In this secure cloud platform, you can rapidly develop and share innovative applications, APIs, data, and content to meet the unique business needs of your financial institution.  \n \n Through the [{{site.data.keyword.framework-fs_full}}](/docs/framework-financial-services?topic=framework-financial-services-about), you can access a unified set of security and compliance controls, which was built specifically for and with the financial services industry. To address your evolving needs as a financial institution, IBM continuously validates these controls with global Councils of CSOs, CTOs, and CIOs from major banks, insurance providers, and regulatory advisors.  \n \n The {{site.data.keyword.cloud_notm}} for Financial Services profile provides you with a set of pre-configured automated goals that are mapped to the [{{site.data.keyword.framework-fs_full}} control requirements](/docs/framework-financial-services?topic=framework-financial-services-about#framework-control-requirements). The results of these tests help you validate compliance when you are using one of the [references architectures](/docs/framework-financial-services?topic=framework-financial-services-reference-architecture-overview) for the {{site.data.keyword.cloud_notm}} for Financial Services. |
+| Digital Operational Resilience Act (DORA) - Regulation (EU) 2022/2554 | The Digital Operational Resilience Act (Regulation (EU) 2022/2554) solves an important problem in the EU financial regulation. Before DORA, financial institutions managed the main categories of operational risk mainly with the allocation of capital, but they did not manage all components of operational resilience. After DORA, they must also follow rules for the protection, detection, containment, recovery, and repair capabilities against ICT-related incidents. DORA explicitly refers to ICT risk and sets rules on ICT risk-management, incident reporting, operational resilience testing and ICT third-party risk monitoring. This Regulation acknowledges that ICT incidents and a lack of operational resilience have the possibility to jeopardise the soundness of the entire financial system, even if there is adequate capital for the traditional risk categories. |
+| Esquema Nacional de Seguridad (ENS) High | By provision of a Spanish law, Spanish citizens have a legal right to access government services electronically. Governed by Royal Decree 3/2010, the Esquema Nacional de Seguridad (ENS) (National Security Framework) aims to establish a security policy for the use of electronic media. Inclusive of cloud computing services, ENS defines basic principles and minimum requirements for the protection of information. |
+| AI ICT guardrails | The AI ICT guardrails provides a predefined list of infrastructure and data controls, required to handle AI and Generative AI (GenAI) workloads. These controls include AI specific elaborations across control categories like risk and compliance management, unified infrastructure security and performance, application and workload protection, data protection, identity and access management, logging, and monitoring. This list of controls is to be used in conjunction with the security baseline of the organization. |
+| C5:2020 (Cloud Computing Compliance Criteria Catalog) | The Cloud Computing Compliance Controls Catalog (C5), created by the German Federal Office for Information Security (Bundesamt für Sicherheit in der Informationstechnik, or BSI) outlines requirements that cloud service providers must meet in order to provide a minimum security level for their services. |
+| SOC 2 | SOC 2 is a voluntary compliance standard for service organizations, developed by the American Institute of CPAs (AICPA). Its intent is to ensure the safety and privacy of user data. It outlines the five trust service principles of security, availability, processing integrity, confidentiality, and privacy of customer data as a framework for safeguarding data. SOC 2 applies to any technology service provider or SaaS company that handles or stores customer data. Third-party vendors, other partners, or support organizations that those firms work with should also maintain SOC 2 compliance to ensure the integrity of their data systems and safeguards. |
+| ISMAP (Information System Security Management and Assessment Program) | The Information System Security Management and Assessment Program (ISMAP) aims to secure the security level of the government's cloud service procurement by evaluating and registering cloud services that meet the security requirements of the government in advance, thereby contributing to the smooth introduction of cloud services. |
+| PCI DSS (Payment Card Industry Data Security Standard) v4.0.0 | The Payment Card Industry Data Security Standard (PCI DSS) was developed to encourage and enhance payment card account data security and facilitate the broad adoption of consistent data security measures globally. PCI DSS provides a baseline of technical and operational requirements designed to protect account data. While specifically designed to focus on environments with payment card account data, PCI DSS can also be used to protect against threats and secure other elements in the payment ecosystem. |
+{: caption="Table 1. Available predefined policies" caption-side="top"}
 
-    The {{site.data.keyword.sysdigsecure_short}} is integrated with Git.
-    {: note}
+All other posture policies apply to other environments such as AWS, Azure, GCP, Kubernetes, OpenShift, or hosts.
 
-- Provide control over cloud infrastructure configurations and ensure consistent implementation of policies across multiple cloud providers.
+## Next steps
+{: #about-next}
 
-    Use out-of-the-box compliance controls.
-
-    Create customized security policies that align with your security mandates.
-
-    Duplicate an existing security policy and turn on and off controls, or create a new ones from scratch.
-
-- Monitor for suspicious activity and threats.
-
-    Perform risk assessments of your infrastructure and workloads by checking policies and controls that are included in standard frameworks such as CIS, PCI, NIST.
-
-    Enforce compliance with controls using policy as code based on OPA.
-
-- Monitor all suspicious activity performed by privileged users.
-
-- Integrate with DevOps tools to streamline the incident response process.
-
-- Show proof of your compliance through audit logs and container forensics data.
-
-## Kubernetes Security Posture Management (KSPM)
-{: #about-kspm}
-
-
-Kubernetes Security Posture Management, or KSPM, is the use of security automation tools to discover and fix security and compliance issues within a Kubernetes component.
-
-- KSPM provides processes and technologies to help secure a Kubernetes cluster or a {{site.data.keyword.redhat_openshift_notm}} cluster, and the workloads running within it.
-
-- KSPM continuously analyzes and evaluates the security of cluster components and their configurations, identifies potential vulnerabilities, and monitors for, and responds to, security incidents.
-
-KSPM is one part in a Kubernetes security strategy, but it isn't the only one. KSPM is not a substitute for runtime security, which helps detect active threats within your environment. Nor does KSPM address risks such as malware inside containers, which is a threat that  container image scanning can handle.
-
-You must deploy a broad set of security tools for Kubernetes. Included in your security tools can be {{site.data.keyword.sysdigsecure_full_notm}}. As part of a broader Kubernetes security strategy, KSPM allows teams to validate the security of Kubernetes configurations to find and remediate mistakes that can trigger a breach. By running continuous, automatic scans of Kubernetes configurations, admins can mitigate one of the most common areas of attack, human error. At the same time, you can automate compliance in even the most complex Kubernetes clusters.
-
-For more information, see [About KSPM](/docs/workload-protection?topic=workload-protection-kspm).
-
-
-## Network policies for containerized workloads
-{: #about-nw}
-
-When clients provision a cluster, they can choose a networking setup so that certain cluster components can communicate with each other and with networks or services outside of the cluster. Examples of [networking configurations](https://cloud.ibm.com/docs/containers?topic=containers-plan_vpc_basics) are:
-
-* Worker-to-worker
-* Worker-to-master
-* User-to-master
-* Worker communication to other services or networks
-* External communication to apps that run on worker nodes.
-
-Clusters on Virtual Private Clouds (VPCs) run on secure, isolated virtual networks where traffic flow to and from worker nodes is controlled by applying rules defined through security groups (SGs). Traffic flow to and from the cluster subnets is controlled by ACLs. Clients can define container network policies to restrict egress and ingress traffic and communication between applications.
-
-With the [Network Security Policy tool](/docs/workload-protection?topic=workload-protection-netsec_policy) that is available through the {{site.data.keyword.sysdigsecure_full_notm}} service, clients can generate and fine-tune Kubernetes network policies based on the traffic allowed or denied, and track ingress and egress communication. For example, you can configure a "least-privilege" policy to protect your workloads or view existing network policies that have been applied to you workloads.
-
-{{site.data.keyword.sysdigsecure_short}} leverages native Kubernetes features and doesn't require any additional networking requirements other than the Container Network Interface (CNI). Through the UI, clients can view which policies are being applied in real time.
+To get the most of {{site.data.keyword.sysdigsecure_short}} enable CSPM following the steps described in [Implementing CSPM (Cloud Security Posture Management) for {{site.data.keyword.cloud_notm}} using the UI and CLI](/docs/workload-protection?topic=workload-protection-cspm-implement).

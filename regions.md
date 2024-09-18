@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-07-24"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Regions
+# Supported regions for Workload Protection
 {: #regions}
 
 A list of supported regions for the {{site.data.keyword.sysdigsecure_full_notm}} service.

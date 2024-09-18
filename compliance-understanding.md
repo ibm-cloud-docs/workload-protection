@@ -31,7 +31,7 @@ The compliance posture for each of your [zones](/docs/workload-protection?topic=
 
 ![Example compliance overview.](images/compliance_view.png "Example of a compliance view showing the compliance posture for various zones"){: caption="Figure 1. Example compliance view" caption-side="bottom"}
 
-Zones are listed alphabetically. The default _Entire Infrastructure_ zone is [automatically created by {{site.data.keyword.sysdigsecure_full_notm}}](/docs/workload-protection?topic=workload-protection-about#about-cspm). You can define your own zones by using the [Zones page](/docs/workload-protection?topic=workload-protection-posture-zones).
+Zones are listed alphabetically. The default _Entire Infrastructure_ zone is automatically created by {{site.data.keyword.sysdigsecure_full_notm}}. You can define your own zones by using the [Zones page](/docs/workload-protection?topic=workload-protection-posture-zones).
 
 Compliance posture information that is displayed includes:
 

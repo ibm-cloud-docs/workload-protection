@@ -31,7 +31,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for the set up and
 | `Monitor incidents`  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [receive emails about platform notifications](/docs/overview?topic=overview-ui). </br>Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
 | `Maintain {{site.data.keyword.cloud_notm}} high availability SLA`  | Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview?topic=overview-slas). |   |
 | `Provide high availability capabilities` | Provide capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions (MZR), to meet local access and low latency requirements for each supported region.  | Use the list of [available regions](/docs/workload-protection?topic=workload-protection-endpoints) to plan for and create new instances of the service. |
-| `Monitor agents`   | Provide images and instructions for how to install agents in environments that you want to monitor, such as Kubernetes and Openshift. | Install and configure agents. </br>Monitor that the agents are running in your environment. |
+| `Monitor agents`   | Provide images and instructions for how to install agents in environments that you want to monitor, such as Kubernetes and {{site.data.keyword.redhat_openshift_notm}}. | Install and configure agents. </br>Monitor that the agents are running in your environment. |
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
 
 

@@ -33,4 +33,4 @@ Consider the following when configuring context-based restrictions:
 
 * Context-based restrictions do not affect connectivity of {{site.data.keyword.sysdigsecure_full}} agents since they do not use {{site.data.keyword.iamlong}}.
 
-* Private connections between agents and {{site.data.keyword.sysdigsecure_full}} can be configured using [private service endpoints](/docs/workload-protection?topic=workload-protection-endpoints).
+* Private connections between agents and {{site.data.keyword.sysdigsecure_full}} can be configured using [private service endpoints](/docs/monitoring?topic=workload-protection-endpoints).
