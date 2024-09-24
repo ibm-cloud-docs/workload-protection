@@ -1,0 +1,250 @@
+
+
+  
+  - navgroup:
+      id: learn
+      topics:
+      - topic: getting-started.md
+        navtitle: Getting started
+      - topic: key_features.md
+        navtitle: Key features
+      - topic: about.md
+        navtitle: About IBM Cloud Security Posture Management (CSPM)
+      - topic: pricing.md
+        navtitle: Pricing
+      - topic: releasenotes.md
+        navtitle: Release notes
+
+  - navgroup:
+      id: howto
+      topics:
+      - topicgroup:
+          label: Managing instances
+          topics:
+             - topic: instance_provision.md
+               navtitle: Provisioning an instance
+             - topic: terraform-setup.md
+             - topic: instance_remove.md
+               navtitle: Deleting an instance
+             - topic: instance_upgrade.md
+
+      - topicgroup:
+          label: Configuring registries (WIP)
+          topics:
+             - topic: registry-ibm-cloud.md
+               navtitle: IBM Cloud Registry
+
+      - topicgroup:
+          label: Managing keys
+          topics:
+             - topic: access_key.md
+               navtitle: Access keys
+             - topic: api_token.md
+               navtitle: IAM API keys
+             - topic: secure_token.md
+               navtitle: Secure API tokens
+
+      - topicgroup:
+          label: Managing the agent
+          topics:
+          - topic: agent-helm-parameters.md
+            navtitle: Configurable parameters
+          - topic: agent-deploy-kube-helm.md
+            navtitle: On a Kubernetes cluster
+          - topic: agent-deploy-openshift-helm.md
+            navtitle: On a Red Hat OpenShift cluster
+          - topic: deploy-wp-outside-cloud.md
+            navtitle: On an outside Kubernetes or OpenShift cluster
+          - topic: agent-deploy-satellite.md
+            navtitle: On IBM Satellite
+          - topic: powervs-linux.md
+            navtitle: On Linux hosts on PowerVS
+          - topic: agent-deploy-windows.md
+            navtitle: On Windows
+          - topic: manage-linux-agent.md
+            navtitle: Protecting Linux hosts
+      
+      - topicgroup:
+          label: Cloud Security Posture Management (CSPM)
+          topics:
+          - topic: cspm-best-practices.md
+            navtitle: Best practices
+          - topic: cspm-implement.md
+            navtitle: Implementing using the UI and CLI
+
+      - topicgroup:
+          label: Controlling access
+          topics:
+          - topic: iam.md
+            navtitle: Controlling access through IAM
+          - topic: iam_grant.md
+            navtitle: Granting permissions to work with Workload Protection - (Not April GA)
+          - topic: iam_grant_team.md
+          - topic: teams.md
+          - topic: team_id.md
+
+      - topicgroup:
+          label: Logging and monitoring
+          topics:
+          - at_events.md
+
+      - topicgroup:
+          label: Enhancing security
+          topics:
+          - topic: data-security.md
+          - topic: service-connection.md
+          - topic: architecture-workload-isolation.md
+            navtitle: Architecture and workload isolation
+          - topic: cbr.md
+            navtitle: Protecting resources with context-based restrictions
+          - topic: ha-dr.md
+
+      - topicgroup:
+          label: Secure UI
+          topics:
+          - instance_launch.md
+          - topic: get_web_url.md
+
+      - topicgroup:
+          label: Alerts
+          topics:
+          - notifications.md
+          - topic: notifications_api.md
+          - topic: pd_sms.md
+          - topic: eventnotif.md
+          - topic: eventnotif_sms.md
+
+      - topicgroup:
+          label: Insights
+          topics:
+          - insights.md
+      
+      - topicgroup:
+          label: Inventory
+          topics:
+          - inventory.md
+
+      - topicgroup:
+          label: Risks
+          topics:
+          - risks.md
+
+      - topicgroup:
+          label: Posture Management
+          topics:
+          - topic: posture-zones.md
+            navtitle: Managing zones
+
+          - topicgroup:
+              label: Managing posture policies
+              topics:
+              - topic: posture-policies.md
+                navtitle: Managing Posture Policies
+              - topic: posture-requirements.md
+                navtitle: Managing requirements and requirement groups
+              - topic: posture-policy-create.md
+                navtitle: Creating a custom policy
+              - topic: posture-policy-create-template.md
+                navtitle: Creating a custom policy from a template
+
+          - topic: posture-controls.md
+            navtitle: Managing controls
+          - topic: posture-link-policy-to-zone.md
+            navtitle: Linking a policy to a zone
+
+          - topicgroup:
+              label: Compliance reporting
+              topics:
+              - topic: compliance.md
+                navtitle: Analyzing compliance postures from detection to remediation
+              - compliance-understanding.md
+              - compliance-evaluate.md
+              - compliance-reports.md
+              - compliance-api.md
+              - identity_and_access.md
+
+      - topicgroup:
+          label: Threat detection policies
+          topics:
+          - vulnerability_policies.md
+          - threat_detection.md
+          - topic: posture-policy-create.md
+            navtitle: Creating a custom policy
+          - manage_rules.md
+          - runtime_tuning.md
+          - image_profiles.md
+
+      - topicgroup:
+          label: Network security policies
+          topics:
+          - topic: netsec_policy.md
+            navtitle: Kubernetes Network Policies
+          - topic: network_config_ts.md
+            navtitle: Configuring the account
+          - topic: network_ts.md
+            navtitle: Configuration issues
+
+      - topicgroup:
+          label: Events
+          topics:
+          - event_forwarding.md
+          - audit_logging.md
+
+      - topicgroup:
+          label: Investigate
+          topics:
+          - activity_audit.md
+          - captures.md
+          - rapid_response.md
+
+      - topicgroup:
+          label: Integrations
+          topics:
+          - integrations.md
+
+  - navgroup:
+      id: reference
+      topics:
+      - terminology.md
+      - topic: regions.md
+        navtitle: Regions
+      - endpoints.md
+      - topic: shared-responsibilities.md
+        navtitle: Understanding your responsibilities
+
+      - topicgroup:
+          label: CLI Reference
+          topics:
+          - include: ../workload-protection-cli-plugin/sysdig-secure-cli.md
+            navtitle: Workload Protection CLI
+          - include: ../workload-protection-cli-plugin/sysdig-secure-cli-compliance.md
+            navtitle: Compliance CLI
+          - include: ../workload-protection-cli-plugin/sysdig-secure-cli-policy.md
+            navtitle: Policy CLI
+          - include: ../workload-protection-cli-plugin/sysdig-secure-cli-version.md
+            navtitle: Version CLI
+
+      - topicgroup:
+          label: API
+          links:
+          - link:
+              label: API Reference
+              href: https://{DomainName}/apidocs/workload-protection
+          topics:
+          - using-curl.md
+
+      - topicgroup:
+          label: Additional documentation
+          topics:
+          - sysdig_doc.md
+
+  - navgroup:
+        id: help
+        topics:
+        - gettinghelp.md
+
+        - topicgroup:
+            label: Troubleshooting
+            topics:
+            - troubleshoot-01.md
+

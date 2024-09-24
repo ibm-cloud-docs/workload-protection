@@ -13,8 +13,8 @@ subcollection: workload-protection
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Pricing for for IBM Cloud Security and Compliance Center Workload Protection
-{: #pricing_plans}
+# Pricing 
+{: #pricing}
 
 Pricing for {{site.data.keyword.sysdigsecure_full_notm}} is based on a graduated tier system in which costs decrease per-resource as you deploy more resources. Your cost depends on how many {{site.data.keyword.sysdigsecure_short}} agents that you have and where those agents are deployed.
 {: shortdesc}
