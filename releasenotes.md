@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-10-03"
 
 keywords:  release notes, IBM Cloud
 
@@ -17,68 +17,122 @@ content-type: release-note
 # Release notes for {{site.data.keyword.sysdigsecure_full_notm}}
 {: #release-notes}
 
-The following changes to the service were made available with the associated date.
+Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
+{: shortdesc}
 
-## 8 July 2024
-{: #workload-protection-jul0824}
+## September 2024
+{: #workload-protection-sep24}
+
+### 30 September 2024
+{: #workload-protection-sep3024}
 {: release-note}
 
-Support for Cloud Security Posture Management (CSPM) now available
-:   {{site.data.keyword.sysdigsecure_full}} now supports Cloud Security Posture Management (CSPM) for {{site.data.keyword.cloud_notm}} resources with the {{site.data.keyword.cloud_notm}} Framework for Financial Services, Digital Operational Resilience Act (DORA), CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark, PCI, and many other industry related or best practices standards.
+Full custom controls for CSPM
+:   You can now create Custom Controls for CSPM via Terraform. Define your REGO code, remediation playbooks and severity from scratch to meet your compliance requirements
 
-## 16 April 2024
+Package Deny List for Vulnerability rules
+:   The new Package Deny list vulnerability rule lets you control which packages are allowed in your codebase.
+    By defining these rules, you can enforce stricter security measures and maintain tighter control over your software artifacts.
+
+New Posture Policies
+:   {{site.data.keyword.sysdigsecure_short}} now includes Posture Policies for Bottlerocket, Rocky Linux 9, Ubuntu 20, Ubuntu 22, RHEL 8, and RHEL 9.
+    These new policies are designed to help you maintain security compliance across a broader range of Linux distributions.
+
+## August 2024
+{: #workload-protection-aug24}
+
+### 20 August 2024
+{: #workload-protection-aug2024}
+{: release-note}
+
+Identify Network Exposure in Inventory
+:   The new added Network Exposure tab in Inventory shows the reason and how resources are exposed. It supports Hosts and Workloads.
+
+Resource Packages in Inventory
+:   You can now use the Packages module in Inventory to track the vulnerabilities and the analyzed packages of your images.
+
+    In addition, you can filter by Package to find all workloads with a specific package in your environment.
+
+:   Layered Analysis
+{{site.data.keyword.sysdigsecure_short}} now analyzes the image hierarchy exposing the layer each vulnerability has been identified or from which packages introduce each layer.
+Better ownership and remediation details are included now by differentiating the base image and application layers and including a new set of recommendations to fix the major issues identified in the image.
+
+## July 2024
+{: #workload-protection-july24}
+
+### 8 July 2024
+{: #workload-protection-july0824}
+{: release-note}
+
+{{site.data.keyword.sysdigsecure_full}} now supports Cloud Security Posture Management (CSPM) for {{site.data.keyword.cloud_notm}} resources with the {{site.data.keyword.cloud_notm}} Framework for Financial Services, Digital Operational Resilience Act (DORA), CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark, PCI, and many other industry related or best practices standards.
+
+## April 2024
+{: #workload-protection-apr24}
+
+### 16 April 2024
 {: #workload-protection-apr1624}
 {: release-note}
 
-Support for Risks now available
-:   {{site.data.keyword.sysdigsecure_short}} announces support for [Risks](/docs/workload-protection?topic=workload-protection-risks), a module that consolidates all findings from your multi-cloud environment and includes an attack path analysis to help you prioritize the major detected risks.
+{{site.data.keyword.sysdigsecure_short}} announces support for [Risks](/docs/workload-protection?topic=workload-protection-risks), a module that consolidates all findings from your multi-cloud environment and includes an attack path analysis to help you prioritize the major detected risks.
 
-## 29 April 2024
+### 29 April 2024
 {: #workload-protection-apr2924}
 {: release-note}
 
-Manage the Workload Protection agent in Linux on PowerVS
-:   {{site.data.keyword.sysdigsecure_short}} announces support for [Managing the Workload Protection agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
+{{site.data.keyword.sysdigsecure_short}} announces support for [Managing the Workload Protection agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
 
-## 8 February 2024
+## February 2024
+{: #workload-protection-feb24}
+
+### 8 February 2024
 {: #workload-protection-feb0824}
 {: release-note}
 
-Deploy and manage an agent on Satellite using a Helm chart
-:   {{site.data.keyword.sysdigsecure_short}} announces the ability to [deploy and manage an agent on Satellite using a Helm chart](/docs/workload-protection?topic=workload-protection-agent-deploy-satellite).
+{{site.data.keyword.sysdigsecure_short}} announces the ability to [deploy and manage an agent on Satellite using a Helm chart](/docs/workload-protection?topic=workload-protection-agent-deploy-satellite).
 
-## 20 February 2024
+### 20 February 2024
 {: #workload-protection-feb2024}
 {: release-note}
 
-Support for Inventory now available
-:   {{site.data.keyword.sysdigsecure_short}} announces support for [Inventory](/docs/workload-protection?topic=workload-protection-inventory), a detailed view of all your resources across your multi-cloud environments (AWS, Azure and Google Public Cloud), Kubernetes environments (such as IBM Kubernetes Service, Red Hat OpenShift, or any other Kubernetes platform) as well as your container images.
+{{site.data.keyword.sysdigsecure_short}} announces support for [Inventory](/docs/workload-protection?topic=workload-protection-inventory), a detailed view of all your resources across your multi-cloud environments (AWS, Azure and Google Public Cloud), Kubernetes environments (such as IKS, ROKS, or any other Kubernetes platform) as well as your container images.
 
-## 18 January 2024
+## January 2024
+{: #workload-protection-jan24}
+
+### 18 January 2024
 {: #workload-protection-jan1624}
 {: release-note}
 
 Deprecation of Sysdig Secure + Monitor plan in IBM Cloud Monitoring
-:   As of 18 January 2024, the Graduated Tier - Sysdig Secure + Monitor plan in IBM Cloud Monitoring is deprecated. For current Workload Protection users, there is no change to functionality. However, if you are currently working with the Sysdig Secure through IBM Cloud Monitoring, you must move to a Workload Protection based plan by the 18 August 2024 to maintain the same functionality. For more information about the transition see [the frequently asked questions](/docs/monitoring?topic=monitoring-faq#faq_4).
+: As of 18 January 2024, the Graduated Tier - Sysdig Secure + Monitor plan in IBM Cloud Monitoring is deprecated. For current Workload Protection users, there is no change to functionality. However, if you are currently working with the Sysdig Secure through IBM Cloud Monitoring, you must move to a Workload Protection based plan by the 18 August 2024 to maintain the same functionality. For more information about the transition see [the frequently asked questions](/docs/monitoring?topic=monitoring-faq#faq_4).
 
 Deprecation of version 1 of the scanning engine
 :   As of 18 January 2024, Version 1 of the scanning engine in Workload Protection is deprecated. The functionality is replaced by a new scanning engine with better performance and more capabilities. Any new instances that are created starting today are automically configured to use the new engine. If you are currently working with an existing instance, you must migrate to the new engine by 18 January, 2025. When you migrate, you must also move from the legacy node-analyzer to the new one. In some cases, uninstalling and reinstalling by using Helm is the simplest approach. If you are working with a pipeline or registry scanning, you will need to start using the new scanning components. [Learn more about scanning engines](https://docs.sysdig.com/en/docs/sysdig-secure/scanning/new-scanning-engine/){: external}.
 
-## 18 September 2023
+## September 2023
+{: #workload-protection-sep23}
+
+### 18 September 2023
 {: #workload-protection-sep1823}
 {: release-note}
 
 New vulnerability scanning engine available
 :   {{site.data.keyword.sysdigsecure_short}} announces the new vulnerability scanning engine is now available.
 
-## 10 May 2023
+## May 2023
+{: #workload-protection-may23}
+
+### 10 May 2023
 {: #workload-protection-may1023}
 {: release-note}
 
 Availability in additional regions
 :   {{site.data.keyword.sysdigsecure_short}} is available for use in [multiple regions.](/docs/workload-protection?topic=workload-protection-regions)
 
-## 14 April 2023
+## April 2023
+{: #workload-protection-apr23}
+
+### 14 April 2023
 {: #workload-protection-apr1423}
 {: release-note}
 
