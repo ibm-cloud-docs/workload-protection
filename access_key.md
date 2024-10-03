@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-09-24"
 
 keywords:
 
@@ -19,8 +19,9 @@ The **Access Key** is a token that you must use to configure agents to successfu
 {: shortdesc}
 
 
-## Getting the access key through the {{site.data.keyword.cloud_notm}} UI
+## Getting the access key 
 {: #access_key_ibm_cloud_ui}
+{: ui}
 
 To get the access key for an {{site.data.keyword.sysdigsecure_full_notm}} instance through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
@@ -38,6 +39,7 @@ To get the access key for an {{site.data.keyword.sysdigsecure_full_notm}} instan
 
 ## Getting the access key through the CLI
 {: #access_key_cli}
+{: cli}
 
 To get the access key for a instance through the command line, complete the following steps:
 
@@ -71,8 +73,9 @@ To get the access key for a instance through the command line, complete the foll
 
 
 
-## Creating an access key
+## Creating an access key with the API
 {: #access_key_create}
+{: api}
 
 If the access key is compromised or you have a policy to renew it after a number of days, you can generate a new access key and disable the old one.
 
@@ -120,8 +123,9 @@ To create a new access key for an {{site.data.keyword.sysdigsecure_full_notm}} i
 
 3. The access key can now be used in the agent configuration files.
 
-## Disabling an access key
+## Disabling an access key with the API
 {: #access_key_disable}
+{: api}
 
 To disable an existing access key for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
 
@@ -170,8 +174,9 @@ To disable an existing access key for an {{site.data.keyword.sysdigsecure_full_n
     {: screen}
 
 
-## Enabling an access key
+## Enabling an access key with the API
 {: #access_key_enable}
+{: api}
 
 To enable an existing access key for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
 
@@ -197,6 +202,7 @@ After you enable the access key, the agents will need to be manually restarted s
 
 ## Viewing the available access keys
 {: #access_key_view}
+{: api}
 
 To view all of the access keys for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
 
@@ -246,6 +252,7 @@ To view all of the access keys for an {{site.data.keyword.sysdigsecure_full_notm
 
 ## Deleting access keys
 {: #access_key_delete}
+{: api}
 
 To delete an access keys for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
 
@@ -270,6 +277,7 @@ To delete an access keys for an {{site.data.keyword.sysdigsecure_full_notm}} ins
 
 ## Hide the access key
 {: #access_key_hide}
+{: ui}
 
 
 To hide the *Access Key* page for non-admin users in an {{site.data.keyword.sysdigsecure_short}} instance through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:

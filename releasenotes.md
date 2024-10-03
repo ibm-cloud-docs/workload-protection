@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-10-03"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,43 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## September 2024
+{: #workload-protection-sep24}
+
+### 30 September 2024
+{: #workload-protection-sep3024}
+{: release-note}
+
+Full custom controls for CSPM
+:   You can now create Custom Controls for CSPM via Terraform. Define your REGO code, remediation playbooks and severity from scratch to meet your compliance requirements
+
+Package Deny List for Vulnerability rules
+:   The new Package Deny list vulnerability rule lets you control which packages are allowed in your codebase.
+    By defining these rules, you can enforce stricter security measures and maintain tighter control over your software artifacts.
+
+New Posture Policies
+:   {{site.data.keyword.sysdigsecure_short}} now includes Posture Policies for Bottlerocket, Rocky Linux 9, Ubuntu 20, Ubuntu 22, RHEL 8, and RHEL 9.
+    These new policies are designed to help you maintain security compliance across a broader range of Linux distributions.
+
+## August 2024
+{: #workload-protection-aug24}
+
+### 20 August 2024
+{: #workload-protection-aug2024}
+{: release-note}
+
+Identify Network Exposure in Inventory
+:   The new added Network Exposure tab in Inventory shows the reason and how resources are exposed. It supports Hosts and Workloads.
+
+Resource Packages in Inventory
+:   You can now use the Packages module in Inventory to track the vulnerabilities and the analyzed packages of your images.
+
+    In addition, you can filter by Package to find all workloads with a specific package in your environment.
+
+:   Layered Analysis
+{{site.data.keyword.sysdigsecure_short}} now analyzes the image hierarchy exposing the layer each vulnerability has been identified or from which packages introduce each layer.
+Better ownership and remediation details are included now by differentiating the base image and application layers and including a new set of recommendations to fix the major issues identified in the image.
 
 ## July 2024
 {: #workload-protection-july24}
@@ -71,7 +108,6 @@ Deprecation of Sysdig Secure + Monitor plan in IBM Cloud Monitoring
 
 Deprecation of version 1 of the scanning engine
 :   As of 18 January 2024, Version 1 of the scanning engine in Workload Protection is deprecated. The functionality is replaced by a new scanning engine with better performance and more capabilities. Any new instances that are created starting today are automically configured to use the new engine. If you are currently working with an existing instance, you must migrate to the new engine by 18 January, 2025. When you migrate, you must also move from the legacy node-analyzer to the new one. In some cases, uninstalling and reinstalling by using Helm is the simplest approach. If you are working with a pipeline or registry scanning, you will need to start using the new scanning components. [Learn more about scanning engines](https://docs.sysdig.com/en/docs/sysdig-secure/scanning/new-scanning-engine/){: external}.
-
 
 ## September 2023
 {: #workload-protection-sep23}

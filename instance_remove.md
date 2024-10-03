@@ -37,6 +37,7 @@ Then, delete the instance from the {{site.data.keyword.cloud_notm}} Dashboard.
 
 ## Removing an instance through the {{site.data.keyword.cloud_notm}} UI
 {: #remove_ui}
+{: ui}
 
 To remove an instance of {{site.data.keyword.sysdigsecure_full_notm}} by using the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
@@ -49,6 +50,7 @@ To remove an instance of {{site.data.keyword.sysdigsecure_full_notm}} by using t
 
 ## Removing an instance through the CLI
 {: #remove_cli}
+{: cli}
 
 To remove an instance of {{site.data.keyword.sysdigsecure_full_notm}} through the command line, complete the following steps:
 

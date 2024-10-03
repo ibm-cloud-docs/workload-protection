@@ -22,6 +22,7 @@ You can provision an instance of the {{site.data.keyword.sysdigsecure_full_notm}
 
 ## Provisioning an instance from the catalog
 {: #provision_ui}
+{: ui}
 
 To provision an instance from the {{site.data.keyword.cloud_notm}} catalog, complete the following steps:
 
@@ -53,6 +54,7 @@ To provision an instance from the {{site.data.keyword.cloud_notm}} catalog, comp
 
 ## Provisioning an instance through the CLI
 {: #provision_cli}
+{: cli}
 
 To provision an instance through the command line, complete the following steps:
 
