@@ -46,7 +46,7 @@ The following table lists the high-availability (HA) status for the regions (loc
 | `North America`       | `Washington (us-east)`   | `MZR`     |
 | `North America`       | `Toronto (ca-tor)`       | `MZR`     |
 | `South America`       | `Sao Paulo (br-sao)`     | `MZR`     |
-{: caption="Table 1. List of locations where the service is available" caption-side="top"}
+{: caption="List of locations where the service is available" caption-side="top"}
 
 Where
 

@@ -58,7 +58,7 @@ Data is retained as follows, including when an agent is uninstalled, and the hos
 | scan results `[*]` | Image data is kept for a maximum of 90 days. \n  \n A maximum of 5 tags for each  repository and a maximum of 5 different images for each tag are retained. If an additional image is pushed when 5 images exist, the oldest image will be deleted, regardless of age.  \n  \n Images used by a container monitored by a {{site.data.keyword.sysdigsecure_full_notm}} agent (runtime images) are always retained regardless of limits. |
 | vulnerability management reports | 15 days|
 | captures | 90 days |
-{: caption="Table 1. Data retention" caption-side="bottom"}
+{: caption="Data retention" caption-side="bottom"}
 
 `[*]` - Conditions are applied simultaneously.  The retention policy will be triggered for the first matched retention trigger.
 

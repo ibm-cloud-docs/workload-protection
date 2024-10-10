@@ -23,7 +23,7 @@ Review the following sample architecture for {{site.data.keyword.sysdigsecure_fu
 
 {{site.data.keyword.sysdigsecure_full_notm}} is a highly available, multi-tenant, regional service that is available in {{site.data.keyword.cloud_notm}}. You can use it to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run.
 
-![{{site.data.keyword.sysdigsecure_full_notm}}](images/Monitoring-arch.svg "{{site.data.keyword.sysdigsecure_full_notm}} architecture"){: caption="Figure 1. {{site.data.keyword.sysdigsecure_short}} Architecture" caption-side="bottom"}
+![{{site.data.keyword.sysdigsecure_full_notm}}](images/Monitoring-arch.svg "{{site.data.keyword.sysdigsecure_full_notm}} architecture"){: caption="{{site.data.keyword.sysdigsecure_short}} Architecture" caption-side="bottom"}
 
 The API server component provides a web and an API interface to the service.
 
@@ -54,4 +54,3 @@ You can use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM
 * To grant access to manage the {{site.data.keyword.sysdigsecure_short}} service in {{site.data.keyword.cloud_notm}}, you can assign platform roles that define users levels of access for completing platform management tasks and accessing account resources.
 
 * Service roles that define levels of access for viewing data and managing features, such as dashboards, teams, and alerts, can be assigned to users. These roles grant access to manage the instance and its resource.
-

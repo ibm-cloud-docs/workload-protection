@@ -88,7 +88,7 @@ To provision an instance through the CLI, see [Provisioning a Monitoring instanc
 
 After you provision an instance of the {{site.data.keyword.sysdigsecure_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you can deploy the agent on your cluster. The agent collects data that you can use for intrusion detection, posture management, vulnerability scanning, and incident response capabilities.
 
-![Agents that can be configured to provide data to {{site.data.keyword.sysdigsecure_full_notm}}](images/Agent-Collection.svg "Agents that can be configured to provide data to {{site.data.keyword.sysdigsecure_full_notm}}"){: caption="Figure 1. Agents that can be configured to provide data to {{site.data.keyword.sysdigsecure_full_notm}}" caption-side="bottom"}
+![Agents that can be configured to provide data to {{site.data.keyword.sysdigsecure_full_notm}}](images/Agent-Collection.svg "Agents that can be configured to provide data to {{site.data.keyword.sysdigsecure_full_notm}}"){: caption="Agents that can be configured to provide data to {{site.data.keyword.sysdigsecure_full_notm}}" caption-side="bottom"}
 
 Choose 1 of the following options:
 1. [Configure an agent for Kubernetes](/docs/workload-protection?topic=workload-protection-agent-deploy-kube-helm).
@@ -134,7 +134,7 @@ See the following table for tasks that you can run to secure your environment:
 | [Scan container images](/docs/workload-protection?topic=workload-protection-pipeline)             | You can scan container images for vulnerabilities, and other violations.  |
 | [Configure a rule](/docs/workload-protection?topic=workload-protection-manage_rules)                  | You can create a `Detection Rule` to detect and respond to anomalous runtime activity.  \n You can create a rule to specify which image versions can be used. |
 | [Review your Compliance results](https://docs.sysdig.com/en/docs/sysdig-secure/posture/compliance/){: external}        | The Compliance module relies on persisting the resources in an inventory; this enhanced resource visibility and full-context prioritization drives remediation and resolution of violations.|
-{: caption="Table 1. Tasks to secure your environment" caption-side="bottom"}
+{: caption="Tasks to secure your environment" caption-side="bottom"}
 
 ## Next steps
 {: #getting-started-secure-next-step}
