@@ -19,12 +19,12 @@
         "href": "/docs/workload-protection?topic=workload-protection-cspm-best-practices&interface=ui"
       },
       {
-        "title": "Pricing",
-        "href": "/docs/workload-protection?topic=workload-protection-pricing"
+        "title": "Implementing CSPM (Cloud Security Posture Management) for {{site.data.keyword.cloud_notm}}M",
+        "href": "/docs/workload-protection?topic=workload-protection-cspm-implement"
       },
       {
-        "title": "Best Practices for working with Workload Protection for IBM Cloud CSPM",
-        "href": "/docs/workload-protection?topic=workload-protection-cspm-best-practices&interface=ui"
+        "title": "Pricing for Workload Protection",
+        "href": "/docs/workload-protection?topic=workload-protection-pricing"
       }
     ]
   },
