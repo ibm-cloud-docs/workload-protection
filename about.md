@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-10-10"
 
 keywords:
 
@@ -49,7 +49,7 @@ The following posture policies are available for you to use to implement CSPM fo
 | SOC 2 | SOC 2 is a voluntary compliance standard for service organizations, developed by the American Institute of CPAs (AICPA). Its intent is to ensure the safety and privacy of user data. It outlines the five trust service principles of security, availability, processing integrity, confidentiality, and privacy of customer data as a framework for safeguarding data. SOC 2 applies to any technology service provider or SaaS company that handles or stores customer data. Third-party vendors, other partners, or support organizations that those firms work with should also maintain SOC 2 compliance to ensure the integrity of their data systems and safeguards. |
 | ISMAP (Information System Security Management and Assessment Program) | The Information System Security Management and Assessment Program (ISMAP) aims to secure the security level of the government's cloud service procurement by evaluating and registering cloud services that meet the security requirements of the government in advance, thereby contributing to the smooth introduction of cloud services. |
 | PCI DSS (Payment Card Industry Data Security Standard) v4.0.0 | The Payment Card Industry Data Security Standard (PCI DSS) was developed to encourage and enhance payment card account data security and facilitate the broad adoption of consistent data security measures globally. PCI DSS provides a baseline of technical and operational requirements designed to protect account data. While specifically designed to focus on environments with payment card account data, PCI DSS can also be used to protect against threats and secure other elements in the payment ecosystem. |
-{: caption="Table 1. Available predefined policies" caption-side="top"}
+{: caption="Available predefined policies" caption-side="top"}
 
 All other posture policies apply to other environments such as AWS, Azure, GCP, Kubernetes, OpenShift, or hosts.
 

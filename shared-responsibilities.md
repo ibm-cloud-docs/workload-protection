@@ -32,7 +32,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for the set up and
 | `Maintain {{site.data.keyword.cloud_notm}} high availability SLA`  | Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview?topic=overview-slas). |   |
 | `Provide high availability capabilities` | Provide capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions (MZR), to meet local access and low latency requirements for each supported region.  | Use the list of [available regions](/docs/workload-protection?topic=workload-protection-endpoints) to plan for and create new instances of the service. |
 | `Monitor agents`   | Provide images and instructions for how to install agents in environments that you want to monitor, such as Kubernetes and {{site.data.keyword.redhat_openshift_notm}}. | Install and configure agents. </br>Monitor that the agents are running in your environment. |
-{: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
+{: caption="Responsibilities for incident and operations" caption-side="top"}
 
 
 
@@ -49,7 +49,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | `Update default rules and policies`                            | Update the default rules and policies as requirements change. | Update custom policies and track changes by using your own change management process. |
 | `Update pre-defined alert definitions`                  | Update the default alert definitions as requirements change. | Update custom alert definitions and track changes by using your own change management process. |
 | `Track versions of custom rules, policies, notifications, and teams`    |   | Use your own change management process to control versions of monitoring resources such as rules, policies, teams, and notifications. |
-{: caption="Table 2. Responsibilities for change management" caption-side="top"}
+{: caption="Responsibilities for change management" caption-side="top"}
 
 ## Identity and access management
 {: #iam-responsibilities}
@@ -62,7 +62,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | `Manage platform permissions`  | Allow administrators to control access to manage resources in the {{site.data.keyword.cloud_notm}}. | Grant, revoke, and manage access to service instances by using IAM. |
 | `Manage service permissions`   | Allow administrators to control access to work with the {{site.data.keyword.sysdigsecure_full_notm}}. | Grant, revoke, and manage access to monitoring features by using IAM. |
 | `Control data access` | Allow administrators to control access to data and metadata through {{site.data.keyword.sysdigsecure_short}} teams. | Grant, revoke, and manage access to data by using IAM and team definitions. |
-{: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
+{: caption="Responsibilities for identity and access management" caption-side="top"}
 
 [Learn more about controlling access through IAM](/docs/workload-protection?topic=workload-protection-iam). [Learn more about controlling access using {{site.data.keyword.sysdigsecure_short}} teams](/docs/workload-protection?topic=workload-protection-iam).
 
@@ -75,7 +75,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | Task                                       | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |--------------------------------------------|-------------------------------------------------|-----------------------|
 | `Meet security and compliance objectives`  | Maintain controls that are commensurate to supported industry compliance standards, such as SOC. | Ensure that regulated data is not provided to the {{site.data.keyword.sysdigsecure_full_notm}} service. |
-{: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
+{: caption="Responsibilities for security and regulation compliance" caption-side="top"}
 
 ## Disaster recovery
 {: #disaster-recovery}
@@ -88,4 +88,4 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | `Service`         | Automatically recover and restart service components after any disaster event. |   |
 | `Data`            |   |Extract and save data and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event. |
 | `Agent`    |   |  Recovery of the agents running in your environment should they be impacted by a disaster. |
-{: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
+{: caption="Responsibilities for disaster recovery" caption-side="top"}

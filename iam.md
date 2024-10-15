@@ -78,7 +78,7 @@ The following table identifies the platform role that you can grant a user in th
 | `Create a service ID`                                                   | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg)         |          |        |
 | `View details of a service instance`                                    | ![Checkmark icon](/images/checkmark-icon.svg)  | ![Checkmark icon](/images/checkmark-icon.svg)    | ![Checkmark icon](/images/checkmark-icon.svg)      | ![Checkmark icon](/images/checkmark-icon.svg)    |
 | `View service instances in the Observability Monitoring dashboard`      | ![Checkmark icon](/images/checkmark-icon.svg)  | ![Checkmark icon](/images/checkmark-icon.svg)    | ![Checkmark icon](/images/checkmark-icon.svg)      | ![Checkmark icon](/images/checkmark-icon.svg)    |
-{: caption="Table 1. IAM user roles and actions" caption-side="top"}
+{: caption="IAM user roles and actions" caption-side="top"}
 
 
 A user with an **administrator** role automatically has the service **manager** role permissions.
@@ -105,7 +105,7 @@ The following table identifies the service role that you can grant a user in the
 | `View reports and image scanning results`        | ![Checkmark icon](/images/checkmark-icon.svg)  | ![Checkmark icon](/images/checkmark-icon.svg) | |
 | `View platforms, frameworks, rules and policies` | ![Checkmark icon](/images/checkmark-icon.svg)      | ![Checkmark icon](/images/checkmark-icon.svg)                    | ![Checkmark icon](/images/checkmark-icon.svg)    |
 | `View events`                                   | ![Checkmark icon](/images/checkmark-icon.svg)      | ![Checkmark icon](/images/checkmark-icon.svg)                    | ![Checkmark icon](/images/checkmark-icon.svg)    |
-{: caption="Table 2. Service roles and actions" caption-side="top"}
+{: caption="Service roles and actions" caption-side="top"}
 
 ## IAM actions
 {: #iam_actions}
@@ -118,7 +118,7 @@ The following table identifies the IAM actions that are assigned to the platform
 | Service           | `manager`         | `sysdig-secure.launch.admin` </br>`sysdig-secure.launch.user` </br>`sysdig-secure.launch.viewer` |
 | Service           | `writer`          | `sysdig-secure.launch.user` </br>`sysdig-secure.launch.viewer` |
 | Service           | `reader`          | `sysdig-secure.launch.viewer` |
-{: caption="Table 3. IAM actions assigned to platform and service roles" caption-side="top"}
+{: caption="IAM actions assigned to platform and service roles" caption-side="top"}
 
 ## How do I know which access policies are set for me?
 {: #iam_accesspolicy}

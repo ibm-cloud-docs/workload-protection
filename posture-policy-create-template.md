@@ -56,7 +56,7 @@ Complete the following steps to create a policy that uses an existing policy as 
 
 If you create a new policy by duplicating an existing policy, the new policy is displayed with the requirements and controls that are copied from the duplicated policy. If you create a policy without duplicating an existing policy, the requirements and controls are blank.
 
-![Example duplicated policy](images/duplicated-policy.png "An example of a duplicated policy"){: caption="Figure 1. An example of a duplicated policy" caption-side="bottom"}
+![Example duplicated policy](images/duplicated-policy.png "An example of a duplicated policy"){: caption="An example of a duplicated policy" caption-side="bottom"}
 
 
 

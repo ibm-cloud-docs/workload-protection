@@ -85,7 +85,7 @@ You can filter the list of unresolved IP addresses to show only **Internal**, **
 
 You can use the **Topology** tab to see a graphical representation of the policy.  The view is a high-level Kubernetes metadata view of pod owners, listening ports, service and labels. You can hover over items in the topology to see all the relevant details for entities and communications.
 
-![Example topology](images/sample-topology.png "Example topology diagram showing entities and communications"){: caption="Figure 1. Example topology" caption-side="bottom"}
+![Example topology](images/sample-topology.png "Example topology diagram showing entities and communications"){: caption="Example topology" caption-side="bottom"}
 
 The color of topology items indicates the status.
 

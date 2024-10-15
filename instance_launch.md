@@ -32,7 +32,7 @@ The following table lists the minimum policies that a user must be able to launc
 |--------------------------------|---------------------------|------------------------|
 | `{{site.data.keyword.sysdigsecure_full_notm}}` | Platform role: Viewer     | Allows the user to view the list of service instances in the Observability Security dashboard. |
 | `{{site.data.keyword.sysdigsecure_full_notm}}` | Service role: Writer      | Allows the user to launch the web UI and permissions to operate the service.  |
-{: caption="Table 1. IAM policies" caption-side="top"}
+{: caption="IAM policies" caption-side="top"}
 
 For more information about configuring these policies for a user, see [Granting permissions to launch the monitoring UI or to make REST API calls](/docs/workload-protection?topic=workload-protection-iam).
 

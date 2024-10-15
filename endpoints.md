@@ -41,7 +41,7 @@ The following table lists the endpoints that are available for each region:
 | `AU-SYD`    | `https://au-syd.security-compliance-secure.cloud.ibm.com`        | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78       | https (TLS) 443 |
 | `CA-TOR`    | `https://ca-tor.security-compliance-secure.cloud.ibm.com`        | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237       | https (TLS) 443 |
 | `BR-SAO`    | `https://br-sao.security-compliance-secure.cloud.ibm.com`        | 163.107.66.98  \n 163.109.67.242  \n 169.57.141.43       | https (TLS) 443 |
-{: caption="Table 1. List of endpoints" caption-side="top"}
+{: caption="List of endpoints" caption-side="top"}
 
 
 
@@ -66,7 +66,7 @@ To make API calls, you might need to define a firewall rule in your host.
 | `AU-SYD`    | `https://private.au-syd.security-compliance-secure.cloud.ibm.com/api`        |
 | `CA-TOR`    | `https://private.ca-tor.security-compliance-secure.cloud.ibm.com/api`        |
 | `BR-SAO`    | `https://private.br-sao.security-compliance-secure.cloud.ibm.com/api`        |
-{: caption="Table 2. Private REST API endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service" caption-side="top"}
+{: caption="Private REST API endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service" caption-side="top"}
 
 
 ### Public REST API endpoints
@@ -84,7 +84,7 @@ To make API calls, you might need to define a firewall rule in your host.
 | `AU-SYD`    | `https://au-syd.security-compliance-secure.cloud.ibm.com/api`        |
 | `CA-TOR`    | `https://ca-tor.security-compliance-secure.cloud.ibm.com/api`        |
 | `BR-SAO`    | `https://br-sao.security-compliance-secure.cloud.ibm.com/api`        |
-{: caption="Table 3. Public REST API endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service" caption-side="top"}
+{: caption="Public REST API endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service" caption-side="top"}
 
 
 
@@ -115,7 +115,7 @@ The following table lists the *Private Collector endpoints* that are available f
 | Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38  \n 166.9.40.35  \n 166.9.42.48  \n  \n  166.9.249.112 `(*)`  \n 166.9.249.141 `(*)`  \n 166.9.249.177 `(*)`         | TCP 6443  |  TCP 443  |
 | Toronto (`CA-TOR`)  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20  \n 166.9.76.23  \n 166.9.78.21  \n  \n  166.9.247.153 `(*)`  \n 166.9.247.185 `(*)`  \n 166.9.247.205 `(*)`    | TCP 6443  |  TCP 443  |
 | Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53  \n  \n  166.9.231.240 `(*)`  \n 166.9.232.28 `(*)`  \n 166.9.233.17 `(*)`       | TCP 6443  |  TCP 443  |
-{: caption="Table 4. List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
+{: caption="List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 `(*)` Indicates IP addresses that are in plan to be supported. These IP addresses should be added to an allowlist in advance to avoid service interruptions. Current IP addresses will be deprecated. A notification will be sent before the current IP addresses are deprecated.
 {: note}
@@ -137,7 +137,7 @@ The following table lists the *Public Collector endpoints* that are available fo
 | `AU-SYD`    | `ingest.au-syd.security-compliance-secure.cloud.ibm.com`            | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78     | TCP 6443 |
 | `CA-TOR`    | `ingest.ca-tor.security-compliance-secure.cloud.ibm.com`            | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237     | TCP 6443 |
 | `BR-SAO`    | `ingest.br-sao.security-compliance-secure.cloud.ibm.com`            | 163.107.66.98  \n 163.109.67.242  \n 169.57.141.43     | TCP 6443 |
-{: caption="Table 5. List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.sysdigsecure_full_notm}}" caption-side="top"}
+{: caption="List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.sysdigsecure_full_notm}}" caption-side="top"}
 
 
 ## Subnets for webhook notifications from {{site.data.keyword.sysdigsecure_full_notm}}
@@ -157,4 +157,4 @@ To receive alert notifications by using webhooks from the {{site.data.keyword.sy
 | `AU-SYD`   | 130.198.66.144/28  \n 130.198.80.152/29  \n 135.90.73.96/29  \n 135.90.78.192/28  \n 135.90.94.96/27  \n 168.1.115.192/27  \n 168.1.213.32/27  \n 168.1.213.72/29  \n 168.1.41.96/28  |
 | `CA-TOR`   | 158.85.78.224/27  \n 158.85.94.128/29  \n 163.74.67.192/28  \n 163.74.69.184/29  \n 163.74.71.96/27  \n 163.75.65.232/29  \n 163.75.72.192/27  \n 169.55.129.208/28  |
 | `BR-SAO` | 163.107.66.96/29  \n 163.107.68.128/28  \n 163.107.71.32/27  \n 163.109.67.240/29  \n 163.109.73.128/27  \n 169.57.141.40/29  \n 169.57.186.0/27  \n 169.57.195.0/28 |
-{: caption="Table 6. Source Subnets for Webhook notifications from {{site.data.keyword.sysdigsecure_full_notm}}" caption-side="top"}
+{: caption="Source Subnets for Webhook notifications from {{site.data.keyword.sysdigsecure_full_notm}}" caption-side="top"}

@@ -1,28 +1,48 @@
 {
-    "title": " IBM Cloud Security and Compliance Center Workload Protection",
-    "lastupdated": "2023-04-14",
-    "introduction": "Use IBM Cloud Security and Compliance Center Workload Protection to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run.",
-    "section_devtools": {
-      "api": "/apidocs/workload-protection",
-      "cli": "/docs/workload-protection-cli-plugin",
-      "terraform": ""
-    },
-    "section_recommended": [
-          {
-            "title": "Getting started with IBM Cloud Security and Compliance Center Workload Protection",
-            "description": "Use the IBM Cloud Security and Compliance Center Workload Protection CLI to configure your account to detect and respond to software vulnerabilities.",
-            "href": "/docs/workload-protection?topic=workload-protection-getting-started"
-          },
-          {
-            "title": "See what's new",
-            "description": "Read about the latest changes to IBM Cloud Security and Compliance Center Workload Protection. ",
-            "href": "/docs/workload-protection?topic=workload-protection-release-notes"
-          }
-    ],
-    "section_learn": {
-      "developer": "https://developer.ibm.com/depmodels/cloud/",
-      "architecture": "https://www.ibm.com/cloud/architecture",
-      "training": "https://www.ibm.com/training/cloud",
-      "community": "https://community.ibm.com/community/user/publiccloud/home"
+  "version": 2,
+  "title": "IBM Cloud Security and Compliance Center Workload Protection",
+  "introduction": "Use IBM Cloud Security and Compliance Center Workload Protection to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run.",
+  "product_page": "https://www.ibm.com/products/security-and-compliance-center",
+  "console_page": "/catalog/security-and-compliance-center-workload-protection",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Getting started with IBM Cloud Security and Compliance Center Workload Protection",
+        "href": "/docs/workload-protection?topic=workload-protection-getting-started"
+      },
+      {
+        "title": "About IBM Cloud Security Posture Management (CSPM)",
+        "href": "/docs/workload-protection?topic=workload-protection-about"
+      },
+      {
+        "title": "Best Practices for working with Workload Protection for IBM Cloud CSPM",
+        "href": "/docs/workload-protection?topic=workload-protection-cspm-best-practices&interface=ui"
+      },
+      {
+        "title": "Implementing CSPM (Cloud Security Posture Management) for {{site.data.keyword.cloud_notm}}M",
+        "href": "/docs/workload-protection?topic=workload-protection-cspm-implement"
+      },
+      {
+        "title": "Pricing for Workload Protection",
+        "href": "/docs/workload-protection?topic=workload-protection-pricing"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Db2 Optimization Techniques for SAP Database Migration to the Cloud",
+      "description": "This blog announces the availability of IBM Cloud Security and Compliance Center Workload Protection.",
+      "href": "https://www.ibm.com/blog/announcement/now-available-ibm-cloud-security-and-compliance-center-workload-protection/",
+      "type": "blog",
+      "recommended": true
     }
+  ],
+  "section_devtools": {
+    "api": "/apidocs/workload-protection",
+    "cli": "/docs/workload-protection?topic=workload-protection-workload-protection-cli&interface=ui",
+    "terraform": "https://registry.terraform.io/modules/terraform-ibm-modules/scc-workload-protection/ibm/latest"
+  },
+  "section_updates": {
+    "view_more": "/docs/workload-protection?topic=workload-protection-release-notes"
   }
+}
