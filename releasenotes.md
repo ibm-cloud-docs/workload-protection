@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-10-03"
+lastupdated: "2024-10-21"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,18 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## October 2024
+{: #workload-protection-oct24}
+
+### 10 October 2024
+{: #workload-protection-oct1024}
+{: release-note}
+
+Now Generally Available: Posture Management for IBM Cloud in SCC Workload Protection
+:   SCC Workload Protection now provides posture management (CSPM) for IBM Cloud resources with regulatory and industry leading out-of-the-box policies, a unified compliance posture dashboard with detailed remediation guidance and a comprehensive view of assets across hybrid multicloud.
+
+For more information, check out [About IBM Cloud Security Posture Management (CSPM)](/docs/workload-protection?topic=workload-protection-about).
 
 ## September 2024
 {: #workload-protection-sep24}
