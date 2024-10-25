@@ -1,4 +1,4 @@
-<prod-pillar>---
+---
 
 copyright:
   years:  2023
@@ -21,6 +21,3 @@ Image profiling in {{site.data.keyword.sysdigsecure_full}} enhances the data col
 {{site.data.content.sysdig-doc}}
 
 For more information, see [Profiling](https://docs.sysdig.com/en/docs/sysdig-secure/policies/image-profiles/){: external}
-
-
-</prod-pillar>
