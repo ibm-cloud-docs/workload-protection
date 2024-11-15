@@ -38,4 +38,4 @@ For more information about your responsibilities for {{site.data.keyword.sysdigs
 
 {{site.data.keyword.sysdigsecure_short}} provides the mechanisms to export your content that’s uploaded, stored, and processed when you use the service.
 
-For more information about how to get data from {{site.data.keyword._{{site.data.keyword.sysdigsecure_short}}_notm}}, including supported data formats, check out the [API docs](/apidocs/workload-protection).
+For more information about how to get data from {{site.data.keyword.sysdigsecure_short}}, including supported data formats, check out the [API docs](/apidocs/workload-protection).
