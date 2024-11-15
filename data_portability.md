@@ -31,7 +31,7 @@ The planning and execution for the porting of the required application code on t
 
 The conversion of the exported data and configuration to the format that’s required by the alternative infrastructure and adapted applications.
 
-For more information about your responsibilities for {{site.data.keyword.sysdigsecure_short}}, check otu [Shared responsibilities for {{site.data.keyword.sysdigsecure_short}}_notm}}](/docs/workload-protection?topic=workload-protection-shared-responsibilities).
+For more information about your responsibilities for {{site.data.keyword.sysdigsecure_short}}, check otu [Shared responsibilities for {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-shared-responsibilities).
 
 ## Data export procedures
 {: #data-portability-procedures}
