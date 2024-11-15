@@ -179,6 +179,7 @@ toc:
       id: reference
       topics:
       - terminology.md
+      - data_portability.md
       - topic: regions.md
         navtitle: Regions
       - endpoints.md
