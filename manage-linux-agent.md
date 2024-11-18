@@ -30,7 +30,7 @@ Protect your hosts running on {{site.data.keyword.cloud_notm}}, other cloud prov
 ## Deploying the Linux agent by using a script
 {: manage-linux-agent-deploy-script}
 
-Complete the following steps to configure a {{site.data.keyword.sysdigsecure_short}} agent on Linux to collect and forward metrics to an instance of the {{site.data.keyword.sysdigsecure_short}} service:
+Complete the following steps to configure a {{site.data.keyword.sysdigsecure_short}} agent on Linux for detecting threats, validating your operating system posture and scanning your server to identify vulnerabilities. This agent will forward all security findings to an instance of the {{site.data.keyword.sysdigsecure_short}} service:
 
 1. Obtain the access key.
 
@@ -55,14 +55,15 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
 4. Deploy the {{site.data.keyword.sysdigsecure_short}} agent. Run the following command:
 
    ```sh
-   curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --tags TAG_DATA'
+   curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a ACCESS_KEY -c COLLECTOR_ENDPOINT --collector_port 6443 --tags TAG_DATA --secure true --additional_conf 'sysdig_api_endpoint: API_ENDPOINT\nhost_scanner:\n  enabled: true\n  scan_on_start: true\nkspm_analyzer:\n  enabled: true'
    ```
    {: pre}
   
   Where:
   
   * `ACCESS_KEY` is the ingestion key for the instance.
-  * `COLLECTOR_ENDPOINT` is the public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion).
+  * `COLLECTOR_ENDPOINT` is the public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
+  * `API_ENDPOINT` is the public or private API Endpoint URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_rest_api). Make sure to add it without `https` or `/api`, for example `private.us-east.security-compliance-secure.cloud.ibm.com`.
   * `TAG_DATA` are comma-separated tags that are formatted as `TAG_NAME:TAG_VALUE`. You can associate one or more tags to your {{site.data.keyword.sysdigsecure_short}} agent. For example, `role:serviceX,location:us-south`.
   
   To install cURL, run `yum -q -y` install curl for RHEL, CentOS, and Fedora Linux distributions.  
@@ -84,6 +85,8 @@ To look for errors, issue:
 
 ## Deploying the Linux agent using a package
 {: manage-linux-agent-deploy-package}
+
+You can also install the {{site.data.keyword.sysdigsecure_short}} agent manually by installing the package and defining all the configuration.
 
 1. Obtain the access key.
 
@@ -173,6 +176,16 @@ To look for errors, issue:
     {: pre}
 
     ```sh
+    echo sysdig_api_endpoint: API_ENDPOINT >> /opt/draios/etc/dragent.yaml
+    echo host_scanner: >> /opt/draios/etc/dragent.yaml
+    echo "  enabled: true" >> /opt/draios/etc/dragent.yaml
+    echo "  scan_on_start: true" >> /opt/draios/etc/dragent.yaml
+    echo kspm_analyzer: >> /opt/draios/etc/dragent.yaml
+    echo "  enabled: true" >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```sh
     sudo systemctl enable dragent
     ```
     {: pre}
@@ -181,6 +194,21 @@ To look for errors, issue:
     sudo systemctl start dragent
     ```
     {: pre}
+
+Your configuration file (`/opt/draios/etc/dragent.yaml`) needs to look like:
+```
+customerid: ACCESS_KEY
+tags: [TAGS]
+collector: COLLECTOR_URL
+sysdig_api_endpoint: API_ENDPOINT
+host_scanner:
+  enabled: true
+  scan_on_start: true
+kspm_analyzer:
+  enabled: true
+collector_port: 6443
+ssl: true
+```
 
 ## Updating a Linux agent
 {: manage-linux-agent-update}
@@ -253,6 +281,8 @@ systemctl status dragent
 
 To see the latest {{site.data.keyword.sysdigsecure_short}} agent logs, go to the directory `/opt/draios/logs` and check the log file `draios.log`.
 
+If you want to see logs for the vulnerability scanning, grep by `host-scanner`. To look for Posture information, grep by `kspm-analyzer`.
+
 To look for errors, you can run the following command: 
 
 ```sh
@@ -270,66 +300,15 @@ ps -ef | grep sysdig
 ```
 {: pre}
 
-## Identifying vulnerabilities in Linux hosts with Host Analyzer
-{: manage-linux-agent-identify-vulnerabilities}
 
-{{site.data.keyword.sysdigsecure_short}} provides host and image scanning in Linux hosts, detecting all installed packages and associated vulnerabilities sorted by severity and prioritizing those with a fix available.
+## Verifying results in the UI
+{: manage-linux-agent-verify}
 
-After installing the Host Analyzer, review the detected vulnerabilities in your host accessing **Scanning/Hosts** in the {{site.data.keyword.sysdigsecure_short}}. The first scan starts shortly after installation.
+After a few minutes, you can check the results in the UI for your Vulnerabilities, the Posture validation and, if any, Threats detected in your host.
 
-It is possible to run the Host Analyzer by using either Docker or as a package.
-
-### Install using Docker
-{: manage-linux-agent-identify-vulnerabilities-docker}
-
-To install the Host Analyzer, issue:
-
-```sh
-docker run --detach
--e HOST_FS_MOUNT_PATH=/host
--e SYSDIG_ACCESS_KEY=<ACCESS_KEY>
--e SYSDIG_API_URL=<COLLECTOR_ENDPOINT>
--e SCAN_ON_START=true
--v /:/host:ro --uts=host --net=host
-quay.io/sysdig/vuln-host-scanner:$(curl -L -s https://download.sysdig.com/scanning/sysdig-host-scanner/latest_version.txt)
-```
-{: pre}
-
-Where:
-
-Where:
-* **ACCESS_KEY** is the ingestion key for the instance.
-* **COLLECTOR_ENDPOINT** is the public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get the endpoint you need to use, check out [API endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_rest_api).
-  - For example, if you have {{site.data.keyword.sysdigsecure_short}} service in EU-GB, the **COLLECTOR_ENDPOINT** would be `https://eu-gb.security-compliance-secure.cloud.ibm.com/internal/scanning/scanning-analysis-collector`.
-* **SCAN_ON_START** forces a first scan when the Host Scanner initializes.
-
-### Install as a package
-{: manage-linux-agent-identify-vulnerabilities-package}
-
-It is also possible to install the Host Analyzer on non-Kubernetes hosts using packages. 
-
-To do this, follow the instructions in the Sysdig tutorial [Vulnerability Host Scanner](https://docs.sysdig.com/en/docs/installation/sysdig-secure/install-agent-components/hosts/packages/vulnerability-host-scanner/){: external}, following all of the [Installation](https://docs.sysdig.com/en/docs/installation/sysdig-secure/install-agent-components/hosts/packages/vulnerability-host-scanner/#installation) steps for RPM-based operating systems and substituting the [{{site.data.keyword.sysdigsecure_short}} API endpoint](https://cloud.ibm.com/apidocs/workload-protection#endpoint-url) for the`<api-url>` in Step 3.
-
-## Scanning for compliance and benchmarks in Linux hosts with KSPM Analyzer
-{: manage-linux-agent-scanning-kpsm}
-
-{{site.data.keyword.sysdigsecure_short}} allows you to evaluate your Linux Hosts against several CIS benchmarks such as CIS Distribution Independent Linux Benchmark and compliance policies.
-
-You need to run the Kubernetes Security Posture Management (KSPM) analyzer as a container. To install the KSPM analyzer in a non-Kubernetes environment, you can use:
-
-```sh
-docker run -d \
--v /:/host:ro -v /tmp:/host/tmp --privileged \ 
---network host --pid host --env \
-ACCESS_KEY=<Sysdig agent access key> \
---env API_ENDPOINT=<workload_protection_api_endpoint> \ quay.io/sysdig/kspm-analyzer:latest \
-```
-{: pre}
-
-Where:
-
-* **ACCESS_KEY** is the ingestion key for the instance.
-* **API_ENDPOINT** is the public or private API endpoint for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [API endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_rest_api). Notice that you don’t need to include “https”.
-  - For example, if you have {{site.data.keyword.sysdigsecure_short}} service in `eu-gb`, the `API_ENDPOINT` would be `eu-gb.security-compliance-secure.cloud.ibm.com`.
-
-As soon as it is running, the KSPM Analyzer will evaluate Linux configuration files to identify failing controls from the enabled Policies. You can see all results in **Posture/Compliance** in the **Entire Infrastructure** zone or define specific zones for your Linux hosts under **Policies/Zones**.
+Access to your {{site.data.keyword.sysdigsecure_short}} instance:
+- Verify your agent is connected correctly under **Integrations / Data Sources / Sysdig Agents**.
+- Review your host appears under **Inventory**. You can filter by the hostname (`Resource Name`) or type of operating system (`Platform`)
+- The {{site.data.keyword.sysdigsecure_short}} agent will evaluate Linux configuration files to identify failing controls from the enabled Policies. You can see all results in **Posture/Compliance** in the **Entire Infrastructure** zone or define specific zones for your Linux hosts under **Policies/Zones**.
+- The {{site.data.keyword.sysdigsecure_short}} agent provides host and image scanning in Linux hosts, detecting all installed packages and associated vulnerabilities sorted by severity and prioritizing those with a fix available. Access to **Vulnerabilities / Runtime** and search for your host by the hostname or type of system (`asset.type is host`).
+- As soon as the {{site.data.keyword.sysdigsecure_short}} will start detecting threats based on the Runtime Policies that are configured. Access to **Threats** to see if any event was detected. In this [document](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-threat_detection), you can find how to manage the threat detection policies and rules.
