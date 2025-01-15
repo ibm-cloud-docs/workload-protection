@@ -63,6 +63,8 @@ toc:
             navtitle: On IBM Satellite
           - topic: powervs-linux.md
             navtitle: On Linux hosts on PowerVS
+          - topic: powervs-aix.md
+            navtitle: On AIX hosts on PowerVS
           - topic: agent-deploy-windows.md
             navtitle: On Windows
           - topic: manage-linux-agent.md
