@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-10-21"
+lastupdated: "2025-01-15"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,25 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## January 2025
+{: #workload-protection-jan25}
+
+### 13 January 2025
+{: #workload-protection-jan25}
+{: release-note}
+
+Posture Management for AIX servers on PowerVS
+:   SCC Workload Protection now provides posture compliance for AIX operating system, including multiple out-of-the-box policies
+For more information, check out [Managing the Workload Protection agent in AIX on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs).
+
+Compliance Readiness Report
+:   You can generate a PDF of the Compliance Readiness Report, providing an overview of the current state of a compliance policy. The report highlights the status of passing requirements and controls, along with the count of passing and failing resources for each control.
+
+Malware Control Policy
+:   SCC Workload Protection is releasing a new Runtime Threat Policy for Malware Detection.
+You can now detect Malware being executed in your environment by detecting the known malware hashes and utilize YARA rules to enhance the detection capabilities. 
+Create a new **Malware Control Policy** under Policies > Runtime Policies.
 
 ## October 2024
 {: #workload-protection-oct24}
