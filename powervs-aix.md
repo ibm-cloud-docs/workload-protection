@@ -36,6 +36,8 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
   ```sh
   curl https://s3.us-east-1.amazonaws.com/download.draios.com/dependencies/kspm-analyzer/1.44.17/kspm-analyzer-aix-ppc64 -o /tmp/kspm-analyzer-aix-ppc64
   ```
+  {: pre}
+  
   **Note**: This command stores the binary under `/tmp`, you can use your desire directory.
 
 4. Configure the service:
@@ -43,6 +45,7 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
   ```sh
   mkssys -p /tmp/kspm-analyzer-aix-ppc64 -s kspm_analyzer -u 0 -e /tmp/kspm-analyzer.log -i /tmp/kspm-analyzer.log -o /tmp/kspm-analyzer.log
   ```
+  {: pre}
 
   Where:
   * `-p` is the full path of your kspm-analyzer binary you have downloaded in step 3.
@@ -54,6 +57,7 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
   ```sh
   startsrc -s kspm_analyzer -e 'NODE_NAME=<HOSTNAME> API_ENDPOINT=<REGION>.security-compliance-secure.cloud.ibm.com ACCESS_KEY=<ACCESS KEY>'
   ```
+  {: pre}
 
   Where:
   * `HOSTNAME`: it will be used for showing results and your server in Inventory.
@@ -66,5 +70,6 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
   ```sh
   mkitab "fkcmd:2:respawn:startsrc -s kspm_analyzer -e 'NODE_NAME=<HOSTNAME> API_ENDPOINT=<REGION>.security-compliance-secure.cloud.ibm.com ACCESS_KEY=<ACCESSKEY>'"
   ```
+  {: pre}
 
 7. Verify the service is running by checking the logs under `/tmp/kspm-analyzer.log`.
