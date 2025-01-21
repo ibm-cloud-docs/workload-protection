@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-11"
+lastupdated: "2025-01-21"
 
 keywords:
 
@@ -223,7 +223,7 @@ This command stores your token in the variable `AUTH_TOKEN`. For more informatio
 Now, run the following HTTP `PUT` request to your {{site.data.keyword.appconfig_short}} instance. Remember to replace `<app-config-aggregator-ID>` with your {{site.data.keyword.appconfig_short}} instance ID, `<region>` with the region where you have created your {{site.data.keyword.appconfig_short}} instance:
 
 ```sh
-curl -X PUT -H "Authorization: Bearer $AUTH_TOKEN" https://<region>.apprapp.cloud.ibm.com/apprapp/config-aggregator/v1/instances/<app-config-aggregator-ID>/settings -d '{"resource_collection_enabled": true, "trusted_profile_id": "<ibmcspm-tp-app-config-aggregator-ID>", "regions": ["all"]}'
+curl -X PUT -H "Authorization: Bearer $AUTH_TOKEN" https://<region>.apprapp.cloud.ibm.com/apprapp/config_aggregator/v1/instances/<app-config-aggregator-ID>/settings -d '{"resource_collection_enabled": true, "trusted_profile_id": "<ibmcspm-tp-app-config-aggregator-ID>", "regions": ["all"]}'
 ```
 {: pre}
 
