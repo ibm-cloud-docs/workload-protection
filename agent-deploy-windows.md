@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-11"
+lastupdated: "2025-01-28"
 
 keywords:
 
@@ -39,7 +39,7 @@ The {{site.data.keyword.sysdigsecure_short}} agent uses Falco to ensure workload
 
 Installing the {{site.data.keyword.sysdigsecure_short}} agent using either GUI or CLI operation is possible.
 
-[Download the agent](https://download.sysdig.com/stable/msi/x86_64/agent-windows-1.0.0.msi) in MSI format to start the installation via GUI or CLI.
+[Download the agent](https://download.sysdig.com/stable/msi/x86_64/agent-windows-latest.msi) in MSI format to start the installation via GUI or CLI.
 
 ### GUI Installation
 {: #agent-deploy-windows-threats-gui}
