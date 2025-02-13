@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-01-15"
+lastupdated: "2025-02-13"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,16 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## February 2025
+{: #workload-protection-feb25}
+
+### 13 February 2025
+{: #workload-protection-feb25}
+{: release-note}
+
+Information Technology Security Guidance (ITSG-33) now available in {{site.data.keyword.sysdigsecure_short}}
+:   {{site.data.keyword.sysdigsecure_short}} now provides an out-of-the-box policy and controls for Information Technology Security Guidance (ITSG-33). This policy can be leveraged to manage the overall posture for hybrid multicloud environments including IBM Cloud, AWS, Azure, GCP, Kubernetes and Linux.
 
 ## January 2025
 {: #workload-protection-jan25}

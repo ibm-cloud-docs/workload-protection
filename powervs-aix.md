@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-30"
 
 keywords: linux, powervs, workload protection
 
@@ -50,9 +50,16 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
    Where:
    * `-p` is the full path of your kspm-analyzer binary you have downloaded in step 3.
    * `-s` is the service name.
-   * `-i`, `-o` and `-e` to write logs under `/tmp/kspm-analyzer.logs`. You can use any other file for writing the service logs.
+   * `-i`, `-o` and `-e` to write logs under `/tmp/kspm-analyzer.log`. You can use any other file for writing the service logs.
 
-5. Start the service. Make sure to replace `<HOSTNAME>`, `<REGION>` and `<ACCESS KEY>`:
+5. Add execution permissions to the binary:
+
+   ```sh
+   chmod +x /tmp/kspm-analyzer-aix-ppc64
+   ```
+   {: pre}
+
+6. Start the service. Make sure to replace `<HOSTNAME>`, `<REGION>` and `<ACCESS KEY>`:
 
    ```sh
    startsrc -s kspm_analyzer -e 'NODE_NAME=<HOSTNAME> API_ENDPOINT=<REGION>.security-compliance-secure.cloud.ibm.com ACCESS_KEY=<ACCESS KEY>'
@@ -64,12 +71,14 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
    * `REGION`: depending on the region your have deployed {{site.data.keyword.sysdigsecure_short}}. Check step 2.
    * `ACCESS KEY`: from step 1.
 
+   An example would be: `startsrc -s kspm_analyzer -e 'NODE_NAME=myhostname API_ENDPOINT=us-east.security-compliance-secure.cloud.ibm.com ACCESS_KEY=xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'`
 
-6. Configure the service to run during startup (`inittab`):
+
+7. Configure the service to run during startup (`inittab`):
 
    ```sh
    mkitab "fkcmd:2:respawn:startsrc -s kspm_analyzer -e 'NODE_NAME=<HOSTNAME> API_ENDPOINT=<REGION>.security-compliance-secure.cloud.ibm.com ACCESS_KEY=<ACCESSKEY>'"
    ```
    {: pre}
 
-7. Verify the service is running by checking the logs under `/tmp/kspm-analyzer.log`.
+8. Verify the service is running by checking the logs under `/tmp/kspm-analyzer.log`.
