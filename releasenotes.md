@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-21"
 
 keywords:  release notes, IBM Cloud
 
@@ -23,12 +23,25 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 ## February 2025
 {: #workload-protection-feb25}
 
+### 18 February 2025
+{: #workload-protection-feb1825}
+{: release-note}
+
+Custom Risks for {{site.data.keyword.cloud_notm}}
+:   Custom Risks empowers your security team to tackle unique security challenges by defining, writing, and executing custom risk patterns. Create adaptive queries tailored to your specific environment and risk tolerance, then build graph queries and save them as Custom Risks for ongoing management. Start today by accessing your {{site.data.keyword.sysdigsecure_short}} UI and navigating to the **Risks** page and selecting **Custom Risks**.
+
+Graph Search for {{site.data.keyword.cloud_notm}}
+:   This feature lets you explore and access data on GraphDB by querying entities and relationships with SysQL, including all {{site.data.keyword.cloud_notm}} findings. The intuitive query builder ensures a seamless experience and lets you proactively identify risky patterns before they escalate into full-fledged threats. Start today by accessing your {{site.data.keyword.sysdigsecure_short}} UI and navigating to the **Inventory** page and selecting **Search**.
+
+Posture management for Oracle Cloud Infrastructure (OCI)
+:   {{site.data.keyword.sysdigsecure_short}} now provides out-of-the-box posture policies and controls for Oracle Cloud Infrastructure (OCI), including graph-based security analytics and custom risks. 
+
 ### 13 February 2025
 {: #workload-protection-feb25}
 {: release-note}
 
 Information Technology Security Guidance (ITSG-33) now available in {{site.data.keyword.sysdigsecure_short}}
-:   {{site.data.keyword.sysdigsecure_short}} now provides an out-of-the-box policy and controls for Information Technology Security Guidance (ITSG-33). This policy can be leveraged to manage the overall posture for hybrid multicloud environments including IBM Cloud, AWS, Azure, GCP, Kubernetes and Linux.
+:   {{site.data.keyword.sysdigsecure_short}} now provides an out-of-the-box policy and controls for Information Technology Security Guidance (ITSG-33). This policy can be leveraged to manage the overall posture for hybrid multicloud environments including {{site.data.keyword.cloud_notm}}, AWS, Azure, GCP, Kubernetes and Linux.
 
 ## January 2025
 {: #workload-protection-jan25}
