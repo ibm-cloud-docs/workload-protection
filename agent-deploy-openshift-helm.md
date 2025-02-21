@@ -143,38 +143,54 @@ Define a yaml file and include the values to deploy the {{site.data.keyword.sysd
 The following yaml is a template that you can use to configure the {{site.data.keyword.sysdigsecure_short}} agent and the Secure components. You can customize the file by removing or commenting with `#` the sections that are not required for your agent deployment.
 
 ```yaml
+agent:
+  collectorSettings:
+    collectorHost: INGESTION_ENDPOINT
+  sysdig:
+    settings:
+     host_scanner:
+       enabled: true
+     kspm_analyzer:
+       enabled: true
+     sysdig_api_endpoint: API_ENDPOINT
+  extraVolumes:
+    volumes:
+    - name: root-vol
+      hostPath:
+        path: /
+    - name: tmp-vol
+      hostPath:
+        path: /tmp
+    mounts:
+    - mountPath: /host
+      name: root-vol
+      readOnly: true
+    - mountPath: /host/tmp
+      name: tmp-vol
 global:
+  imageRegistry: icr.io/ext
   clusterConfig:
     name: CLUSTER_NAME
   sysdig:
     accessKey: SERVICE_ACCESS_KEY
-  kspm:
-    deploy: true
-agent:
-  image:
-    registry: icr.io
-  slim:
-    enabled: true
-    image:
-      repository: ext/sysdig/agent-slim
-    kmoduleImage:
-      repository: ext/sysdig/agent-kmodule
-  collectorSettings:
-    collectorHost: INGESTION_ENDPOINT
+    apiHost: API_ENDPOINT
 nodeAnalyzer:
-  secure: 
-    vulnerabilityManagement:
-      newEngineOnly: true
-  nodeAnalyzer:
-    runtimeScanner: 
-      settings:
-        eveEnabled: true
-    deploy: true
-    apiEndpoint: API_ENDPOINT
-    benchmarkRunner:
-      deploy: false
-kspmCollector:
-  apiEndpoint: API_ENDPOINT
+  enabled: false
+clusterShield:
+  enabled: true
+  cluster_shield:
+    sysdig_endpoint: 
+      region: custom
+    log_level: info
+    features:
+      admission_control:
+        enabled: true
+      container_vulnerability_management:
+        enabled: true
+      audit:
+        enabled: true
+      posture:
+        enabled: true
 ```
 {: codeblock}
 
@@ -199,23 +215,57 @@ helm install -n ibm-observe sysdig-agent sysdig/sysdig-deploy -f agent-values-mo
 ```
 {: pre}
 
+For example, for the us-east region, a sample Helm values file looks as follows:
 
-Run the following command to install the agent by using the helm chart and the variables yaml file:
-
-```sh
-helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-namespace\
-    --set global.sysdig.accessKey=<SERVICE_ACCESS_KEY> \
-    --set agent.collectorSettings.collectorHost=<INGESTION_ENDPOINT> \
-    --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=<API_ENDPOINT> \
-    --set nodeAnalyzer.nodeAnalyzer.runtimeScanner.settings.eveEnabled=true \
-    --set nodeAnalyzer.secure.vulnerabilityManagement.newEngineOnly=true \
-    --set global.kspm.deploy=true \
-    --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
-    --set global.clusterConfig.name=<CLUSTER_NAME> \
-    --set kspmCollector.apiEndpoint=<API_ENDPOINT> \
-    --set agent.image.registry=icr.io \
-    --set agent.slim.image.repository=ext/sysdig/agent-slim \
-    --set agent.slim.kmoduleImage.repository=ext/sysdig/agent-kmodule
+```yaml
+agent:
+  collectorSettings:
+    collectorHost: ingest.private.us-east.security-compliance-secure.cloud.ibm.com
+  sysdig:
+    settings:
+     host_scanner:
+       enabled: true
+     kspm_analyzer:
+       enabled: true
+     sysdig_api_endpoint: private.us-east.security-compliance-secure.cloud.ibm.com
+  extraVolumes:
+    volumes:
+    - name: root-vol
+      hostPath:
+        path: /
+    - name: tmp-vol
+      hostPath:
+        path: /tmp
+    mounts:
+    - mountPath: /host
+      name: root-vol
+      readOnly: true
+    - mountPath: /host/tmp
+      name: tmp-vol
+global:
+  imageRegistry: icr.io/ext
+  clusterConfig:
+    name: my-cluster
+  sysdig:
+    accessKey: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx
+    apiHost: private.us-east.security-compliance-secure.cloud.ibm.com
+nodeAnalyzer:
+  enabled: false
+clusterShield:
+  enabled: true
+  cluster_shield:
+    sysdig_endpoint: 
+      region: custom
+    log_level: info
+    features:
+      admission_control:
+        enabled: true
+      container_vulnerability_management:
+        enabled: true
+      audit:
+        enabled: true
+      posture:
+        enabled: true
 ```
 {: pre}
 
@@ -244,16 +294,14 @@ To update the agent version by using Helm, complete the following steps:
     ```
     {: pre}
 
-2. Find the values yaml file that you used to deploy the agent and modify the `agent.image.tag` with the version of the agent that you want to deploy.
-
-3. Upgrade the agent.
+2. Upgrade the agent.
 
     ```sh
     helm upgrade -n ibm-observe sysdig-agent sysdig/sysdig-deploy -f agent-values-monitor-secure.yaml
     ```
     {: pre}
 
-
+With these steps, you'll upgrade your agents to the latest available version.
 
 ## Remove an agent
 {: #agent-deploy-openshift-helm-delete}
