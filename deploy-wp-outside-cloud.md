@@ -75,61 +75,58 @@ Once you have a sufficient version of Helm and the permission to run commands on
 
 4. Verify the Helm chart `sysdig/sysdig-deploy` is listed.
 
-5. Install the {{site.data.keyword.sysdigsecure_short}}. This can be done by issuing Helm command that sets certain values (let's call this the `--set` method) or by creating a yaml Helm values file where the values are listed and then issuing a command that references that file. Either path can be used to sucessfully install the {{site.data.keyword.sysdigsecure_short}} agent. 
+5. Install the {{site.data.keyword.sysdigsecure_short}}. This can be done by creating a yaml Helm values file where the values are listed and then issuing a command that references that file. 
 
-    **a.** To set the values when issuing the `helm` command:
-
-```sh
-    helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-namespace \
-    --set global.sysdig.accessKey=<SERVICE_ACCESS_KEY> \
-    --set agent.collectorSettings.collectorHost=<INGESTION_ENDPOINT> \
-    --set nodeAnalyzer.nodeAnalyzer.apiEndpoint=<API_ENDPOINT> \
-    --set nodeAnalyzer.nodeAnalyzer.runtimeScanner.deploy=false \
-    --set nodeAnalyzer.nodeAnalyzer.hostScanner.scanOnStart=true \
-    --set nodeAnalyzer.secure.vulnerabilityManagement.newEngineOnly=true \
-    --set global.kspm.deploy=true \
-    --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
-    --set clusterScanner.enabled=true \
-    --set global.clusterConfig.name=iks-ctolon \
-    --set kspmCollector.apiEndpoint=<API_ENDPOINT>
-```
-{: pre}
-
-Where:
-
-* `CLUSTER_NAME` is the name of the cluster where you are deploying the agent.
-* `SERVICE_ACCESS_KEY` is the Workload Protection instance access key.
-* `INGESTION_ENDPOINT` is the instance's ingestion endpoint.
-* `API_ENDPOINT` is the intance's API endpoint.
-
-    **b.** To install using a Helm values file, first create a file named `agent-values-monitor-secure.yaml` (or something similar). The following yaml is a template that you can use to configure the {{site.data.keyword.sysdigsecure_short}} agent. You can customize the file by removing or commenting with `#` the sections that are not required for your agent deployment.
+    To install using a Helm values file, first create a file named `agent-values-monitor-secure.yaml` (or something similar). The following yaml is a template that you can use to configure the {{site.data.keyword.sysdigsecure_short}} agent. You can customize the file by removing or commenting with `#` the sections that are not required for your agent deployment.
 
 ```yaml
+agent:
+  collectorSettings:
+    collectorHost: INGESTION_ENDPOINT
+  sysdig:
+    settings:
+     host_scanner:
+       enabled: true
+     kspm_analyzer:
+       enabled: true
+     sysdig_api_endpoint: API_ENDPOINT
+  extraVolumes:
+    volumes:
+    - name: root-vol
+      hostPath:
+        path: /
+    - name: tmp-vol
+      hostPath:
+        path: /tmp
+    mounts:
+    - mountPath: /host
+      name: root-vol
+      readOnly: true
+    - mountPath: /host/tmp
+      name: tmp-vol
 global:
   clusterConfig:
     name: CLUSTER_NAME
   sysdig:
     accessKey: SERVICE_ACCESS_KEY
-  kspm:
-    deploy: true
-agent:
-  collectorSettings:
-    collectorHost: INGESTION_ENDPOINT
+    apiHost: API_ENDPOINT
 nodeAnalyzer:
-  secure: 
-    vulnerabilityManagement:
-      newEngineOnly: true
-  nodeAnalyzer:
-    deploy: true
-    runtimeScanner: 
-      deploy: false
-    apiEndpoint: API_ENDPOINT
-    benchmarkRunner:
-      deploy: false
-kspmCollector:
-  apiEndpoint: API_ENDPOINT
-clusterScanner:
+  enabled: false
+clusterShield:
   enabled: true
+  cluster_shield:
+    sysdig_endpoint: 
+      region: custom
+    log_level: info
+    features:
+      admission_control:
+        enabled: true
+      container_vulnerability_management:
+        enabled: true
+      audit:
+        enabled: true
+      posture:
+        enabled: true
 ```
 {: codeblock}
 
@@ -137,8 +134,8 @@ Where:
 
 * `CLUSTER_NAME` is the name of the cluster where you are deploying the agent.
 * `SERVICE_ACCESS_KEY` is the Workload Protection instance access key.
-* `INGESTION_ENDPOINT` is the instance's ingestion endpoint.
-* `API_ENDPOINT` is the intance's API endpoint.
+* `INGESTION_ENDPOINT` is the instance's ingestion endpoint. For example, `ingest.us-east.security-compliance-secure.cloud.ibm.com`
+* `API_ENDPOINT` is the intance's API endpoint. For example, `us-east.security-compliance-secure.cloud.ibm.com`
 
 Then, run the install command referencing the created Helm values file:
 
@@ -159,14 +156,14 @@ To update the agent version by using Helm, complete the following steps:
     ```
     {: pre}
 
-2. Find the values yaml file that you used to deploy the agent and modify the `agent.image.tag` with the version of the agent that you want to deploy.
-
-3. Upgrade the agent.
+2. Upgrade the agent.
 
     ```sh
     helm upgrade -n ibm-observe sysdig-agent sysdig/sysdig-deploy -f agent-values-monitor-secure.yaml
     ```
     {: pre}
+
+With these steps, you'll upgrade your agents to the latest available version.
 
 ## Remove an agent
 {: deploy-wp-outside-cloud-remove-agent}
