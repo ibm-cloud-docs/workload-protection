@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-02-21"
+lastupdated: "2025-02-28"
 
 keywords:  release notes, IBM Cloud
 
@@ -22,6 +22,27 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 
 ## February 2025
 {: #workload-protection-feb25}
+
+### 26 February 2025
+{: #workload-protection-feb2625}
+{: release-note}
+
+Deprecation of v1beta1 APIs for Scanning Engine
+:   As of 25 February 2025, the following APIs are deprecated:
+
+- /secure/vulnerability/v1beta1/runtime-results
+- /secure/vulnerability/v1beta1/registry-results
+- /secure/vulnerability/v1beta1/pipeline-results
+- /secure/vulnerability/v1beta1/results/<result-id>
+
+The API v1 enhances consistency and alignment with platform API standards, and offers improved response schema:
+
+- /secure/vulnerability/v1/runtime-results
+- /secure/vulnerability/v1beta1/registry-results
+- /secure/vulnerability/v1/pipeline-results
+- /secure/vulnerability/v1/results/<result-id>
+
+If you are currently working with v1beta1 APIs, you must migrate to the new APIs by 1 September, 2025.
 
 ### 18 February 2025
 {: #workload-protection-feb1825}
