@@ -25,7 +25,7 @@ Policies without a linked zone have a "Missing Zone" indicator.
 
 To apply a policy to a zone, complete the following steps:
 
-1. Hover over the **Policies** icon ![Policies icon](/images/policies.png "Policies") and click **Zones**.
+1. Hover over the **Policies** icon ![Policies icon](/images/policies.png "Policies") and click **Policies** in the *Posture* section.
 
 2. Link the policy to a zone.
 

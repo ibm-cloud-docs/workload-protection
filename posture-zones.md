@@ -44,7 +44,7 @@ To configure a zone, do the following steps:
 
 1. Open the [{{site.data.keyword.sysdigsecure_short}} UI](/docs/workload-protection?topic=workload-protection-launch).
 
-2. Hover over the **Policies** icon ![Policies icon](/images/policies.png "Policies") and click **Zones** in the *Posture* section.
+2. Hover over the **Inventory** and click **Zones** in the *Posture* section.
 
 3. Click **New Zone**.
 
@@ -75,9 +75,7 @@ To configure a zone, do the following steps:
    GCP
    :    Organization, project, region, labels, host (for Docker, Linux hosts), and cluster
 
-6. Select the policies to be applied to the zone from the **Policies** list. Multiple policies can be selected by selecting policies from the list one at a time.
-
-7. Click **Save**.
+6. Click **Save**.
 
 The created zone is displayed on the **Zones** page.
 
@@ -91,11 +89,11 @@ To apply policies to a zone, complete the folloing steps:
 
 1. Open the [{{site.data.keyword.sysdigsecure_short}} UI](/docs/workload-protection?topic=workload-protection-launch).
 
-2. Hover over the **Policies** icon ![Policies icon](/images/policies.png "Policies") and click **Zones** in the *Posture* section.
+2. Hover over the **Policies** icon ![Policies icon](/images/policies.png "Policies") and click **Policies** in the *Posture* section.
 
-3. Click the zone where you want to apply the policy.
+3. Select the Policy you want to assign and click on the three dots on the right and *Assign Zones*.
 
-4. In **Apply Policies**, select the configured policy from the list.
+4. Under *Assigned Zones* select the Zone(s) you want to assign.
 
 5. Click **Save**.
 
@@ -109,11 +107,11 @@ To remove policies to a zone, complete the folloing steps:
 
 1. Open the [{{site.data.keyword.sysdigsecure_short}} UI](/docs/workload-protection?topic=workload-protection-launch).
 
-2. Hover over the **Policies** icon ![Policies icon](/images/policies.png "Policies") and click **Zones** in the *Posture* section.
+2. Hover over the **Policies** icon ![Policies icon](/images/policies.png "Policies") and click **Policies** in the *Posture* section.
 
-3. Click the zone where you want to apply the policy.
+3. Select the Policy you want to assign and click on the three dots on the right and *Assign Zones*.
 
-4. Delete the configured policy from the list.
+4. Under *Assigned Zones* remove the Zone(s) you want to assign.
 
 5. Click **Save**.
 
@@ -124,7 +122,7 @@ To modify a custom zone's configuration, do the following steps:
 
 1. Open the [{{site.data.keyword.sysdigsecure_short}} UI](/docs/workload-protection?topic=workload-protection-launch).
 
-2. Hover over the **Policies** icon ![Policies icon](/images/policies.png "Policies") and click **Zones** in the *Posture* section.
+2. Hover over the **Inventory** and click **Zones** in the *Posture* section.
 
 3. Click the zone that you want to modify.
 
@@ -139,7 +137,7 @@ You can delete a zone that you no longer need.
 
 1. Open the [{{site.data.keyword.sysdigsecure_short}} UI](/docs/workload-protection?topic=workload-protection-launch).
 
-2. Hover over the **Policies** icon ![Policies icon](/images/policies.png "Policies") and click **Zones** in the *Posture* section.
+2. Hover over the **Inventory** and click **Zones** in the *Posture* section.
 
 3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the zone that you want to delete.
 
