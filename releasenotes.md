@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-19"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,16 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## March 2025
+{: #workload-protection-mar25}
+
+### 19 March 2025
+{: #workload-protection-mar1925}
+{: release-note}
+
+Resource Report (CSV) is now available in {{site.data.keyword.cloud_notm}}
+:   Resource Report generates a CSV that includes Compliance results with the resource details: Name, CRN, Control status, remediation, posture policy, resource labels and many more details. Scope the report to the policy you prefer: Financial Services framework, CIS Benchmark for IBM Cloud or Kubernetes, DORA or PCI that you can schedule daily, weekly or monthly. Start today by accessing your {{site.data.keyword.sysdigsecure_short}} UI and navigating to the **Reporting** page and selecting **New Schedule**.
 
 ## February 2025
 {: #workload-protection-feb25}
