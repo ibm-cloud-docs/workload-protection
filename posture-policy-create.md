@@ -18,8 +18,11 @@ subcollection: workload-protection
 You can create custom policies in {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
 
+You can create a custom policy via the {{site.data.keyword.sysdigsecure_short}} console or by using Terraform. 
 
-Complete the following steps to create a new policy with no prior policy as a base:
+Use [this Terraform resource](https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs/resources/secure_posture_policy) to create a new policy by defining the groups, requirements and controls.
+
+Complete the following steps to create a new policy in the {{site.data.keyword.sysdigsecure_short}} console with no prior policy as a base:
 
 ## Before you begin
 {: #posture-policy-create-prereqs}

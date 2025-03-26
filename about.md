@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-03-19"
 
 keywords:
 
@@ -33,6 +33,8 @@ The posture module brings many features for your CSPM in your hybrid environment
 - Detailed remediation instructions to fix failing controls.
 
 - Ability to create custom policies, controls, and control parameters.
+
+- Capability to integrate all your {{site.data.keyword.sysdigsecure_short}} accounts and enterprise seamlessly. 
 
 ## Available pre-defined policies for IBM Cloud CSPM in {{site.data.keyword.sysdigsecure_short}}
 

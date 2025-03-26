@@ -39,6 +39,8 @@ Controls are built on the [Open Policy Agent (OPA) engine](https://www.openpolic
 
 The Posture Controls library shows you the code that is used to create the controls and the inputs they evaluate. You can download this code as a JSON file.
 
+You can create your own custom controls with [Terraform](https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs/resources/secure_posture_control).
+{: note}
 
 ## Accessing Posture Controls
 {: #posture-controls-access}
