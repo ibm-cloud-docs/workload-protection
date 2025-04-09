@@ -39,6 +39,16 @@ Power Virtual Server Cloud Security Posture Management
 ## March 2025
 {: #workload-protection-mar25}
 
+### 27 March 2025
+{: #workload-protection-mar2725}
+{: release-note}
+
+Tenant-Aware Hierarchical Posture Scanning
+:   {{site.data.keyword.cloud_notm}} is introducing Tenant-Aware Hierarchical Posture Scanning, a new capability designed to streamline posture management in multi-tenant environments. This feature allows parent tenants to seamlessly integrate posture scanning results from child tenants, ensuring consistent policy application and reporting while eliminating the need for complex cross-region data transfers. To activate the Tenant-Aware Hierarchical Posture Scanning feature, customers must contact {{site.data.keyword.cloud_notm}} Support. Our team will assist with enabling the feature and guiding you through the setup process to ensure smooth integration into your environment.
+
+In-Use for Linux Hosts is now available in {{site.data.keyword.cloud_notm}}
+:   Starting with {{site.data.keyword.cloud_notm}} Linux v13.8.0, you can recognize In-Use Packages on hosts. This addition extends {{site.data.keyword.cloud_notm}} coverage and helps reduce scope of vulnerabilities you should care about first for remediation; further reducing noise in an ever expanding VM landscape.
+
 ### 19 March 2025
 {: #workload-protection-mar1925}
 {: release-note}
