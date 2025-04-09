@@ -190,13 +190,13 @@ toc:
       - topicgroup:
           label: CLI Reference
           topics:
-          - include: ../workload-protection-cli-plugin/sysdig-secure-cli.md
+          - topic: sysdig-secure-cli.md
             navtitle: Workload Protection CLI
-          - include: ../workload-protection-cli-plugin/sysdig-secure-cli-compliance.md
+          - topic: sysdig-secure-cli-compliance.md
             navtitle: Compliance CLI
-          - include: ../workload-protection-cli-plugin/sysdig-secure-cli-policy.md
+          - topic: sysdig-secure-cli-policy.md
             navtitle: Policy CLI
-          - include: ../workload-protection-cli-plugin/sysdig-secure-cli-version.md
+          - topic: sysdig-secure-cli-version.md
             navtitle: Version CLI
       - topicgroup:
           label: API
