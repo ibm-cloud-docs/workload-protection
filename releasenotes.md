@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-10"
 
 keywords:  release notes, IBM Cloud
 
@@ -22,6 +22,21 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 
 ## April 2025
 {: #workload-protection-apr25}
+
+## 12 April 2025
+{: #workload-protection-apr1225}
+{: release-note}
+
+Updates to the {{site.data.keyword.sysdigsecure_full_notm}} infrastructure
+:   {{site.data.keyword.sysdigsecure_full_notm}} is upgrading its network load balancers and service endpoints infrastructure. With this change the regional endpoints (public and private) use new virtual IP addresses. Action might be required when accessing {{site.data.keyword.sysdigsecure_full_notm}}:
+
+    * If you use an IP address other than the URL domain name
+    * If you have IP-based allowlists or firewall rules running in your environment
+    * If you have IP address-specific routing
+
+    For details on the changes and the new IP addresses, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints).
+
+
 
 ### 7 April 2025
 {: #workload-protection-apr725}
