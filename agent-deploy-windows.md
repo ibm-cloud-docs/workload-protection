@@ -1,13 +1,11 @@
 ---
-
 copyright:
-  years:  2024
-lastupdated: "2025-01-28"
+  years: 2024
+lastupdated: "2025-04-09"
 
 keywords:
 
 subcollection: workload-protection
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -19,7 +17,9 @@ After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} s
 
 {{site.data.keyword.sysdigsecure_short}} provides the following features to protect your Windows servers:
 
-- **Threat detection and response**: identify threats and suspicious activity based on application, network and host activity by processing syscall events and investigate with detailed system captures. 
+- **Threat detection and response**: identify threats and suspicious activity based on application, network and host activity by processing syscall events and investigate with detailed system captures.
+- **Posture management**: scan host configuration files for compliance and benchmarks such as CIS Windows Server Benchmarks.
+- **Host scanning**: scan host packages, detect the associated vulnerabilities and identify the resolution priority based on available fixed versions and severity.
 
 {: shortdesc}
 
@@ -32,14 +32,14 @@ After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} s
 
 3. Make sure you have `Administrator` permissions to perform the operations.
 
-## Deploying the agent for threat detection and response 
+## Deploying the agent for threat detection and response
 {: #agent-deploy-windows-threats}
 
 The {{site.data.keyword.sysdigsecure_short}} agent uses Falco to ensure workload security and compliance. The agent has two components, the Connection Manager and the Security Manager, which are both managed by the Agent Installer.
 
 Installing the {{site.data.keyword.sysdigsecure_short}} agent using either GUI or CLI operation is possible.
 
-[Download the agent](https://download.sysdig.com/stable/msi/x86_64/agent-windows-latest.msi) in MSI format to start the installation via GUI or CLI.
+[Download the agent](https://download.sysdig.com/stable/msi/x86_64/sysdig-host-shield-latest.msi) in MSI format to start the installation via GUI or CLI. If you need to install the agent in a host that only runs in the IBM private network you can [download it from here](https://s3.direct.us-south.cloud-object-storage.appdomain.cloud/agent-asset-prod-us-south/stable/msi/x86_64/sysdig-host-shield-latest.msi).
 
 ### GUI Installation
 {: #agent-deploy-windows-threats-gui}
@@ -52,15 +52,15 @@ You can execute the MSI using a GUI and the installation process will prompt you
 Run the MSI in silent mode via `CommandLine` or `PowerShell` by running the following command. Remember to replace `<COLLECTOR_URL>` and `<AGENT_ACCESS_KEY>` with the values from your {{site.data.keyword.sysdigsecure_short}} instance:
 
 ```
-> msiexec /i sysdig-agent.msi COLLECTOR_URL=<COLLECTOR_URL> COLLECTOR_PORT=6443 ACCESS_KEY=<AGENT_ACCESS_KEY> ACCEPT_TERMS_CONDITIONS=True /qn
+> msiexec /i sysdig-host-shield.msi REGION=<region> ACCESS_KEY=<AGENT_ACCESS_KEY> VM_FEATURE_ENABLED=True POSTURE_FEATURE_ENABLED=True ACCEPT_TERMS_CONDITIONS=True /qn
 ```
 {: pre}
 
 ## Verifying the installation
 {: #agent-deploy-windows-verification}
 
-* After installing the {{site.data.keyword.sysdigsecure_short}} agent, two new services should be running in the host: `Sysdig Connection Manager` and `Sysdig Security Manager`.
-* Access to your {{site.data.keyword.sysdigsecure_short}} instance and click on **Integrations / Data Sources - Sysdig Agents**. You should see your Windows server(s) listed there.
-* Verify, enable or customize the Threat Detection policies under **Policies / Runtime Policies** in the `Windows Workload` section. 
+- After installing the {{site.data.keyword.sysdigsecure_short}} agent, two new services should be running in the host: `Sysdig Connection Manager` and `Sysdig Security Manager`.
+- Access to your {{site.data.keyword.sysdigsecure_short}} instance and click on **Integrations / Data Sources - Sysdig Agents**. You should see your Windows server(s) listed there.
+- Verify, enable or customize the Threat Detection policies under **Policies / Runtime Policies** in the `Windows Workload` section.
 
 Check out [Windows Threat Detection with IBM Security and Compliance Center {{site.data.keyword.sysdigsecure_short}}](https://community.ibm.com/community/user/cloud/blogs/victor-guerrero/2024/01/11/windows-threat-detection-with-ibm-security-and-com?CommunityKey=dd1ee2bc-c83b-4afb-bd1c-9095ff0c3bc1) to see examples of threat detection on Windows and how to troubleshoot detected events.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-03-19"
+lastupdated: "2025-04-09"
 
 keywords:  release notes, IBM Cloud
 
@@ -20,14 +20,40 @@ content-type: release-note
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
 
+## April 2025
+{: #workload-protection-apr25}
+
+### 7 April 2025
+{: #workload-protection-apr725}
+{: release-note}
+
+Posture for Windows Servers
+:   This feature provides compliance scanning for standalone Windows Server hosts, enabling security and regulatory compliance checks for Windows environments. With this release, CIS Windows Server 2022 Benchmark v3.0.0 and CIS Windows Server 2019 Benchmark v3.0.1 Posture policies are provided. For installation, see [Managing the {{site.data.keyword.sysdigsecure_short}} agent on Windows Servers](/docs/workload-protection?topic=workload-protection-agent-deploy-windows).
+
+Host Scanning for Windows Servers
+:   This feature provides coverage for Windows Server operating system vulnerabilities sourced from [Microsoft Security Response Center](https://api.msrc.microsoft.com/). In addition, the Windows {{site.data.keyword.sysdigsecure_short}} agent detects any non operating-system package vulnerabilities. A single agent supports both Posture and Host Scanning features. For installation, see [Managing the {{site.data.keyword.sysdigsecure_short}} agent on Windows Servers](/docs/workload-protection?topic=workload-protection-agent-deploy-windows).
+
+Power Virtual Server Cloud Security Posture Management
+:   {{site.data.keyword.sysdigsecure_short}} now supports PowerVS resources as part of its Cloud Security Posture Management (CSPM) feature. Supported resources includes PowerVS Workspaces, Instances, Instance Volumnes, Networks, Network Security Groups and Public Networks. Any existing {{site.data.keyword.sysdigsecure_short}} with {{site.data.keyword.cloud_notm}} CSPM enabled will automatically begin collecting PowerVS resources.
+
 ## March 2025
 {: #workload-protection-mar25}
+
+### 27 March 2025
+{: #workload-protection-mar2725}
+{: release-note}
+
+Tenant-Aware Hierarchical Posture Scanning
+:   {{site.data.keyword.cloud_notm}} is introducing Tenant-Aware Hierarchical Posture Scanning, a new capability designed to streamline posture management in multi-tenant environments. This feature allows parent tenants to seamlessly integrate posture scanning results from child tenants, ensuring consistent policy application and reporting while eliminating the need for complex cross-region data transfers. To activate the Tenant-Aware Hierarchical Posture Scanning feature, customers must contact {{site.data.keyword.cloud_notm}} Support. Our team will assist with enabling the feature and guiding you through the setup process to ensure smooth integration into your environment.
+
+In-Use for Linux Hosts is now available in {{site.data.keyword.cloud_notm}}
+:   Starting with {{site.data.keyword.cloud_notm}} Linux v13.8.0, you can recognize In-Use Packages on hosts. This addition extends {{site.data.keyword.cloud_notm}} coverage and helps reduce scope of vulnerabilities you should care about first for remediation; further reducing noise in an ever expanding VM landscape.
 
 ### 19 March 2025
 {: #workload-protection-mar1925}
 {: release-note}
 
-Resource Report (CSV) is now available in {{site.data.keyword.cloud_notm}}
+Resource Report (CSV) is now available in {{site.data.keyword.sysdigsecure_short}}
 :   Resource Report generates a CSV that includes Compliance results with the resource details: Name, CRN, Control status, remediation, posture policy, resource labels and many more details. Scope the report to the policy you prefer: Financial Services framework, CIS Benchmark for IBM Cloud or Kubernetes, DORA or PCI that you can schedule daily, weekly or monthly. Start today by accessing your {{site.data.keyword.sysdigsecure_short}} UI and navigating to the **Reporting** page and selecting **New Schedule**.
 
 ## February 2025
