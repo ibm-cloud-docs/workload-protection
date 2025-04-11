@@ -22,4 +22,4 @@ For information about integrating {{site.data.keyword.sysdigsecure_short}} into 
 
 {{site.data.content.sysdig-doc}}
 
-For more information, see [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-secure.html){: external}
+For more information, see [Integrations](https://docs.sysdig.com/en/docs/sysdig-secure/integrations-for-sysdig-secure/){: external}
