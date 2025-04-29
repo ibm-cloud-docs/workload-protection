@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-14"
 
 keywords:
 
@@ -44,23 +44,37 @@ Installing the {{site.data.keyword.sysdigsecure_short}} agent using either GUI o
 ### GUI Installation
 {: #agent-deploy-windows-threats-gui}
 
-You can execute the MSI using a GUI and the installation process will prompt you to accept the EULA and enter the Collector and Access Key details.
+You can execute the MSI using a GUI and the installation process will prompt you to accept the EULA, select Region as `custom` and complete:
+- Custom Collector: is the public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
+- Custom Collector port: set it always to `6443`.
+- Custom Api Url: is the public or private API Endpoint URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). For example `https://private.us-east.security-compliance-secure.cloud.ibm.com`.
+- Access Key: is the ingestion key for the instance.
 
 ### CLI Installation
 {: #agent-deploy-windows-threats-cli}
 
-Run the MSI in silent mode via `CommandLine` or `PowerShell` by running the following command. Remember to replace `<COLLECTOR_URL>` and `<AGENT_ACCESS_KEY>` with the values from your {{site.data.keyword.sysdigsecure_short}} instance:
+Run the MSI in silent mode via `CommandLine` or `PowerShell` by running the following command. Remember to replace `<COLLECTOR_URL>`, `<API_ENDPOINT>`, `<AGENT_ACCESS_KEY>` with the values from your {{site.data.keyword.sysdigsecure_short}} instance:
 
 ```
-> msiexec /i sysdig-host-shield.msi REGION=<region> ACCESS_KEY=<AGENT_ACCESS_KEY> VM_FEATURE_ENABLED=True POSTURE_FEATURE_ENABLED=True ACCEPT_TERMS_CONDITIONS=True /qn
+> msiexec /i sysdig-host-shield-latest.msi  REGION=custom ACCESS_KEY=<AGENT_ACCESS_KEY> COLLECTOR_URL=<COLLECTOR_URL> COLLECTOR_PORT=6443 API_URL=<API_ENDPOINT> VM_FEATURE_ENABLED=True POSTURE_FEATURE_ENABLED=True ACCEPT_TERMS_CONDITIONS=True  /qn
 ```
 {: pre}
+
+Where:
+
+- AGENT_ACCESS_KEY is the ingestion key for the instance.
+- COLLECTOR_URL is the public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
+- API_ENDPOINT is the public or private API Endpoint URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). For example `https://private.us-east.security-compliance-secure.cloud.ibm.com`.
 
 ## Verifying the installation
 {: #agent-deploy-windows-verification}
 
-- After installing the {{site.data.keyword.sysdigsecure_short}} agent, two new services should be running in the host: `Sysdig Connection Manager` and `Sysdig Security Manager`.
-- Access to your {{site.data.keyword.sysdigsecure_short}} instance and click on **Integrations / Data Sources - Sysdig Agents**. You should see your Windows server(s) listed there.
-- Verify, enable or customize the Threat Detection policies under **Policies / Runtime Policies** in the `Windows Workload` section.
+A few minutes after the installation is completed, make sure that:
+- The new service should be running in the host: `SysdigHostShield`.
+- You can see your Windows server(s) are list in **Integrations / Data Sources - Sysdig Agents** in your {{site.data.keyword.sysdigsecure_short}} instance.
+- Your Windows host appears under **Inventory**. You can filter by the hostname (Resource Name) or type of operating system (Platform).
+- You have a vulnerability report for your Windows server under Vulnerabilities / Runtime and search for your host by the hostname or type of system (`asset.type is host`).
+- The agent will evaluate Windows configuration files to identify failing controls. Enable your desire policy, such as CIS Benchmarks for Windows, under **Policies / Posture Policies**.
+- You enable or customize the Threat Detection policies under **Policies / Runtime Policies** in the `Windows Workload` section.
 
 Check out [Windows Threat Detection with IBM Security and Compliance Center {{site.data.keyword.sysdigsecure_short}}](https://community.ibm.com/community/user/cloud/blogs/victor-guerrero/2024/01/11/windows-threat-detection-with-ibm-security-and-com?CommunityKey=dd1ee2bc-c83b-4afb-bd1c-9095ff0c3bc1) to see examples of threat detection on Windows and how to troubleshoot detected events.
