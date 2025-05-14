@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2025-03-19"
+lastupdated: "2025-05-14"
 
 keywords:
 
@@ -19,7 +19,7 @@ The compliance module in {{site.data.keyword.sysdigsecure_full}} maintains a det
 
 {{site.data.keyword.sysdigsecure_short}} CSPM and KSPM provide compliance and configuration management of resources and critical workloads. Several predefined policies are supported, including {{site.data.keyword.cloud_notm}} Framework for Financial Services, Digital Operational Resilience Act (DORA) or CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark to achieve security and compliance for your environment. Custom policies are also supported.
 
-The {{site.data.keyword.cloud_notm}} CSPM feature in {{site.data.keyword.sysdigsecure_short}} interacts with {{site.data.keyword.appconfig_short}} for gathering all your resource configuration details. The integration uses {{site.data.keyword.IBM_notm}} [IAM trusted profiles](/docs/account?topic=account-create-trusted-profile&interface=ui) for managing permissions. 
+The {{site.data.keyword.cloud_notm}} CSPM feature in {{site.data.keyword.sysdigsecure_short}} interacts with the aggregator feature of {{site.data.keyword.appconfig_short}} for gathering all your resource configuration details. The aggregator feature is free of charge and part of the Basic plan of {{site.data.keyword.appconfig_short}}. The integration uses {{site.data.keyword.IBM_notm}} [IAM trusted profiles](/docs/account?topic=account-create-trusted-profile&interface=ui) for managing permissions. 
 
 You can easily integrate {{site.data.keyword.cloud_notm}} accounts to implement CSPM for new and for existing {{site.data.keyword.sysdigsecure_short}} instances.
 
