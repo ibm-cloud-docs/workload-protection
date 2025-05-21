@@ -1,8 +1,8 @@
----
+e---
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-04-10"
+lastupdated: "2025-05-21"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,16 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## May 2025
+{: #workload-protection-may25}
+
+## 21 May 2025
+{: #workload-protection-may2125}
+{: release-note}
+
+Automatically onboard new {{site.data.keyword.cloud_notm}} accounts for {{site.data.keyword.cloud_notm}} Enterprise
+:   {{site.data.keyword.sysdigsecure_full_notm}} now automatically discovers and onboards newly created active IBM Cloud accounts, helping ensure your cloud environment is up-to-date without manual intervention. {{site.data.keyword.sysdigsecure_short}} performs this synchronization every 24 hours, onboarding new accounts and offboarding those that have been removed from your {{site.data.keyword.cloud_notm}} Enterprise. Resources associated with removed accounts will also be deleted from inventory.
 
 ## April 2025
 {: #workload-protection-apr25}
