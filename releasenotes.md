@@ -2,7 +2,7 @@ e---
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-05-21"
+lastupdated: "2025-05-27"
 
 keywords:  release notes, IBM Cloud
 
@@ -22,6 +22,13 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 
 ## May 2025
 {: #workload-protection-may25}
+
+## 23 May 2025
+{: #workload-protection-may2325}
+{: release-note}
+
+[IBM Cloud Shell settings](https://cloud.ibm.com/docs/account?topic=account-shell-settings) are now support for {{site.data.keyword.cloud_notm}} CSPM
+:   {{site.data.keyword.sysdigsecure_short}} now ingests your {{site.data.keyword.cloud_notm}} Shell settings as part of Cloud Security Posture Management (CSPM). This enhancement enables you to validate the Cloud Shell locations and features with three new posture controls or by creating custom controls for more flexibility. 
 
 ## 21 May 2025
 {: #workload-protection-may2125}
