@@ -2,7 +2,7 @@ e---
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-05-27"
+lastupdated: "2025-06-11"
 
 keywords:  release notes, IBM Cloud
 
@@ -63,7 +63,7 @@ Posture for Windows Servers
 :   This feature provides compliance scanning for standalone Windows Server hosts, enabling security and regulatory compliance checks for Windows environments. With this release, CIS Windows Server 2022 Benchmark v3.0.0 and CIS Windows Server 2019 Benchmark v3.0.1 Posture policies are provided. For installation, see [Managing the {{site.data.keyword.sysdigsecure_short}} agent on Windows Servers](/docs/workload-protection?topic=workload-protection-agent-deploy-windows).
 
 Host Scanning for Windows Servers
-:   This feature provides coverage for Windows Server operating system vulnerabilities sourced from [Microsoft Security Response Center](https://api.msrc.microsoft.com/). In addition, the Windows {{site.data.keyword.sysdigsecure_short}} agent detects any non operating-system package vulnerabilities. A single agent supports both Posture and Host Scanning features. For installation, see [Managing the {{site.data.keyword.sysdigsecure_short}} agent on Windows Servers](/docs/workload-protection?topic=workload-protection-agent-deploy-windows).
+:   This feature provides coverage for Windows Server operating system vulnerabilities sourced from [Microsoft Security Response Center](https://www.microsoft.com/en-us/msrc){: external}. In addition, the Windows {{site.data.keyword.sysdigsecure_short}} agent detects any non operating-system package vulnerabilities. A single agent supports both Posture and Host Scanning features. For installation, see [Managing the {{site.data.keyword.sysdigsecure_short}} agent on Windows Servers](/docs/workload-protection?topic=workload-protection-agent-deploy-windows).
 
 Power Virtual Server Cloud Security Posture Management
 :   {{site.data.keyword.sysdigsecure_short}} now supports PowerVS resources as part of its Cloud Security Posture Management (CSPM) feature. Supported resources includes PowerVS Workspaces, Instances, Instance Volumnes, Networks, Network Security Groups and Public Networks. Any existing {{site.data.keyword.sysdigsecure_short}} with {{site.data.keyword.cloud_notm}} CSPM enabled will automatically begin collecting PowerVS resources.

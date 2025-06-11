@@ -48,7 +48,7 @@ Before deploying the {{site.data.keyword.sysdigsecure_short}} components, create
 
 Create an HTTPS [Satellite Link by using the console or CLI](/docs/satellite?topic=satellite-link-cloud-create) in order to connect securely to {{site.data.keyword.sysdigsecure_short}} private endpoints.
 
-1. Get your {{site.data.keyword.sysdigsecure_short}} [private endpoint](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_monitoring). For example, if your {{site.data.keyword.sysdigsecure_short}} instance is in `us-east` your endpoint would be `private.us-east.security-compliance-secure.cloud.ibm.com`.
+1. Get your {{site.data.keyword.sysdigsecure_short}} [private endpoint](/docs/workload-protection?topic=workload-protection-endpoints). For example, if your {{site.data.keyword.sysdigsecure_short}} instance is in `us-east` your endpoint would be `private.us-east.security-compliance-secure.cloud.ibm.com`.
 
 2. Access [**Satellite Locations** dashboard](https://cloud.ibm.com/satellite/locations). Link endpoints and click **Create an endpoint**.
 
