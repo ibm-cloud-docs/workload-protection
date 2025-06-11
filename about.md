@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-06-11"
 
 keywords:
 
@@ -37,6 +37,7 @@ The posture module brings many features for your CSPM in your hybrid environment
 - Capability to integrate all your {{site.data.keyword.sysdigsecure_short}} accounts and enterprise seamlessly. 
 
 ## Available pre-defined policies for IBM Cloud CSPM in {{site.data.keyword.sysdigsecure_short}}
+{: #about-available-policies}
 
 The following posture policies are available for you to use to implement CSPM for your {{site.data.keyword.cloud_notm}} resources:
 
@@ -75,6 +76,73 @@ The following posture policies are available for you to use to implement CSPM fo
 {: caption="Available predefined policies" caption-side="top"}
 
 All other posture policies apply to other environments such as AWS, Azure, GCP, Kubernetes, OpenShift, or hosts.
+
+## List of Services Supported by {{site.data.keyword.sysdigsecure_short}}
+{: #about-available-services}
+
+{{site.data.keyword.sysdigsecure_full}} supports the following services for Cloud Security Posture Management (CPSM):
+
+| Name of service |
+|-----------------|
+| [Cloud Object Storage](/docs/cloud-object-storage) |
+| [Kubernetes Service](/docs/containers) |
+| [Red Hat OpenShift](/docs/openshift) |
+| [Virtual server for VPC](/docs/vpc?topic=vpc-creating-virtual-servers) |
+| [Virtual Private Cloud](/docs/vpc) |
+| [Block storage volume for VPC](/docs/vpc?topic=vpc-creating-block-storage) |
+| [Block storage snapshots for VPC](/docs/vpc?topic=vpc-snapshots-vpc-create) |
+| [Secrets Manager](/docs/secrets-manager) |
+| [Databases for PostgreSQL](/docs/databases-for-postgresql) |
+| [Databases for Redis](/docs/databases-for-redis) |
+| [Databases for ElasticSearch](/docs/databases-for-elasticsearch) |
+| [Databases for EnterpriseDB](/docs/databases-for-enterprisedb) |
+| [Databases for ETCD](/docs/databases-for-etcd) |
+| [Databases for MongoDB](/docs/databases-for-mongodb) |
+| [Databases for MySQL](/docs/databases-for-mysql) |
+| [Identity and Access Management](/docs/account?topic=account-cloudaccess) |
+| [Key Protect](/docs/key-protect) |
+| [Container Registry](/docs/Registry?topic=Registry-getting-started) |
+| [Load Balancer for VPC](/docs/loadbalancer-service) |
+| [Security Group for VPC](/docs/vpc?topic=vpc-using-security-groups) |
+| [SSH Keys for VPC](/docs/vpc?topic=vpc-ssh-keys) |
+| [Subnet for VPC](/docs/vpc?topic=vpc-about-subnets-vpc) |
+| [Virtual Private Endpoint (VPE) for VPC](/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui) |
+| [Auto Scale (Instance Group) for VPC](/docs/vpc?topic=vpc-creating-auto-scale-instance-group) |
+| [Bare Metal servers for VPC](/docs/vpc?topic=vpc-planning-for-bare-metal-servers) |
+| [Client VPN for VPC](/docs/vpc?topic=vpc-vpn-client-to-site-overview) |
+| [Dedicated Host for VPC](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances) |
+| [Floating IP for VPC](/docs/vpc?topic=vpc-fip-about) |
+| [Flow Logs](/docs/vpc?topic=vpc-flow-logs) - VPC |
+| [Custom image for VPC](/docs/vpc?topic=vpc-planning-custom-images) |
+| [Placement Groups for VPC](/docs/vpc?topic=vpc-about-placement-groups-for-vpc) |
+| [Code Engine](/docs/codeengine) |
+| [Network ACL - VPC](/docs/vpc?topic=vpc-using-acls) |
+| [DNS Service - VPC](/docs/dns-svcs) |
+| [VPN for VPC](/docs/vpc?topic=vpc-about-networking-for-vpc#external-connectivity) |
+| [IBM Cloud Backup - VPC](/docs/vpc?topic=vpc-backup-service-about) |
+| [Public Gateway](/docs/vpc?topic=vpc-vpn-create-gateway) |
+| [Event Streams (messagehub)](/docs/EventStreams) |
+| [IBM Cloud Direct Link](/docs/dl) |
+| [Transit Gateway](/docs/transit-gateway) |
+| [Toolchain](/docs/ContinuousDelivery) |
+| [IBM Cloudant CLI](/docs/Cloudant-cli-plugin) |
+| [IBM Cloud Internet Services (CIS)](/docs/cis) |
+| [Schematics](/docs/schematics) |
+| [Cloud Monitoring](/docs/monitoring?topic=monitoring-getting-started#getting-started)|
+| [Security and Compliance Center (SCC)](/docs/security-compliance) |
+| [Hyper Protect Crypto Services (HPCS)](/docs/hs-crypto) |
+| [App ID](/docs/appid) |
+| [App Configuration](/docs/app-configuration) |
+| [Catalog Management](/docs/account?topic=account-restrict-by-user&interface=ui) |
+| [Event Notifications](/docs/event-notifications) |
+| [Messages for RabbitMQ](/docs/messages-for-rabbitmq) |
+| [IBM Cloud Projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects) |
+| [IBM Cloud Activity Tracker Event Routing](/docs/atracker) |
+| [watsonx.ai Runtime](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-overview.html?context=cpdaas) |
+| [IBM Power Virtual Server](/docs/power-iaas) |
+| [IBM Cloud Logs](/docs/cloud-logs) |
+| [IBM Cloud Shell](/docs/cloud-shell?topic=cloud-shell-getting-started) |
+{: caption="List of services supported by Workload Protection" caption-side="bottom"}
 
 ## Next steps
 {: #about-next}
