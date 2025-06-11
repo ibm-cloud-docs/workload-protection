@@ -70,7 +70,7 @@ To provision an instance through the {{site.data.keyword.cloud_notm}} UI, comple
 
 6. Select a service plan.
 
-   For more information about the service plans, see [Service plans](/docs/workload-protection?topic=workload-protection-pricing_plans#pricing_plans).
+   For more information about the service plans, see [Service plans](/docs/workload-protection?topic=workload-protection-pricing).
 
 7. Enter a service name.
 

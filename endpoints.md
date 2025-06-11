@@ -19,14 +19,11 @@ subcollection: workload-protection
 A list of supported public and private endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service.
 {: shortdesc}
 
-
-
 ## Web UI endpoints
 {: #endpoints_workload_protection}
 
 To access the {{site.data.keyword.sysdigsecure_full_notm}} web UI, you might need to define a firewall rule in your host.`(*)`  Indicates IP addresses that are in plan to be supported. These IP addresses need be added to an allowlist, if you use an allowlist, before 1 May 2025, to avoid service interruptions. Be sure to keep the current IP addresses in the allowlist as well.  A notification will be sent before the current IP addresses are deprecated.
 {: note}
-
 
 The following table lists the endpoints that are available for each region:
 
@@ -125,6 +122,7 @@ The following table lists the *Private Collector endpoints* that are available f
 | Toronto (`CA-TOR`)  | `ingest.private.ca-tor.security-compliance-secure.cloud.ibm.com`   | 166.9.77.20  \n 166.9.76.23  \n 166.9.78.21  \n  \n  166.9.247.153 `(*)`  \n 166.9.247.185 `(*)`  \n 166.9.247.205 `(*)` \n 166.9.209.13 `(*)`  \n 166.9.209.42 `(*)`  \n 166.9.209.72 `(*)`   | TCP 6443  |  TCP 443  |
 | Washington (`US-East`)   | `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53  \n  \n  166.9.231.240 `(*)`  \n 166.9.232.28 `(*)`  \n 166.9.233.17 `(*)` \n 166.9.231.19 `(*)`  \n 166.9.232.40 `(*)`  \n 166.9.233.36 `(*)`      | TCP 6443  |  TCP 443  |
 {: caption="List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.sysdigsecure_full_notm}}" caption-side="top"}
+
 ### Public Collector endpoints
 {: #endpoints_ingestion_public}
 

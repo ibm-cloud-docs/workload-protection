@@ -40,7 +40,7 @@ To provision an instance from the {{site.data.keyword.cloud_notm}} catalog, comp
 
 7. Select a service plan.
 
-    For more information about the service plans, see [Service plans](/docs/workload-protection?topic=workload-protection-pricing_plans#pricing_plans).
+    For more information about the service plans, see [Service plans](/docs/workload-protection?topic=workload-protection-pricing).
 
 8. Enter a service name.
 
@@ -79,7 +79,7 @@ To provision an instance through the command line, complete the following steps:
 
     `service-name` is the name of the {{site.data.keyword.sysdigsecure_full_notm}} service name in the {{site.data.keyword.cloud_notm}}.
 
-    `SERVICE_PLAN_NAME` is the type of plan. See [Service plans](/docs/workload-protection?topic=workload-protection-pricing_plans) to get the plan name.
+    `SERVICE_PLAN_NAME` is the type of plan. See [Service plans](/docs/workload-protection?topic=workload-protection-pricing) to get the plan name.
 
     `LOCATION` is the region where the instance is created.
 

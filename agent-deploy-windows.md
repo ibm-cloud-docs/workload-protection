@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-04-14"
+lastupdated: "2025-06-11"
 
 keywords:
 
@@ -77,4 +77,4 @@ A few minutes after the installation is completed, make sure that:
 - The agent will evaluate Windows configuration files to identify failing controls. Enable your desire policy, such as CIS Benchmarks for Windows, under **Policies / Posture Policies**.
 - You enable or customize the Threat Detection policies under **Policies / Runtime Policies** in the `Windows Workload` section.
 
-Check out [Windows Threat Detection with IBM Security and Compliance Center {{site.data.keyword.sysdigsecure_short}}](https://community.ibm.com/community/user/cloud/blogs/victor-guerrero/2024/01/11/windows-threat-detection-with-ibm-security-and-com?CommunityKey=dd1ee2bc-c83b-4afb-bd1c-9095ff0c3bc1) to see examples of threat detection on Windows and how to troubleshoot detected events.
+Check out [Windows Threat Detection with IBM Security and Compliance Center {{site.data.keyword.sysdigsecure_short}}](https://community.ibm.com/community/user/blogs/victor-guerrero/2024/01/11/windows-threat-detection-with-ibm-security-and-com?CommunityKey=dd1ee2bc-c83b-4afb-bd1c-9095ff0c3bc1){: external} to see examples of threat detection on Windows and how to troubleshoot detected events.
