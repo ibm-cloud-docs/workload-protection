@@ -1,8 +1,8 @@
-e---
+---
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-06-11"
+lastupdated: "2025-06-17"
 
 keywords:  release notes, IBM Cloud
 
@@ -51,7 +51,7 @@ Updates to the {{site.data.keyword.sysdigsecure_full_notm}} infrastructure
     * If you have IP-based allowlists or firewall rules running in your environment
     * If you have IP address-specific routing
 
-    For details on the changes and the new IP addresses, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints).
+    For details on the changes and the new IP addresses, check out [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints).
 
 
 
