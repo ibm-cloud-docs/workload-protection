@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-09-14"
+  years:  2025
+lastupdated: "2025-06-26"
 
 keywords:
 
@@ -16,27 +16,47 @@ subcollection: workload-protection
 # Pricing 
 {: #pricing}
 
-Pricing for {{site.data.keyword.sysdigsecure_full_notm}} is based on a graduated tier system in which costs decrease per-resource as you deploy more resources. Your cost depends on how many {{site.data.keyword.sysdigsecure_short}} agents that you have and where those agents are deployed.
+{{site.data.keyword.sysdigsecure_short}} offers two pricing plan options: Free Trial and Graduated Tier. Reference the table below for more information about these plans. 
 {: shortdesc}
 
-For an up-to-the-minute look at the metrics and tiers used to determine costs, check out the [catalog page for {{site.data.keyword.sysdigsecure_short}}](https://cloud.ibm.com/workload-protection/catalog/security-and-compliance-center-workload-protection).
+|   |   |
+|---|---|
+|  Free Trial | The Free Trial plan enables you to try  all of the {{site.data.keyword.sysdigsecure_short}} capabilities available under the paid Graduated Tier plan. However, the Free Trial plan expires after 30 days, after which you have the option to upgrade to the Graduated Tier plan.  |
+|  Graduated Tier |   The Graduated Tier plan for {{site.data.keyword.sysdigsecure_short}} offers unified security and continuous compliance options for hosts, virtual machines, containers, OpenShift and Kubernetes, and multicloud environments.|
+
+## How Pricing Units are calculated
+{: #pricing_pricing-units}
+
+All pricing units are calculated based on monthly or hourly cost and prorated based on consumption usage. For more information about pricing, check out [how you're charged](/docs/billing-usage?topic=billing-usage-charges). 
+
+| Use Case  | Pricing Unit  |  Environment / Workload  |  Supported |
+|---|---|---|---|
+| CSPM (agentless)  | Multicloud CSPM Compute Instances | Cloud environments, including multicloud | {{site.data.keyword.cloud_notm}} VSIs, IBM PowerVS Instances, AWS EC2, Azure VMs, GCP Compute Instances, Oracle OCI Compute Instances. |
+| Kubernetes Protection (agent-based) | Node Hours (Worker) | Containerized on Cloud or on-premises, including Kubernetes/OpenShift | Worker nodes on IKS/ROKS, AKS/ARO, GKE, OKE |
+| Host Protection (agent-based) | VM Node Hours | Virtualized on Cloud or on-premises, including VMs | Including VMs such as Linux Hosts, Windows OS, AIX, VMware, Power, PowerVS, Open Stack, or other private clouds. |
+
+{{site.data.keyword.sysdigsecure_short}} performs scans for all connected {{site.data.keyword.cloud_notm}} accounts every 24 hours. The 24-hour schedule begins as soon as you connect an account for the first time. On-demand scanning is also supported at no additional charge.
 {: tip}
 
-A free trial of {{site.data.keyword.sysdigsecure_short}} is available for users who want to try the service out. It includes all of the capabilities of the paid plan and expires after 30 days unless you upgrade it to a paid plan.
+## How Graduated Tiers Work 
+{: #pricing_plan-works}
 
-## How pricing works in Workload Protection
-{: #pricing_plans-works}
+The **Graduated Tier plan** is the paid plan for {{site.data.keyword.sysdigsecure_short}}. Tiers are measured by the number of pricing units they contain. Pricing units are segmented into three categories: CSPM usage, active {{site.data.keyword.sysdigsecure_short}} agents, and deployment environments for {{site.data.keyword.sysdigsecure_short}} agents.
 
-Your monthly charge is pro-rated based on the amount of time within that month you have had a resource deployed. You are not charged for time during a month when a resource was not deployed.
+The Graduated Tier plan offers discounts as you increase the number of pricing units, allowing you to stack pricing unit tiers as your coverage needs increase. Discounts are applied as you move from one tier to the next. Using the chart below as an example, you are charged list price for tier 1 (up to 250 pricing units). The discount for tier 2 starts at unit 251 and continues to unit 500, with the next tier starting at unit 501, and so on. 
+
+| Pricing Unit Tiers  | Compute Instance  |  Worker Nodes  |  VM Nodes |
+|---|---|---|---|
+| 1–250   | $18 | $45 | $16 |
+| 251–500   | $15.30 | $38.25 | $13.60  |
+| 501–1,000   | $13.50 | $33.75 | $12 |
+| 1,001–2,500   | $12.60 | $31.50 | $11.20  |
+| 2,501–5,000   | $10.80 | $27 | $9.60  |
+| 5,001   | $9.90 | $24.75 | $8.80  |
+{: caption="The above prices are estimates. Pricing is subject to change and does not reflect pricing differences by region. Tiers are based on the volume of pricing units. " caption-side="bottom"}
+
+To start pricing for {{site.data.keyword.sysdigsecure_short}}, check out the [{{site.data.keyword.sysdigsecure_short}} catalog](https://cloud.ibm.com/workload-protection/catalog/security-and-compliance-center-workload-protection).  
 {: tip}
 
-There are three usage metrics used to determine pricing. All are calculated **per month**:
-
-1. **Node hours**: this metric is used for agents deployed on nodes in Kubernetes clusters inside IBM Cloud (typically, one agent is deployed per node). Although the metric is calculated per hour, bills are issued monthly, so it is helpful to remember that a month with 30 days has 720 hours.
-2. **Multi-cloud cloud security posture management (CSPM) compute instances**: this metric is used for agents deployed on clouds other than {{site.data.keyword.cloud_notm}} and is calculated per month.
-3. **VM Node Hours (Virtual Machine Node Hours)**: this metric is used for agents deployed on standalone nodes outside any container platforms. Although the metric is calculated per hour, bills are issued monthly.
-
-All pricing plans use a **graduated tiered** system, in which you are charged based on the number of resources that are deployed. For example, if the first tier is 10 cents for the first 250 resources, and five cents for the next 250 resources, and you have 300 resources, you would pay USD 27.50 per month; USD 25 for the resources in the first tier, and USD 2.50 for the resources in the next tier. For more information about pricing, check out [How you're charged](/docs/billing-usage?topic=billing-usage-charges).
-
-The {{site.data.keyword.sysdigsecure_short}} agent and the {{site.data.keyword.mon_short}} agent cannot be deployed on the same cluster. However, you can access {{site.data.keyword.sysdigsecure_short}} functionality through {{site.data.keyword.mon_short}} by selecting the **Graduated Tier - Sysdig Secure + Monitor** plan. For more information, check out [Service plans](/docs/monitoring?topic=monitoring-service_plans).
-{: note}
+If you are using both {{site.data.keyword.sysdigsecure_short}} and {{site.data.keyword.mon_short}}, it’s important to remember that you do not need to deploy an individual agent for each on the same cluster. A single agent works for both products. You should connect your {{site.data.keyword.mon_short}} and {{site.data.keyword.sysdigsecure_short}} instances during the instance creation. For more information, check out the [frequently asked questions](/docs/monitoring?topic=monitoring-faq#faq_4).
+{:note}
