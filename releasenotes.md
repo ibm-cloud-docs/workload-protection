@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-06-17"
+lastupdated: "2025-07-07"
 
 keywords:  release notes, IBM Cloud
 
@@ -20,6 +20,20 @@ content-type: release-note
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
 
+## June 2025
+{: #workload-protection-june25}
+
+## 27 July 2025
+{: #workload-protection-june2725}
+{: release-note}
+
+Automatically detect {{site.data.keyword.cloud_notm}} Virtual Servers for VPC that are exposed
+:    {{site.data.keyword.sysdigsecure_short}} now detects Virtual Servers for VPC that are exposed as part of the Network Exposure module. This update enhances visibility for {{site.data.keyword.cloud_notm}} customers by enabling identification and analysis of publicly exposed virtual servers, closing a critical security gap in multi-cloud environments. Exposed virtual servers can be analyzed under Inventory or Search.
+
+Threats module is now available in {{site.data.keyword.sysdigsecure_short}}
+:   Threats combine related security signals into a single, actionable security incident. It provides context driven correlation, such as Kubernetes workloads or attack phases. This consolidation accelerates understanding the scope and criticaly of threats. You can automate responses such as sending notifications when a new threat is discovered by using Automations under Policies. 
+
+
 ## May 2025
 {: #workload-protection-may25}
 
@@ -27,7 +41,7 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 {: #workload-protection-may2325}
 {: release-note}
 
-[IBM Cloud Shell settings](https://cloud.ibm.com/docs/account?topic=account-shell-settings) are now support for {{site.data.keyword.cloud_notm}} CSPM
+[IBM Cloud Shell settings](https://cloud.ibm.com/docs/account?topic=account-shell-settings) are now supported for {{site.data.keyword.cloud_notm}} CSPM
 :   {{site.data.keyword.sysdigsecure_short}} now ingests your {{site.data.keyword.cloud_notm}} Shell settings as part of Cloud Security Posture Management (CSPM). This enhancement enables you to validate the Cloud Shell locations and features with three new posture controls or by creating custom controls for more flexibility. 
 
 ## 21 May 2025
