@@ -20,4 +20,4 @@ Rules are the fundamental building blocks that you use to compose your security 
 
 {{site.data.content.sysdig-doc}}
 
-For more information, see [Manage threat detection rules](https://docs.sysdig.com/en/docs/sysdig-secure/policies/manage-rules/){: external}
+For more information, see [Manage threat detection rules](https://docs.sysdig.com/en/sysdig-secure/manage_threat_detection_rules/){: external}

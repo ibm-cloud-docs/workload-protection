@@ -28,7 +28,7 @@ You can use the Support Center search field to find answers to your questions fr
 
 To access the Support Center, log in to the {{site.data.keyword.cloud_notm}} console, and click **Support** from the menu bar.
 
-If you have a basic, advanced, or premium [support plan](/docs/get-support?topic=get-support-support-plans#support-plans), you can find call-in numbers and a chat option to get help.
+If you have a basic, advanced, or premium [support plan](/docs/account?topic=account-open-case&interface=ui), you can find call-in numbers and a chat option to get help.
 
 The Support Center is the preferred method for getting support, but if you can't log in to {{site.data.keyword.cloud_notm}}, you can use the [New support case](https://{DomainName}/unifiedsupport/cases/add) page to submit a case.
 {: note}
@@ -55,4 +55,4 @@ Tag your questions with **ibm-cloud** and **workload-protection**.
 
 If you don't find answers to your questions, and you experience problems with {{site.data.keyword.cloud_notm}}, you can use support cases to get help with technical, account and access, billing and invoice or sales inquiry issues.
 
-You can [create](/docs/get-support?topic=get-support-open-case) and [manage](/docs/get-support?topic=get-support-managing-support-cases) a support case by using the [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}. After you submit a support case, the support team works to investigate and resolve the issue depending on your type of support plan.
+You can [create](/docs/account?topic=account-open-case&interface=ui) and [manage](/docs/account?topic=account-open-case&interface=ui) a support case by using the [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}. After you submit a support case, the support team works to investigate and resolve the issue depending on your type of support plan.
