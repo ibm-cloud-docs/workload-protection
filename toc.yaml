@@ -44,15 +44,11 @@ toc:
           topics:
              - topic: access_key.md
                navtitle: Access keys
-             - topic: api_token.md
-               navtitle: IAM API keys
              - topic: secure_token.md
                navtitle: Secure API tokens
       - topicgroup:
           label: Managing the agent
-          topics:
-          - topic: agent-helm-parameters.md
-            navtitle: Configurable parameters
+          topics: 
           - topic: agent-deploy-kube-helm.md
             navtitle: On a Kubernetes cluster
           - topic: agent-deploy-openshift-helm.md
@@ -93,6 +89,8 @@ toc:
           - topic: service-connection.md
           - topic: cbr.md
             navtitle: Protecting resources with context-based restrictions
+          - topic: ha-dr.md
+            navtitle: High availability
       - topicgroup:
           label: Secure UI
           topics:
