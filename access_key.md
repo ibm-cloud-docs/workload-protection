@@ -81,7 +81,7 @@ If the access key is compromised or you have a policy to renew it after a number
 
 To create a new access key for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
 
-1. Obtain the {{site.data.keyword.sysdigsecure_short}} API token from the {{site.data.keyword.sysdigsecure_full_notm}} UI. [Learn more](/docs/workload-protection?topic=workload-protection-api_token#api_token_get).
+1. Obtain the {{site.data.keyword.sysdigsecure_short}} API token from the {{site.data.keyword.sysdigsecure_full_notm}} UI.
 
 2. Issue a curl POST request against the endpoint to generate a new access key.
 
@@ -129,7 +129,7 @@ To create a new access key for an {{site.data.keyword.sysdigsecure_full_notm}} i
 
 To disable an existing access key for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
 
-1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI ( [see instructions](/docs/workload-protection?topic=workload-protection-api_token#api_token_get) ).
+1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI.
 
 2. Issue a curl POST request against the endpoint to disable the given access key.
 
@@ -180,7 +180,7 @@ To disable an existing access key for an {{site.data.keyword.sysdigsecure_full_n
 
 To enable an existing access key for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
 
-1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI. [Learn more](/docs/workload-protection?topic=workload-protection-api_token#api_token_get).
+1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI.
 
 2. Issue a curl POST request against the endpoint to enable the given access key.
 
@@ -206,7 +206,7 @@ After you enable the access key, the agents will need to be manually restarted s
 
 To view all of the access keys for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
 
-1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI. [Learn more](/docs/workload-protection?topic=workload-protection-api_token#api_token_get).
+1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI.
 
 2. Issue a curl GET request against the regional endpoint to enable the given access key.
 
@@ -256,7 +256,7 @@ To view all of the access keys for an {{site.data.keyword.sysdigsecure_full_notm
 
 To delete an access keys for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
 
-1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI. [Learn more](/docs/workload-protection?topic=workload-protection-api_token#api_token_get).
+1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI.
 
 2. Issue a curl DELETE request against the regional endpoint to delete the access key.
 
