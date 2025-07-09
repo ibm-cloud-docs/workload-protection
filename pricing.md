@@ -23,17 +23,19 @@ subcollection: workload-protection
 |---|---|
 |  Free Trial | The Free Trial plan enables you to try  all of the {{site.data.keyword.sysdigsecure_short}} capabilities available under the paid Graduated Tier plan. However, the Free Trial plan expires after 30 days, after which you have the option to upgrade to the Graduated Tier plan.  |
 |  Graduated Tier |   The Graduated Tier plan for {{site.data.keyword.sysdigsecure_short}} offers unified security and continuous compliance options for hosts, virtual machines, containers, OpenShift and Kubernetes, and multicloud environments.|
+{: caption="The two different plans." caption-side="bottom"}
 
 ## How Pricing Units are calculated
 {: #pricing_pricing-units}
 
-All pricing units are calculated based on monthly or hourly cost and prorated based on consumption usage. For more information about pricing, check out [how you're charged](/docs/billing-usage?topic=billing-usage-charges). 
+All pricing units are calculated based on monthly or hourly cost and prorated based on consumption usage. For more information about pricing, check out [how you're charged](/docs/account?topic=account-charges). 
 
 | Use Case  | Pricing Unit  |  Environment / Workload  |  Supported |
 |---|---|---|---|
 | CSPM (agentless)  | Multicloud CSPM Compute Instances | Cloud environments, including multicloud | {{site.data.keyword.cloud_notm}} VSIs, IBM PowerVS Instances, AWS EC2, Azure VMs, GCP Compute Instances, Oracle OCI Compute Instances. |
 | Kubernetes Protection (agent-based) | Node Hours (Worker) | Containerized on Cloud or on-premises, including Kubernetes/OpenShift | Worker nodes on IKS/ROKS, AKS/ARO, GKE, OKE |
 | Host Protection (agent-based) | VM Node Hours | Virtualized on Cloud or on-premises, including VMs | Including VMs such as Linux Hosts, Windows OS, AIX, VMware, Power, PowerVS, Open Stack, or other private clouds. |
+{: caption="The different ways you're charged depending on the use case." caption-side="bottom"}
 
 {{site.data.keyword.sysdigsecure_short}} performs scans for all connected {{site.data.keyword.cloud_notm}} accounts every 24 hours. The 24-hour schedule begins as soon as you connect an account for the first time. On-demand scanning is also supported at no additional charge.
 {: tip}

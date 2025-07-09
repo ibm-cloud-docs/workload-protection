@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-09-24"
+  years:  2023, 2025
+lastupdated: "2025-07-09"
 
 keywords:
 
@@ -92,7 +92,7 @@ To create a new access key for an {{site.data.keyword.sysdigsecure_full_notm}} i
 
     Where
 
-    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints).
+    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints).
     * `SYSDIG_API_TOKEN` is the API token that you get in step 1.
     * `GUID` is the GUID of the instance that is associated with the access key.
 
@@ -270,7 +270,7 @@ To delete an access keys for an {{site.data.keyword.sysdigsecure_full_notm}} ins
     * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints).
     * `SYSDIG_API_TOKEN` is the API Token retrieved in Step 1.
     * `GUID` is the GUID of the instance that is associated with the access key.
-    * `ACCESS_KEY` is the access key to be deleted.  You can [view a list of all access keys](#access_key_view) to obtain the access key values.
+    * `ACCESS_KEY` is the access key to be deleted.  You can [view a list of all access keys](/docs/workload-protection?topic=workload-protection-access_key&interface=api#access_key_view) to obtain the access key values.
     * `GUID` is the GUID of the instance that is associated with the access key.
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2025-05-14"
+lastupdated: "2025-07-09"
 
 keywords:
 
@@ -23,7 +23,7 @@ The {{site.data.keyword.cloud_notm}} CSPM feature in {{site.data.keyword.sysdigs
 
 You can easily integrate {{site.data.keyword.cloud_notm}} accounts to implement CSPM for new and for existing {{site.data.keyword.sysdigsecure_short}} instances.
 
-You can also integrate your {{site.data.keyword.cloud_notm}} Enterprise to implement CSPM for all the accounts that belong to your organization. All steps to integrate your Enterprise are described in this [documentation](#cspm-implement-enterprise).
+You can also integrate your {{site.data.keyword.cloud_notm}} Enterprise to implement CSPM for all the accounts that belong to your organization. All steps to integrate your Enterprise are described in this [documentation](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-enterprise).
 
 ## Before you begin
 {: #cspm-implement-prereqs}
@@ -210,8 +210,8 @@ ibmcloud iam trusted-profile-policy-create ibmcspm-app-config-aggregator -r View
 In this step, you configure {{site.data.keyword.appconfig_short}} to start collecting your service configuration. You can perform this step by going to your {{site.data.keyword.appconfig_short}} instance and [enable Configuration Aggregator](/docs/app-configuration?topic=app-configuration-ac-configuration-aggregator#ac-enable-configuration-aggregator-single-account).
 
 You can also perform this step via API. Before starting this step, make sure you have:
-- The {{site.data.keyword.appconfig_short}} GUID (`app-config-aggregator-ID`) you created in [Step 2](#cspm-implement-cli-step2).
-- The trusted profile for {{site.data.keyword.appconfig_short}} for collecting service configuration (`ibmcspm-tp-app-config-aggregator-ID`) that you created in [Step 3](#cspm-implement-cli-step3).
+- The {{site.data.keyword.appconfig_short}} GUID (`app-config-aggregator-ID`) you created in [Step 2](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-cli-step2).
+- The trusted profile for {{site.data.keyword.appconfig_short}} for collecting service configuration (`ibmcspm-tp-app-config-aggregator-ID`) that you created in [Step 3](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-cli-step3).
 
 For the following action, run an HTTP `PUT` request using `curl`.
 
@@ -244,14 +244,14 @@ You should receive the output with the configuration you have set, similar to:
 
 In this final step, you configure your {{site.data.keyword.sysdigsecure_short}} instance you need to use the following values from previous steps:
 - Your {{site.data.keyword.sysdigsecure_short}} instance name (`workload-protection-instance-name`).
-- The {{site.data.keyword.appconfig_short}} CRN (`app-config-aggregator-CRN`) that you created in [Step 2](#cspm-implement-cli-step2).
-- The trusted profile for {{site.data.keyword.sysdigsecure_short}} to interact with {{site.data.keyword.appconfig_short}} (`ibmcspm-tp-wp-app-config-ID`) you created in [Step 1](#cspm-implement-cli-step1).
+- The {{site.data.keyword.appconfig_short}} CRN (`app-config-aggregator-CRN`) that you created in [Step 2](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-cli-step2).
+- The trusted profile for {{site.data.keyword.sysdigsecure_short}} to interact with {{site.data.keyword.appconfig_short}} (`ibmcspm-tp-wp-app-config-ID`) you created in [Step 1](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-cli-step1).
 - Your {{site.data.keyword.cloud_notm}} account ID (`<ibm-cloud-account-id>`). You can get it under **Manage > Account > Account Settings** in `ID`.
 
 If previously you have onboarded any other {{site.data.keyword.cloud_notm}} account or add any other parameter, make sure to keep existing parameters. You can see the existing used paramaters of your instance by running `ibmcloud resource service-instance <workload-protection-instance-name> --output json` replacing `<workload-protection-instance-name>` by your {{site.data.keyword.sysdigsecure_short}} instance name.
 {: note}
 
-Run the following CLI command to update your {{site.data.keyword.sysdigsecure_short}} instance to onboard your {{site.data.keyword.cloud_notm}} Account. Replace `<workload-protection-instance-name>` by your {{site.data.keyword.sysdigsecure_short}} instance name, `<app-config-aggregator-CRN>` by your {{site.data.keyword.appconfig_short}} instance CRN and `<ibmcspm-tp-wp-app-config-ID>` by the trusted profile ID created in [Step 2](#cspm-implement-cli-step2) and `<ibm-cloud-account-id>` by your {{site.data.keyword.cloud_notm}} account ID.
+Run the following CLI command to update your {{site.data.keyword.sysdigsecure_short}} instance to onboard your {{site.data.keyword.cloud_notm}} Account. Replace `<workload-protection-instance-name>` by your {{site.data.keyword.sysdigsecure_short}} instance name, `<app-config-aggregator-CRN>` by your {{site.data.keyword.appconfig_short}} instance CRN and `<ibmcspm-tp-wp-app-config-ID>` by the trusted profile ID created in [Step 2](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-cli-step2) and `<ibm-cloud-account-id>` by your {{site.data.keyword.cloud_notm}} account ID.
 
 ```sh
 ibmcloud resource service-instance-update "<workload-protection-instance-name>" -p '{"enable_cspm": true, "target_accounts": [{"account_id": "<ibm-cloud-account-id>", "config_crn": "<app-config-aggregator-CRN>", "trusted_profile_id": "<ibmcspm-tp-wp-app-config-ID>"}]}' -g Default
@@ -271,14 +271,14 @@ Verifying the integration by following the next steps:
 {: #cspm-implement-disable}
 {: cli}
 
-In order to disable CSPM for your account, you need to run the following command. Replace `<workload-protection-instance-name>` by your {{site.data.keyword.sysdigsecure_short}} instance name, `<app-config-aggregator-CRN>` by your {{site.data.keyword.appconfig_short}} instance CRN and `<ibmcspm-tp-wp-app-config-ID>` by the trusted profile ID created in [Step 2](#cspm-implement-cli-step2) and `<ibm-cloud-account-id>` by your {{site.data.keyword.cloud_notm}} account ID:
+In order to disable CSPM for your account, you need to run the following command. Replace `<workload-protection-instance-name>` by your {{site.data.keyword.sysdigsecure_short}} instance name, `<app-config-aggregator-CRN>` by your {{site.data.keyword.appconfig_short}} instance CRN and `<ibmcspm-tp-wp-app-config-ID>` by the trusted profile ID created in [Step 2](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-cli-step2) and `<ibm-cloud-account-id>` by your {{site.data.keyword.cloud_notm}} account ID:
 
 ```sh
 ibmcloud resource service-instance-update "<workload-protection-instance-name>" -p '{"enable_cspm": true, "target_accounts": [{"account_id": "<ibm-cloud-account-id>", "config_crn": "<app-config-aggregator-CRN>", "trusted_profile_id": "<ibmcspm-tp-wp-app-config-ID>", "delete": true}]}' -g Default
 ```
 {: pre}
 
-This is the same command described in [Step 5](#cspm-implement-cli-step5) with the addition of `"delete": true`.
+This is the same command described in [Step 5](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-cli-step5) with the addition of `"delete": true`.
 {: note}
 
 ## Integrating your Enterprise
@@ -377,17 +377,15 @@ Follow the steps to [Enable Configuration aggregator - Enterprise Account](/docs
 
 In this final step, you configure your {{site.data.keyword.sysdigsecure_short}} instance you need to use the following values from previous steps:
 - Your {{site.data.keyword.sysdigsecure_short}} instance name (`workload-protection-instance-name`).
-- The {{site.data.keyword.appconfig_short}} CRN (`app-config-aggregator-CRN`) that you created in [Step 2](#cspm-implement-enterprise-step2).
-- The trusted profile for {{site.data.keyword.sysdigsecure_short}} to interact with {{site.data.keyword.appconfig_short}} (`ibmcspm-tp-wp-app-config-ID`) you created in [Step 1](#cspm-implement-enterprise-step1).
+- The {{site.data.keyword.appconfig_short}} CRN (`app-config-aggregator-CRN`) that you created in [Step 2](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-enterprise-step2).
+- The trusted profile for {{site.data.keyword.sysdigsecure_short}} to interact with {{site.data.keyword.appconfig_short}} (`ibmcspm-tp-wp-app-config-ID`) you created in [Step 1](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-enterprise-step1).
 
 If previously you have onboarded any other {{site.data.keyword.cloud_notm}} account or add any other parameter, make sure to keep existing parameters. You can see the existing used paramaters of your instance by running `ibmcloud resource service-instance <workload-protection-instance-name> --output json` replacing `<workload-protection-instance-name>` by your {{site.data.keyword.sysdigsecure_short}} instance name.
 {: note}
 
-Run the following CLI command to update your {{site.data.keyword.sysdigsecure_short}} instance to onboard your {{site.data.keyword.cloud_notm}} Enterprise. Replace `<workload-protection-instance-name>` by your {{site.data.keyword.sysdigsecure_short}} instance name, `<app-config-aggregator-CRN>` by your {{site.data.keyword.appconfig_short}} instance CRN and `<ibmcspm-tp-wp-app-config-ID>` by the trusted profile ID created in [Step 2](#cspm-implement-enterprise-step2).
+Run the following CLI command to update your {{site.data.keyword.sysdigsecure_short}} instance to onboard your {{site.data.keyword.cloud_notm}} Enterprise. Replace `<workload-protection-instance-name>` by your {{site.data.keyword.sysdigsecure_short}} instance name, `<app-config-aggregator-CRN>` by your {{site.data.keyword.appconfig_short}} instance CRN and `<ibmcspm-tp-wp-app-config-ID>` by the trusted profile ID created in [Step 2](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=cli#cspm-implement-enterprise-step2).
 
 ```sh
 ibmcloud resource service-instance-update "<workload-protection-instance-name>" -p '{"enable_cspm": true, "target_accounts": [{"account_type": "ENTERPRISE", "config_crn": "<app-config-aggregator-CRN>", "trusted_profile_id": "<ibmcspm-tp-wp-app-config-ID>"}]}' -g Default
 ```
 {: pre}
-
-After this step, all your Enterprise will be onboarded in {{site.data.keyword.sysdigsecure_short}}. You can 

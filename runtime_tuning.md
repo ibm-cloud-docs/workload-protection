@@ -20,4 +20,4 @@ The runtime policy tuning feature helps reduce false positive inicators in the {
 
 {{site.data.content.sysdig-doc}}
 
-For more information, see [Runtime threat detection policy tuning](https://docs.sysdig.com/en/docs/sysdig-secure/policies/runtime-policy-tuning/){: external}
+For more information, see [Runtime threat detection policy tuning](https://docs.sysdig.com/en/sysdig-secure/runtime_policy_tuning/#:~:text=Log%20in%20to%20Sysdig%20Secure,appear%20on%20the%20left%20panel.){: external}
