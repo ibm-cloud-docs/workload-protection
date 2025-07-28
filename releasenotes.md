@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-07-07"
+lastupdated: "2025-07-28"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,20 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## July 2025
+{: #workload-protection-july25}
+
+## 10 July 2025
+{: #workload-protection-july1025}
+
+Now Generally Available: Admission Controller
+:   {{site.data.keyword.sysdigsecure_short}} now provides a new Admission Controller, delivering powerful deploy-time security enforcement across Kubernetes environments. You can use Admission Controller to integrate Kubernetes Security Posture Management (KSPM) and Vulnerability Management (VM) into your deployment workflows. Admission Controller enables a shift-left approach by preventing risky configurations and vulnerable images from reaching production. The Admission Controller has the following features:
+
+    * Deploy-time image scanning. Admission Controller integrates with scan policies to evaluate images at deployment time, blocking workloads that use images with CVEs, misconfigurations, or policy violations. Workloads are rejected before scheduling to a node, eliminating unnecessary risk.
+    * Kubernetes audit logging. This feature enables Audit Detections to record API-level admission decisions, including who attempted deployments, when, and why actions were allowed or blocked. This provides a complete audit trail for security investigations and policy tuning. See also: [Kubernetes Audit Logging](/docs/workload-protection?topic=workload-protection-audit_logging).
+    * Kubernetes posture enforcement. This feature applies posture policies to define best practices, such as preventing privileged containers, enforcing non-root users, or applying resource limits. The Admission Controller evaluates these policies during admission and blocks non-compliant deployments. You can assign different policies per zone to account for environment-specific constraints (for example, staging versus production).
+
 
 ## June 2025
 {: #workload-protection-june25}
