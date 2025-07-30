@@ -121,6 +121,9 @@ clusterShield:
     features:
       admission_control:
         enabled: true
+        container_vulnerability_management:
+          enabled: true
+        dry_run: false
       container_vulnerability_management:
         enabled: true
       audit:
