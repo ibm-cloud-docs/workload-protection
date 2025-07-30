@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-07-28"
+lastupdated: "2025-07-30"
 
 keywords:  release notes, IBM Cloud
 
@@ -37,7 +37,7 @@ Now Generally Available: Admission Controller
 ## June 2025
 {: #workload-protection-june25}
 
-## 27 July 2025
+## 27 June 2025
 {: #workload-protection-june2725}
 {: release-note}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-07-30"
 
 keywords: linux, powervs, workload protection
 
@@ -82,3 +82,8 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
    {: pre}
 
 8. Verify the service is running by checking the logs under `/tmp/kspm-analyzer.log`.
+
+## Applying CIS benchmark for AIX to your server
+{: #assign-policy}
+
+{{site.data.keyword.sysdigsecure_full}} provides the CIS benchmarks for AIX as posture policies. [Follow these steps](/docs/workload-protection?topic=workload-protection-posture-zones#posture-zones-policy-apply) to find the AIX policies and assign them to your hosts. 

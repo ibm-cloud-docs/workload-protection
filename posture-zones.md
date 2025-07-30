@@ -85,7 +85,7 @@ If you created a zone where no relevant resources are available for the selected
 ## Applying policies to a zone
 {: #posture-zones-policy-apply}
 
-To apply policies to a zone, complete the folloing steps:
+To apply policies to a zone, complete the following steps:
 
 1. Open the [{{site.data.keyword.sysdigsecure_short}} UI](/docs/workload-protection?topic=workload-protection-launch).
 
@@ -103,7 +103,7 @@ When you apply a policy in a zone that does not have in scope resources relevant
 ## Removing policies from a zone
 {: #posture-zones-policy-remove}
 
-To remove policies to a zone, complete the folloing steps:
+To remove policies to a zone, complete the following steps:
 
 1. Open the [{{site.data.keyword.sysdigsecure_short}} UI](/docs/workload-protection?topic=workload-protection-launch).
 
