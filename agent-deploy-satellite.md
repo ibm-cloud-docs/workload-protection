@@ -167,6 +167,9 @@ The following yaml is a template that you can use to configure the {{site.data.k
 
 ```yaml
 agent:
+  ebpf:
+    enabled: true
+    kind: universal_ebpf
   collectorSettings:
     collectorHost: INGESTION_SATELLITE_ENDPOINT
     collectorPort: INGESTION_SATELLITE_ENDPOINT_PORT
@@ -212,6 +215,8 @@ Where:
 - `INGESTION_SATELLITE_ENDPOINT_PORT` is the port from the [Satellite endpoint extracted previously](#agent-deploy-satellite-link-create) that points to `ingest` endpoint. For example, `30771`.
 - `API_ENDPOINT` is the [Satellite endpoint extracted previously](#agent-deploy-satellite-link-create) that points to {{site.data.keyword.sysdigsecure_short}} private API endpoint. For example, `c1bcda0323e0ef4b83aba-6b64a6ccc9c596bf59a86625d8fa2202-c111.us-east.satellite.appdomain.cloud:31924`. In this case, both hostname and port are defined together.
 
+   The `universal_ebpf` driver requires kernel version 5.8 or newer. If you have a lower version you need BPF ring buffer support and a kernel that exposes BTF (BPF Type Format). If you have any problem during the agent installation, try removing the lines `agent.ebpf.enabled: true` and `agent.ebpf.kind: universal_ebpf` or [contact support](/docs/workload-protection?topic=workload-protection-gettinghelp).
+   {: note}
 
 ### Step 4. Install the Helm chart
 {: #agent-deploy-satellite-helm-install-step4}
@@ -228,7 +233,9 @@ helm install -n ibm-observe sysdig-agent sysdig/sysdig-deploy -f agent-values-mo
 If you want to directly install the {{site.data.keyword.sysdigsecure_short}} components **without a Helm values file**, you can run the following command setting all variables with `--set`.
 
 ```sh
-helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-namespace\
+helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-namespace \
+    --set agent.ebpf.enabled=true \
+    --set agent.ebpf.kind=universal_ebpf \
     --set global.sysdig.accessKey=<SERVICE_ACCESS_KEY> \
     --set global.sysdig.apiHost=<API_ENDPOINT> \
     --set agent.collectorSettings.collectorHost=<INGESTION_SATELLITE_ENDPOINT> \

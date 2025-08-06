@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2025-07-09"
+lastupdated: "2025-07-31"
 
 keywords:
 
@@ -33,6 +33,9 @@ Before you get started, make sure you have the following requirements completed:
 - You have assigned at least the `Manager` role to the [{{site.data.keyword.appconfig_short}} service](/docs/app-configuration?topic=app-configuration-ac-service-access-management). This is required for the CSPM to enable service configuration.
 - You already have a {{site.data.keyword.sysdigsecure_short}} instance or enough permissions to create a new instance.
 - [Permissions to create and manage trusted profiles](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-roles-reqs).
+
+When context-based restrictions are enabled for any resource in your {{site.data.keyword.cloud_notm}} account, configuration cannot be collected unless access to that resource is provided. To provide access, you need to create a rule. When asked to add a context, create a network zone and [select App Configuration as the reference service](/docs/app-configuration?topic=app-configuration-ac-configuration-aggregator#ac-configuration-aggregator-with-workload-protection). 
+{: note}
 
 ## Integrating with an existing {{site.data.keyword.sysdigsecure_short}} instance
 {: #cspm-implement-ui-existing}

@@ -104,6 +104,9 @@ The following yaml is a template that you can use to configure the {{site.data.k
 
 ```yaml
 agent:
+  ebpf:
+    enabled: true
+    kind: universal_ebpf
   collectorSettings:
     collectorHost: INGESTION_ENDPOINT
   sysdig:
@@ -164,6 +167,9 @@ Where
 - `INGESTION_ENDPOINT` is the instance's ingestion endpoint. For example, `ingest.us-east.security-compliance-secure.cloud.ibm.com`
 - `API_ENDPOINT` is the instance's API endpoint. For example, `us-east.security-compliance-secure.cloud.ibm.com`
 
+   The `universal_ebpf` driver requires kernel version 5.8 or newer. If you have a lower version you need BPF ring buffer support and a kernel that exposes BTF (BPF Type Format). If you have any problem during the agent installation, try removing the lines `agent.ebpf.enabled: true` and `agent.ebpf.kind: universal_ebpf` or [contact support](/docs/workload-protection?topic=workload-protection-gettinghelp).
+   {: note}
+
 ### Step 3. Install the Helm chart
 {: #agent-deploy-kube-helm-install-step3}
 
@@ -180,6 +186,9 @@ For example, for the us-east region, a sample Helm values file looks as follows:
 
 ```yaml
 agent:
+  ebpf:
+    enabled: true
+    kind: universal_ebpf
   collectorSettings:
     collectorHost: ingest.private.us-east.security-compliance-secure.cloud.ibm.com
   sysdig:
