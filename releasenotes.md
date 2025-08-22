@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-22"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## August 2025
+{: #workload-protection-aug25}
+
+## 4 August 2025
+
+{{site.data.keyword.cloud_notm}} Framework for Financial Services v2.0
+:   {{site.data.keyword.sysdigsecure_short}} now includes a new posture policy to continuously track compliance of Financial Services v2.0. For more information about this policy, see [the change log](/docs/workload-protection?topic=workload-protection-financial-services).
 
 ## July 2025
 {: #workload-protection-july25}

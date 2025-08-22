@@ -72,6 +72,8 @@ toc:
             navtitle: Best practices
           - topic: cspm-implement.md
             navtitle: Implementing using the UI and CLI
+          - topic: cspm-fscloud.md
+            navtitle: IBM Cloud Framework for Financial Services
       - topicgroup:
           label: Controlling access
           topics:
