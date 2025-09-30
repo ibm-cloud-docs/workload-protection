@@ -32,7 +32,7 @@ All pricing units are calculated based on monthly or hourly cost and prorated ba
 
 | Use Case  | Pricing Unit  |  Environment / Workload  |  Supported |
 |---|---|---|---|
-| CSPM (agentless)  | Multicloud CSPM Compute Instances | Cloud environments, including multicloud | {{site.data.keyword.cloud_notm}} VSIs, IBM PowerVS Instances, AWS EC2, Azure VMs, GCP Compute Instances, Oracle OCI Compute Instances. |
+| CSPM (agentless)  | Multicloud CSPM Compute Instances | Cloud environments, including multicloud | {{site.data.keyword.cloud_notm}} VSIs, IBM PowerVS Instances, Worker Nodes, Baremetal servers for VPC, AWS EC2, Azure VMs, GCP Compute Instances, Oracle OCI Compute Instances. |
 | Kubernetes Protection (agent-based) | Node Hours (Worker) | Containerized on Cloud or on-premises, including Kubernetes/OpenShift | Worker nodes on IKS/ROKS, AKS/ARO, GKE, OKE |
 | Host Protection (agent-based) | VM Node Hours | Virtualized on Cloud or on-premises, including VMs | Including VMs such as Linux Hosts, Windows OS, AIX, VMware, Power, PowerVS, Open Stack, or other private clouds. |
 {: caption="The different ways you're charged depending on the use case." caption-side="bottom"}
