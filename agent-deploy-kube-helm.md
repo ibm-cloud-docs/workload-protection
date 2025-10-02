@@ -37,6 +37,8 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
     You can run the following command to create the namespace: `kubectl create namespace ibm-observe`
     {: tip}
 
+- Outbound traffic from your cluster to {{site.data.keyword.sysdigsecure_short}} endpoints is required to port `443` and `6443`. Similarly, if you connect the agents via VPE, both ports need to be allowed for outbound traffic from the cluster.
+
 ## Deploy an agent
 {: #agent-deploy-kube-helm-deploy}
 

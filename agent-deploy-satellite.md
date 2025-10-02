@@ -41,6 +41,8 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
 
 - Get your {{site.data.keyword.sysdigsecure_short}} `ingest` endpoint. This endpoint is different than the one being created in the next step. Access your Satellite location, then select **Link endpoints** and **System endpoints**. Copy the `system` endpoint starting with **satellite-sysdig-** that is pointing to `ingest.private.<region>.monitoring.cloud.ibm.com`. You can use this endpoint later as `INGESTION_SATELLITE_ENDPOINT`.
 
+- Outbound traffic from your cluster to {{site.data.keyword.sysdigsecure_short}} endpoints is required to port `443` and `6443`. 
+
 Before deploying the {{site.data.keyword.sysdigsecure_short}} components, create a [Satellite link endpoint](#agent-deploy-satellite-link-create) for the {{site.data.keyword.sysdigsecure_short}} private API endpoint. 
 
 ## Create {{site.data.keyword.sysdigsecure_short}} Satellite link endpoint

@@ -36,6 +36,8 @@ In addition to its ability to run in {{site.data.keyword.cloud_notm}}, the centr
     You can run the following command to create the namespace: `kubectl create namespace ibm-observe`
     {: tip}
 
+- Outbound traffic from your cluster to {{site.data.keyword.sysdigsecure_short}} endpoints is required to port `443` and `6443`.
+
 ## Deploy an agent
 {: deploy-wp-outside-cloud-deploy-agent}
 
