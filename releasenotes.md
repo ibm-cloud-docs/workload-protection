@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-08-22"
+lastupdated: "2025-10-06"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## September 2025
+{: #workload-protection-sep25}
+
+## 26 September 2025
+
+Resource Group ID is now supported to scope in zones
+:   You can now scope your {{site.data.keyword.cloud_notm}} zones with resource group IDs in {{site.data.keyword.sysdigsecure_short}}. Learn more about setting scope in [posture zones](/docs/workload-protection?topic=workload-protection-posture-zones).
 
 ## August 2025
 {: #workload-protection-aug25}
