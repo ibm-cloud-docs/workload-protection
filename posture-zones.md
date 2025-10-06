@@ -57,6 +57,9 @@ To configure a zone, do the following steps:
 
    Scope rules for supported platforms are:
 
+   IBM Cloud
+   :     Organization (Enterprise), account, region, labels (tags), Resource Group ID
+   
    Kubernetes
    :    Distribution (AKS, GKE, EKS, default Kubernetes), cluster name, namespace, and labels
 

@@ -39,6 +39,8 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
     You can run `oc adm new-project --node-selector='' ibm-observe` to create the project.
     {: tip}
 
+- Outbound traffic from your cluster to {{site.data.keyword.sysdigsecure_short}} endpoints is required to port `443` and `6443`. Similarly, if you connect the agents via VPE, both ports need to be allowed for outbound traffic from the cluster.
+
 ## Deploy an agent
 {: #agent-deploy-openshift-helm-deploy}
 

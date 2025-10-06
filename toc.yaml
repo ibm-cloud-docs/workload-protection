@@ -30,25 +30,25 @@ toc:
       - topicgroup:
           label: Managing instances
           topics:
-             - topic: instance_provision.md
-               navtitle: Provisioning an instance
-             - topic: instance_remove.md
-               navtitle: Deleting an instance
+          - topic: instance_provision.md
+            navtitle: Provisioning an instance
+          - topic: instance_remove.md
+            navtitle: Deleting an instance
       - topicgroup:
           label: Configuring registries (WIP)
           topics:
-             - topic: registry-ibm-cloud.md
-               navtitle: IBM Cloud Registry
+          - topic: registry-ibm-cloud.md
+            navtitle: IBM Cloud Registry
       - topicgroup:
           label: Managing keys
           topics:
-             - topic: access_key.md
-               navtitle: Access keys
-             - topic: secure_token.md
-               navtitle: Secure API tokens
+          - topic: access_key.md
+            navtitle: Access keys
+          - topic: secure_token.md
+            navtitle: Secure API tokens
       - topicgroup:
           label: Managing the agent
-          topics: 
+          topics:
           - topic: agent-deploy-kube-helm.md
             navtitle: On a Kubernetes cluster
           - topic: agent-deploy-openshift-helm.md
@@ -211,10 +211,10 @@ toc:
           topics:
           - sysdig_doc.md
   - navgroup:
-        id: help
-        topics:
-        - gettinghelp.md
-        - topicgroup:
-            label: Troubleshooting
-            topics:
-            - troubleshoot-01.md
+      id: help
+      topics:
+      - gettinghelp.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - troubleshoot-01.md
