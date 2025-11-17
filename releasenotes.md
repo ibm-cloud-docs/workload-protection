@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-10-06"
+lastupdated: "2025-11-17"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,21 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## November 2025
+{: #workload-protection-nov25}
+
+## 4 November 2025
+{: #workload-protection-nov0425}
+
+Image Signature Validation for Admission Control of Kubernetes Workloads
+:    {{site.data.keyword.sysdigsecure_short}} now supports Image Signature Validation to ensure that only trusted and verifiable container images are deployed to your Kubernetes and OpenShift clusters. 
+
+    * This new capability, powered by Cosign, lets you enforce signature verification at admission time using trusted sources like Red Hat Trusted Artifact Signer (RHTAS), GitHub + Sigstore, or a self-hosted Sigstore instance. 
+    * Available starting with Cluster Shield 1.17.0, Image Signature Validation integrates with the {{site.data.keyword.sysdigsecure_short}} Admission Controller to strengthen supply chain security by preventing unsigned or tampered images before they reach your critical environments.
+    * For more information, see the [Image Signature Validation Policy](/docs/workload-protection?topic=workload-protection-image-signature-validation).
+
+
 
 ## September 2025
 {: #workload-protection-sep25}
