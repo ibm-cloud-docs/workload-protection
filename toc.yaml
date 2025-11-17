@@ -144,6 +144,15 @@ toc:
               - compliance-api.md
               - identity_and_access.md
       - topicgroup:
+          label: Supply chain policies
+          topics:
+          - topic: supply-chain-policies.md
+            navtitle: Supply chain policies
+          - topic: image-signature-validation.md
+            navtitle: Image Signature Validation
+          - topic: image-signature-validation-rhtas.md
+            navtitle: Image Signature Validation with RHTAS
+      - topicgroup:
           label: Threat detection policies
           topics:
           - vulnerability_policies.md
