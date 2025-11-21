@@ -39,11 +39,7 @@ Complete the following steps to add a notification channel:
 
     2. Enter the name of the channel.
 
-    3. Enable the *Notify when Resolved* condition to receive a notification when the alert is manually resolved by a user.
-
-    4. Enable the *Notify when Acknowledged* field to receive a notification when the alert is manually acknowledged by the user.
-
-    5. Configure the notification according to the selected notification type:
+    3. Configure the notification according to the selected notification type:
 
         * For an **Email** notification channel, add the list of recipients, separated by commas.
 
@@ -67,7 +63,7 @@ Complete the following steps to add a notification channel:
 
         * For a **Teams Email** notification channel, select the name of the team to receive notifications.
 
-    6. Optionally, and for integrations that allow a test, enable the *Test notification* condition to receive a test notification. If you do not receive a test notification in 10 minutes, review your channel configuration.
+    4. Optionally, and for integrations that allow a test, enable the *Test notification* condition to receive a test notification. If you do not receive a test notification in 10 minutes, review your channel configuration.
 
 6. Click **Save**.
 
