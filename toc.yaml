@@ -133,9 +133,7 @@ toc:
               label: Managing controls
               topics:
               - topic: posture-controls.md
-                navtitle: Accessing posture controls<draft
-              - topic: custom-controls.md
-                navtitle: Creating custom controls</draft>
+                navtitle: Accessing posture controls
           - topic: posture-link-policy-to-zone.md
             navtitle: Linking a policy to a zone
           - topicgroup:
