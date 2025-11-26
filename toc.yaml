@@ -129,8 +129,13 @@ toc:
                 navtitle: Creating a custom policy
               - topic: posture-policy-create-template.md
                 navtitle: Creating a custom policy from a template
-          - topic: posture-controls.md
-            navtitle: Managing controls
+          - topicgroup:
+              label: Managing controls
+              topics:
+              - topic: posture-controls.md
+                navtitle: Accessing posture controls<draft
+              - topic: custom-controls.md
+                navtitle: Creating custom controls</draft>
           - topic: posture-link-policy-to-zone.md
             navtitle: Linking a policy to a zone
           - topicgroup:
