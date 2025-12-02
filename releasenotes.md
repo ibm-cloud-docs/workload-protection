@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-11-17"
+lastupdated: "2025-11-21"
 
 keywords:  release notes, IBM Cloud
 
@@ -22,6 +22,18 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 
 ## November 2025
 {: #workload-protection-nov25}
+
+## 18 November 2025
+{: #workload-protection-nov1825}
+
+Vulnerability Management reports are now available in the Scheduler Manager
+:   {{site.data.keyword.sysdigsecure_short}} reporting platform now provides the following vulnerability management reports:
+    * Runtime: Kubernetes workloads and host vulnerability findings detected via agent in runtime.
+    * Pipeline: Container image vulnerability findings from your CI/CD integrations.
+    * Registry: Container image vulnerability findings from your container registries.
+
+Threat Intelligence feed
+:   The new {{site.data.keyword.sysdigsecure_short}} Threat Intelligence page automatically identifies emerging high profile risks with insights from misconfigurations, vulnerabilities, zero-days and active attacks that are affecting your environment. Each detection includes the impacted platforms, number of affected hosts or packages and a link to learn more about the impact.
 
 ## 4 November 2025
 {: #workload-protection-nov0425}
@@ -165,7 +177,7 @@ Deprecation of v1beta1 APIs for Scanning Engine
 The API v1 enhances consistency and alignment with platform API standards, and offers improved response schema:
 
 - /secure/vulnerability/v1/runtime-results
-- /secure/vulnerability/v1beta1/registry-results
+- /secure/vulnerability/v1/registry-results
 - /secure/vulnerability/v1/pipeline-results
 - /secure/vulnerability/v1/results/<result-id>
 

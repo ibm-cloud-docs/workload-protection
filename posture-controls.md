@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Posture Controls
+# Accessing posture controls
 {: #posture-controls}
 
 You can use the {{site.data.keyword.sysdigsecure_full}} Posture Controls library to see the logic that is used to determine compliance results.
@@ -21,28 +21,29 @@ You can use the {{site.data.keyword.sysdigsecure_full}} Posture Controls library
 For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).
 {: tip}
 
+## Before you begin
+{: #before-begin}
+
 A control describes a rule, for example `/etc/docker/certs.d/*/* owned by root:root`, the code that is run to evaluate it, and a remediation playbook to fix the violation that might be detected.
 
 There are different types of controls to address business, security, compliance, and operational requirements.
 
 Posture Controls helps you:
 
-* Ensure that the compliance analysis fits your organization's needs.
-
-* Know what is evaluated.
-
-* Review specific controls and the logic in those controls and remediations.
+- Ensure that the compliance analysis fits your organization's needs.
+- Know what is evaluated.
+- Review specific controls and the logic in those controls and remediations.
 
 For more information about compliance, see [**Compliance** views and functions documentation.](/docs/workload-protection?topic=workload-protection-compliance)
 
 Controls are built on the [Open Policy Agent (OPA) engine](https://www.openpolicyagent.org/docs/latest/){: external} that uses the [Rego policy language](https://www.openpolicyagent.org/docs/latest/policy-language/){: external}.
 
-The Posture Controls library shows you the code that is used to create the controls and the inputs they evaluate. You can download this code as a JSON file.
+The posture controls library shows you the code that is used to create the controls and the inputs they evaluate. You can download this code as a JSON file.
 
 You can create your own custom controls with [Terraform](https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs/resources/secure_posture_control).
 {: note}
 
-## Accessing Posture Controls
+## Procedure
 {: #posture-controls-access}
 
 To access the **Posture Controls**, do the following steps:
