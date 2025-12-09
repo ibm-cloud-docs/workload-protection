@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2025-11-21"
+lastupdated: "2025-12-09"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,16 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## December 2025
+{: #workload-protection-dec25}
+
+## 9 December 2025
+{: #workload-protection-dec0925}
+
+Vulnerability Management rules now support complex image label validation
+:   {{site.data.keyword.sysdigsecure_short}} vulnerability rule bundles for `Image Label` now allows you to verify the label and its value and ensure no conflicting labels exist.
+
 
 ## November 2025
 {: #workload-protection-nov25}
