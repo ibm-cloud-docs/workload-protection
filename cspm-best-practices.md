@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-01-07"
+lastupdated: "2026-01-09"
 
 keywords:
 
@@ -87,7 +87,7 @@ In addition to modifying the parameters of existing controls, you can duplicate 
 
 By default, {{site.data.keyword.sysdigsecure_short}} creates a scope for all your connected {{site.data.keyword.cloud_notm}} services, clusters and workloads in a zone called **Entire Infrastructure**. You can apply new posture policies to this zone or create a new zone to scope your resources.
 
-You can [create your own scopes](docs/workload-protection?topic=workload-protection-posture-zones) based on region or account IDs. In the near future, also resource labels will be available for defining scope.
+You can [create your own scopes](/docs/workload-protection?topic=workload-protection-posture-zones) based on region or account IDs. In the near future, also resource labels will be available for defining scope.
 
 ## Next steps
 {: #cspm-best-practices-next-steps}
