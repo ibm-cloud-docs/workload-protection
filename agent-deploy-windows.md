@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-06-11"
+lastupdated: "2026-01-09"
 
 keywords:
 
@@ -64,7 +64,7 @@ Where:
 
 - AGENT_ACCESS_KEY is the ingestion key for the instance.
 - COLLECTOR_URL is the public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
-- API_ENDPOINT is the public or private API Endpoint URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). For example `https://private.us-east.security-compliance-secure.cloud.ibm.com`.
+- API_ENDPOINT is the public or private API Endpoint URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). For example `https://private.us-east.security-compliance-secure.cloud.ibm.com/api`.
 
 ## Verifying the installation
 {: #agent-deploy-windows-verification}
