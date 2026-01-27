@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-05-04"
+  years:  2023, 2026
+lastupdated: "2026-01-27"
 
 subcollection: workload-protection
 
@@ -49,7 +49,7 @@ You are notified on the command line when updates to the {{site.data.keyword.clo
 {{site.data.keyword.sysdigsecure_full_notm}} provides the following CLIs:
 
 [Workload Protection CLI](/docs/workload-protection?topic=workload-protection-workload-protection-cli)
-:   Describes how you can use the CLI to access information in IBM Cloud Security and Compliance Center Workload Protection.
+:   Describes how you can use the CLI to access information in {{site.data.keyword.sysdigsecure_full_notm}}.
 
 [Compliance](/docs/workload-protection?topic=workload-protection-workload-protection-compliance-cli)
 :   The compliance CLI lets you determine the available frameworks, platforms, and scope options as well as create and manage benchmark and compliance tasks.

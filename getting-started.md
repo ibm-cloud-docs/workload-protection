@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-04-18"
+  years:  2023, 2026
+lastupdated: "2026-01-27"
 
 keywords:
 
@@ -134,8 +134,3 @@ See the following table for tasks that you can run to secure your environment:
 | [Configure a rule](/docs/workload-protection?topic=workload-protection-manage_rules)                  | You can create a `Detection Rule` to detect and respond to anomalous runtime activity.  \n You can create a rule to specify which image versions can be used. |
 | [Review your Compliance results](https://docs.sysdig.com/en/docs/sysdig-secure/posture/compliance/){: external}        | The Compliance module relies on persisting the resources in an inventory; this enhanced resource visibility and full-context prioritization drives remediation and resolution of violations.|
 {: caption="Tasks to secure your environment" caption-side="bottom"}
-
-## Next steps
-{: #getting-started-secure-next-step}
-
-To get the most out of {{site.data.keyword.sysdigsecure_short}}, connect your instance to {{site.data.keyword.compliance_short}}. By creating a connection, you can view all of the compliance results that are returned by {{site.data.keyword.sysdigsecure_short}}, but you can validate and view your I{{site.data.keyword.cloud_notm}} results all in the same place. For more information, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).

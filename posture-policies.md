@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-09-26"
+  years:  2023, 2026
+lastupdated: "2026-01-27"
 
 keywords:
 
@@ -17,9 +17,6 @@ subcollection: workload-protection
 
 You can use the {{site.data.keyword.sysdigsecure_full}} Posture Policies to manage policies in your environment.
 {: shortdesc}
-
-For more information about how an instance of {{site.data.keyword.sysdigsecure_full_notm}} can be integrated with {{site.data.keyword.compliance_short}} to run scans that validate your level of compliance, check out [Connecting Workload Protection](/docs/security-compliance?topic=security-compliance-setup-workload-protection).
-{: tip}
 
 A control describes a rule, the code that is run to evaluate it, and a remediation playbook to fix the violation that might be detected. There are different types of controls to address business, security, compliance, and operational requirements. For more information, see [Posture controls](/docs/workload-protection?topic=workload-protection-posture-controls).
 
