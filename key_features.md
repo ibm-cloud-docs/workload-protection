@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-07-02"
+  years:  2023, 2026
+lastupdated: "2026-01-27"
 
 keywords:
 
@@ -76,7 +76,7 @@ subcollection: workload-protection
 
 - FIM (File Integrity Monitoring) detection rules that can be defined per scope (path, filename, cmd, user, etc) and detect at source all possible activities (read, write a file, write a directory, etc).
 
-## Kubernetes Workload Protection and Network Segmentation (CWPP)
+## Kubernetes {{site.data.keyword.sysdigsecure_short}} and Network Segmentation (CWPP)
 {: #feature_4}
 
 - {{site.data.keyword.sysdigsecure_full_notm}} is a full Kubernetes Workload Protection Platform including vulnerability scanning, host and container detection/prevention, posture and compliance (KSPM), all built for Kubernetes and OpenShift.

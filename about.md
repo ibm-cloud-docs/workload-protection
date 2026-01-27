@@ -141,7 +141,7 @@ All other posture policies apply to other environments such as AWS, Azure, GCP, 
 | [IBM Power Virtual Server](/docs/power-iaas) |
 | [IBM Cloud Logs](/docs/cloud-logs) |
 | [IBM Cloud Shell](/docs/cloud-shell?topic=cloud-shell-getting-started) |
-{: caption="List of services supported by Workload Protection" caption-side="bottom"}
+{: caption="List of services supported by {{site.data.keyword.sysdigsecure_short}}" caption-side="bottom"}
 
 ## Next steps
 {: #about-next}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-05-03"
+  years: 2024, 2026
+lastupdated: "2026-01-27"
 
 keywords: linux, powervs, workload protection
 
@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing the Workload Protection agent in Linux on PowerVS
+# Managing the {{site.data.keyword.sysdigsecure_short}} agent in Linux on PowerVS
 {: #agent-deploy-linux-powervs}
 
 After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts on [{{site.data.keyword.powerSysFull}}](/docs/power-iaas?topic=power-iaas-getting-started) to collect events and protect your workloads.

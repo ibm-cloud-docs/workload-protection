@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-04-16"
+  years: 2024, 2026
+lastupdated: "2026-01-27"
 
 keywords:
 
@@ -21,7 +21,7 @@ The Risks module consolidates all findings from the Cloud Native Application Pro
 
 Based on the findings of your infrastructure, risks are periodically re-evaluated and re-prioritized to provide a constantly updated report on your current risk factors, enriched with context from {{site.data.keyword.sysdigsecure_short}}'s runtime agents and detections.
 
-{{site.data.keyword.sysdigsecure_short}} implements Sysdig Secure functionality. Information that is provided by the Sysdig Secure documentation applies to Workload Protection as well.
+{{site.data.keyword.sysdigsecure_short}} implements Sysdig Secure functionality. Information that is provided by the Sysdig Secure documentation applies to {{site.data.keyword.sysdigsecure_short}} as well.
 {: note}
 
 For more information, check out [Risks](https://docs.sysdig.com/en/docs/sysdig-secure/risks/).

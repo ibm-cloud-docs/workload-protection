@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-08-14"
+  years:  2023, 2026
+lastupdated: "2026-01-27"
 
 keywords: IBM Cloud, deploy, Kubernetes, OpenShift
 
@@ -141,7 +141,7 @@ clusterShield:
 Where:
 
 * `CLUSTER_NAME` is the name of the cluster where you are deploying the agent.
-* `SERVICE_ACCESS_KEY` is the Workload Protection instance access key.
+* `SERVICE_ACCESS_KEY` is the {{site.data.keyword.sysdigsecure_short}} instance access key.
 * `INGESTION_ENDPOINT` is the instance's ingestion endpoint. For example, `ingest.us-east.security-compliance-secure.cloud.ibm.com`
 * `API_ENDPOINT` is the intance's API endpoint. For example, `us-east.security-compliance-secure.cloud.ibm.com`
 
