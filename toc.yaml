@@ -134,6 +134,8 @@ toc:
               topics:
               - topic: posture-controls.md
                 navtitle: Accessing posture controls
+              - topic: custom-controls.md
+                navtitle: Creating custom controls
           - topic: posture-link-policy-to-zone.md
             navtitle: Linking a policy to a zone
           - topicgroup:
