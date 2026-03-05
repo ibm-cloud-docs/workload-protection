@@ -35,11 +35,6 @@ toc:
           - topic: instance_remove.md
             navtitle: Deleting an instance
       - topicgroup:
-          label: Configuring registries (WIP)
-          topics:
-          - topic: registry-ibm-cloud.md
-            navtitle: IBM Cloud Registry
-      - topicgroup:
           label: Managing keys
           topics:
           - topic: access_key.md
