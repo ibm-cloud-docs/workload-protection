@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-01-27"
+lastupdated: "2026-03-18"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,21 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## March 2026
+{: #workload-protection-mar26}
+
+## 17 March 2026
+{: #workload-protection-mar1726}
+
+AI Agent Threat Detection
+:   You can now detect suspicious behavior from AI agents (Codex, Gemini CLI, Claude Code) using our latest Runtime Policies. Enable these protections today under Policies > Runtime Policies.
+
+File Integrity Monitoring (FIM) Runtime detections
+:   A new runtime detection type, File Integrity Monitoring (FIM), is now available. You can configure this feature by creating FIM Policies (requires agent version 14.3 or higher). This detection helps you meet PCI DSS Requirements 10.5.5 and 11.5.
+
+New posture report is now available
+:   {{site.data.keyword.sysdigsecure_short}} now supports the `Resource Posture Report (Per Requirement view)`, which includes a comprehensive list of findings for all your posture results, categorized by policy, requirement, control and resource.
 
 ## December 2025
 {: #workload-protection-dec25}
