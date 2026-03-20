@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-01-09"
+lastupdated: "2026-01-27"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Best Practices for working with Workload Protection for {{site.data.keyword.cloud_notm}} CSPM
+# Best Practices for working with {{site.data.keyword.sysdigsecure_short}} for {{site.data.keyword.cloud_notm}} CSPM
 {: #cspm-best-practices}
 
 {{site.data.keyword.sysdigsecure_full}} now supports Cloud Security Posture Management (CSPM) for {{site.data.keyword.cloud_notm}} resources with the {{site.data.keyword.cloud_notm}} Framework for Financial Services, Digital Operational Resilience Act (DORA), CIS {{site.data.keyword.cloud_notm}} Foundations Benchmark, PCI, and other regulated industry standards.

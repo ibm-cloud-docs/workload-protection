@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-10-16"
+  years:  2023, [CURRENT_YEAR]
+lastupdated: "2026-01-27"
 
 keywords:
 
@@ -112,7 +112,7 @@ The following table lists the *Private Collector endpoints* that are available f
 To successfully connect your infrastructure to your {{site.data.keyword.sysdigsecure_short}} instance, ensure that it has network connectivity to the {{site.data.keyword.sysdigsecure_short}} region IPs on ports (`6443` and `443`).
 {: note}
 
-| Region      | Private ingestion endpoint       | Private IP addresses       | Workload Protection  \n  agent collector ports   | Workload Protection  \n  agent api ports|
+| Region      | Private ingestion endpoint       | Private IP addresses       | {{site.data.keyword.sysdigsecure_short}}  \n  agent collector ports   | {{site.data.keyword.sysdigsecure_short}}  \n  agent api ports|
 |-------------|----------------------------------|----------------------------|-----------|---------|
 | Dallas (`US-South`)  | `ingest.private.us-south.security-compliance-secure.cloud.ibm.com`   | 166.9.14.170  \n 166.9.48.41  \n 166.9.17.11   \n  \n 166.9.228.45 `(*)`  \n 166.9.229.45 `(*)`  \n 166.9.230.44 `(*)` \n 166.9.228.235  `(*)`  \n 166.9.229.31 `(*)`  \n 166.9.251.30  `(*)`  | TCP 6443  | TCP 443  |
 | Frankfurt (`EU-DE`)     | `ingest.private.eu-de.security-compliance-secure.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71   \n  \n  166.9.248.88 `(*)`  \n 166.9.248.120 `(*)`  \n 166.9.248.152 `(*)` \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13 `(*)`    | TCP 6443  | TCP 443  |

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2025-12-09"
+  years:  2023, 2026
+lastupdated: "2026-03-18"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,21 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## March 2026
+{: #workload-protection-mar26}
+
+## 17 March 2026
+{: #workload-protection-mar1726}
+
+AI Agent Threat Detection
+:   You can now detect suspicious behavior from AI agents (Codex, Gemini CLI, Claude Code) using our latest Runtime Policies. Enable these protections today under Policies > Runtime Policies.
+
+File Integrity Monitoring (FIM) Runtime detections
+:   A new runtime detection type, File Integrity Monitoring (FIM), is now available. You can configure this feature by creating FIM Policies (requires agent version 14.3 or higher). This detection helps you meet PCI DSS Requirements 10.5.5 and 11.5.
+
+New posture report is now available
+:   {{site.data.keyword.sysdigsecure_short}} now supports the `Resource Posture Report (Per Requirement view)`, which includes a comprehensive list of findings for all your posture results, categorized by policy, requirement, control and resource.
 
 ## December 2025
 {: #workload-protection-dec25}
@@ -221,14 +236,14 @@ Information Technology Security Guidance (ITSG-33) now available in {{site.data.
 {: release-note}
 
 Posture Management for AIX servers on PowerVS
-:   SCC Workload Protection now provides posture compliance for AIX operating system, including multiple out-of-the-box policies
-For more information, check out [Managing the Workload Protection agent in AIX on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs).
+:   SCC {{site.data.keyword.sysdigsecure_short}} now provides posture compliance for AIX operating system, including multiple out-of-the-box policies
+For more information, check out [Managing the {{site.data.keyword.sysdigsecure_short}} agent in AIX on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs).
 
 Compliance Readiness Report
 :   You can generate a PDF of the Compliance Readiness Report, providing an overview of the current state of a compliance policy. The report highlights the status of passing requirements and controls, along with the count of passing and failing resources for each control.
 
 Malware Control Policy
-:   SCC Workload Protection is releasing a new Runtime Threat Policy for Malware Detection.
+:   SCC {{site.data.keyword.sysdigsecure_short}} is releasing a new Runtime Threat Policy for Malware Detection.
 You can now detect Malware being executed in your environment by detecting the known malware hashes and utilize YARA rules to enhance the detection capabilities. 
 Create a new **Malware Control Policy** under Policies > Runtime Policies.
 
@@ -239,8 +254,8 @@ Create a new **Malware Control Policy** under Policies > Runtime Policies.
 {: #workload-protection-oct1024}
 {: release-note}
 
-Now Generally Available: Posture Management for IBM Cloud in SCC Workload Protection
-:   SCC Workload Protection now provides posture management (CSPM) for IBM Cloud resources with regulatory and industry leading out-of-the-box policies, a unified compliance posture dashboard with detailed remediation guidance and a comprehensive view of assets across hybrid multicloud.
+Now Generally Available: Posture Management for IBM Cloud in SCC {{site.data.keyword.sysdigsecure_short}}
+:   SCC {{site.data.keyword.sysdigsecure_short}} now provides posture management (CSPM) for IBM Cloud resources with regulatory and industry leading out-of-the-box policies, a unified compliance posture dashboard with detailed remediation guidance and a comprehensive view of assets across hybrid multicloud.
 
 For more information, check out [About IBM Cloud Security Posture Management (CSPM)](/docs/workload-protection?topic=workload-protection-about).
 
@@ -303,7 +318,7 @@ Better ownership and remediation details are included now by differentiating the
 {: #workload-protection-apr2924}
 {: release-note}
 
-{{site.data.keyword.sysdigsecure_short}} announces support for [Managing the Workload Protection agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
+{{site.data.keyword.sysdigsecure_short}} announces support for [Managing the {{site.data.keyword.sysdigsecure_short}} agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
 
 ## February 2024
 {: #workload-protection-feb24}
@@ -328,10 +343,10 @@ Better ownership and remediation details are included now by differentiating the
 {: release-note}
 
 Deprecation of Sysdig Secure + Monitor plan in IBM Cloud Monitoring
-: As of 18 January 2024, the Graduated Tier - Sysdig Secure + Monitor plan in IBM Cloud Monitoring is deprecated. For current Workload Protection users, there is no change to functionality. However, if you are currently working with the Sysdig Secure through IBM Cloud Monitoring, you must move to a Workload Protection based plan by the 18 August 2024 to maintain the same functionality. For more information about the transition see [the frequently asked questions](/docs/monitoring?topic=monitoring-faq#faq_4).
+: As of 18 January 2024, the Graduated Tier - Sysdig Secure + Monitor plan in IBM Cloud Monitoring is deprecated. For current {{site.data.keyword.sysdigsecure_short}} users, there is no change to functionality. However, if you are currently working with the Sysdig Secure through IBM Cloud Monitoring, you must move to a {{site.data.keyword.sysdigsecure_short}} based plan by the 18 August 2024 to maintain the same functionality. For more information about the transition see [the frequently asked questions](/docs/monitoring?topic=monitoring-faq#faq_4).
 
 Deprecation of version 1 of the scanning engine
-:   As of 18 January 2024, Version 1 of the scanning engine in Workload Protection is deprecated. The functionality is replaced by a new scanning engine with better performance and more capabilities. Any new instances that are created starting today are automically configured to use the new engine. If you are currently working with an existing instance, you must migrate to the new engine by 18 January, 2025. When you migrate, you must also move from the legacy node-analyzer to the new one. In some cases, uninstalling and reinstalling by using Helm is the simplest approach. If you are working with a pipeline or registry scanning, you will need to start using the new scanning components. [Learn more about scanning engines](https://docs.sysdig.com/en/docs/sysdig-secure/scanning/new-scanning-engine/){: external}.
+:   As of 18 January 2024, Version 1 of the scanning engine in {{site.data.keyword.sysdigsecure_short}} is deprecated. The functionality is replaced by a new scanning engine with better performance and more capabilities. Any new instances that are created starting today are automically configured to use the new engine. If you are currently working with an existing instance, you must migrate to the new engine by 18 January, 2025. When you migrate, you must also move from the legacy node-analyzer to the new one. In some cases, uninstalling and reinstalling by using Helm is the simplest approach. If you are working with a pipeline or registry scanning, you will need to start using the new scanning components. [Learn more about scanning engines](https://docs.sysdig.com/en/docs/sysdig-secure/scanning/new-scanning-engine/){: external}.
 
 ## September 2023
 {: #workload-protection-sep23}

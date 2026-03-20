@@ -48,7 +48,7 @@ You are notified on the command line when updates to the {{site.data.keyword.clo
 
 {{site.data.keyword.sysdigsecure_full_notm}} provides the following CLIs:
 
-[Workload Protection CLI](/docs/workload-protection?topic=workload-protection-workload-protection-cli)
+[{{site.data.keyword.sysdigsecure_short}} CLI](/docs/workload-protection?topic=workload-protection-workload-protection-cli)
 :   Describes how you can use the CLI to access information in {{site.data.keyword.sysdigsecure_full_notm}}.
 
 [Compliance](/docs/workload-protection?topic=workload-protection-workload-protection-compliance-cli)

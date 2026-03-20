@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-01-27"
+lastupdated: "2026-03-18"
 
 keywords:
 
@@ -129,6 +129,7 @@ All other posture policies apply to other environments such as AWS, Azure, GCP, 
 | [IBM Cloud Internet Services (CIS)](/docs/cis) |
 | [Schematics](/docs/schematics) |
 | [Cloud Monitoring](/docs/monitoring?topic=monitoring-getting-started#getting-started)|
+| [Security and Compliance Center Workload Protection](/docs/workload-protection) |
 | [Hyper Protect Crypto Services (HPCS)](/docs/hs-crypto) |
 | [App ID](/docs/appid) |
 | [App Configuration](/docs/app-configuration) |
@@ -141,7 +142,7 @@ All other posture policies apply to other environments such as AWS, Azure, GCP, 
 | [IBM Power Virtual Server](/docs/power-iaas) |
 | [IBM Cloud Logs](/docs/cloud-logs) |
 | [IBM Cloud Shell](/docs/cloud-shell?topic=cloud-shell-getting-started) |
-{: caption="List of services supported by Workload Protection" caption-side="bottom"}
+{: caption="List of services supported by {{site.data.keyword.sysdigsecure_short}}" caption-side="bottom"}
 
 ## Next steps
 {: #about-next}

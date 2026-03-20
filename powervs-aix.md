@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025
-lastupdated: "2025-07-30"
+  years:  2025, 2026
+lastupdated: "2026-01-27"
 
 keywords: linux, powervs, workload protection
 
@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing the Workload Protection agent in AIX on PowerVS
+# Managing the {{site.data.keyword.sysdigsecure_short}} agent in AIX on PowerVS
 {: #agent-deploy-aix-powervs}
 
 After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your AIX hosts on [{{site.data.keyword.powerSysFull}}](/docs/power-iaas?topic=power-iaas-getting-started) to validate your AIX operating system security.
