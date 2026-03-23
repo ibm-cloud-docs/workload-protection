@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2026
-lastupdated: "2026-01-27"
+lastupdated: "2026-03-23"
 
 keywords: linux, powervs, workload protection
 
@@ -38,7 +38,7 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
    ```
    {: pre}
   
-   **Note**: This command stores the binary under `/tmp`, you can use your desire directory.
+   **Note**: This command stores the binary under `/tmp`, you can use your desired directory.
 
 4. Configure the service:
 
@@ -87,3 +87,12 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
 {: #assign-policy}
 
 {{site.data.keyword.sysdigsecure_full}} provides the CIS benchmarks for AIX as posture policies. [Follow these steps](/docs/workload-protection?topic=workload-protection-posture-zones#posture-zones-policy-apply) to find the AIX policies and assign them to your hosts. 
+
+## Verifying results in the UI
+{: #aix-agent-verify}
+
+After a few minutes, you can check the posture results for your AIX servers in the UI.
+
+Access your {{site.data.keyword.sysdigsecure_short}} instance:
+- Verify that your host appears under **Inventory**. You can filter by the hostname (`Resource Name`) or type of operating system (`Platform`).
+- The {{site.data.keyword.sysdigsecure_short}} agent will evaluate AIX after [you apply the corresponding policy](/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs#assign-policy). You can see all results in **Posture/Compliance** in the **Entire Infrastructure** zone or define specific zones for your AIX hosts under **Policies/Zones**.
