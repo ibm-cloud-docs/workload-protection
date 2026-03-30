@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Are you receiving a message that credentials cannot be verified when you run a command?
+# Why are my credentials not verified when I run a command?
 {: #troubleshoot-01}
 {: troubleshoot}
 {: support}
