@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-03-18"
+lastupdated: "2026-04-02"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+## April 2026 
+{: #workload-protection-apr26}
+
+## 1 April 2026
+{: #workload-protection-apr0126}
+
+Improved Main Dashboard
+: Introducing an improved main dashboard that provides a clearer separation between day‑to‑day security workflows and administration. This is a navigation‑only update and does not affect existing data, policies, configurations, or functionality.
 
 ## March 2026
 {: #workload-protection-mar26}

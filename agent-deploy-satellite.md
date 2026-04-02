@@ -321,3 +321,4 @@ Complete the following steps:
 
 
     If you forget to include the namespace in the command, you get the following error: `Error: uninstall: Release not loaded: sysdig-agent: release: not found`.
+     
