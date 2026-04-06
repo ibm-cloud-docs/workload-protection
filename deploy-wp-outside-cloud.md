@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-01-27"
+lastupdated: "2026-04-06"
 
 keywords: IBM Cloud, deploy, Kubernetes, OpenShift
 
@@ -122,6 +122,7 @@ clusterShield:
   cluster_shield:
     sysdig_endpoint: 
       region: custom
+      collector: INGESTION_ENDPOINT:6443
     log_level: info
     features:
       admission_control:
@@ -142,7 +143,7 @@ Where:
 
 * `CLUSTER_NAME` is the name of the cluster where you are deploying the agent.
 * `SERVICE_ACCESS_KEY` is the {{site.data.keyword.sysdigsecure_short}} instance access key.
-* `INGESTION_ENDPOINT` is the instance's ingestion endpoint. For example, `ingest.us-east.security-compliance-secure.cloud.ibm.com`
+* `INGESTION_ENDPOINT` is the instance's ingestion endpoint. For example, `ingest.us-east.security-compliance-secure.cloud.ibm.com`. Under `cluster_shield.sysdig_endpoint.collector` make sure to add the port at the end.
 * `API_ENDPOINT` is the intance's API endpoint. For example, `us-east.security-compliance-secure.cloud.ibm.com`
 
    The `universal_ebpf` driver requires kernel version 5.8 or newer. If you have a lower version you need BPF ring buffer support and a kernel that exposes BTF (BPF Type Format). If you have any problem during the agent installation, try removing the lines `agent.ebpf.enabled: true` and `agent.ebpf.kind: universal_ebpf` or [contact support](/docs/workload-protection?topic=workload-protection-gettinghelp).

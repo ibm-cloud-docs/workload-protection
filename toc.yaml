@@ -197,17 +197,6 @@ toc:
       - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
       - topicgroup:
-          label: CLI Reference
-          topics:
-          - topic: sysdig-secure-cli.md
-            navtitle: Workload Protection CLI
-          - topic: sysdig-secure-cli-compliance.md
-            navtitle: Compliance CLI
-          - topic: sysdig-secure-cli-policy.md
-            navtitle: Policy CLI
-          - topic: sysdig-secure-cli-version.md
-            navtitle: Version CLI
-      - topicgroup:
           label: API
           links:
           - link:
