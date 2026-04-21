@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-02"
+lastupdated: "2026-04-21"
 
 keywords:  release notes, IBM Cloud
 
@@ -21,6 +21,12 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 {: shortdesc}
 ## April 2026 
 {: #workload-protection-apr26}
+
+## 21 April 2026
+{: #workload-protection-apr2126}
+
+Resource Ownership
+:   {{site.data.keyword.sysdigsecure_short}} now supports Resource Ownership, enabling automatic identification of who is responsible for a specific resource based on infrastructure metadata such as Kubernetes labels or cloud tags. Configure **Owner Keys** (for example, `compliance.owner` or `maintainer`) **Settings > Resource Ownership** to automatically map resources to their owners across your inventory and Graph Search. Ownership information is queryable via SysQL and surfaces in the Inventory view, supporting both operational visibility and ticket routing workflows. You can define up to 10 owner keys and 10 ticket assignee keys per instance. 
 
 ## 1 April 2026
 {: #workload-protection-apr0126}
