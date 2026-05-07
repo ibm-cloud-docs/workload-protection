@@ -196,6 +196,7 @@ toc:
       - endpoints.md
       - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
+      - cdr-rules-reference.md
       - topicgroup:
           label: API
           links:

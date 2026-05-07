@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-21"
+lastupdated: "2026-05-07"
 
 keywords:  release notes, IBM Cloud
 
@@ -21,6 +21,12 @@ Use these release notes to learn about updates to {{site.data.keyword.sysdigsecu
 {: shortdesc}
 ## April 2026 
 {: #workload-protection-apr26}
+
+## April 26 2026
+{: #workload-protection-apr2626}
+
+Now Generally Available: Cloud Detection and Response for {{site.data.keyword.cloud_notm}}
+:   {{site.data.keyword.sysdigsecure_short}} now provides near real-time threat detection and response (CDR) for {{site.data.keyword.cloud_notm}} audit logs. CDR ingests Activity Tracker events applying detection rules to identify threats such as privilege escalation, lateral movement, and suspicious API activity. For more information, see [Enabling Detection and Response for {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-cdr-tutorial).
 
 ## 21 April 2026
 {: #workload-protection-apr2126}
