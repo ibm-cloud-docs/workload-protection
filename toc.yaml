@@ -70,6 +70,13 @@ toc:
           - topic: cspm-fscloud.md
             navtitle: IBM Cloud Framework for Financial Services
       - topicgroup:
+          label: Cloud Detection and Response (CDR)
+          topics:
+          - topic: cdr-tutorial.md
+            navtitle: Enabling Cloud Detection and Response
+          - topic: cdr-rules-reference.md
+            navtitle: CDR Rules Reference
+      - topicgroup:
           label: Controlling access
           topics:
           - topic: iam.md
