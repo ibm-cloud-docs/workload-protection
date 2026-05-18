@@ -35,6 +35,11 @@ toc:
           - topic: instance_remove.md
             navtitle: Deleting an instance
       - topicgroup:
+          label: Configuring registries (WIP)
+          topics:
+          - topic: registry-ibm-cloud.md
+            navtitle: IBM Cloud Registry
+      - topicgroup:
           label: Managing keys
           topics:
           - topic: access_key.md
@@ -224,3 +229,113 @@ toc:
           label: Troubleshooting
           topics:
           - troubleshoot-01.md
+          - topic: cdr-tutorial.md
+            navtitle: Enabling Cloud Detection and Response
+  - navgroup:
+      id: learn
+      topics:
+      - topic: getting-started.md
+        navtitle: Getting started
+      - topicgroup:
+          label: Use cases
+          topics:
+          - about.md
+          - compliance.md
+      - topic: bp.md
+        navtitle: Best practices
+      - pricing.md
+      - topic: releasenotes.md
+        navtitle: Release notes
+  - navgroup:
+      id: tutorial
+      topics:
+      - topic: cspm-tutorial-enterprise.md
+        navtitle: Enabling cloud compliance for enterpises
+  - navgroup:
+      id: howto
+      topics:
+      - topic: cspm-implement.md
+        navtitle: Enabling cloud compliance
+      - topic: cdr-tutorial.md
+        navtitle: Enabling Cloud Detection and Response
+      - iam.md
+      - topicgroup:
+          label: Securing containers and hosts
+          topics:
+          - access_key.md
+          - topicgroup:
+              label: Protecting IBM Cloud containers and hosts
+              topics:
+              - topic: agent-deploy-kube-helm.md
+                navtitle: On a Kubernetes cluster
+              - topic: agent-deploy-openshift-helm.md
+                navtitle: On a Red Hat OpenShift cluster
+              - topic: agent-deploy-satellite.md
+                navtitle: On IBM Satellite
+              - topic: powervs-linux.md
+                navtitle: On Linux hosts on PowerVS
+              - topic: powervs-aix.md
+                navtitle: On AIX hosts on PowerVS
+          - topicgroup:
+              label: Protecting other containers and hosts
+              topics:
+              - topic: deploy-wp-outside-cloud.md
+                navtitle: On an outside Kubernetes or OpenShift cluster
+              - topic: agent-deploy-windows.md
+                navtitle: On Windows
+              - topic: manage-linux-agent.md
+                navtitle: Protecting Linux hosts
+          - vulnerabilities-next.md
+      - topicgroup:
+          label: Observability
+          topics:
+          - at_events.md
+      - topicgroup:
+          label: Enhancing security
+          topics:
+          - architecture-workload-isolation.md
+          - cbr.md
+  - navgroup:
+      id: reference
+      topics:
+      - data_portability.md
+      - posture-policies-services.md
+      - regions-endpoints.md
+      - topic: shared-responsibilities.md
+        navtitle: Understanding your responsibilities
+      - cdr-rules-reference.md
+      - topic: wp-cli.md
+      - topicgroup:
+          label: API
+          links:
+          - link:
+              label: API Reference
+              href: https://{DomainName}/apidocs/workload-protection
+          topics:
+          - using-curl.md
+      - errors.md
+      - topicgroup:
+          label: Additional documentation
+          topics:
+          - sysdig_doc.md
+  - navgroup:
+      id: help
+      topics:
+      - gettinghelp.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - troubleshoot-01.md
+          - ts-agent-install.md
+          - ts-agent-powervs.md
+          - ts-agent-windows.md
+          - ts-cbr.md
+          - ts-compliance-results.md
+          - ts-cspm-setup.md
+          - ts-cdr.md
+          - ts-dashboard-loading.md
+          - ts-integration-errors.md
+          - ts-inventory-missing.md
+          - ts-report-failures.md
+          - ts-vulnerabilities-missing.md
+          - faqs.md
