@@ -2,11 +2,11 @@
 
 copyright:
   years:  2026
-last updated: "2026-05-18"
+lastupdated: "2026-05-20"
 
 keywords: PowerVS AIX agent, dragent service, and PowerVS Linux agent
 
-Subcollection: workload-protection
+subcollection: workload-protection
 
 content-type: troubleshoot
 
@@ -50,11 +50,11 @@ To resolve this issue, complete the following steps:
    ```
    {: pre}
 
-   3. Verify that `/opt/draios/etc/dragent.yaml` contains the correct `customerid`, `collector`, `sysdig_api_endpoint`, `collector_port: 6443`, and `ssl: true` values. The API endpoint must be specified without the `https://` prefix or `/api` suffix.
+3. Verify that `/opt/draios/etc/dragent.yaml` contains the correct `customerid`, `collector`, `sysdig_api_endpoint`, `collector_port: 6443`, and `ssl: true` values. The API endpoint must be specified without the `https://` prefix or `/api` suffix.
 
-   4. Confirm that the PowerVS host can reach the private collector endpoint on port 6443. Use a private endpoint for PowerVS deployments, for example `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
+4. Confirm that the PowerVS host can reach the private collector endpoint on port 6443. Use a private endpoint for PowerVS deployments, for example `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
 
-   5. If vulnerability scanning or posture data is missing but the agent is connected, confirm that `host_scanner.enabled: true` and `kspm_analyzer.enabled: true` are set in `dragent.yaml`.
+5. If vulnerability scanning or posture data is missing but the agent is connected, confirm that `host_scanner.enabled: true` and `kspm_analyzer.enabled: true` are set in `dragent.yaml`.
 
 ## For AIX on {{site.data.keyword.powerSys_notm}}
 {: #AIX-powervs}
@@ -63,7 +63,7 @@ To resolve this issue, complete the following steps:
 
    ```sh
    cat /tmp/kspm-analyzer.log
-    ```
+   ```
    {: pre}
 
 2. Confirm that the binary has execution permissions:
@@ -84,16 +84,36 @@ To resolve this issue, complete the following steps:
 
    ```sh
    lssrc -s kspm_analyzer
-    ```
+   ```
    {: pre}
 
 4. If the service is stopped, restart it with the correct environment variables. Replace `<HOSTNAME>`, `<REGION>`, and `<ACCESS_KEY>` with your values:
 
- ```sh
+   ```sh
    startsrc -s kspm_analyzer -e 'NODE_NAME=<HOSTNAME> API_ENDPOINT=<REGION>.security-compliance-secure.cloud.ibm.com ACCESS_KEY=<ACCESS_KEY>'
    ```
    {: pre}
 
-5. Note that the AIX agent supports only posture management (CIS AIX Benchmark). Vulnerability scanning and threat detection are not available for AIX hosts.
+5. Confirm that the PowerVS host can reach the private API endpoint. Use a private endpoint for PowerVS deployments, for example `private.us-east.security-compliance-secure.cloud.ibm.com`.
+
+The AIX agent supports only posture management (CIS AIX Benchmark). Vulnerability scanning and threat detection are not available for AIX hosts.
+{: note}
+
+## Verifying AIX agent results in the UI
+{: #aix-agent-verify-ts}
+
+AIX agent verification is different because {{site.data.keyword.sysdigsecure_short}} supports only posture management for AIX hosts.
+
+{{site.data.content.sysdig-doc}}
+
+After you deploy the AIX agent, complete the following steps:
+
+1. Verify that your AIX host appears in the inventory. For more information, see [Inventory](https://docs.sysdig.com/en/docs/sysdig-secure/inventory/){: external} in the Sysdig documentation.
+
+2. Apply the corresponding CIS AIX Benchmark policy. The {{site.data.keyword.sysdigsecure_short}} agent evaluates your AIX host only after you apply the policy. For more information about associating a policy with a zone, see [Managing posture policies](https://docs.sysdig.com/en/sysdig-secure/manage_posture_policies/){: external} in the Sysdig documentation.
+
+3. View the posture results after the agent completes its first evaluation cycle, which typically takes a few minutes. For more information, see [Compliance](https://docs.sysdig.com/en/docs/sysdig-secure/posture/compliance/){: external} in the Sysdig documentation.
+
+If your AIX host does not appear in the inventory or posture results are not visible after applying a policy, review the [troubleshooting steps for AIX on {{site.data.keyword.powerSys_notm}}](#AIX-powervs).
 
 For more information, see [Managing the {{site.data.keyword.sysdigsecure_short}} agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs) and [Managing the {{site.data.keyword.sysdigsecure_short}} agent in AIX on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs).
