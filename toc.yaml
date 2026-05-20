@@ -208,7 +208,6 @@ toc:
       - endpoints.md
       - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
-      - cdr-rules-reference.md
       - topicgroup:
           label: API
           links:
@@ -222,20 +221,8 @@ toc:
           topics:
           - sysdig_doc.md
   - navgroup:
-      id: help
-      topics:
-      - gettinghelp.md
-      - topicgroup:
-          label: Troubleshooting
-          topics:
-          - troubleshoot-01.md
-          - topic: cdr-tutorial.md
-            navtitle: Enabling Cloud Detection and Response
-  - navgroup:
       id: learn
       topics:
-      - topic: getting-started.md
-        navtitle: Getting started
       - topicgroup:
           label: Use cases
           topics:
@@ -243,9 +230,6 @@ toc:
           - compliance.md
       - topic: bp.md
         navtitle: Best practices
-      - pricing.md
-      - topic: releasenotes.md
-        navtitle: Release notes
   - navgroup:
       id: tutorial
       topics:
@@ -256,8 +240,6 @@ toc:
       topics:
       - topic: cspm-implement.md
         navtitle: Enabling cloud compliance
-      - topic: cdr-tutorial.md
-        navtitle: Enabling Cloud Detection and Response
       - iam.md
       - topicgroup:
           label: Securing containers and hosts
@@ -303,7 +285,6 @@ toc:
       - regions-endpoints.md
       - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
-      - cdr-rules-reference.md
       - topic: wp-cli.md
       - topicgroup:
           label: API
@@ -331,11 +312,10 @@ toc:
           - ts-agent-windows.md
           - ts-cbr.md
           - ts-compliance-results.md
-          - ts-cspm-setup.md
           - ts-cdr.md
           - ts-dashboard-loading.md
           - ts-integration-errors.md
           - ts-inventory-missing.md
           - ts-report-failures.md
           - ts-vulnerabilities-missing.md
-          - faqs.md
+      - faqs.md
