@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-01-27"
+lastupdated: "2026-05-29"
 
 keywords:
 
@@ -40,6 +40,8 @@ subcollection: workload-protection
 
 - Analyze infrastructure as code (IaC) security posture including Terraform, CloudFormation, Helm charts or YAML manifests.
 
+You can also use {{site.data.keyword.terraform-provider_short}} IBM Module for [{{site.data.keyword.sysdigsecure_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/scc-workload-protection/ibm/latest){: external} to provision and configure instances as code.
+{: tip}
 
 ## Vulnerability Management
 {: #feature_2}

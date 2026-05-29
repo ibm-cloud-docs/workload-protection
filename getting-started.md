@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-03-12"
+lastupdated: "2026-05-29"
 
 keywords:
 
@@ -82,6 +82,8 @@ The service UI opens.
 
 To provision an instance through the CLI, see [Provisioning a Monitoring instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/workload-protection?topic=workload-protection-provision#provision_cli).
 {: tip}
+
+You can also use {{site.data.keyword.terraform-provider_short}} IBM Module for [{{site.data.keyword.sysdigsecure_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/scc-workload-protection/ibm/latest){: external} to provision and configure instances as code.
 
 ## Step 3. Connect a data source by configuring an agent
 {: #getting-started-secure-step3}

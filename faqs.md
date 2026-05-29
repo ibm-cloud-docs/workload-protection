@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-05-18"
+lastupdated: "2026-05-29"
 
 keywords: workload protection faq, security faq, cspm faq, agent faq, compliance faq
 
@@ -37,6 +37,12 @@ Your pricing depends on how you use {{site.data.keyword.sysdigsecure_short}}:
 - Host protection with agents installed on virtual machines: Priced per virtual machine (VM) node hour
 
 Pricing is calculated monthly or hourly according to your consumption. As your usage grows, you can benefit from volume discounts across pricing tiers. For more information, go to [Pricing](/docs/workload-protection?topic=workload-protection-pricing).
+
+## Can I use {{site.data.keyword.terraform-provider_short}} to automate {{site.data.keyword.sysdigsecure_short}} provisioning?
+{: #faq-terraform-automation}
+{: faq}
+
+Yes. The [{{site.data.keyword.sysdigsecure_short}} module](https://registry.terraform.io/modules/terraform-ibm-modules/scc-workload-protection/ibm/latest){: external} provides a curated {{site.data.keyword.terraform-provider_short}} configuration for provisioning and managing {{site.data.keyword.sysdigsecure_full_notm}} instances as code. You can use it to automate instance setup consistently across accounts or environments. For an overview of available {{site.data.keyword.cloud_notm}} {{site.data.keyword.terraform-provider_short}} modules, see [About {{site.data.keyword.terraform-provider_short}} IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).
 
 ## Do I need separate agents if I use both {{site.data.keyword.sysdigsecure_short}} and {{site.data.keyword.mon_short}} on the same cluster?
 {: #faq-shared-agent}

@@ -50,7 +50,8 @@ To provision an instance from the {{site.data.keyword.cloud_notm}} catalog, comp
 
 11. Click **Create**.
 
-
+If you need the same catalog configuration in more than one place, you can automate instance provisioning with the [{{site.data.keyword.sysdigsecure_short}} module](https://registry.terraform.io/modules/terraform-ibm-modules/scc-workload-protection/ibm/latest){: external}. For an overview, see [About {{site.data.keyword.terraform-provider_short}} IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).
+{: tip}
 
 ## Provisioning an instance through the CLI
 {: #provision_cli}
