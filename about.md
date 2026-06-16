@@ -18,8 +18,8 @@ subcollection: workload-protection
 {{site.data.keyword.sysdigsecure_full}} is a cloud-native application protection platform (CNAPP) that helps secure workloads across hybrid multicloud and on-premises environments, including AI workloads. You can identify vulnerabilities, validate configurations, permissions, and compliance, detect and block runtime threats, and respond to incidents. {{site.data.keyword.sysdigsecure_short}} supports diverse platforms, including cloud, on-premises infrastructure, hosts, virtual machines, and container environments.
 {: shortdesc}
 
-{{site.data.keyword.sysdigsecure_short}} supports multiple cloud providers, such as AWS and Azure, in addition to {{site.data.keyword.cloud_notm}}. For more information, see [Connect cloud accounts](https://docs.sysdig.com/en/sysdig-secure/connect-cloud-accounts/){: external}.
-{: tip}
+
+
 
 {{site.data.keyword.sysdigsecure_short}} supports your {{site.data.keyword.cloud_notm}} account and resources in two main ways:
 
@@ -35,6 +35,9 @@ Together, these capabilities provide consistent visibility and protection across
 {: #use-cases-cspm}
 
 CSPM provides a unified platform to manage the security and compliance of applications, workloads, and infrastructure that run on {{site.data.keyword.cloud_notm}}, in other clouds, and on-premises.
+
+{{site.data.keyword.sysdigsecure_short}} supports multiple cloud providers, such as AWS and Azure, in addition to {{site.data.keyword.cloud_notm}}. For more information, see [Connect cloud accounts](https://docs.sysdig.com/en/sysdig-secure/connect-cloud-accounts/){: external}.
+{: tip}
 
 App Configuration connection
 :   To enable CSPM with {{site.data.keyword.sysdigsecure_short}}, your {{site.data.keyword.cloud_notm}} account needs an instance of {{site.data.keyword.appconfig_short}}. {{site.data.keyword.appconfig_short}} uses a configuration aggregator to gather configuration information in your {{site.data.keyword.cloud_notm}} account, which allows {{site.data.keyword.sysdigsecure_short}} to access your resources and scan them for compliance.
