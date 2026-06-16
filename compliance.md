@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2024, 2026
-lastupdated: "2026-01-27"
+  years: 2023, 2026
+lastupdated: "2026-06-16"
 
-keywords:
+keywords: compliance, posture management, security posture, compliance evaluation, remediation, controls, policies, zones, CSPM, KSPM
 
 subcollection: workload-protection
 
@@ -15,65 +15,84 @@ subcollection: workload-protection
 # Analyzing compliance postures from detection to remediation
 {: #compliance}
 
-The {{site.data.keyword.sysdigsecure_full}} compliance feature persists environment compliance information in an inventory, which enhances resource visibility and full-context prioritization. This information helps you drive remediation and resolution of compliance violations. {{site.data.keyword.sysdigsecure_short}} supports CSPM and KSPM.
+{{site.data.keyword.sysdigsecure_full}} provides comprehensive compliance posture management capabilities that help security teams, compliance officers, and DevOps engineers continuously monitor, evaluate, and improve their security posture across cloud environments. The platform enables organizations to detect compliance violations, understand their security posture, and drive remediation through to resolution.
 {: shortdesc}
 
-Compliance lets you manage your risks by:
+Information about your compliance posture is included in an [inventory](https://docs.sysdig.com/en/docs/sysdig-secure/inventory/){: external}, which enhances resource visibility and provides full-context prioritization. This information helps you drive remediation and resolution of compliance violations. To access your inventory and other compliance-related information, open the {{site.data.keyword.sysdigsecure_short}} UI. In the console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Security > Compliance** and click the name of your instance of {{site.data.keyword.sysdigsecure_short}}. Then, click **Open dashboard** to open the {{site.data.keyword.sysdigsecure_short}} UI. 
+{: note}
 
-* Remediating.
-* Accepting the risk.
-* Opening Pull requests in your code repository, if integration is enabled.
+## How compliance posture management works
+{: #compliance-how-it-works}
 
-The resources in your [zones](/docs/workload-protection?topic=workload-protection-posture-zones) are evaluated against compliance policies and any violations are collected as tiles on the **Compliance** page in the {{site.data.keyword.sysdigsecure_full}} UI.  This evaluation is done once daily.
+{{site.data.keyword.sysdigsecure_short}} evaluates the resources in your [zones](https://docs.sysdig.com/en/sysdig-secure/zones/){: external} against compliance policies. Any violations are collected and displayed as tiles on the **Compliance** page in the {{site.data.keyword.sysdigsecure_short}} UI. This evaluation is performed once daily to provide up-to-date compliance status.
 
-You can use {{site.data.keyword.sysdigsecure_full_notm}} policies or create custom policies.
+You can use {{site.data.keyword.sysdigsecure_short}} predefined policies or [create custom policies](https://docs.sysdig.com/en/sysdig-secure/manage_posture_policies/#create-a-custom-policy){: external} tailored to your organization's specific requirements. When evaluating violations, you can select individual resources to see their associated list of violations, enabling targeted remediation efforts.
 
-When evaluating violations you can select the resource to see the associated list of violations.
+### Key concepts
+{: #compliance-concepts}
 
-You can also create reports that you can download from the UI or API.
+The compliance workflow consists of the following key components:
 
+Zones
+:   Logical groupings of resources that represent different parts of your infrastructure. The default _Entire Infrastructure_ zone is automatically created by {{site.data.keyword.sysdigsecure_short}}, and you can define custom zones to match your organizational structure. Zones are defined by a collection of scopes or resource types. 
 
-You can use the {{site.data.keyword.sysdigsecure_full_notm}} **Posture** > **Compliance** view of the {{site.data.keyword.sysdigsecure_short}} UI to review and analyze your environment's compliance posture.
+Policies
+:   Collections of requirements that define a compliance standard. A policy includes one or more controls to define that compliance standard. Policies can be based on industry frameworks or custom organizational requirements.
 
-The basic steps you will follow are:
+Requirements
+:   Specific compliance criteria that must be met. Each requirement consists of one or more controls.
 
-1. Use the [compliance page](/docs/workload-protection?topic=workload-protection-compliance-understanding) to see high-level posture performance indicators (PPIs) for each policy applied to your [zones](/docs/workload-protection?topic=workload-protection-posture-zones).
+Controls
+:   Identifies a potential issue or violation within the environment and the solution to remediate the problem. Different types of controls are used to address business, security, compliance, and operational requirements. 
 
-2. Select a policy in the view to see its results.
+The **Compliance** overview page displays key posture performance indicators for each policy applied to your zones. For more information, see [Understanding the Compliance UI](https://docs.sysdig.com/en/sysdig-secure/compliance/#understand-the-compliance-ui){: external}. 
+{: tip}
 
-3. Select failing requirements to see the controls and associated failing resources.
+## Compliance workflow overview
+{: #compliance-workflow}
 
-4. [Remediate the issues.](/docs/workload-protection?topic=workload-protection-evaluate-remediate) The remediation flow lets you to understand the issue and review suggested patches that {{site.data.keyword.sysdigsecure_full_notm}} creates to resolve the problem. You can also choose to apply the patch manually or by using your Git repository.
+The typical compliance posture management workflow follows these stages:
 
-    - Manual patches can be applied by copying the provided patch code and applying it to your environment.
+1. Detection and assessment. {{site.data.keyword.sysdigsecure_short}} scans your environment daily and evaluates resources against defined policies. {{site.data.keyword.sysdigsecure_short}} identifies violations and categorizes them by severity, providing a comprehensive view of your compliance posture.
+1. Analysis and prioritization. Security and compliance teams can review high-level posture performance indicators for each policy applied to their zones. By selecting a policy, teams can see detailed results, including failing requirements, associated controls, and affected resources. 
+1. Evaluation and decision making. When reviewing violations, [teams can examine the control pane](https://docs.sysdig.com/en/sysdig-secure/compliance-findings/#drill-down-to-the-control-pane){: external} to understand the hierarchy of requirements and controls. Each item indicates whether it's passing or failing.
+1. Remediation. {{site.data.keyword.sysdigsecure_short}} provides multiple remediation options to address compliance violations. For more information, see [Evaluate and Remediate](https://docs.sysdig.com/en/sysdig-secure/compliance-findings/#drill-down-to-the-control-pane){: external}.
+1. Reporting and documentation. Organizations can generate [compliance reports](https://docs.sysdig.com/en/sysdig-secure/compliance/#policy-compliance-report){: external} that can be downloaded from the UI or accessed via API. These reports can be shared with development teams, executives, auditors, and other stakeholders who require compliance status information.
+1. Source detection and patching. When [Git integration is implemented](https://docs.sysdig.com/en/sysdig-secure/github-action-integration/){: external}, {{site.data.keyword.sysdigsecure_short}} scans and analyzes the manifests from your defined Git sources daily or whenever a new Git source is added. The system determines which resources are declared in your source files and attempts to match discovered resources with deployed and evaluated resources.
 
-    - Remediating using a Git code repository involves selecting the relevant Git source. {{site.data.keyword.sysdigsecure_full_notm}} will create a pull request integrating the patch, as well as checking code formatting. The PR can be reviewed before merging.
+## Use cases by role
+{: #compliance-use-cases}
 
-    Alternately, you can "accept the risk", either temporarily or permanently, and remove the violation from being flagged by the system.
+Different organizational roles benefit from compliance posture management in specific ways:
 
-5. [Create a report.](/docs/workload-protection?topic=workload-protection-compliance-reports) You can optionally generate a compliance report that can be shared with others requiring the information, such as development teams, executives, and auditors.
+### Compliance and security teams
+{: #compliance-security-teams}
 
-## Compliance by role
-{: #compliance-by-role}
+Compliance and security team members use the compliance feature to:
 
-The needs of different members of your organization can be met using the **Compliance** function.
+* Check the current compliance status of business zones against predefined policies.
+* Demonstrate to auditors the compliance status of their business zone at a specific point in time.
+* Create reports of compliance status to share with auditors and management teams.
+* Understand the magnitude of the compliance gap and track improvement over time.
+* Monitor trends in compliance posture through historical data visualization.
 
-### Compliance and security team members
-{: #compliance_sec-team}
+### DevOps engineers
+{: #compliance-devops}
 
-Compliance and security team members might need to review the environment's compliance posture in the following areas:
+DevOps team members use the compliance feature to:
 
-* Checking the current compliance status of the business zones against predefined policies.
-* Demonstrating to an auditor the compliance status of their business zone at a specific point in time.
-* Creating a report of the compliance status of their business zone to share with auditors and management team.
-* Understanding the magnitude of the compliance gap.
+* Identify compliance violations for predefined policies on their business zones.
+* Manage violations according to their severity, prioritizing high-severity issues.
+* Efficiently fix violations using automated patches or pull requests.
+* Document exceptions and acceptable risks according to organizational risk management policies.
+* Integrate compliance checks into their CI/CD pipelines.
 
-### DevOps team members
-{: #compliance-devops-team}
+### Cloud architects
+{: #compliance-architects}
 
-DevOps team members might need to review the environment's compliance posture in the following areas:
+Cloud architects use the compliance feature to:
 
-* Identifying compliance violations for a predefined policy on their business zone.
-* Managing violations according to their severity.
-* Easily fixing violations.
-* Documenting exceptions and acceptable risk according to the risk management policies of their organization.
+* Design infrastructure that meets compliance requirements from the start.
+* Understand which controls apply to different resource types and configurations.
+* Evaluate the compliance impact of architectural decisions.
+* Ensure new deployments align with organizational security policies.

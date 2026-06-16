@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-05-18"
+lastupdated: "2026-06-16"
 
 keywords: vulnerabilities, agent, security scanning
 
@@ -29,6 +29,9 @@ After you add an agent, verify that it was deployed correctly.
 4. Click **Inventory** to confirm that your resources appear in the list.
 5. Then, go to **Integrations > Environments > Sysdig Agents** and confirm that your agent appears in the list.
 
+If you [added an agent to an AIX host](/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs), you can view the agent only on the **Inventory** page. The agent does not appear on the **Sysdig Agents** page.
+{: important}
+
 ## Reviewing results 
 {: #review-results}
 
@@ -37,9 +40,9 @@ After you verify your agent was successfully installed, you can view compliance 
 1. Go to the [{{site.data.keyword.cloud_notm}} Compliance](/security/compliance) page.
 2. Select your {{site.data.keyword.sysdigsecure_short}} instance.
 3. Click **Open dashboard**.
-4. To view compliance scan results, go to **Compliance > Findings**. 
-5. To view vulnerability scan results, go to **Vulnerabilities > Overview**.
-6. To view threat detections, go to **Threats**. 
+4. To view compliance scan results, go to **Attack Surface > Compliance Findings**. 
+5. To view vulnerability scan results, go to **Dashboards > Vulnerabilities**.
+6. To view threat detections, go to **Detection & Response > Threats**. 
 
 ## Setting up security policies
 {: #vulnerabilities-next-policies}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-05-18"
+lastupdated: "2026-06-16"
 
 keywords: context-based restrictions, App Configuration, network zone, and IAM
 

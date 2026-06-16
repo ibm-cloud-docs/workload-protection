@@ -2,9 +2,9 @@
 
 copyright:
   years:  2025, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-06-16"
 
-keywords: linux, powervs, workload protection
+keywords: aix, powervs
 
 subcollection: workload-protection
 
@@ -12,35 +12,39 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing the {{site.data.keyword.sysdigsecure_short}} agent in AIX on PowerVS
+# Managing the {{site.data.keyword.sysdigsecure_short}} agent on AIX on {{site.data.keyword.powerSys_notm}}
 {: #agent-deploy-aix-powervs}
 
 After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your AIX hosts on [{{site.data.keyword.powerSysFull}}](/docs/power-iaas?topic=power-iaas-getting-started) to validate your AIX operating system security.
 {: shortdesc}
 
-{{site.data.keyword.sysdigsecure_short}} provides the following features to protect your standalone AIX hosts on {{site.data.keyword.powerSys_notm}}:
+## Adding an agent to an AIX host on {{site.data.keyword.powerSys_notm}}
+{: #powervs-aix-add}
 
-- **Posture management**: scan host configuration files for compliance and benchmarks such as CIS AIX Benchmark.
+Complete the following steps to add an agent to an AIX host on {{site.data.keyword.powerSys_notm}}:
 
-## Deploying the agent by running the binary
-{: #agent-deploy-aix-powervs-agent-script}
+1. [Obtain the access key](/docs/workload-protection?topic=workload-protection-access_key).
 
-Complete the following steps to configure a {{site.data.keyword.sysdigsecure_short}} agent on AIX for validating your operating system posture. This agent will forward the security findings to an instance of the {{site.data.keyword.sysdigsecure_short}} service:
+2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions&interface=cli#endpoints_ingestion).
 
-1. [Obtain the access key](/docs/workload-protection?topic=workload-protection-access_key&interface=ui).
-
-2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion).
-
-3. Download the binary:
+3. Download the KSPM analyzer binary by running the following command:
 
    ```sh
    curl https://s3.us-east-1.amazonaws.com/download.draios.com/dependencies/kspm-analyzer/1.44.17/kspm-analyzer-aix-ppc64 -o /tmp/kspm-analyzer-aix-ppc64
    ```
    {: pre}
   
-   **Note**: This command stores the binary under `/tmp`, you can use your desired directory.
+   This command stores the binary in the `/tmp` directory. You can use a different directory if needed.
+   {: note}
 
-4. Configure the service:
+4. Add execution permissions to the binary by running the following command:
+
+   ```sh
+   chmod +x /tmp/kspm-analyzer-aix-ppc64
+   ```
+   {: pre}
+
+5. Configure the service by running the following command:
 
    ```sh
    mkssys -p /tmp/kspm-analyzer-aix-ppc64 -s kspm_analyzer -u 0 -e /tmp/kspm-analyzer.log -i /tmp/kspm-analyzer.log -o /tmp/kspm-analyzer.log
@@ -48,51 +52,138 @@ Complete the following steps to configure a {{site.data.keyword.sysdigsecure_sho
    {: pre}
 
    Where:
-   * `-p` is the full path of your kspm-analyzer binary you have downloaded in step 3.
-   * `-s` is the service name.
-   * `-i`, `-o` and `-e` to write logs under `/tmp/kspm-analyzer.log`. You can use any other file for writing the service logs.
 
-5. Add execution permissions to the binary:
+   `-p`
+   :   The full path to the KSPM analyzer binary that you downloaded in step 3.
+
+   `-s`
+   :   The service name.
+
+   `-i`, `-o`, `-e`
+   :   The log file location. This example uses `/tmp/kspm-analyzer.log`. You can specify a different file path for the service logs.
+
+6. Start the service by running the following command:
 
    ```sh
-   chmod +x /tmp/kspm-analyzer-aix-ppc64
-   ```
-   {: pre}
-
-6. Start the service. Make sure to replace `<HOSTNAME>`, `<REGION>` and `<ACCESS KEY>`:
-
-   ```sh
-   startsrc -s kspm_analyzer -e 'NODE_NAME=<HOSTNAME> API_ENDPOINT=<REGION>.security-compliance-secure.cloud.ibm.com ACCESS_KEY=<ACCESS KEY>'
+   startsrc -s kspm_analyzer -e 'NODE_NAME=HOSTNAME API_ENDPOINT=REGION.security-compliance-secure.cloud.ibm.com ACCESS_KEY=ACCESS_KEY'
    ```
    {: pre}
 
    Where:
-   * `HOSTNAME`: it will be used for showing results and your server in Inventory.
-   * `REGION`: depending on the region your have deployed {{site.data.keyword.sysdigsecure_short}}. Check step 2.
-   * `ACCESS KEY`: from step 1.
 
-   An example would be: `startsrc -s kspm_analyzer -e 'NODE_NAME=myhostname API_ENDPOINT=us-east.security-compliance-secure.cloud.ibm.com ACCESS_KEY=xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'`
+   `HOSTNAME`
+   :   The hostname that identifies your server in the {{site.data.keyword.sysdigsecure_short}} inventory and results.
 
+   `REGION`
+   :   The region where your {{site.data.keyword.sysdigsecure_short}} instance is deployed. For example, `us-east` or `eu-de`. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions&interface=cli#endpoints_ingestion).
 
-7. Configure the service to run during startup (`inittab`):
+   `ACCESS_KEY`
+   :   The access key that you obtained in step 1.
+
+   For example:
 
    ```sh
-   mkitab "fkcmd:2:respawn:startsrc -s kspm_analyzer -e 'NODE_NAME=<HOSTNAME> API_ENDPOINT=<REGION>.security-compliance-secure.cloud.ibm.com ACCESS_KEY=<ACCESSKEY>'"
+   startsrc -s kspm_analyzer -e 'NODE_NAME=myhostname API_ENDPOINT=us-east.security-compliance-secure.cloud.ibm.com ACCESS_KEY=xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
    ```
    {: pre}
 
-8. Verify the service is running by checking the logs under `/tmp/kspm-analyzer.log`.
+7. Configure the service to start automatically during system startup by running the following command:
 
-## Applying CIS benchmark for AIX to your server
-{: #assign-policy}
+   ```sh
+   mkitab "fkcmd:2:respawn:startsrc -s kspm_analyzer -e 'NODE_NAME=HOSTNAME API_ENDPOINT=REGION.security-compliance-secure.cloud.ibm.com ACCESS_KEY=ACCESS_KEY'"
+   ```
+   {: pre}
 
-{{site.data.keyword.sysdigsecure_full}} provides the CIS benchmarks for AIX as posture policies. [Follow these steps](/docs/workload-protection?topic=workload-protection-posture-zones#posture-zones-policy-apply) to find the AIX policies and assign them to your hosts. 
+   Replace `HOSTNAME`, `REGION`, and `ACCESS_KEY` with the same values that you used in step 6.
 
-## Verifying results in the UI
-{: #aix-agent-verify}
+8. Verify that the service is running by checking the logs:
 
-After a few minutes, you can check the posture results for your AIX servers in the UI.
+   ```sh
+   tail -f /tmp/kspm-analyzer.log
+   ```
+   {: pre}
 
-Access your {{site.data.keyword.sysdigsecure_short}} instance:
-- Verify that your host appears under **Inventory**. You can filter by the hostname (`Resource Name`) or type of operating system (`Platform`).
-- The {{site.data.keyword.sysdigsecure_short}} agent will evaluate AIX after [you apply the corresponding policy](/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs#assign-policy). You can see all results in **Posture/Compliance** in the **Entire Infrastructure** zone or define specific zones for your AIX hosts under **Policies/Zones**.
+
+## Checking the agent status
+{: #powervs-aix-check-status}
+
+To check the status of the agent, run the following command:
+
+```sh
+lssrc -s kspm_analyzer
+```
+{: pre}
+
+## Stopping the agent
+{: #powervs-aix-stop-agent}
+
+To stop the agent, run the following command:
+
+```sh
+stopsrc -s kspm_analyzer
+```
+{: pre}
+
+## Restarting the agent
+{: #powervs-aix-restart-agent}
+
+To restart the agent, run the following command:
+
+```sh
+stopsrc -s kspm_analyzer && startsrc -s kspm_analyzer -e 'NODE_NAME=HOSTNAME API_ENDPOINT=REGION.security-compliance-secure.cloud.ibm.com ACCESS_KEY=ACCESS_KEY'
+```
+{: pre}
+
+Replace `HOSTNAME`, `REGION`, and `ACCESS_KEY` with your configuration values.
+
+## Removing the agent
+{: #powervs-aix-remove-agent}
+
+To remove the agent from an AIX host on {{site.data.keyword.powerSys_notm}}, complete the following steps:
+
+1. Stop the service:
+
+   ```sh
+   stopsrc -s kspm_analyzer
+   ```
+   {: pre}
+
+2. Remove the service from the system:
+
+   ```sh
+   rmssys -s kspm_analyzer
+   ```
+   {: pre}
+
+3. Remove the service from the startup configuration:
+
+   ```sh
+   rmitab fkcmd
+   ```
+   {: pre}
+
+4. Delete the binary file:
+
+   ```sh
+   rm /tmp/kspm-analyzer-aix-ppc64
+   ```
+   {: pre}
+
+### Viewing agent logs
+{: #powervs-aix-view-logs}
+
+The agent logs are located in the `/tmp/kspm-analyzer.log` file by default.
+
+To view the logs in real time, run the following command:
+
+```sh
+tail -f /tmp/kspm-analyzer.log
+```
+{: pre}
+
+To search for errors in the logs, run the following command:
+
+```sh
+grep -i error /tmp/kspm-analyzer.log
+```
+{: pre}

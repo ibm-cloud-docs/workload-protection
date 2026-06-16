@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-06-01"
 
 keywords: cloud detection and response, CDR, ibm cloud, falco, rules, fields, activity tracker
 

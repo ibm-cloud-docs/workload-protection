@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-05-18"
+lastupdated: "2026-06-16"
 
 keywords: cspm, compliance, agents, zones, policies, enterprise accounts
 
@@ -18,10 +18,10 @@ subcollection: workload-protection
 Review these best practices to help you get the most out of {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
 
-## Cloud Security Posture Management (CSPM)
+## Cloud security posture management (CSPM)
 {: #bp-cspm}
 
-Cloud Security Posture Management (CSPM) helps you continuously assess and improve your cloud security posture by identifying compliance violations across your {{site.data.keyword.cloud_notm}} account and resources. For more information, go to [Managing compliance with CSPM](/docs/workload-protection?topic=workload-protection-cspm-compliance).
+Cloud security posture management (CSPM) helps you continuously assess and improve your cloud security posture by identifying compliance violations across your {{site.data.keyword.cloud_notm}} account and resources. For more information, go to [Managing compliance with CSPM](/docs/workload-protection?topic=workload-protection-cspm-compliance).
 
 ### Enable CSPM
 {: #bp-cspm-enable}
@@ -40,7 +40,7 @@ Start with [predefined policies](/docs/workload-protection?topic=workload-protec
 ### Review and prioritize remediation
 {: #bp-cspm-remediation}
 
-After the first completed scan, review posture results from **Posture > Compliance**. Not all compliance violations carry the same risk. Focus your remediation efforts by severity, so critical and high-severity findings are addressed first. For more information, see [Findings](https://docs.sysdig.com/en/sysdig-secure/compliance-findings/){: external}. 
+After the first completed scan, review posture results from **Attack Surface > Compliance Findings**. Not all compliance violations carry the same risk. Focus your remediation efforts by severity, so critical and high-severity findings are addressed first. For more information, see [Findings](https://docs.sysdig.com/en/sysdig-secure/compliance-findings/){: external}. 
 
 Use the [**Inventory**](https://docs.sysdig.com/en/docs/sysdig-secure/inventory/){: external} to review all connected {{site.data.keyword.cloud_notm}} resources and use feature filters to narrow down to your most prevalent and at-risk resources.
 {: tip}

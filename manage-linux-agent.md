@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-08-19"
+  years:  2023, 2026
+lastupdated: "2026-06-16"
 
 keywords: workload protection, deploy, linux
 
@@ -12,87 +12,95 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Protecting Linux hosts
-{: manage-linux-agent}
+# On other Linux hosts
+{: #manage-linux-agent}
 
 After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts to collect events and protect your workloads. You can configure which threats you want to detect in each environment and conduct forensic processes to understand security breaches.
+{: shortdesc}
 
-{{site.data.keyword.sysdigsecure_short}} provides the following features to protect your standalone Linux hosts:
+You can protect your hosts running on {{site.data.keyword.cloud_notm}}, other cloud providers such as Amazon Web Services, Azure, Google Cloud Platform, or on-premises by using {{site.data.keyword.sysdigsecure_short}}. Support exists for installing the {{site.data.keyword.sysdigsecure_short}} agent using a package on Debian, Ubuntu, CentOS, RHEL, Fedora, Amazon AMI, and Amazon Linux 2. For information about deploying the agent on Linux hosts running on {{site.data.keyword.powerSysFull}}, see [Managing the {{site.data.keyword.sysdigsecure_short}} agent on Linux on {{site.data.keyword.powerSys_notm}}](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
+{: tip}
 
-* **Threat detection**: identify threats and suspicious activity based on application, network and host activity by processing syscall events and investigate with detailed system captures.
+## Adding an agent to a Linux host by using a script
+{: #manage-linux-agent-deploy-script}
 
-* **Posture management**: scan host configuration files for compliance and benchmarks such as CIS Linux Benchmark.
+Complete the following steps to add an agent to a Linux host by using a script:
 
-* **Host scanning**: scan host packages, detect the associated vulnerabilities and identify the resolution priority based on available fixed versions and severity.
+1. [Obtain the access key](/docs/workload-protection?topic=workload-protection-access_key).
 
-Protect your hosts running on {{site.data.keyword.cloud_notm}}, other cloud providers such as Amazon Web Services, Azure, Google Cloud Platform, or on-premise by using {{site.data.keyword.sysdigsecure_short}}. Support exists for installing the {{site.data.keyword.sysdigsecure_short}} agent using a package on Debian, Ubuntu, CentOS, RHEL, Fedora, Amazon AMI, and Amazon Linux 2.
+2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_ingestion).
 
-## Deploying the Linux agent by using a script
-{: manage-linux-agent-deploy-script}
-
-Complete the following steps to configure a {{site.data.keyword.sysdigsecure_short}} agent on Linux for detecting threats, validating your operating system posture and scanning your server to identify vulnerabilities. This agent will forward all security findings to an instance of the {{site.data.keyword.sysdigsecure_short}} service:
-
-1. Obtain the access key.
-
-2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion).
-
-3. Install the kernel headers. When you install a {{site.data.keyword.sysdigsecure_short}} agent, the agent uses kernel header files. Choose a distribution and run the following command for that distribution.
+3. Install the kernel headers. When you install a {{site.data.keyword.sysdigsecure_short}} agent, the agent uses kernel header files. Choose a distribution and run the corresponding command.
   
-   * For Debian and Ubuntu Linux distributions, run the following command:
+   For Debian and Ubuntu Linux distributions, run the following command:
 
-     ```sh
-     apt-get -y install linux-headers-$(uname -r)
-     ```
-     {: pre}
+   ```sh
+   apt-get -y install linux-headers-$(uname -r)
+   ```
+   {: pre}
 
-   * For RHEL, CentOS, and Fedora Linux distributions, run the following command:
+   For RHEL, CentOS, and Fedora Linux distributions, run the following command:
 
-     ```sh
-     yum -y install kernel-devel-$(uname -r)
-     ```
-     {: pre}  
+   ```sh
+   yum -y install kernel-devel-$(uname -r)
+   ```
+   {: pre}
   
-4. Deploy the {{site.data.keyword.sysdigsecure_short}} agent. Run the following command:
+4. Deploy the {{site.data.keyword.sysdigsecure_short}} agent by running the following command:
 
    ```sh
    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a ACCESS_KEY -c COLLECTOR_ENDPOINT --collector_port 6443 --tags TAG_DATA --secure true --additional_conf 'sysdig_api_endpoint: API_ENDPOINT\nhost_scanner:\n  enabled: true\n  scan_on_start: true\nkspm_analyzer:\n  enabled: true'
    ```
    {: pre}
   
-  Where:
+   Where:
   
-  * `ACCESS_KEY` is the ingestion key for the instance.
-  * `COLLECTOR_ENDPOINT` is the public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
-  * `API_ENDPOINT` is the public or private API Endpoint URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_rest_api). Make sure to add it without `https` or `/api`, for example `private.us-east.security-compliance-secure.cloud.ibm.com`.
-  * `TAG_DATA` are comma-separated tags that are formatted as `TAG_NAME:TAG_VALUE`. You can associate one or more tags to your {{site.data.keyword.sysdigsecure_short}} agent. For example, `role:serviceX,location:us-south`.
+   `ACCESS_KEY`
+   :   The ingestion key for the instance.
+   
+   `COLLECTOR_ENDPOINT`
+   :   The public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
+   
+   `API_ENDPOINT`
+   :   The public or private API endpoint URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [API endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_rest_api). Specify the endpoint without `https://` or `/api`. For example, `private.us-east.security-compliance-secure.cloud.ibm.com`.
+   
+   `TAG_DATA`
+   :   Comma-separated tags that are formatted as `TAG_NAME:TAG_VALUE`. You can associate one or more tags with your {{site.data.keyword.sysdigsecure_short}} agent. For example, `role:serviceX,location:us-south`.
   
-  To install cURL, run `yum -q -y` install curl for RHEL, CentOS, and Fedora Linux distributions.  
-5. Check that the {{site.data.keyword.sysdigsecure_short}} agent is running. Run the following command:
+   To install cURL, run `yum -q -y install curl` for RHEL, CentOS, and Fedora Linux distributions.
+   {: tip}
+
+5. Verify that the {{site.data.keyword.sysdigsecure_short}} agent is running by running the following command:
 
    ```sh
    ps -ef | grep sysdig
    ```
    {: pre}
 
-To see the latest {{site.data.keyword.sysdigsecure_short}} agent logs, go to the directory `/opt/draios/logs` and check the log file `draios.log`.
+6. Check the agent logs. The latest {{site.data.keyword.sysdigsecure_short}} agent logs are located in the `/opt/draios/logs` directory in the `draios.log` file.
 
-To look for errors, issue:
+   To look for errors, run the following command:
 
    ```sh
    grep error /opt/draios/logs/draios.log
    ```
-   {: pre}  
+   {: pre}
 
-## Deploying the Linux agent using a package
-{: manage-linux-agent-deploy-package}
+## Adding an agent to a Linux host by using a package
+{: #manage-linux-agent-deploy-package}
 
-You can also install the {{site.data.keyword.sysdigsecure_short}} agent manually by installing the package and defining all the configuration.
+You can also install the {{site.data.keyword.sysdigsecure_short}} agent manually by installing the package and defining the configuration.
 
-1. Obtain the access key.
+### Adding an agent to Debian or Ubuntu
+{: #manage-linux-agent-deploy-package-debian}
 
-2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion).
+Complete the following steps to add an agent to a Debian or Ubuntu Linux host:
 
-3. Trust the Sysdig Monitor GPG key, configure the `apt` repository, and update the package list by running the following commands:
+1. [Obtain the access key](/docs/workload-protection?topic=workload-protection-access_key).
+
+2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_ingestion).
+
+3. Trust the GPG key, configure the `apt` repository, and update the package list by running the following commands:
   
    ```sh
    curl -s https://download.sysdig.com/DRAIOS-GPG-KEY.public | apt-key add -
@@ -107,96 +115,105 @@ You can also install the {{site.data.keyword.sysdigsecure_short}} agent manually
    ```sh
    apt-get update
    ```
-   {: pre}  
+   {: pre}
 
-4. Install the kernel headers. When you install a {{site.data.keyword.sysdigsecure_short}} agent, the agent uses kernel header files. Choose a distribution and run the following command for that distribution.  
+4. Install the kernel headers by running the following command:
 
-  * For Debian and Ubuntu Linux distributions, run the following commands:
+   ```sh
+   apt-get -y install linux-headers-$(uname -r)
+   ```
+   {: pre}
 
-    ```sh
-    apt-get -y install linux-headers-$(uname -r)
-    ```
-    {: pre}
+5. Install the agent package by running the following command:
 
-  * For RHEL, CentOS, and Fedora Linux distributions, run the following command:
+   ```sh
+   apt-get -y install draios-agent
+   ```
+   {: pre}
 
-    ```sh
-    yum -y install kernel-devel-$(uname -r)
-    ```
-    {: pre}  
+6. Configure the agent by adding the access key and collector endpoint:
 
-5. Install, configure, and restart the Sysdig agent by running the following commands.  
+   ```sh
+   echo customerid: ACCESS_KEY >> /opt/draios/etc/dragent.yaml
+   echo tags: [TAGS] >> /opt/draios/etc/dragent.yaml
+   echo collector: COLLECTOR_URL >> /opt/draios/etc/dragent.yaml
+   echo ssl: true >> /opt/draios/etc/dragent.yaml
+   echo secure: true >> /opt/draios/etc/dragent.yaml
+   ```
+   {: pre}
 
-  * For Debian and Ubuntu Linux distributions, run the following commands:
+7. Restart the agent by running the following command:
 
-    ```sh
-    apt-get -y install draios-agent
-    ```
-    {: pre}
+   ```sh
+   service dragent restart
+   ```
+   {: pre}
 
-    ```sh
-    echo customerid: ACCESS_KEY >> /opt/draios/etc/dragent.yaml 
-    echo tags: [TAGS] >> /opt/draios/etc/dragent.yaml
-    ```
-    {: pre}
+### Adding an agent to RHEL, CentOS, or Fedora
+{: #manage-linux-agent-deploy-package-rhel}
 
-    ```sh
-    echo collector: COLLECTOR_URL >> /opt/draios/etc/dragent.yaml 
-    echo ssl: true >> /opt/draios/etc/dragent.yaml
-    ```
-    {: pre}
+Complete the following steps to add an agent to a RHEL, CentOS, or Fedora Linux host:
 
-    ```sh
-    service dragent restart
-    ```
-    {: pre}
+1. [Obtain the access key](/docs/workload-protection?topic=workload-protection-access_key).
 
-  * For RHEL, CentOS, and Fedora Linux distributions, run the following commands:
+2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_ingestion).
 
-    ```sh
-    yum -y install draios-agent
-    ```
-    {: pre}
+3. Trust the GPG key and configure the yum repository by running the following command:
 
-    ```sh
-    echo customerid: ACCESS_KEY >> /opt/draios/etc/dragent.yaml 
-    echo tags: [TAGS] >> /opt/draios/etc/dragent.yaml
-    ```
-    {: pre}
+   ```sh
+   sudo rpm --import https://download.sysdig.com/DRAIOS-GPG-KEY.public && sudo curl -s -o /etc/yum.repos.d/draios.repo https://download.sysdig.com/stable/rpm/draios.repo
+   ```
+   {: pre}
 
-    ```sh
-    echo collector: COLLECTOR_URL >> /opt/draios/etc/dragent.yaml 
-    echo ssl: true >> /opt/draios/etc/dragent.yaml
-    ```
-    {: pre}
+4. Install the kernel headers by running the following command:
 
-    ```sh
-    echo secure: true >> /opt/draios/etc/dragent.yaml
-    ```
-    {: pre}
+   ```sh
+   yum -y install kernel-devel-$(uname -r)
+   ```
+   {: pre}
 
-    ```sh
-    echo sysdig_api_endpoint: API_ENDPOINT >> /opt/draios/etc/dragent.yaml
-    echo host_scanner: >> /opt/draios/etc/dragent.yaml
-    echo "  enabled: true" >> /opt/draios/etc/dragent.yaml
-    echo "  scan_on_start: true" >> /opt/draios/etc/dragent.yaml
-    echo kspm_analyzer: >> /opt/draios/etc/dragent.yaml
-    echo "  enabled: true" >> /opt/draios/etc/dragent.yaml
-    ```
-    {: pre}
+5. Install the agent package by running the following command:
 
-    ```sh
-    sudo systemctl enable dragent
-    ```
-    {: pre}
+   ```sh
+   yum -y install draios-agent
+   ```
+   {: pre}
 
-    ```sh
-    sudo systemctl start dragent
-    ```
-    {: pre}
+6. Configure the agent by adding the access key and collector endpoint:
 
-Your configuration file (`/opt/draios/etc/dragent.yaml`) needs to look like:
-```
+   ```sh
+   echo customerid: ACCESS_KEY >> /opt/draios/etc/dragent.yaml
+   echo tags: [TAGS] >> /opt/draios/etc/dragent.yaml
+   echo collector: COLLECTOR_URL >> /opt/draios/etc/dragent.yaml
+   echo ssl: true >> /opt/draios/etc/dragent.yaml
+   echo secure: true >> /opt/draios/etc/dragent.yaml
+   echo sysdig_api_endpoint: API_ENDPOINT >> /opt/draios/etc/dragent.yaml
+   echo host_scanner: >> /opt/draios/etc/dragent.yaml
+   echo "  enabled: true" >> /opt/draios/etc/dragent.yaml
+   echo "  scan_on_start: true" >> /opt/draios/etc/dragent.yaml
+   echo kspm_analyzer: >> /opt/draios/etc/dragent.yaml
+   echo "  enabled: true" >> /opt/draios/etc/dragent.yaml
+   ```
+   {: pre}
+
+7. Enable and start the agent by running the following commands:
+
+   ```sh
+   sudo systemctl enable dragent
+   ```
+   {: pre}
+
+   ```sh
+   sudo systemctl start dragent
+   ```
+   {: pre}
+
+### Verifying the configuration file
+{: #manage-linux-agent-verify-config}
+
+Your configuration file (`/opt/draios/etc/dragent.yaml`) should contain the following settings:
+
+```yaml
 customerid: ACCESS_KEY
 tags: [TAGS]
 collector: COLLECTOR_URL
@@ -208,14 +225,16 @@ kspm_analyzer:
   enabled: true
 collector_port: 6443
 ssl: true
+secure: true
 ```
+{: codeblock}
 
-## Updating a Linux agent
-{: manage-linux-agent-update}
+## Updating the agent
+{: #manage-linux-agent-update}
 
-Complete the following steps to update a {{site.data.keyword.sysdigsecure_short}} agent on Linux.
+To update the {{site.data.keyword.sysdigsecure_short}} agent, complete the following steps based on your Linux distribution.
 
-To update the agent from Debian and Ubuntu Linux distributions, run the following commands as the `sudo` user:
+For Debian and Ubuntu Linux distributions, run the following commands:
 
 ```sh
 sudo apt-get update
@@ -227,10 +246,10 @@ sudo apt-get -y install draios-agent
 ```
 {: pre}
 
-To update the agent from RHEL, CentOS, and Fedora Linux distributions, run the following commands as the `sudo` user:
+For RHEL, CentOS, and Fedora Linux distributions, run the following commands:
 
 ```sh
-yum clean expire-cache
+sudo yum clean expire-cache
 ```
 {: pre}
 
@@ -239,32 +258,29 @@ sudo yum -y install draios-agent
 ```
 {: pre}
 
-## Removing a {{site.data.keyword.sysdigsecure_short}} agent that has been deployed as a service in a Linux system
-{: manage-linux-agent-removing}
+## Removing the agent
+{: #manage-linux-agent-removing}
 
-Complete the following steps to remove a {{site.data.keyword.sysdigsecure_short}} agent on Linux.
+To remove the {{site.data.keyword.sysdigsecure_short}} agent, complete the following steps based on your Linux distribution.
 
-To uninstall the agent from Debian and Ubuntu Linux distributions, run the following command as the `sudo` user:
+For Debian and Ubuntu Linux distributions, run the following command:
 
 ```sh
 sudo apt-get remove draios-agent
 ```
 {: pre}
 
-To uninstall the agent from RHEL, CentOS, and Fedora Linux distributions, run the following command as the `sudo` user:
+For RHEL, CentOS, and Fedora Linux distributions, run the following command:
 
 ```sh
 sudo yum erase draios-agent
 ```
 {: pre}
 
-## Troubleshooting the agent
-{: manage-linux-agent-troubleshooting}
+## Checking the agent status
+{: #manage-linux-agent-troubleshooting-status-cli}
 
-### Checking the status of an agent by using the CLI
-{: manage-linux-agent-troubleshooting-status-cli}
-
-To check the status of an agent, run the following command: 
+To check the status of the agent, run one of the following commands:
 
 ```sh
 service dragent status
@@ -276,39 +292,28 @@ systemctl status dragent
 ```
 {: pre}
 
-### Viewing the logs of an agent
-{: manage-linux-agent-troubleshooting-logs}
+## Viewing agent logs
+{: #manage-linux-agent-troubleshooting-logs}
 
-To see the latest {{site.data.keyword.sysdigsecure_short}} agent logs, go to the directory `/opt/draios/logs` and check the log file `draios.log`.
+The latest {{site.data.keyword.sysdigsecure_short}} agent logs are located in the `/opt/draios/logs` directory in the `draios.log` file.
 
-If you want to see logs for the vulnerability scanning, grep by `host-scanner`. To look for Posture information, grep by `kspm-analyzer`.
-
-To look for errors, you can run the following command: 
+To view logs for vulnerability scanning, run the following command:
 
 ```sh
-grep error /opt/draios/logs/draios.log
+grep host-scanner /opt/draios/logs/draios.log
 ```
 {: pre}
 
-### Verifying the state of the agent
-{: manage-linux-agent-troubleshooting-verify-state}
-
-To check that the {{site.data.keyword.sysdigsecure_short}} agent is running, run the following command: 
+To view logs for posture management, run the following command:
 
 ```sh
-ps -ef | grep sysdig
+grep kspm-analyzer /opt/draios/logs/draios.log
 ```
 {: pre}
 
+To look for errors, run the following command:
 
-## Verifying results in the UI
-{: manage-linux-agent-verify}
-
-After a few minutes, you can check the results in the UI for your Vulnerabilities, the Posture validation and, if any, Threats detected in your host.
-
-Access to your {{site.data.keyword.sysdigsecure_short}} instance:
-- Verify your agent is connected correctly under **Integrations / Data Sources / Sysdig Agents**.
-- Review your host appears under **Inventory**. You can filter by the hostname (`Resource Name`) or type of operating system (`Platform`)
-- The {{site.data.keyword.sysdigsecure_short}} agent will evaluate Linux configuration files to identify failing controls from the enabled Policies. You can see all results in **Posture/Compliance** in the **Entire Infrastructure** zone or define specific zones for your Linux hosts under **Policies/Zones**.
-- The {{site.data.keyword.sysdigsecure_short}} agent provides host and image scanning in Linux hosts, detecting all installed packages and associated vulnerabilities sorted by severity and prioritizing those with a fix available. Access to **Vulnerabilities / Runtime** and search for your host by the hostname or type of system (`asset.type is host`).
-- As soon as the {{site.data.keyword.sysdigsecure_short}} will start detecting threats based on the Runtime Policies that are configured. Access to **Threats** to see if any event was detected. In this [document](/docs/workload-protection?topic=workload-protection-threat_detection), you can find how to manage the threat detection policies and rules.
+```sh
+grep -i error /opt/draios/logs/draios.log
+```
+{: pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-05-18"
+lastupdated: "2026-06-16"
 
 keywords: enterprise, compliance, cloud security posture management, app configuration
 
@@ -26,6 +26,9 @@ completion-time: 2h
 If you're an Administrator of an enterprise account, you can set up {{site.data.keyword.sysdigsecure_full}} to scan all of your enterprise's child accounts for compliance. By completing this tutorial, you learn how to set up your own instance of {{site.data.keyword.sysdigsecure_short}}, add an agent to a {{site.data.keyword.redhat_openshift_notm}} cluster to scan for vulnerabilities within that cluster, and set up {{site.data.keyword.appconfig_short}} so {{site.data.keyword.sysdigsecure_short}} can scan your enterprise account and all child accounts for compliance. 
 {: shortdesc}
 
+This topic focuses on enabling CSPM for {{site.data.keyword.cloud_notm}}. Need to enable CSPM for another cloud provider, like AWS, Azure, GCP, or OCI? See [Connect cloud accounts](https://docs.sysdig.com/en/sysdig-secure/connect-cloud-accounts/){: external} for more information.
+{: tip}
+
 Imagine that you're the administrator of an enterprise account that contains multiple child accounts. You want to set up {{site.data.keyword.sysdigsecure_short}} to scan your enterprise and all child accounts for compliance. You already have a running instance of {{site.data.keyword.appconfig_short}} in your enterprise account, and you want {{site.data.keyword.sysdigsecure_short}} to use that instance of {{site.data.keyword.appconfig_short}} to gather configuration information for compliance scanning. To keep your workloads as secure as possible, you also want to add an agent to your {{site.data.keyword.redhat_openshift_notm}} cluster so {{site.data.keyword.sysdigsecure_short}} can scan that cluster for threats and vulnerabilities.
 
 ## Before you begin
@@ -46,9 +49,12 @@ Make sure that you're working in your enterprise account and that you have the n
 
 Create an instance of {{site.data.keyword.sysdigsecure_short}} in your enterprise account.
 
+You can use Terraform to set up an instance of {{site.data.keyword.sysdigsecure_short}} as code. For more information, see the [FAQ](/docs/workload-protection?topic=workload-protection-workload-protection-faq#faq-terraform-automation).
+{: tip}
+
 1. Go to the {{site.data.keyword.cloud_notm}} catalog, search for **Security and Compliance Center {{site.data.keyword.sysdigsecure_short}}**, and open the catalog listing for the service.
 2. Select the location for your instance and select a plan that fits your needs.
-3. Cloud Security Posture Management (CSPM) is enabled by default, but you already have an instance of {{site.data.keyword.appconfig_short}} in your enterprise account, so you need to disable it.
+3. Cloud security posture management (CSPM) is enabled by default, but you already have an instance of {{site.data.keyword.appconfig_short}} in your enterprise account, so you need to disable it.
     
     If you keep CSPM enabled, a new instance of {{site.data.keyword.appconfig_short}} is created to use with your instance of {{site.data.keyword.sysdigsecure_short}}. 
     {: important}

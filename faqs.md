@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-05-18"
+lastupdated: "2026-06-16"
 
 keywords: workload protection faq, security faq, cspm faq, agent faq, compliance faq
 
@@ -32,11 +32,17 @@ The Free Trial plan gives you access to all {{site.data.keyword.sysdigsecure_sho
 
 Your pricing depends on how you use {{site.data.keyword.sysdigsecure_short}}:
 
-- Cloud Security Posture Management (CSPM) for cloud compliance: Priced per instance of cloud accounts being scanned
-- Kubernetes protection with agents installed on clusters: Priced per worker node hour
-- Host protection with agents installed on virtual machines: Priced per virtual machine (VM) node hour
+- Cloud security posture management (CSPM) for cloud compliance: Priced per compute instance being scanned. For a list of compute instances that incur charges, see [billable resources](/docs/workload-protection?topic=workload-protection-pricing#pricing_pricing-units). Other cloud resources that are scanned for CSPM do not incur charges. 
+- Kubernetes protection with agents installed on clusters: Priced per worker node hour.
+- Host protection with agents installed on virtual machines: Priced per virtual machine (VM) node hour.
 
 Pricing is calculated monthly or hourly according to your consumption. As your usage grows, you can benefit from volume discounts across pricing tiers. For more information, go to [Pricing](/docs/workload-protection?topic=workload-protection-pricing).
+
+## Can I use Terraform to automate {{site.data.keyword.sysdigsecure_short}} provisioning?
+{: #faq-terraform-automation}
+{: faq}
+
+Yes. The [{{site.data.keyword.sysdigsecure_short}} module](https://registry.terraform.io/modules/terraform-ibm-modules/scc-workload-protection/ibm/latest){: external} provides a curated Terraform configuration for provisioning and managing {{site.data.keyword.sysdigsecure_full_notm}} instances as code. You can use it to automate instance setup consistently across accounts or environments. For an overview of available {{site.data.keyword.cloud_notm}} Terraform modules, see [About Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).
 
 ## Do I need separate agents if I use both {{site.data.keyword.sysdigsecure_short}} and {{site.data.keyword.mon_short}} on the same cluster?
 {: #faq-shared-agent}
