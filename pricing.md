@@ -40,7 +40,7 @@ All pricing units are calculated based on monthly or hourly cost and prorated ba
 {{site.data.keyword.sysdigsecure_short}} performs scans for all connected {{site.data.keyword.cloud_notm}} accounts every 24 hours. The 24-hour schedule begins as soon as you connect an account for the first time. On-demand scanning is also supported at no additional charge.
 {: tip}
 
-## How graduated tiers Work 
+## How the graduated tier plan works
 {: #pricing_plan-works}
 
 The graduated tier plan is the paid plan for {{site.data.keyword.sysdigsecure_short}}. Tiers are measured by the number of pricing units they contain. Pricing units are segmented into three categories: CSPM usage, active {{site.data.keyword.sysdigsecure_short}} agents, and deployment environments for {{site.data.keyword.sysdigsecure_short}} agents.

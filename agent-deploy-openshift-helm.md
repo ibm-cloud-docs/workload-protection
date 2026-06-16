@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-04-18"
+  years:  2023, 2026
+lastupdated: "2026-06-16"
 
 keywords:
 
@@ -12,46 +12,39 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing the {{site.data.keyword.sysdigsecure_short}} agent in {{site.data.keyword.redhat_openshift_notm}} by using a HELM chart
+# Managing the {{site.data.keyword.sysdigsecure_short}} agent in {{site.data.keyword.redhat_openshift_notm}} by using a Helm chart
 {: #agent-deploy-openshift-helm}
 
 You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.sysdigsecure_short}} agent on a {{site.data.keyword.redhat_openshift_notm}} cluster.
 {: shortdesc}
 
+You can also use the console to connect an existing {{site.data.keyword.redhat_openshift_notm}} or Kubernetes cluster to your instance of {{site.data.keyword.sysdigsecure_short}}. In the {{site.data.keyword.cloud_notm}} console, go to **Containers > Clusters** to access the existing cluster. Then, click **Connect** in the {{site.data.keyword.sysdigsecure_short}} widget to connect your cluster to {{site.data.keyword.sysdigsecure_short}}.
+{: fast-path}
+
 ## Before you begin
 {: #agent-deploy-openshift-helm-prereqs}
 
-- Install the latest release of the version 3 [Helm CLI](https://github.com/helm/helm/releases){: external} on your local machine.
-
-   Helm 3.6 or later is required.
-   {: note}
-
-- [Install the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`), {{site.data.keyword.containershort_notm}} plug-in (`ibmcloud oc`), and {{site.data.keyword.registrylong_notm}} plug-in (`ibmcloud cr`)](/docs/openshift?topic=openshift-cli-install).
-
-- [Install the {{site.data.keyword.redhat_openshift_notm}} (`oc`) and Kubernetes (`kubectl`) CLIs](/docs/openshift?topic=openshift-cli-install#install-kubectl-cli).
-
-- Check that you have access and permissions to deploy the {{site.data.keyword.sysdigsecure_short}} agent on the cluster.
-
-- Verify the `ibm-observe` project is available in your cluster. The agent is deployed in this project.
+- Install the latest release of the [Helm CLI](https://github.com/helm/helm/releases){: external} on your local machine. Helm version 3.6 or later is required. 
+- Install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.containershort_notm}} plug-in, the {{site.data.keyword.registrylong_notm}} plug-in, and the {{site.data.keyword.redhat_openshift_notm}} and Kubernetes CLIs. For more information, go to [Installing the CLI](/docs/openshift?topic=openshift-cli-install).
+- Verify that you have the required access and permissions to deploy the {{site.data.keyword.sysdigsecure_short}} agent on the cluster.
+- Verify that the `ibm-observe` project is available in your cluster. The agent is deployed in this project.
 
     A project is a namespace in a cluster.
 
-    You can run `oc adm new-project --node-selector='' ibm-observe` to create the project.
+    To create the project, run `oc adm new-project --node-selector='' ibm-observe`.
     {: tip}
 
-- Outbound traffic from your cluster to {{site.data.keyword.sysdigsecure_short}} endpoints is required to port `443` and `6443`. Similarly, if you connect the agents via VPE, both ports need to be allowed for outbound traffic from the cluster.
+- Verify that outbound traffic from your cluster to {{site.data.keyword.sysdigsecure_short}} endpoints is allowed on ports `443` and `6443`. If you connect the agents through a Virtual Private Endpoint (VPE), both ports must be allowed for outbound traffic from the cluster.
 
-## Deploy an agent
+## Deploying an agent
 {: #agent-deploy-openshift-helm-deploy}
 
-Complete the following steps to deploy an agent by using Helm:
+Complete the following steps to deploy an agent by using Helm.
 
-### Step 1. Set up the cluster context
+### Set up the cluster context
 {: #agent-deploy-openshift-helm-install-step1}
 
-Complete the following steps:
-
-1. Log in to the account. If you have a federated account, include the `--sso` option.
+1. Log in to your account. If you have a federated account, include the `--sso` option.
 
     ```sh
     ibmcloud login [-g <resource_group>] [--sso]
@@ -65,7 +58,7 @@ Complete the following steps:
     ```
     {: pre}
 
-3. In your browser, navigate to the address of your **Master URL** and append `/console`. For example, `https://c0.containers.cloud.ibm.com:23652/console`.
+3. In your browser, navigate to the address of your cluster controller URL and append `/console`. For example, `https://c0.containers.cloud.ibm.com:23652/console`.
 
 4. From the {{site.data.keyword.redhat_openshift_notm}} web console menu bar, click your profile **IAM#user.name@email.com > Copy Login Command**. Display and copy the `oc login` token command into your command line to authenticate from the CLI.
 
@@ -76,7 +69,7 @@ Complete the following steps:
     ```
     {: pre}
 
-    Example output
+    Example output:
 
     ```sh
     Client Version: v4.11.0
@@ -87,62 +80,40 @@ Complete the following steps:
     If you can't perform operations that require Administrator permissions, such as listing all the worker nodes or pods in a cluster, download the TLS certificates and permission files for the cluster administrator by running the `ibmcloud oc cluster config --cluster <cluster_name_or_ID> --admin` command.
     {: tip}
 
-### Step 2. Setup the Sysdig Helm repository
+### Set up the Sysdig Helm repository
 {: #agent-deploy-openshift-helm-install-step2}
 
 Add the {{site.data.keyword.sysdigsecure_short}} Helm repository to your Helm instance.
 
-1.  Add the Helm repository.
+1. Add the Helm repository.
 
     ```sh
     helm repo add sysdig https://charts.sysdig.com
     ```
     {: pre}
 
-    If you get the following error:
-
-    ```text
-    helm repo add sysdig https://charts.sysdig.com    --debug
-    Error: context deadline exceeded
-    helm.go:84: [debug] context deadline exceeded
-    ```
-    {: screen}
-
-    Run the following command and retry adding the Helm repository.
-
-    ```sh
-    rm $HOME/Library/Preferences/helm/repositories.lock
-    ```
-    {: pre}
-
-
-2. Update the repos to retrieve the latest versions of all Helm charts.
+2. Update the repository to retrieve the latest versions of all Helm charts.
 
     ```sh
     helm repo update
     ```
     {: pre}
 
-3. List the Helm charts that are currently available for the Sysdig repo.
+3. List the Helm charts that are currently available for the Sysdig repository.
 
     ```sh
     helm search repo sysdig
     ```
     {: pre}
 
-4. Verify the Helm chart `sysdig/sysdig-deploy` is listed.
+4. Verify that the `sysdig/sysdig-deploy` Helm chart is listed.
 
-
-
-
-
-
-### Step 3. Create the values yaml file
+### Create the values `YAML` file
 {: #agent-deploy-openshift-helm-install-step3}
 
-Define a yaml file and include the values to deploy the {{site.data.keyword.sysdigsecure_short}} agent and the Secure components that you plan to deploy. For example, name the file `agent-values-monitor-secure.yaml`.
+Define a `YAML` file and include the values to deploy the {{site.data.keyword.sysdigsecure_short}} agent and the Secure components that you plan to deploy. For example, name the file `agent-values-monitor-secure.yaml`.
 
-The following yaml is a template that you can use to configure the {{site.data.keyword.sysdigsecure_short}} agent and the Secure components. You can customize the file by removing or commenting with `#` the sections that are not required for your agent deployment.
+The following `YAML` is a template that you can use to configure the {{site.data.keyword.sysdigsecure_short}} agent and the Secure components. You can customize the file by removing or commenting with `#` the sections that are not required for your agent.
 
 ```yaml
 agent:
@@ -203,29 +174,33 @@ clusterShield:
 ```
 {: codeblock}
 
-Where
+Where:
 
-- `CLUSTER_NAME` is the name of the cluster where you are deploying the agent.
-- `SERVICE_ACCESS_KEY` is the {{site.data.keyword.sysdigsecure_short}} instance access key.
-- `INGESTION_ENDPOINT` is the instance's ingestion endpoint. For example, `ingest.us-east.security-compliance-secure.cloud.ibm.com`. Under `cluster_shield.sysdig_endpoint.collector` make sure to add the port at the end.
-- `API_ENDPOINT` is the intance's API endpoint. For example, `us-east.security-compliance-secure.cloud.ibm.com`
+`CLUSTER_NAME`
+:   The name of the cluster where you are deploying the agent.
 
-    The `universal_ebpf` driver requires kernel version 5.8 or newer. If you have a lower version you need BPF ring buffer support and a kernel that exposes BTF (BPF Type Format). If you have any problem during the agent installation, try removing the lines `agent.ebpf.enabled: true` and `agent.ebpf.kind: universal_ebpf` or [contact support](/docs/workload-protection?topic=workload-protection-gettinghelp).
-   {: note}
+`SERVICE_ACCESS_KEY`
+:   The {{site.data.keyword.sysdigsecure_short}} instance access key.
 
-### Step 4. Install the helm chart
+`INGESTION_ENDPOINT`
+:   The instance's ingestion endpoint. For example, `ingest.us-east.security-compliance-secure.cloud.ibm.com`.
+
+`API_ENDPOINT`
+:   The instance's API endpoint. For example, `us-east.security-compliance-secure.cloud.ibm.com`.
+
+### Install the Helm chart
 {: #agent-deploy-openshift-helm-install-step4}
 
-To deploy the agent, the Secure components, or both, you must install the `sysdig/sysdig-deploy` chart and use the variables yaml file that you configured in the previous step.
+To deploy the agent, the Secure components, or both, install the `sysdig/sysdig-deploy` chart and use the variables `YAML` file that you configured in the previous step.
 
-Run the following command to install the agent by using the helm chart:
+Run the following command to install the agent by using the Helm chart:
 
 ```sh
 helm install -n ibm-observe sysdig-agent sysdig/sysdig-deploy -f agent-values-monitor-secure.yaml
 ```
 {: pre}
 
-For example, for the us-east region, a sample Helm values file looks as follows:
+The following example shows a sample Helm values file for the `us-east` region:
 
 ```yaml
 agent:
@@ -284,27 +259,14 @@ clusterShield:
       posture:
         enabled: true
 ```
-{: pre}
+{: codeblock}
 
-Where
-
-- `CLUSTER_NAME` is the name of the cluster where you are deploying the agent.
-- `SERVICE_ACCESS_KEY` is the {{site.data.keyword.sysdigsecure_short}} instance access key.
-- `INGESTION_ENDPOINT` is the instance's ingestion endpoint.
-- `API_ENDPOINT` is the intance's API endpoint.
-
-
-
-If you encounter the following error: `Error: INSTALLATION FAILED: OpenShift cluster unreachable: xxxxxx failed to refresh token: oauth2: cannot fetch token: 400 Bad Request`, set your cluster context and try again.
-
-
-
-## Update an agent
+## Updating an agent
 {: #agent-deploy-openshift-helm-update}
 
 To update the agent version by using Helm, complete the following steps:
 
-1. Update the chart.
+1. Update the Helm repository.
 
     ```sh
     helm repo update
@@ -318,14 +280,15 @@ To update the agent version by using Helm, complete the following steps:
     ```
     {: pre}
 
-With these steps, you'll upgrade your agents to the latest available version.
+These steps upgrade your agents to the latest available version.
 
-## Remove an agent
+## Removing an agent
 {: #agent-deploy-openshift-helm-delete}
 
-To delete the agent by using Helm, you must uninstall the chart.
+You can also use the console to remove the agent from your cluster. In the {{site.data.keyword.cloud_notm}} console, go to **Containers > Clusters** to access the existing cluster. Then, open the **Options** menu in the {{site.data.keyword.sysdigsecure_short}} widget and select **Disconnect**.
+{: fast-path}
 
-Complete the following steps:
+To delete the agent by using Helm, uninstall the chart.
 
 1. List the charts that are installed.
 
@@ -334,7 +297,7 @@ Complete the following steps:
     ```
     {: pre}
 
-    The output of the command lists charts as follows:
+    The output lists the installed charts:
 
     ```text
     NAME        	NAMESPACE  	REVISION	UPDATED                             	STATUS  	CHART              	APP VERSION
@@ -345,12 +308,9 @@ Complete the following steps:
 2. Uninstall the chart.
 
     ```sh
-    helm delete sysdig-agent  -n ibm-observe
+    helm delete sysdig-agent -n ibm-observe
     ```
     {: pre}
 
-    In terms of Helm, `sysdig-agent` is the name of the release.
+    In Helm, `sysdig-agent` is the name of the release.
     {: tip}
-
-    If you forget to include the namespace in the command, you get the following error: `Error: uninstall: Release not loaded: sysdig-agent: release: not found`.
-    

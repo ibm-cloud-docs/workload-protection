@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-07-09"
+  years:  2023, 2026
+lastupdated: "2026-06-16"
 
 keywords:
 
@@ -15,213 +15,223 @@ subcollection: workload-protection
 # Managing access keys
 {: #access_key}
 
-The **Access Key** is a token that you must use to configure agents to successfully forward data to your {{site.data.keyword.sysdigsecure_full}} instance in {{site.data.keyword.cloud_notm}}.
+An access key is a token that you must use to configure agents to successfully forward data to your {{site.data.keyword.sysdigsecure_short}} instance in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 
-## Getting the access key 
+## Managing access keys by using the console
 {: #access_key_ibm_cloud_ui}
 {: ui}
 
-To get the access key for an {{site.data.keyword.sysdigsecure_full_notm}} instance through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
+You can view, create, disable, enable, and delete access keys for a {{site.data.keyword.sysdigsecure_short}} instance by using the {{site.data.keyword.cloud_notm}} console.
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+To manage access keys by using the console, complete the following steps:
 
-2. Go to the Menu icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Resource list**.
+1. In the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com){: external}, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Security > Compliance**.
+2. Click the name of your {{site.data.keyword.sysdigsecure_short}} instance.
+3. From the **Actions** menu, select **Manage key**.
+4. Click **your dashboard** to view, create, disable, enable, or delete access keys. 
 
-3. Select **Security**. You can see the list of instances that are available on {{site.data.keyword.cloud_notm}}.
+You can also hide the access key from non-administrators. For more information, go to [Non-admin users](https://docs.sysdig.com/en/administration/agent_access_key/#non-admin-users){: external}.
+{: tip}
 
-4. Identify the instance for which you want to get the access key. Click the *Actions* icon ![Actions icon](../../icons/action-menu-icon.svg "Actions") next to the instance and then click **Manage key**.
-
-    A window opens where you can click **Show key** to view the access key.
-
-
-
-## Getting the access key through the CLI
+## Getting the access key by using the CLI
 {: #access_key_cli}
 {: cli}
 
-To get the access key for a instance through the command line, complete the following steps:
+To get the access key for a {{site.data.keyword.sysdigsecure_short}} instance by using the CLI, complete the following steps:
 
-1. [Pre-requisite] [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
+1. [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-2. Log in to the region in the {{site.data.keyword.cloud_notm}} where the instance is running. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
+2. Log in to the region that contains your {{site.data.keyword.sysdigsecure_short}} instance by running the [`ibmcloud login`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) command:
 
-3. Set the resource group where the instance is running. Run the following command: [ibmcloud target](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target)
+    ```sh
+    ibmcloud login
+    ```
+    {: pre}
 
-    By default, the `default` resource group is set.
+3. Set the resource group where the instance is running by running the [`ibmcloud target`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command:
 
-4. Get the instance name. Run the following command: [ibmcloud resource service-instances](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances)
+    ```sh
+    ibmcloud target -g <resource_group>
+    ```
+    {: pre}
 
-    ```text
+    Where `<resource_group>` is the name of the resource group. By default, the `default` resource group is set.
+
+4. Get the instance name by running the [`ibmcloud resource service-instances`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances) command:
+
+    ```sh
     ibmcloud resource service-instances
     ```
     {: pre}
 
-5. Get the name of the API key that is associated with the instance. Run the [`ibmcloud resource service-keys`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_keys) command:
+5. Get the name of the API key that is associated with the instance by running the [`ibmcloud resource service-keys`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_keys) command:
 
-    ```text
-    ibmcloud resource service-keys --instance-name INSTANCE_NAME  --output JSON
+    ```sh
+    ibmcloud resource service-keys --instance-name <instance_name> --output JSON
     ```
     {: pre}
 
-    where INSTANCE_NAME is the name of the instance that you obtained in the previous step.
+    Where `<instance_name>` is the name of the instance that you obtained in the previous step.
 
-    The output from this command includes the field **Sysdig Access Key** that contains the access key for the instance.
+    The output from this command includes the `Sysdig Access Key` field that contains the access key for the instance.
 
+You can also create, delete, enable, or disable access keys by using the API or the console. To see the steps, switch to the API instructions, or go to [Managing access keys by using the console](/docs/workload-protection?topic=workload-protection-access_key&interface=ui#access_key_ibm_cloud_ui).
+{: tip}
 
+## Getting the access key by using the API
+{: #access_key_get_api}
+{: api}
 
+You can get the access key by using the CLI or the console. To see the steps, switch to the CLI or UI instructions. You can also use the API to retrieve all available access keys. For more information, see [Viewing the available access keys by using the API](#access_key_view).
 
-
-## Creating an access key with the API
+## Creating an access key by using the API
 {: #access_key_create}
 {: api}
 
 If the access key is compromised or you have a policy to renew it after a number of days, you can generate a new access key and disable the old one.
 
-To create a new access key for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
+To create a new access key for an {{site.data.keyword.sysdigsecure_short}} instance, complete the following steps:
 
-1. Obtain the {{site.data.keyword.sysdigsecure_short}} API token from the {{site.data.keyword.sysdigsecure_full_notm}} UI.
+1. Copy the API token from the {{site.data.keyword.sysdigsecure_short}} UI. For more information, see [Retrieve the Sysdig API token](https://docs.sysdig.com/en/administration/retrieve-the-sysdig-api-token/){: external}.
 
-2. Issue a curl POST request against the endpoint to generate a new access key.
+2. Issue a curl POST request against the endpoint to generate a new access key:
 
-    ```text
-    curl -XPOST -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'IBMInstanceID: GUID' https:ENDPOINT/api/customer/accessKeys
+    ```sh
+    curl -X POST -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'IBMInstanceID: GUID' https://ENDPOINT/api/customer/accessKeys
     ```
     {: pre}
 
-    Where
+    Where:
 
-    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints).
-    * `SYSDIG_API_TOKEN` is the API token that you get in step 1.
+    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints).
+    * `SYSDIG_API_TOKEN` is the API token that you obtained in step 1.
     * `GUID` is the GUID of the instance that is associated with the access key.
 
-    For example, to create an access key, you can run the following:
+    For example:
 
-    ```text
-     curl -XPOST -H 'Authorization: Bearer xxxxxxx' https://us-east.security-compliance-secure.cloud.ibm.com/api/customer/accessKeys
+    ```sh
+    curl -X POST -H 'Authorization: Bearer xxxxxxx' -H 'IBMInstanceID: 12345678-1234-1234-1234-123456789012' https://us-east.security-compliance-secure.cloud.ibm.com/api/customer/accessKeys
     ```
     {: pre}
 
-    The output will provide the newly generated access key in the response.
+    The output provides the generated access key in the response:
 
     ```json
-    {"customerAccessKey":{"enabled":true,"accessKey":"b302311f-aa1c-4930-8726-59fb4ba0fe84","dateCreated":1683550580444,"dateDisabled":null,"limit":null,"reservation":null,"teamId":null}}
     {
         "customerAccessKey": {
             "enabled": true,
             "accessKey": "12345678-1234-1234-1234-123456789012",
             "dateCreated": 1573852152224,
             "dateDisabled": null,
-            "limit":null,
-            "reservation":null,
-            "teamId":null
+            "limit": null,
+            "reservation": null,
+            "teamId": null
         }
     }
     ```
     {: screen}
 
-3. The access key can now be used in the agent configuration files.
+    You can now use the access key to configure agents.
 
-## Disabling an access key with the API
+## Disabling an access key by using the API
 {: #access_key_disable}
 {: api}
 
-To disable an existing access key for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
+To disable an existing access key for an {{site.data.keyword.sysdigsecure_short}} instance, complete the following steps:
 
-1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI.
+1. Copy the API token from the {{site.data.keyword.sysdigsecure_short}} UI. For more information, see [Retrieve the Sysdig API token](https://docs.sysdig.com/en/administration/retrieve-the-sysdig-api-token/){: external}.
 
-2. Issue a curl POST request against the endpoint to disable the given access key.
+2. Issue a curl POST request against the endpoint to disable the access key:
 
-    ```text
-    curl -XPOST -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'IBMInstanceID: GUID' https:ENDPOINT/api/customer/accessKeys/ACCESS_KEY/disable
+    ```sh
+    curl -X POST -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'IBMInstanceID: GUID' https://ENDPOINT/api/customer/accessKeys/ACCESS_KEY/disable
     ```
     {: pre}
 
-    Where
+    Where:
 
-    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints).
-    * `SYSDIG_API_TOKEN` is the API Token retrieved in step 1.
-    * `ACCESS_KEY` is the access key that you wish to disable.
+    * `ENDPOINT` is the URL for the region where the instance is available. 
+    * `SYSDIG_API_TOKEN` is the API token that you obtained in step 1.
+    * `ACCESS_KEY` is the access key that you want to disable.
     * `GUID` is the GUID of the instance that is associated with the access key.
 
-    Once you disable the access key, the agents connected with the access key will be immeditely blocked from sending metrics to this {{site.data.keyword.sysdigsecure_full_notm}} instance.
+    After you disable the access key, agents that are connected with the access key are immediately blocked from sending metrics to this {{site.data.keyword.sysdigsecure_short}} instance.
     {: important}
 
-    For example, to delete an access key, you can run the following:
+    For example:
 
-    ```text
-     curl -XPOST -H 'Authorization: Bearer xxxxxxx' https://us-east.security-compliance-secure.cloud.ibm.com/api/customer/accessKeys/<ACCESSKEY>/disable
+    ```sh
+    curl -X POST -H 'Authorization: Bearer xxxxxxx' -H 'IBMInstanceID: 12345678-1234-1234-1234-123456789012' https://us-east.security-compliance-secure.cloud.ibm.com/api/customer/accessKeys/b302311f-aa1c-4930-8726-59fb4ba0fe84/disable
     ```
     {: pre}
 
-    The output will provide the newly generated access key in the response.
+    The output provides the disabled access key in the response:
 
     ```json
-    {"customerAccessKey":{"enabled":true,"accessKey":"b302311f-aa1c-4930-8726-59fb4ba0fe84","dateCreated":1683550580444,"dateDisabled":null,"limit":null,"reservation":null,"teamId":null}}
     {
         "customerAccessKey": {
             "enabled": false,
             "accessKey": "12345678-1234-1234-1234-123456789012",
             "dateCreated": 1573852152224,
-            "dateDisabled":1683550789329,
-            "limit":null,
-            "reservation":null,
-            "teamId":null
+            "dateDisabled": 1683550789329,
+            "limit": null,
+            "reservation": null,
+            "teamId": null
         }
     }
     ```
     {: screen}
 
 
-## Enabling an access key with the API
+## Enabling an access key by using the API
 {: #access_key_enable}
 {: api}
 
-To enable an existing access key for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
+To enable an existing access key for an {{site.data.keyword.sysdigsecure_short}} instance, complete the following steps:
 
-1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI.
+1. Copy the API token from the {{site.data.keyword.sysdigsecure_short}} UI. For more information, see [Retrieve the Sysdig API token](https://docs.sysdig.com/en/administration/retrieve-the-sysdig-api-token/){: external}.
 
-2. Issue a curl POST request against the endpoint to enable the given access key.
+2. Issue a curl POST request against the endpoint to enable the access key:
 
-    ```text
-    curl -XPOST -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'IBMInstanceID: GUID' https://ENDPOINT/api/customer/accessKeys/ACCESS_KEY/enable
+    ```sh
+    curl -X POST -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'IBMInstanceID: GUID' https://ENDPOINT/api/customer/accessKeys/ACCESS_KEY/enable
     ```
     {: pre}
 
-    Where
+    Where:
 
-    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints).
-    * `SYSDIG_API_TOKEN` is the API Token retrieved in step 1.
-    * `ACCESS_KEY` is the access key that you wish to enable.
+    * `ENDPOINT` is the URL for the region where the instance is available. 
+    * `SYSDIG_API_TOKEN` is the API token that you obtained in step 1.
+    * `ACCESS_KEY` is the access key that you want to enable.
     * `GUID` is the GUID of the instance that is associated with the access key.
 
-
-After you enable the access key, the agents will need to be manually restarted since an agent that connects with a disabled access key will be terminated.
+After you enable the access key, you must manually restart the agents because an agent that connects with a disabled access key is terminated.
 {: note}
 
-## Viewing the available access keys
+## Viewing the available access keys by using the API
 {: #access_key_view}
 {: api}
 
-To view all of the access keys for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
+To view all of the access keys for an {{site.data.keyword.sysdigsecure_short}} instance, complete the following steps:
 
-1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI.
+1. Copy the API token from the {{site.data.keyword.sysdigsecure_short}} UI. For more information, see [Retrieve the Sysdig API token](https://docs.sysdig.com/en/administration/retrieve-the-sysdig-api-token/){: external}.
 
-2. Issue a curl GET request against the regional endpoint to enable the given access key.
+2. Issue a curl GET request against the regional endpoint to view the access keys:
 
-    ```text
-    curl -XGET -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'IBMInstanceID: GUID' https://ENDPOINT/api/customer/accessKeys
+    ```sh
+    curl -X GET -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'IBMInstanceID: GUID' https://ENDPOINT/api/customer/accessKeys
     ```
     {: pre}
 
-    Where
+    Where:
 
-    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints).
-    * `SYSDIG_API_TOKEN` is the API Token retrieved in Step 1.
+    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints).
+    * `SYSDIG_API_TOKEN` is the API token that you obtained in step 1.
     * `GUID` is the GUID of the instance that is associated with the access key.
 
-    The output will provide a list of the access keys in the response and whether they are enabled.
+    The output provides a list of the access keys and whether they are enabled:
 
     ```json
     {
@@ -250,46 +260,24 @@ To view all of the access keys for an {{site.data.keyword.sysdigsecure_full_notm
     {: screen}
 
 
-## Deleting access keys
+## Deleting access keys by using the API
 {: #access_key_delete}
 {: api}
 
-To delete an access keys for an {{site.data.keyword.sysdigsecure_full_notm}} instance, complete the following steps:
+To delete an access key for an {{site.data.keyword.sysdigsecure_short}} instance, complete the following steps:
 
-1. Obtain the API Token from the {{site.data.keyword.sysdigsecure_full_notm}} UI.
+1. Copy the API token from the {{site.data.keyword.sysdigsecure_short}} UI. For more information, see [Retrieve the Sysdig API token](https://docs.sysdig.com/en/administration/retrieve-the-sysdig-api-token/){: external}.
 
-2. Issue a curl DELETE request against the regional endpoint to delete the access key.
+2. Issue a curl `DELETE` request against the regional endpoint to delete the access key:
 
-    ```text
+    ```sh
     curl -X DELETE -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'IBMInstanceID: GUID' https://ENDPOINT/api/customer/accessKeys/ACCESS_KEY
     ```
     {: pre}
 
-    Where
+    Where:
 
-    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints).
-    * `SYSDIG_API_TOKEN` is the API Token retrieved in Step 1.
+    * `ENDPOINT` is the URL for the region where the instance is available. 
+    * `SYSDIG_API_TOKEN` is the API token that you obtained in step 1.
     * `GUID` is the GUID of the instance that is associated with the access key.
-    * `ACCESS_KEY` is the access key to be deleted.  You can [view a list of all access keys](/docs/workload-protection?topic=workload-protection-access_key&interface=api#access_key_view) to obtain the access key values.
-    * `GUID` is the GUID of the instance that is associated with the access key.
-
-
-
-## Hide the access key
-{: #access_key_hide}
-{: ui}
-
-
-To hide the *Access Key* page for non-admin users in an {{site.data.keyword.sysdigsecure_short}} instance through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
-
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-
-2. Go to the Menu icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Resource list**.
-
-3. Select **Security**. You can see the list of instances that are available on {{site.data.keyword.cloud_notm}}.
-
-4. Identify the instance. Select **Open dashboard**.
-
-5. From the *Selector* button in the navigation bar, choose **Settings** &gt; **User Profile** &gt; **Admin Priviledges**.
-
-6. Enable the option **Hide Agent Install** to hide the access key for non-admin users.
+    * `ACCESS_KEY` is the access key to be deleted. You can [view a list of all access keys](/docs/workload-protection?topic=workload-protection-access_key&interface=api#access_key_view) to obtain the access key values.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-04-18"
+  years:  2023, 2026
+lastupdated: "2026-06-16"
 
 keywords:
 
@@ -12,33 +12,16 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Controlling access through IAM
+# Assigning access to {{site.data.keyword.sysdigsecure_short}}
 {: #iam}
 
-{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and consistently control access to all cloud resources in the {{site.data.keyword.cloud_notm}}. You grant permissions through policies that you define on the {{site.data.keyword.sysdigsecure_full_notm}} service in the account.
+Access to {{site.data.keyword.sysdigsecure_short}} is controlled by {{site.data.keyword.iamlong}} (IAM). Every user that accesses the {{site.data.keyword.sysdigsecure_short}} service in your account must be assigned an access policy with an IAM role. The policy determines which actions a user can perform within the context of {{site.data.keyword.sysdigsecure_short}}.
 {: shortdesc}
 
-**Users in an account must be assigned a platform role to manage instances and to launch the UI from the {{site.data.keyword.cloud_notm}}. In addition, users must have a service role that defines the permissions to work with {{site.data.keyword.sysdigsecure_full_notm}}.**
+Users in an account must be assigned a platform role to manage instances and to launch {{site.data.keyword.sysdigsecure_short}} from {{site.data.keyword.cloud_notm}}. In addition, users must have a service role that defines the permissions to work with {{site.data.keyword.sysdigsecure_short}}.
 {: important}
 
-The policy determines the actions that the user can perform within the context of the selected service or instance. The actions are customized and defined with operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles.
-
-*Policies* enable access to be granted at different levels. Some of the options include the following:
-
-* Access to all IAM-enabled services in your account
-* Access across all instances of the service in a single region in your account
-* Access to an individual service instance in your account
-* Access to all instances of the service within the context of a resource group
-* Access to all instances of the service in a single region within the context of a resource group
-* Access to all IAM-enabled services within the context of a resource group
-
-*Roles* define the actions that a user or serviceID can run. There are different types of roles in the {{site.data.keyword.cloud_notm}}:
-
-* *Platform management roles* enable users to perform tasks on service resources at the platform level, for example assigning user access for the service, creating or deleting service IDs, creating instances, assigning policies for your service to other users, and binding instances to applications.
-* *Service access roles* enable users to be assigned varying levels of permission when calling the service's API or running actions in the monitoring UI.
-
-To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use **access groups**. You can assign a single policy to the group instead of assigning the same access multiple times for each individual user or service ID.
-{: tip}
+To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, [use access groups](/docs/account?topic=account-groups&interface=ui). You can assign a single policy to the group instead of assigning the same access multiple times for each individual user or service ID. For more information, go to [How IAM access works](/docs/account?topic=account-account_setup#how_access). 
 
 
 ## Managing access by using access groups
@@ -66,7 +49,7 @@ Use the following actions to manage IAM policies in the {{site.data.keyword.clou
 ## {{site.data.keyword.cloud_notm}} platform roles
 {: #iam_platform}
 
-Users must be granted a platform role to allow them to view and manage the {{site.data.keyword.sysdigsecure_full_notm}} service in your account. You can grant permissions to work with all the instances in the {{site.data.keyword.cloud_notm}} account or you can restrict access to individual instances.
+Users must be granted a platform role to allow them to view and manage the {{site.data.keyword.sysdigsecure_short}} service in your account. You can grant permissions to work with all the instances in the {{site.data.keyword.cloud_notm}} account or you can restrict access to individual instances.
 
 The following table identifies the platform role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run the specified platform actions:
 
@@ -80,9 +63,6 @@ The following table identifies the platform role that you can grant a user in th
 | `View service instances in the Observability Monitoring dashboard`      | ![Checkmark icon](/images/checkmark-icon.svg)  | ![Checkmark icon](/images/checkmark-icon.svg)    | ![Checkmark icon](/images/checkmark-icon.svg)      | ![Checkmark icon](/images/checkmark-icon.svg)    |
 {: caption="IAM user roles and actions" caption-side="top"}
 
-
-A user with an **administrator** role automatically has the service **manager** role permissions.
-{: note}
 
 ## {{site.data.keyword.cloud_notm}} service roles
 {: #iam_svcroles}
@@ -110,7 +90,7 @@ The following table identifies the service role that you can grant a user in the
 ## IAM actions
 {: #iam_actions}
 
-The following table identifies the IAM actions that are assigned to the platform and service roles for the {{site.data.keyword.sysdigsecure_full_notm}} service:
+The following table identifies the IAM actions that are assigned to the platform and service roles for the {{site.data.keyword.sysdigsecure_short}} service:
 
 | Role type         | Role              | IAM actions |
 |-------------------|-------------------|--------------|
@@ -123,7 +103,7 @@ The following table identifies the IAM actions that are assigned to the platform
 ## How do I know which access policies are set for me?
 {: #iam_accesspolicy}
 
-You can see which access policies are set for you in the [{{site.data.keyword.cloud_notm}} UI](https://cloud.ibm.com/){: external} console.
+You can see which access policies are set for you in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
 
 1. Go to [Access IAM users](https://cloud.ibm.com/iam/users){: external}.
 2. Click your name in the user table.
