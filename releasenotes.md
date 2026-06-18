@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-05-07"
+lastupdated: "2026-06-18"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,7 +19,24 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
-## April 2026 
+## June 2026
+{: #workload-protection-jun26}
+
+## 12 June 2026
+{: #workload-protection-jun1226}
+
+Software Lifecycle and End-of-Life Visibility for OS and Go Runtime
+:   {{site.data.keyword.sysdigsecure_short}} Vulnerability Management now surfaces end-of-life (EOL) information for supported operating systems and the Go runtime. Lifecycle status appears in the Resource Details drawer (Components tab), component details, Findings Details drawer, scan result side panel, CLI scanner JSON output, and the Scan Results API.
+
+    Each component is classified as **Active**, **Approaching End of Life** (within 90 days), or **End of Life**. When a component is approaching EOL, the number of remaining days is displayed.
+
+    A new **Component Lifecycle** rule type is available in Rule Bundles. Use it to fail a policy evaluation when a component is past EOL or within 90 days of it. To enforce both conditions, add two Component Lifecycle rules to the same bundle.
+
+    Evaluating Component Lifecycle rules in the CLI requires Sysdig CLI Scanner v1.27.1 or later. Earlier versions ignore the rule during policy evaluation.
+
+    For more information, see [VM lifecycle visibility](https://docs.sysdig.com/en/sysdig-secure/vm-lifecycle-visibility/){: external}.
+
+## April 2026
 {: #workload-protection-apr26}
 
 ## April 26 2026
