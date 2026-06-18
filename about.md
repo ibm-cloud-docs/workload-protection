@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-06-18"
 
 keywords: container security, host security, compliance, agent-based protection
 
@@ -18,8 +18,8 @@ subcollection: workload-protection
 {{site.data.keyword.sysdigsecure_full}} is a cloud-native application protection platform (CNAPP) that helps secure workloads across hybrid multicloud and on-premises environments, including AI workloads. You can identify vulnerabilities, validate configurations, permissions, and compliance, detect and block runtime threats, and respond to incidents. {{site.data.keyword.sysdigsecure_short}} supports diverse platforms, including cloud, on-premises infrastructure, hosts, virtual machines, and container environments.
 {: shortdesc}
 
-
-
+{{site.data.keyword.sysdigsecure_short}} uses functionality from Sysdig Secure. You might see links to [Sysdig Secure documentation](https://docs.sysdig.com/en/docs/sysdig-secure/){: external} throughout this content because that information also applies to {{site.data.keyword.sysdigsecure_short}}.
+{: note}
 
 {{site.data.keyword.sysdigsecure_short}} supports your {{site.data.keyword.cloud_notm}} account and resources in two main ways:
 
@@ -48,7 +48,7 @@ App Configuration connection
 Compliance frameworks
 :   [Default frameworks are available for immediate use](/docs/workload-protection?topic=workload-protection-posture-policies-services), such as DORA, NIST, and the {{site.data.keyword.framework-fs_notm}}. With these predefined policies, you can implement and validate the controls that are required to meet industry standards and regulations. {{site.data.keyword.sysdigsecure_short}} runs automated configuration checks and provides audit-ready reports at both the infrastructure and application levels. For more information, see [Analyzing compliance postures from detection to remediation](/docs/workload-protection?topic=workload-protection-compliance).
 
-Policy management 
+Policy management
 :   You can create and manage your own custom policies to ensure that your workloads are compliant with your organization's policies. For example, you can create a policy to ensure that your workloads are running in a specific region or that they're using a specific version of a database. You can also create policies to ensure that your workloads are using specific security features, such as encryption or multi-factor authentication. For more information, see [creating a custom policy](https://docs.sysdig.com/en/sysdig-secure/manage_posture_policies/#create-a-custom-policy){: external}.
 
 Addressing failures
@@ -63,7 +63,7 @@ Server endpoint detection and response (EDR)
 :   {{site.data.keyword.sysdigsecure_short}} instruments hosts, VMs, and Kubernetes or {{site.data.keyword.openshiftshort}} clusters through eBPF technology to inspect all system activity through system calls with minimal performance impact. This deep visibility allows you to detect and respond to threats in real time across your entire infrastructure.
 
 Threat detection and response
-:   With thousands of out-of-the-box policies that are updated weekly by the Sysdig Threat Research team, you get immediate protection against the latest threats. You can customize existing rules or create new ones using the Falco language, the open source cloud-native standard for runtime security. Beyond rule-based detection, behavioral analysis helps identify common threats like crypto mining activities, while workload profiling automatically defines expected behavior to extend your detection capabilities. For more information, see [Threats](https://docs.sysdig.com/en/sysdig-secure/threats/){: external}. 
+:   With thousands of out-of-the-box policies that are updated weekly by the Sysdig Threat Research team, you get immediate protection against the latest threats. You can customize existing rules or create new ones using the Falco language, the open source cloud-native standard for runtime security. Beyond rule-based detection, behavioral analysis helps identify common threats like crypto mining activities, while workload profiling automatically defines expected behavior to extend your detection capabilities. For more information, see [Threats](https://docs.sysdig.com/en/sysdig-secure/threats/){: external}.
 
 Proactive threat prevention
 :   {{site.data.keyword.sysdigsecure_short}} goes beyond detection by offering preemptive blocking capabilities. You can prevent blacklisted or malicious binaries from executing, including identified malware or drifted binaries in a container image. Advanced remediation features allow you to automatically execute corrective actions such as killing processes, killing or pausing containers, and more.
