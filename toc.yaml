@@ -102,10 +102,9 @@ toc:
           topics:
           - using-curl.md
       - errors.md
-      - topicgroup:
+      - link:
           label: Additional documentation
-          topics:
-          - sysdig_doc.md
+          href: https://docs.sysdig.com/en/docs/sysdig-secure/
   - navgroup:
       id: help
       topics:
