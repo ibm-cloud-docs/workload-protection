@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-06-18"
+lastupdated: "2026-06-19"
 
 keywords: compliance scanning, security, vulnerability scanning, threat detection
 
@@ -34,7 +34,7 @@ Start with {{site.data.keyword.sysdigsecure_full}} to establish a strong securit
 
 Before you can set up a {{site.data.keyword.sysdigsecure_short}} instance, make sure that you have access to create resources in a resource group.
 
-The {{site.data.keyword.cloud_notm}} account owner can create, view, and delete an instance of a service, and can grant access to other users to work with the {{site.data.keyword.sysdigsecure_full_notm}} service. Other {{site.data.keyword.cloud_notm}} users with administrator or editor roles can manage the {{site.data.keyword.sysdigsecure_short}} service. For more information about managing access, see [Managing IAM access for {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-iam) and [Managing user access in {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-assign-access-resources).
+The {{site.data.keyword.cloud_notm}} account owner can create, view, and delete an instance of a service, and can grant access to other users to work with the {{site.data.keyword.sysdigsecure_full_notm}} service. Other {{site.data.keyword.cloud_notm}} users with administrator or editor roles can manage the {{site.data.keyword.sysdigsecure_short}} service. For more information about managing access, see [Managing IAM access for {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-iam) and [Managing user access in {{site.data.keyword.cloud_notm}}](/docs/iam?topic=iam-assign-access-resources&interface=ui).
 
 ## Setting up {{site.data.keyword.sysdigsecure_short}}
 {: #setup}
