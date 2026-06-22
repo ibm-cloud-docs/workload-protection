@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-06-22"
 
 keywords: cspm, compliance, agents, zones, policies, enterprise accounts
 
@@ -21,14 +21,14 @@ Review these best practices to help you get the most out of {{site.data.keyword.
 ## Cloud security posture management (CSPM)
 {: #bp-cspm}
 
-Cloud security posture management (CSPM) helps you continuously assess and improve your cloud security posture by identifying compliance violations across your {{site.data.keyword.cloud_notm}} account and resources. For more information, go to [Managing compliance with CSPM](/docs/workload-protection?topic=workload-protection-cspm-compliance).
+Cloud security posture management (CSPM) helps you continuously assess and improve your cloud security posture by identifying compliance violations across your {{site.data.keyword.cloud_notm}} account and resources. For more information, go to [Enabling cloud compliance](/docs/workload-protection?topic=workload-protection-cspm-implement).
 
 ### Enable CSPM
 {: #bp-cspm-enable}
 
 Enable CSPM to gain visibility into your cloud security posture across all your {{site.data.keyword.cloud_notm}} resources. CSPM automatically discovers and evaluates your cloud resources against security best practices and compliance frameworks.
 
-By default, CSPM is enabled when you create a new {{site.data.keyword.sysdigsecure_short}} instance. Keep CSPM enabled to automatically scan your {{site.data.keyword.cloud_notm}} account and resources for compliance. If you disable CSPM before creating the instance, [you can set up the connection manually later](/docs/workload-protection?topic=workload-protection-cspm-tutorial-enterprise#connect-appconfig). 
+By default, CSPM is enabled when you create a new {{site.data.keyword.sysdigsecure_short}} instance. Keep CSPM enabled to automatically scan your {{site.data.keyword.cloud_notm}} account and resources for compliance. If you disable CSPM before creating the instance, [you can set up the connection manually later](/docs/workload-protection?topic=workload-protection-cspm-tutorial-enterprise#connect-appconfig).
 
 ### Use built-in compliance frameworks
 {: #bp-cspm-frameworks}
@@ -40,7 +40,7 @@ Start with [predefined policies](/docs/workload-protection?topic=workload-protec
 ### Review and prioritize remediation
 {: #bp-cspm-remediation}
 
-After the first completed scan, review posture results from **Attack Surface > Compliance Findings**. Not all compliance violations carry the same risk. Focus your remediation efforts by severity, so critical and high-severity findings are addressed first. For more information, see [Findings](https://docs.sysdig.com/en/sysdig-secure/compliance-findings/){: external}. 
+After the first completed scan, review posture results from **Attack Surface > Compliance Findings**. Not all compliance violations carry the same risk. Focus your remediation efforts by severity, so critical and high-severity findings are addressed first. For more information, see [Findings](https://docs.sysdig.com/en/sysdig-secure/compliance-findings/){: external}.
 
 Use the [**Inventory**](https://docs.sysdig.com/en/docs/sysdig-secure/inventory/){: external} to review all connected {{site.data.keyword.cloud_notm}} resources and use feature filters to narrow down to your most prevalent and at-risk resources.
 {: tip}
@@ -125,7 +125,7 @@ By default, {{site.data.keyword.sysdigsecure_short}} creates a zone called **Ent
 ### Handle context-based restrictions
 {: #bp-zones-cbr}
 
-When context-based restrictions are enabled for resources, configuration data cannot be collected unless access is provided. Create appropriate network zones and reference {{site.data.keyword.appconfig_short}} as the reference service to ensure {{site.data.keyword.sysdigsecure_short}} can scan your resources. For more information, see [Creating context-based restrictions](/docs/account?topic=account-context-restrictions-create&interface=ui).
+When context-based restrictions are enabled for resources, configuration data cannot be collected unless access is provided. Create appropriate network zones and reference {{site.data.keyword.appconfig_short}} as the reference service to ensure {{site.data.keyword.sysdigsecure_short}} can scan your resources. For more information, see [Creating context-based restrictions](/docs/iam?topic=iam-context-restrictions-create&interface=ui).
 
 ## Enterprise accounts
 {: #bp-enterprise}
@@ -137,7 +137,7 @@ If you have an {{site.data.keyword.cloud_notm}} enterprise account, follow these
 
 Enterprise accounts must set up a trusted profile template to allow {{site.data.keyword.sysdigsecure_short}} to scan child accounts for compliance. This is a critical requirement for enterprise-wide compliance management with CSPM. For more information, see [Set up App Configuration to collect configuration data from all child accounts](/docs/workload-protection?topic=workload-protection-cspm-tutorial-enterprise#setup-appconfig).
 
-Create zones based on child account IDs to organize and manage compliance reporting for different parts of your enterprise. 
+Create zones based on child account IDs to organize and manage compliance reporting for different parts of your enterprise.
 {: tip}
 
 ### Enable IAM for enterprise accounts
@@ -154,6 +154,3 @@ Implement the principle of least privilege across your enterprise:
 - Grant users only the minimum permissions required to perform their tasks.
 - Separate platform and service roles appropriately.
 - Review access regularly to ensure permissions remain appropriate as roles change.
-
-
-
