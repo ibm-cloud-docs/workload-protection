@@ -16,8 +16,10 @@ subcollection: workload-protection
 # Pricing
 {: #pricing}
 
-{{site.data.keyword.sysdigsecure_short}} offers two pricing plan options: Free Trial and Graduated Tier. Reference the table below for more information about these plans.
+{{site.data.keyword.sysdigsecure_short}} offers two pricing plan options: free trial and graduated tier.
 {: shortdesc}
+
+The following table explains the differences between the free trial and the graudated tier pricing plan.
 
 | Pricing plan  |  Description |
 |---|---|
