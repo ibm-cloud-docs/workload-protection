@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025
-lastupdated: "2025-06-26"
+  years:  2025, 2026
+lastupdated: "2026-06-22"
 
 keywords:
 
@@ -13,10 +13,10 @@ subcollection: workload-protection
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Pricing 
+# Pricing
 {: #pricing}
 
-{{site.data.keyword.sysdigsecure_short}} offers two pricing plan options: Free Trial and Graduated Tier. Reference the table below for more information about these plans. 
+{{site.data.keyword.sysdigsecure_short}} offers two pricing plan options: Free Trial and Graduated Tier. Reference the table below for more information about these plans.
 {: shortdesc}
 
 | Pricing plan  |  Description |
@@ -28,7 +28,7 @@ subcollection: workload-protection
 ## How pricing units are calculated
 {: #pricing_pricing-units}
 
-All pricing units are calculated based on monthly or hourly cost and prorated based on consumption usage. For more information about pricing, check out [how you're charged](/docs/account?topic=account-charges). 
+All pricing units are calculated based on monthly or hourly cost and prorated based on consumption usage. For more information about pricing, check out [how you're charged](/docs/account?topic=account-charges).
 
 | Use case  | Pricing unit  |  Environment or workload  |  Billable resources |
 |---|---|---|---|
@@ -43,22 +43,13 @@ All pricing units are calculated based on monthly or hourly cost and prorated ba
 ## How the graduated tier plan works
 {: #pricing_plan-works}
 
-The graduated tier plan is the paid plan for {{site.data.keyword.sysdigsecure_short}}. Tiers are measured by the number of pricing units they contain. Pricing units are segmented into three categories: CSPM usage, active {{site.data.keyword.sysdigsecure_short}} agents, and deployment environments for {{site.data.keyword.sysdigsecure_short}} agents.
+The graduated tier plan is the paid plan for {{site.data.keyword.sysdigsecure_short}}. Tiers are measured by the number of pricing units they contain. Pricing units are segmented into three categories: CSPM usage, active {{site.data.keyword.sysdigsecure_short}} agents, and deployment environments for {{site.data.keyword.sysdigsecure_short}} agents. The graduated tier plan offers discounts as you increase the number of pricing units, allowing you to stack pricing unit tiers as your coverage needs increase. Discounts are applied as you move from one tier to the next.
 
-The graduated tier plan offers discounts as you increase the number of pricing units, allowing you to stack pricing unit tiers as your coverage needs increase. Discounts are applied as you move from one tier to the next. Using the chart below as an example, you are charged list price for tier 1 (up to 250 pricing units). The discount for tier 2 starts at unit 251 and continues to unit 500, with the next tier starting at unit 501, and so on. 
+If you are using {{site.data.keyword.sysdigsecure_short}} for CSPM, you are charged the list price for tier one (up to 250 pricing units). The discount for tier two starts at unit 251 and continues to unit 500, with the next tier starting at unit 501, and so on.
 
-| Pricing unit tiers  | Compute instance  |  Worker nodes  |  VM nodes |
-|---|---|---|---|
-| 1–250   | $18 | $45 | $16 |
-| 251–500   | $15.30 | $38.25 | $13.60  |
-| 501–1,000   | $13.50 | $33.75 | $12 |
-| 1,001–2,500   | $12.60 | $31.50 | $11.20  |
-| 2,501–5,000   | $10.80 | $27 | $9.60  |
-| 5,001   | $9.90 | $24.75 | $8.80  |
-{: caption="Prices are estimates. Pricing is subject to change and does not reflect pricing differences by region. Tiers are based on the volume of pricing units. " caption-side="bottom"}
+Container and host protection with agents is charged hourly. The list price applies for tier one (up to 180,000 node hours). The discount for tier two starts at hour 180,001 and continues to hour 360,000, with the next tier starting at hour 360,001, and so on.
 
-To start pricing for {{site.data.keyword.sysdigsecure_short}}, check out the [{{site.data.keyword.sysdigsecure_short}} in the catalog](https://cloud.ibm.com/workload-protection/catalog/security-and-compliance-center-workload-protection).  
-{: tip}
+For more detailed pricing information, check out [{{site.data.keyword.sysdigsecure_short}} in the catalog](https://cloud.ibm.com/workload-protection/catalog/security-and-compliance-center-workload-protection).
 
 If you are using both {{site.data.keyword.sysdigsecure_short}} and {{site.data.keyword.mon_short}}, it’s important to remember that you do not need to deploy an individual agent for each on the same cluster. A single agent works for both products. You should connect your {{site.data.keyword.mon_short}} and {{site.data.keyword.sysdigsecure_short}} instances during the instance creation. For more information, check out the [frequently asked questions](/docs/monitoring?topic=monitoring-faq#faq_4).
 {:note}

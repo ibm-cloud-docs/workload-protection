@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-05-29"
+lastupdated: "2026-06-22"
 keywords:
 
 subcollection: workload-protection
@@ -26,7 +26,7 @@ Any {{site.data.keyword.sysdigsecure_short}} or audit log events generated come 
 
 To get started protecting your {{site.data.keyword.sysdigsecure_short}} resources with context-based restrictions, see the tutorial for [Leveraging context-based restrictions to secure your resources](/docs/account?topic=account-context-restrictions-tutorial).
 
-To automate the creation and management of context-based restrictions for {{site.data.keyword.sysdigsecure_full}}, you can use the [CBR module](https://registry.terraform.io/modules/terraform-ibm-modules/cbr/ibm/latest){: external} from [{{site.data.keyword.terraform-provider_short}} IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim). Context-based restrictions allow you to define network zones and rules that control access to your {{site.data.keyword.sysdigsecure_short}} instance based on network location.
+To automate the creation and management of context-based restrictions for {{site.data.keyword.sysdigsecure_full}}, you can use the [CBR module](https://registry.terraform.io/modules/terraform-ibm-modules/cbr/ibm/latest){: external} from [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim). Context-based restrictions allow you to define network zones and rules that control access to your {{site.data.keyword.sysdigsecure_short}} instance based on network location.
 {: tip}
 
 ## Restrictions
