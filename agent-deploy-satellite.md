@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: workload protection, satellite, sysdig secure, manage
 
@@ -43,7 +43,7 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
 
 Create an HTTPS [Satellite Link by using the console or CLI](/docs/satellite?topic=satellite-link-cloud-create) to connect securely to {{site.data.keyword.sysdigsecure_short}} private endpoints.
 
-1. Get your {{site.data.keyword.sysdigsecure_short}} [private endpoint](/docs/workload-protection?topic=workload-protection-regions#endpoints). For example, if your {{site.data.keyword.sysdigsecure_short}} instance is in `us-east`, your endpoint is `private.us-east.security-compliance-secure.cloud.ibm.com`.
+1. Get your {{site.data.keyword.sysdigsecure_short}} [private endpoint](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints). For example, if your {{site.data.keyword.sysdigsecure_short}} instance is in `us-east`, your endpoint is `private.us-east.security-compliance-secure.cloud.ibm.com`.
 2. Access the [Satellite Locations dashboard](/satellite/locations). Click **Link endpoints**, then click **Create an endpoint**.
 3. Select **Cloud** to create an endpoint for a service, server, or app that runs outside of the location.
 4. Enter an endpoint name, the destination domain name (FQDN) which is the {{site.data.keyword.sysdigsecure_short}} private endpoint that was defined in step 1, and destination port `443`.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-18"
+lastupdated: "2026-07-01"
 
 keywords:
 
@@ -23,7 +23,7 @@ This topic focuses on enabling CSPM for {{site.data.keyword.cloud_notm}}. Need t
 
 To learn more about CSPM and how it works, go to [About {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-about). To see an example workflow, go to [Analyzing compliance postures from detection to remediation](/docs/workload-protection?topic=workload-protection-compliance). 
 
-CSPM for {{site.data.keyword.sysdigsecure_short}} depends on {{site.data.keyword.appconfig_short}}, which collects configuration details from your {{site.data.keyword.cloud_notm}} resources. The [configuration aggregator feature](/docs/app-configuration?topic=app-configuration-ac-configuration-aggregator) in {{site.data.keyword.appconfig_short}} is included at no charge as part of the Lite plan. The integration uses [IAM trusted profiles](/docs/account?topic=account-create-trusted-profile&interface=ui) to manage permissions securely.
+CSPM for {{site.data.keyword.sysdigsecure_short}} depends on {{site.data.keyword.appconfig_short}}, which collects configuration details from your {{site.data.keyword.cloud_notm}} resources. The [configuration aggregator feature](/docs/app-configuration?topic=app-configuration-ac-configuration-aggregator) in {{site.data.keyword.appconfig_short}} is included at no charge as part of the Lite plan. The integration uses [IAM trusted profiles](/docs/iam?topic=iam-create-trusted-profile&interface=ui) to manage permissions securely.
 
 You can enable CSPM for individual {{site.data.keyword.cloud_notm}} accounts or for your entire enterprise. For enterprise-level compliance scanning, see [Enabling cloud compliance for enterprises](/docs/workload-protection?topic=workload-protection-cspm-tutorial-enterprise).
 
@@ -38,7 +38,7 @@ Before you get started, make sure that you have the following:
 - An existing {{site.data.keyword.appconfig_short}} instance. For more information, see [Creating an instance](/docs/app-configuration?topic=app-configuration-ac-create-an-instance).
 - `Manager` role or greater on the [{{site.data.keyword.appconfig_short}} service](/docs/app-configuration?topic=app-configuration-ac-service-access-management).
 - An existing {{site.data.keyword.sysdigsecure_short}} instance with CSPM disabled. For more information, see [Set up {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-cspm-tutorial-enterprise#setup-wp).
-- [Permissions to create and manage trusted profiles](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-roles-reqs).
+- [Permissions to create and manage trusted profiles](/docs/iam?topic=iam-create-trusted-profile&interface=ui#tp-roles-reqs).
 - `Editor` role or greater on the {{site.data.keyword.sysdigsecure_short}} service.
 - The CRNs for your {{site.data.keyword.sysdigsecure_short}} and {{site.data.keyword.appconfig_short}} instances. If you don't already have them, you can find the CRNs by completing the following steps: 
     1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Resource list** and search for the service, either {{site.data.keyword.sysdigsecure_short}} or {{site.data.keyword.appconfig_short}}. 
@@ -76,7 +76,7 @@ If context-based restrictions are enabled for resources in your account, you mus
 ## Creating a trusted profile
 {: #tp-create}
 
-[Create a trusted profile](/docs/account?topic=account-create-trusted-profile&interface=ui) that allows your instance of {{site.data.keyword.sysdigsecure_short}} access to the {{site.data.keyword.appconfig_short}} service. Completing the following steps: 
+[Create a trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=ui) that allows your instance of {{site.data.keyword.sysdigsecure_short}} access to the {{site.data.keyword.appconfig_short}} service. Completing the following steps: 
 
 1. Go to **Manage > Access (IAM) > Trusted profiles** and click **Create**.
 2. After providing a name for the trusted profile, establish trust by selecting **{{site.data.keyword.cloud_notm}} services** as the trusted entity type, and enter the CRN for your {{site.data.keyword.sysdigsecure_short}} instance.

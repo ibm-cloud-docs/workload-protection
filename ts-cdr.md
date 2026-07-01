@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: cloud detection and response, CDR, ibm cloud
 
@@ -84,4 +84,4 @@ To resolve this issue, complete the following steps:
 
 7. After making any corrections, allow up to 5 minutes for the connection status to update in the {{site.data.keyword.sysdigsecure_short}} UI.
 
-For more information, see [Enabling Detection and Response for {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-cdr-tutorial).
+For more information, see [Enabling Detection and Response for {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-cdr-about).

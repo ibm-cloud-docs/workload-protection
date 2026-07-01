@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: agent installation, dragent service, agent troubleshooting, and kernel headers.
 
@@ -56,7 +56,7 @@ To resolve this issue, complete the following steps:
 
 4. Open `/opt/draios/etc/dragent.yaml` and verify that the `customerid`, `collector`, and `sysdig_api_endpoint` fields are set correctly. The collector endpoint must use port 6443 and SSL must be enabled (`ssl: true`).
 
-5. Confirm that outbound TCP traffic to the collector endpoint on port 6443 is allowed. For a list of collector endpoints, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_ingestion).
+5. Confirm that outbound TCP traffic to the collector endpoint on port 6443 is allowed. For a list of collector endpoints, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion).
 
 6. Install the kernel headers for your distribution if they are missing:
 

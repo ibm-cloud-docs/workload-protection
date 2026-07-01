@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: Windows Server, Windows agent, and collector endpoint
 
@@ -43,7 +43,7 @@ To resolve this issue, complete the following steps:
 
 3. Review the Windows Event Viewer for errors related to `SysdigHostShield`.
 
-4. Confirm that the access key and [collector endpoint](/docs/workload-protection?topic=workload-protection-regions#endpoints_ingestion) are correct. You can reinstall the MSI from the command line and pass the correct values:
+4. Confirm that the access key and [collector endpoint](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion) are correct. You can reinstall the MSI from the command line and pass the correct values:
 
    ```powershell
    msiexec /i sysdig-host-shield.msi /qn ACCESS_KEY="<ACCESS_KEY>" COLLECTOR_URL="<COLLECTOR_ENDPOINT>" COLLECTOR_PORT="6443"

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: workload protection, deploy, linux
 
@@ -28,7 +28,7 @@ Complete the following steps to add an agent to a Linux host by using a script:
 
 1. [Obtain the access key](/docs/workload-protection?topic=workload-protection-access_key).
 
-2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion).
 
 3. Install the kernel headers. When you install a {{site.data.keyword.sysdigsecure_short}} agent, the agent uses kernel header files. Choose a distribution and run the corresponding command.
   
@@ -59,10 +59,10 @@ Complete the following steps to add an agent to a Linux host by using a script:
    :   The ingestion key for the instance.
    
    `COLLECTOR_ENDPOINT`
-   :   The public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
+   :   The public or private ingestion URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
    
    `API_ENDPOINT`
-   :   The public or private API endpoint URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [API endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_rest_api). Specify the endpoint without `https://` or `/api`. For example, `private.us-east.security-compliance-secure.cloud.ibm.com`.
+   :   The public or private API endpoint URL for the region where the {{site.data.keyword.sysdigsecure_short}} instance is available. To get an endpoint, see [API endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_rest_api). Specify the endpoint without `https://` or `/api`. For example, `private.us-east.security-compliance-secure.cloud.ibm.com`.
    
    `TAG_DATA`
    :   Comma-separated tags that are formatted as `TAG_NAME:TAG_VALUE`. You can associate one or more tags with your {{site.data.keyword.sysdigsecure_short}} agent. For example, `role:serviceX,location:us-south`.
@@ -98,7 +98,7 @@ Complete the following steps to add an agent to a Debian or Ubuntu Linux host:
 
 1. [Obtain the access key](/docs/workload-protection?topic=workload-protection-access_key).
 
-2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion).
 
 3. Trust the GPG key, configure the `apt` repository, and update the package list by running the following commands:
   
@@ -156,7 +156,7 @@ Complete the following steps to add an agent to a RHEL, CentOS, or Fedora Linux 
 
 1. [Obtain the access key](/docs/workload-protection?topic=workload-protection-access_key).
 
-2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion).
 
 3. Trust the GPG key and configure the yum repository by running the following command:
 

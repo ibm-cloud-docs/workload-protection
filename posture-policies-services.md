@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: posture policies, compliance policies, supported services, IBM Cloud services, CSPM policies
 
@@ -129,7 +129,7 @@ Posture policies for other environments such as AWS, Azure, GCP, Kubernetes, Ope
 ### Security and Identity
 {: #supported-services-security}
 
-- [Identity and Access Management](/docs/account?topic=account-cloudaccess)
+- [Identity and Access Management](/docs/iam?topic=iam-cloudaccess)
 - [Key Protect](/docs/key-protect)
 - [Secrets Manager](/docs/secrets-manager)
 - [Hyper Protect Crypto Services (HPCS)](/docs/hs-crypto)

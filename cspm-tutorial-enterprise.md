@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: enterprise, compliance, cloud security posture management, app configuration
 
@@ -100,7 +100,7 @@ So far, you set up {{site.data.keyword.sysdigsecure_short}} to scan a {{site.dat
     4. Go to **Sources** and click **Add** on the **{{site.data.keyword.cloud_notm}} Account** tab.
     5. Enter the trusted profile ID for `{{site.data.keyword.sysdigsecure_short}} access to {{site.data.keyword.appconfig_short}}` and the {{site.data.keyword.appconfig_short}} instance CRN and click **Add**.
 
-When context-based restrictions are enabled for resources, configuration data cannot be collected unless access is provided. Create appropriate network zones and reference {{site.data.keyword.appconfig_short}} as the reference service to ensure {{site.data.keyword.sysdigsecure_short}} can scan your resources. For more information, see [Creating context-based restrictions](/docs/account?topic=account-context-restrictions-create&interface=ui).
+When context-based restrictions are enabled for resources, configuration data cannot be collected unless access is provided. Create appropriate network zones and reference {{site.data.keyword.appconfig_short}} as the reference service to ensure {{site.data.keyword.sysdigsecure_short}} can scan your resources. For more information, see [Creating context-based restrictions](/docs/iam?topic=iam-context-restrictions-create&interface=ui).
 {: important}
 
 ## Set up {{site.data.keyword.appconfig_short}} to collect configuration data from all child accounts 

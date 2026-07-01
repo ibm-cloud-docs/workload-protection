@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: workload protection faq, security faq, cspm faq, agent faq, compliance faq
 
@@ -62,7 +62,7 @@ You can also deploy the agent on Kubernetes or {{site.data.keyword.redhat_opensh
 {: #faq-agent-ports}
 {: faq}
 
-The agent requires outbound TCP traffic to the collector endpoint on port `6443` and to the API endpoint on port `443`. Both ports must be open for outbound traffic from your cluster or host to the {{site.data.keyword.sysdigsecure_short}} service endpoints. This applies to both public and private endpoint connections, including connections by using Virtual Private Endpoint (VPE). For a list of endpoints, go to [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints).
+The agent requires outbound TCP traffic to the collector endpoint on port `6443` and to the API endpoint on port `443`. Both ports must be open for outbound traffic from your cluster or host to the {{site.data.keyword.sysdigsecure_short}} service endpoints. This applies to both public and private endpoint connections, including connections by using Virtual Private Endpoint (VPE). For a list of endpoints, go to [Endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints).
 
 ## What Helm version is required to deploy the {{site.data.keyword.sysdigsecure_short}} agent?
 {: #faq-helm-version}
