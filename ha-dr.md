@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-07-09"
+  years:  2023, 2026
+lastupdated: "2026-07-01"
 
 keywords: IBM Cloud, disaster recovery, ha, high availability, redundancy
 
@@ -56,7 +56,7 @@ Where
 
     A region can be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
 
-    A region contains [multiple availability zones](https://www.ibm.com/cloud/data-centers/) to meet local access, low latency, and security requirements for the region.
+    A region contains [multiple availability zones](https://www.ibm.com/solutions/cloud-data-centers) to meet local access, low latency, and security requirements for the region.
 
 * `MZR` specifies a [multi-zone region.](/docs/overview?topic=overview-locations)
 

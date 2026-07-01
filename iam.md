@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords:
 
@@ -21,7 +21,7 @@ Access to {{site.data.keyword.sysdigsecure_short}} is controlled by {{site.data.
 Users in an account must be assigned a platform role to manage instances and to launch {{site.data.keyword.sysdigsecure_short}} from {{site.data.keyword.cloud_notm}}. In addition, users must have a service role that defines the permissions to work with {{site.data.keyword.sysdigsecure_short}}.
 {: important}
 
-To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, [use access groups](/docs/account?topic=account-groups&interface=ui). You can assign a single policy to the group instead of assigning the same access multiple times for each individual user or service ID. For more information, go to [How IAM access works](/docs/account?topic=account-account_setup#how_access). 
+To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, [use access groups](/docs/iam?topic=iam-groups&interface=ui). You can assign a single policy to the group instead of assigning the same access multiple times for each individual user or service ID. For more information, go to [How IAM access works](/docs/account?topic=account-account_setup#how_access). 
 
 
 ## Managing access by using access groups
@@ -32,8 +32,8 @@ To manage access groups, you must be the account owner, administrator, or editor
 
 Use the following actions to manage IAM access groups in the {{site.data.keyword.cloud_notm}}:
 
-* [Creating an access group](/docs/account?topic=account-groups&interface=ui#create_ag).
-* [Assigning access to a group](/docs/account?topic=account-groups&interface=ui#access_ag).
+* [Creating an access group](/docs/iam?topic=iam-groups&interface=ui#create_ag).
+* [Assigning access to a group](/docs/iam?topic=iam-groups&interface=ui#access_ag).
 
 ## Managing access by assigning policies directly to users
 {: #iam_users}
@@ -42,9 +42,9 @@ To manage access or assign new access to users by using IAM policies, you must b
 
 Use the following actions to manage IAM policies in the {{site.data.keyword.cloud_notm}}:
 
-* To grant permissions to a user, see [Assigning access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).
-* To revoke permissions, see [Removing access](/docs/account?topic=account-assign-access-resources&interface=ui#removing-access-console).
-* To review a user's permissions, see [Reviewing assigned access](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
+* To grant permissions to a user, see [Assigning access to resources](/docs/iam?topic=iam-assign-access-resources&interface=ui#access-resources-console).
+* To revoke permissions, see [Removing access](/docs/iam?topic=iam-assign-access-resources&interface=ui#removing-access-console).
+* To review a user's permissions, see [Reviewing assigned access](/docs/iam?topic=iam-assign-access-resources&interface=ui#review-your-access-console).
 
 ## {{site.data.keyword.cloud_notm}} platform roles
 {: #iam_platform}

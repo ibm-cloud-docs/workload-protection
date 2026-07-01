@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords:
 
@@ -26,7 +26,7 @@ Complete the following steps:
 
 1. [Obtain the access key](/docs/workload-protection?topic=workload-protection-access_key) for your {{site.data.keyword.sysdigsecure_short}} instance.
 
-2. Obtain the ingestion URL for your instance. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions&interface=cli#endpoints_ingestion).
+2. Obtain the ingestion URL for your instance. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion).
 
 3. Verify that you have `Administrator` permissions on the Windows server.
 
@@ -53,13 +53,13 @@ To install the agent by using the GUI:
 4. Complete the following fields:
 
    Custom Collector
-   :   The ingestion URL for the region where your {{site.data.keyword.sysdigsecure_short}} instance is available. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions&interface=cli#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
+   :   The ingestion URL for the region where your {{site.data.keyword.sysdigsecure_short}} instance is available. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
 
    Custom Collector port
    :   The collector port. Set to `6443`.
 
    Custom API URL
-   :   The API endpoint URL for the region where your {{site.data.keyword.sysdigsecure_short}} instance is available. For more information, see [API endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_rest_api). For example, `https://private.us-east.security-compliance-secure.cloud.ibm.com`.
+   :   The API endpoint URL for the region where your {{site.data.keyword.sysdigsecure_short}} instance is available. For more information, see [API endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_rest_api). For example, `https://private.us-east.security-compliance-secure.cloud.ibm.com`.
 
    Access Key
    :   The ingestion key for your instance.
@@ -84,7 +84,7 @@ Where:
 :   The ingestion key for your instance.
 
 `COLLECTOR_URL`
-:   The ingestion URL for the region where your {{site.data.keyword.sysdigsecure_short}} instance is available. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions&interface=cli#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
+:   The ingestion URL for the region where your {{site.data.keyword.sysdigsecure_short}} instance is available. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion). For example, `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`.
 
 `API_ENDPOINT`
-:   The API endpoint URL for the region where your {{site.data.keyword.sysdigsecure_short}} instance is available. For more information, see [API endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints_rest_api). For example, `https://private.us-east.security-compliance-secure.cloud.ibm.com/api`.
+:   The API endpoint URL for the region where your {{site.data.keyword.sysdigsecure_short}} instance is available. For more information, see [API endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_rest_api). For example, `https://private.us-east.security-compliance-secure.cloud.ibm.com/api`.

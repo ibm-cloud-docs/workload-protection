@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-01"
+lastupdated: "2026-07-01"
 
 keywords:
 
@@ -56,7 +56,7 @@ Before you begin, ensure the following services and permissions are available in
 - Permissions to manage the following services in your {{site.data.keyword.cloud_notm}} account:
    - **{{site.data.keyword.atracker_short}}**: Editor or Administrator platform role.
    - **{{site.data.keyword.cos_full_notm}}**: Manager service role on the instance.
-   - **IAM Identity** (account management): Administrator role to [create Service IDs, API keys, and Trusted Profiles](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-roles-reqs).
+   - **IAM Identity** (account management): Administrator role to [create Service IDs, API keys, and Trusted Profiles](/docs/iam?topic=iam-create-trusted-profile&interface=ui#tp-roles-reqs).
    - **IAM Access Management** (account management): Administrator role to create IAM policies and service-to-service authorizations.
    - **{{site.data.keyword.codeengineshort}}**: Editor or Manager service role.
    - **{{site.data.keyword.registryshort}}**: Reader service role — required for {{site.data.keyword.codeengineshort}} to pull the CDR application image.
@@ -79,7 +79,7 @@ After configuring the target, save the following values that will be used in lat
 - The {{site.data.keyword.cos_short}} **bucket name**. It will be referenced as `<cos_bucket_name>`.
 - The {{site.data.keyword.cos_short}} **bucket region**. It will be referenced as `<cos_bucket_region>`.
 
-   When you configure the {{site.data.keyword.atracker_short}} route, [ensure that the route rule includes the `global` location in addition to your deployment region](https://cloud.ibm.com/docs/iam?topic=iam-at_events_iam#at-viewing-iam). IAM events such as account settings changes, MFA modifications, policy deletions, and context-based restriction changes are generated as global events and are not routed unless `global` is explicitly included.
+   When you configure the {{site.data.keyword.atracker_short}} route, [ensure that the route rule includes the `global` location in addition to your deployment region](/docs/iam?topic=iam-at_events_iam#at-viewing-iam). IAM events such as account settings changes, MFA modifications, policy deletions, and context-based restriction changes are generated as global events and are not routed unless `global` is explicitly included.
 
    Without the `global` location, IAM mutation events will not reach the {{site.data.keyword.cos_short}} bucket and will not be analyzed by {{site.data.keyword.sysdigsecure_short}}.
    {: important}
@@ -179,7 +179,7 @@ ibmcloud ce secret create --name icr-secret --format registry --server icr.io --
 Make sure to replace the following variables in the command:
 - `<target_account_id>` with the {{site.data.keyword.cloud_notm}} account ID.
 - `<trusted_profile_id>` with the trusted profile created in step 3.
-- `<environment_url>` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-endpoints) for your region. For example, if your instance is in Dallas, replace `<environment_url>` with `us-south.security-compliance-secure.cloud.ibm.com`.
+- `<environment_url>` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-supported-regions&interface=api#endpoints) for your region. For example, if your instance is in Dallas, replace `<environment_url>` with `us-south.security-compliance-secure.cloud.ibm.com`.
 - `<service_id>` with the Service ID created in step 2.
 
 ```sh
@@ -247,7 +247,7 @@ Make sure to replace the following variables in the command:
 - `<cos_bucket_region>` with the region of the {{site.data.keyword.cos_short}} bucket created in step 1.
 - `<cos_bucket_name>` with the {{site.data.keyword.cos_short}} bucket name created in step 1.
 - `<trusted_profile_id>` with the trusted profile ID saved in step 3.
-- `<environment_url>` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-endpoints) for your region.
+- `<environment_url>` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-supported-regions&interface=api#endpoints) for your region.
 - `<service_id>` with the Service ID identifier (the `ServiceId-xxx` value) from step 2.
 - `<target_account_id>` with the {{site.data.keyword.cloud_notm}} account ID.
 

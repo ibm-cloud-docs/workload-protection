@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: aix, powervs
 
@@ -25,7 +25,8 @@ Complete the following steps to add an agent to an AIX host on {{site.data.keywo
 
 1. [Obtain the access key](/docs/workload-protection?topic=workload-protection-access_key).
 
-2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions&interface=cli#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion
+).
 
 3. Download the KSPM analyzer binary by running the following command:
 
@@ -75,7 +76,8 @@ Complete the following steps to add an agent to an AIX host on {{site.data.keywo
    :   The hostname that identifies your server in the {{site.data.keyword.sysdigsecure_short}} inventory and results.
 
    `REGION`
-   :   The region where your {{site.data.keyword.sysdigsecure_short}} instance is deployed. For example, `us-east` or `eu-de`. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-regions&interface=cli#endpoints_ingestion).
+   :   The region where your {{site.data.keyword.sysdigsecure_short}} instance is deployed. For example, `us-east` or `eu-de`. For more information, see [Collector endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints_ingestion
+).
 
    `ACCESS_KEY`
    :   The access key that you obtained in step 1.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-18"
+lastupdated: "2026-07-01"
 
 keywords:  release notes, IBM Cloud
 
@@ -43,7 +43,7 @@ Software Lifecycle and End-of-Life Visibility for OS and Go Runtime
 {: #workload-protection-apr2626}
 
 Now Generally Available: Cloud Detection and Response for {{site.data.keyword.cloud_notm}}
-:   {{site.data.keyword.sysdigsecure_short}} now provides near real-time threat detection and response (CDR) for {{site.data.keyword.cloud_notm}} audit logs. CDR ingests Activity Tracker events applying detection rules to identify threats such as privilege escalation, lateral movement, and suspicious API activity. For more information, see [Enabling Detection and Response for {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-cdr-tutorial).
+:   {{site.data.keyword.sysdigsecure_short}} now provides near real-time threat detection and response (CDR) for {{site.data.keyword.cloud_notm}} audit logs. CDR ingests Activity Tracker events applying detection rules to identify threats such as privilege escalation, lateral movement, and suspicious API activity. For more information, see [Enabling Detection and Response for {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-cdr-about).
 
 ## 21 April 2026
 {: #workload-protection-apr2126}
@@ -105,7 +105,7 @@ Image Signature Validation for Admission Control of Kubernetes Workloads
 
     * This new capability, powered by Cosign, lets you enforce signature verification at admission time using trusted sources like Red Hat Trusted Artifact Signer (RHTAS), GitHub + Sigstore, or a self-hosted Sigstore instance. 
     * Available starting with Cluster Shield 1.17.0, Image Signature Validation integrates with the {{site.data.keyword.sysdigsecure_short}} Admission Controller to strengthen supply chain security by preventing unsigned or tampered images before they reach your critical environments.
-    * For more information, see the [Image Signature Validation Policy](/docs/workload-protection?topic=workload-protection-image-signature-validation).
+    * For more information, see the [Image Signature Validation Policy](/docs/sysdig-secure/policies/supply_chain_policies/image-signature-validation/){: external}.
 
 
 
@@ -135,7 +135,7 @@ Now Generally Available: Admission Controller
 :   {{site.data.keyword.sysdigsecure_short}} now provides a new Admission Controller, delivering powerful deploy-time security enforcement across Kubernetes environments. You can use Admission Controller to integrate Kubernetes Security Posture Management (KSPM) and Vulnerability Management (VM) into your deployment workflows. Admission Controller enables a shift-left approach by preventing risky configurations and vulnerable images from reaching production. The Admission Controller has the following features:
 
     * Deploy-time image scanning. Admission Controller integrates with scan policies to evaluate images at deployment time, blocking workloads that use images with CVEs, misconfigurations, or policy violations. Workloads are rejected before scheduling to a node, eliminating unnecessary risk.
-    * Kubernetes audit logging. This feature enables Audit Detections to record API-level admission decisions, including who attempted deployments, when, and why actions were allowed or blocked. This provides a complete audit trail for security investigations and policy tuning. See also: [Kubernetes Audit Logging](/docs/workload-protection?topic=workload-protection-audit_logging).
+    * Kubernetes audit logging. This feature enables Audit Detections to record API-level admission decisions, including who attempted deployments, when, and why actions were allowed or blocked. This provides a complete audit trail for security investigations and policy tuning. See also: [Kubernetes Audit Logging](/docs.sysdig.com/en/sysdig-secure/classic-audit-logging/){: external}.
     * Kubernetes posture enforcement. This feature applies posture policies to define best practices, such as preventing privileged containers, enforcing non-root users, or applying resource limits. The Admission Controller evaluates these policies during admission and blocks non-compliant deployments. You can assign different policies per zone to account for environment-specific constraints (for example, staging versus production).
 
 
@@ -160,8 +160,8 @@ Threats module is now available in {{site.data.keyword.sysdigsecure_short}}
 {: #workload-protection-may2325}
 {: release-note}
 
-[IBM Cloud Shell settings](https://cloud.ibm.com/docs/account?topic=account-shell-settings) are now supported for {{site.data.keyword.cloud_notm}} CSPM
-:   {{site.data.keyword.sysdigsecure_short}} now ingests your {{site.data.keyword.cloud_notm}} Shell settings as part of Cloud Security Posture Management (CSPM). This enhancement enables you to validate the Cloud Shell locations and features with three new posture controls or by creating custom controls for more flexibility. 
+[IBM Cloud Shell settings](/docs/account?topic=account-shell-settings) are now supported for {{site.data.keyword.cloud_notm}} CSPM
+:   {{site.data.keyword.sysdigsecure_short}} now ingests your {{site.data.keyword.cloud_notm}} Shell settings as part of Cloud Security Posture Management (CSPM). This enhancement enables you to validate the Cloud Shell locations and features with three new posture controls or by creating custom controls for more flexibility.
 
 ## 21 May 2025
 {: #workload-protection-may2125}
@@ -184,7 +184,7 @@ Updates to the {{site.data.keyword.sysdigsecure_full_notm}} infrastructure
     * If you have IP-based allowlists or firewall rules running in your environment
     * If you have IP address-specific routing
 
-    For details on the changes and the new IP addresses, check out [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints).
+    For details on the changes and the new IP addresses, check out [Endpoints](/docs/workload-protection?topic=workload-protection-supported-regions&interface=api#endpoints).
 
 
 
@@ -403,7 +403,7 @@ New vulnerability scanning engine available
 {: release-note}
 
 Availability in additional regions
-:   {{site.data.keyword.sysdigsecure_short}} is available for use in [multiple regions.](/docs/workload-protection?topic=workload-protection-regions)
+:   {{site.data.keyword.sysdigsecure_short}} is available for use in [multiple regions.](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints)
 
 ## April 2023
 {: #workload-protection-apr23}

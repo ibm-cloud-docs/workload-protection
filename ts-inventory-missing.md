@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: inventory missing, data synchronization
 
@@ -55,4 +55,4 @@ To resolve this issue:
 
 5. Wait 5-10 minutes after agent installation for data to appear in the dashboard. Initial synchronization can take time.
 
-6. For Classic Infrastructure resources, ensure that the agent is deployed with the correct collector endpoint for your region. See [Endpoints](/docs/workload-protection?topic=workload-protection-regions#endpoints) for the correct values.
+6. For Classic Infrastructure resources, ensure that the agent is deployed with the correct collector endpoint for your region. See [Endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints) for the correct values.

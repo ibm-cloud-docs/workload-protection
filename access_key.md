@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords:
 
@@ -84,7 +84,7 @@ You can also create, delete, enable, or disable access keys by using the API or 
 {: #access_key_get_api}
 {: api}
 
-You can get the access key by using the CLI or the console. To see the steps, switch to the CLI or UI instructions. You can also use the API to retrieve all available access keys. For more information, see [Viewing the available access keys by using the API](#access_key_view).
+You can get the access key by using the CLI or the console. To see the steps, switch to the CLI or UI instructions. You can also use the API to retrieve all available access keys. For more information, see [Viewing the available access keys by using the API](/docs/workload-protection?topic=workload-protection-access_key&interface=api#access_key_view).
 
 ## Creating an access key by using the API
 {: #access_key_create}

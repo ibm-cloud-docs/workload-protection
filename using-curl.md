@@ -32,7 +32,7 @@ curl -X <METHOD> <SERVICE_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
 Where
 
 * `<METHOD>` indicates the type of REST API call that you want to make.
-* `<SERVICE_ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-endpoints). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.security-compliance-secure.cloud.ibm.com`
+* `<SERVICE_ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.security-compliance-secure.cloud.ibm.com`
 * `HEADERS` add additional information such as information to authenticate with the {{site.data.keyword.sysdigsecure_short}} service.
 * `DATA` allows you to pass additional information that might be required.
 
