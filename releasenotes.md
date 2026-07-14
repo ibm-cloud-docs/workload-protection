@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-01"
+lastupdated: "2026-07-14"
 
 keywords:  release notes, IBM Cloud
 
@@ -135,7 +135,7 @@ Now Generally Available: Admission Controller
 :   {{site.data.keyword.sysdigsecure_short}} now provides a new Admission Controller, delivering powerful deploy-time security enforcement across Kubernetes environments. You can use Admission Controller to integrate Kubernetes Security Posture Management (KSPM) and Vulnerability Management (VM) into your deployment workflows. Admission Controller enables a shift-left approach by preventing risky configurations and vulnerable images from reaching production. The Admission Controller has the following features:
 
     * Deploy-time image scanning. Admission Controller integrates with scan policies to evaluate images at deployment time, blocking workloads that use images with CVEs, misconfigurations, or policy violations. Workloads are rejected before scheduling to a node, eliminating unnecessary risk.
-    * Kubernetes audit logging. This feature enables Audit Detections to record API-level admission decisions, including who attempted deployments, when, and why actions were allowed or blocked. This provides a complete audit trail for security investigations and policy tuning. See also: [Kubernetes Audit Logging](/docs.sysdig.com/en/sysdig-secure/classic-audit-logging/){: external}.
+    * Kubernetes audit logging. This feature enables Audit Detections to record API-level admission decisions, including who attempted deployments, when, and why actions were allowed or blocked. This provides a complete audit trail for security investigations and policy tuning. See also: [Kubernetes Audit Logging](https://docs.sysdig.com/en/sysdig-secure/classic-audit-logging/){: external}.
     * Kubernetes posture enforcement. This feature applies posture policies to define best practices, such as preventing privileged containers, enforcing non-root users, or applying resource limits. The Admission Controller evaluates these policies during admission and blocks non-compliant deployments. You can assign different policies per zone to account for environment-specific constraints (for example, staging versus production).
 
 
@@ -349,7 +349,7 @@ Better ownership and remediation details are included now by differentiating the
 {: #workload-protection-apr1624}
 {: release-note}
 
-{{site.data.keyword.sysdigsecure_short}} announces support for [Risks](/docs/workload-protection?topic=workload-protection-risks), a module that consolidates all findings from your multi-cloud environment and includes an attack path analysis to help you prioritize the major detected risks.
+{{site.data.keyword.sysdigsecure_short}} announces support for [Risks](https://docs.sysdig.com/en/sysdig-secure/risks/){: external}, a module that consolidates all findings from your multi-cloud environment and includes an attack path analysis to help you prioritize the major detected risks.
 
 ### 29 April 2024
 {: #workload-protection-apr2924}
