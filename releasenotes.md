@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-14"
+lastupdated: "2026-07-16"
 
 keywords:  release notes, IBM Cloud
 
@@ -19,6 +19,16 @@ content-type: release-note
 
 Use these release notes to learn about updates to {{site.data.keyword.sysdigsecure_full}}.
 {: shortdesc}
+
+## July 2026
+{: #workload-protection-jul26}
+
+## 16 July 2026
+{: #workload-protection-jul1626}
+
+Changes to {{site.data.keyword.cloud_notm}} CSPM controls for Context Based Restrictions
+:   All posture controls related to CBR now fail by default. To make them pass, navigate to **Policies > Posture controls**, select the corresponding control, and add the necessary parameters.
+
 ## June 2026
 {: #workload-protection-jun26}
 
