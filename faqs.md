@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-01"
+lastupdated: "2026-07-24"
 
 keywords: workload protection faq, security faq, cspm faq, agent faq, compliance faq
 
@@ -238,7 +238,7 @@ Vulnerability management policies
 Posture policies
 :   Evaluate compliance against security benchmarks and regulatory frameworks such as CIS benchmarks, PCI DSS, NIST, and {{site.data.keyword.framework-fs_full}}. These policies scan your cloud resources and workload configurations for compliance violations.
 
-You can view and apply these policies from {{site.data.keyword.sysdigsecure_short}} under **Policies**. For more information about policy types and how to use them, go to [Policies](https://docs.sysdig.com/en/docs/sysdig-secure/policies/){: external} in the Sysdig documentation. For {{site.data.keyword.cloud_notm}}-specific posture policies, go to [Posture policies](/docs/workload-protection?topic=workload-protection-posture-policies).
+You can view and apply these policies from {{site.data.keyword.sysdigsecure_short}} under **Policies**. For more information about policy types and how to use them, go to [Policies](https://docs.sysdig.com/en/docs/sysdig-secure/policies/){: external} in the Sysdig documentation. For {{site.data.keyword.cloud_notm}}-specific posture policies, go to [Posture policies](https://docs.sysdig.com/en/sysdig-secure/posture-policies/){: external}.
 
 ## Do context-based restrictions affect {{site.data.keyword.sysdigsecure_short}} agent connectivity?
 {: #faq-cbr-agents}
