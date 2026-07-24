@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-16"
+lastupdated: "2026-07-24"
 
 keywords:  release notes, IBM Cloud
 
@@ -380,7 +380,7 @@ Better ownership and remediation details are included now by differentiating the
 {: #workload-protection-feb2024}
 {: release-note}
 
-{{site.data.keyword.sysdigsecure_short}} announces support for [Inventory](/docs/workload-protection?topic=workload-protection-inventory), a detailed view of all your resources across your multi-cloud environments (AWS, Azure and Google Public Cloud), Kubernetes environments (such as IKS, ROKS, or any other Kubernetes platform) as well as your container images.
+{{site.data.keyword.sysdigsecure_short}} announces support for [Inventory](https://docs.sysdig.com/en/docs/sysdig-secure/inventory/){: external}, a detailed view of all your resources across your multi-cloud environments (AWS, Azure and Google Public Cloud), Kubernetes environments (such as IKS, ROKS, or any other Kubernetes platform) as well as your container images.
 
 ## January 2024
 {: #workload-protection-jan24}

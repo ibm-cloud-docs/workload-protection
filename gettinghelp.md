@@ -55,4 +55,4 @@ Tag your questions with **ibm-cloud** and **workload-protection**.
 
 If you don't find answers to your questions, and you experience problems with {{site.data.keyword.cloud_notm}}, you can use support cases to get help with technical, account and access, billing and invoice or sales inquiry issues.
 
-You can [create](/docs/account?topic=account-open-case&interface=ui) and [manage](/docs/support?topic=support-access-cases) a support case by using the [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}. After you submit a support case, the support team works to investigate and resolve the issue depending on your type of support plan.
+You can [create](/docs/support?topic=support-open-case&interface=ui){: external} and [manage](/docs/support?topic=support-access-cases) a support case by using the [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}. After you submit a support case, the support team works to investigate and resolve the issue depending on your type of support plan.

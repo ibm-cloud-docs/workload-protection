@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-14"
+lastupdated: "2026-07-24"
 
 keywords: IBM Cloud, disaster recovery, ha, high availability, redundancy
 
@@ -86,7 +86,7 @@ The MZR architecture offers automatic failover between 2 zones, and high availab
 
 Disaster recovery is about surviving a catastrophic failure or loss of availability in a single location.
 
-{{site.data.keyword.sysdigsecure_full_notm}} follows {{site.data.keyword.cloud_notm}} requirements for [planning and recovering from disaster events](/docs/resiliency?topic=resiliency-ha-redundancy#disaster-recovery){: external}.
+{{site.data.keyword.sysdigsecure_full_notm}} follows {{site.data.keyword.cloud_notm}} requirements for [planning and recovering from disaster events](/docs/resiliency?topic=resiliency-ha-redundancy#dr){: external}.
 
 If a regional disaster occurs:
 
