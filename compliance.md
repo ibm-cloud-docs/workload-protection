@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-28"
 
 keywords: compliance, posture management, security posture, compliance evaluation, remediation, controls, policies, zones, CSPM, KSPM
 
@@ -18,7 +18,7 @@ subcollection: workload-protection
 {{site.data.keyword.sysdigsecure_full}} provides comprehensive compliance posture management capabilities that help security teams, compliance officers, and DevOps engineers continuously monitor, evaluate, and improve their security posture across cloud environments. The platform enables organizations to detect compliance violations, understand their security posture, and drive remediation through to resolution.
 {: shortdesc}
 
-Information about your compliance posture is included in an [inventory](https://docs.sysdig.com/en/docs/sysdig-secure/inventory/){: external}, which enhances resource visibility and provides full-context prioritization. This information helps you drive remediation and resolution of compliance violations. To access your inventory and other compliance-related information, open the {{site.data.keyword.sysdigsecure_short}} UI. In the console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Security > Compliance** and click the name of your instance of {{site.data.keyword.sysdigsecure_short}}. Then, click **Open dashboard** to open the {{site.data.keyword.sysdigsecure_short}} UI. 
+Information about your compliance posture is included in an [inventory](https://docs.sysdig.com/en/docs/sysdig-secure/inventory/){: external}, which enhances resource visibility and provides full-context prioritization. This information helps you drive remediation and resolution of compliance violations. To access your inventory and other compliance-related information, open the {{site.data.keyword.sysdigsecure_short}} UI. In the console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Security > Compliance** and click the name of your instance of {{site.data.keyword.sysdigsecure_short}}. Then, click **Open dashboard** to open the {{site.data.keyword.sysdigsecure_short}} UI.
 {: note}
 
 ## How compliance posture management works
@@ -34,7 +34,7 @@ You can use {{site.data.keyword.sysdigsecure_short}} predefined policies or [cre
 The compliance workflow consists of the following key components:
 
 Zones
-:   Logical groupings of resources that represent different parts of your infrastructure. The default _Entire Infrastructure_ zone is automatically created by {{site.data.keyword.sysdigsecure_short}}, and you can define custom zones to match your organizational structure. Zones are defined by a collection of scopes or resource types. 
+:   Logical groupings of resources that represent different parts of your infrastructure. The default _Entire Infrastructure_ zone is automatically created by {{site.data.keyword.sysdigsecure_short}}, and you can define custom zones to match your organizational structure. Zones are defined by a collection of scopes or resource types.
 
 Policies
 :   Collections of requirements that define a compliance standard. A policy includes one or more controls to define that compliance standard. Policies can be based on industry frameworks or custom organizational requirements.
@@ -43,9 +43,9 @@ Requirements
 :   Specific compliance criteria that must be met. Each requirement consists of one or more controls.
 
 Controls
-:   Identifies a potential issue or violation within the environment and the solution to remediate the problem. Different types of controls are used to address business, security, compliance, and operational requirements. 
+:   Identifies a potential issue or violation within the environment and the solution to remediate the problem. Different types of controls are used to address business, security, compliance, and operational requirements. You can also create [custom controls](https://docs.sysdig.com/en/sysdig-secure/posture_controls/#custom-controls){: external} for more flexibility.
 
-The **Compliance** overview page displays key posture performance indicators for each policy applied to your zones. For more information, see [Understanding the Compliance UI](https://docs.sysdig.com/en/sysdig-secure/compliance/#understand-the-compliance-ui){: external}. 
+The **Compliance** overview page displays key posture performance indicators for each policy applied to your zones. For more information, see [Understanding the Compliance UI](https://docs.sysdig.com/en/sysdig-secure/compliance/#understand-the-compliance-ui){: external}.
 {: tip}
 
 ## Compliance workflow overview
@@ -54,7 +54,7 @@ The **Compliance** overview page displays key posture performance indicators for
 The typical compliance posture management workflow follows these stages:
 
 1. Detection and assessment. {{site.data.keyword.sysdigsecure_short}} scans your environment daily and evaluates resources against defined policies. {{site.data.keyword.sysdigsecure_short}} identifies violations and categorizes them by severity, providing a comprehensive view of your compliance posture.
-1. Analysis and prioritization. Security and compliance teams can review high-level posture performance indicators for each policy applied to their zones. By selecting a policy, teams can see detailed results, including failing requirements, associated controls, and affected resources. 
+1. Analysis and prioritization. Security and compliance teams can review high-level posture performance indicators for each policy applied to their zones. By selecting a policy, teams can see detailed results, including failing requirements, associated controls, and affected resources.
 1. Evaluation and decision making. When reviewing violations, [teams can examine the control pane](https://docs.sysdig.com/en/sysdig-secure/compliance-findings/#drill-down-to-the-control-pane){: external} to understand the hierarchy of requirements and controls. Each item indicates whether it's passing or failing.
 1. Remediation. {{site.data.keyword.sysdigsecure_short}} provides multiple remediation options to address compliance violations. For more information, see [Evaluate and Remediate](https://docs.sysdig.com/en/sysdig-secure/compliance-findings/#drill-down-to-the-control-pane){: external}.
 1. Reporting and documentation. Organizations can generate [compliance reports](https://docs.sysdig.com/en/sysdig-secure/compliance/#policy-compliance-report){: external} that can be downloaded from the UI or accessed via API. These reports can be shared with development teams, executives, auditors, and other stakeholders who require compliance status information.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-24"
+lastupdated: "2026-07-28"
 
 keywords:  release notes, IBM Cloud
 
@@ -59,7 +59,7 @@ Now Generally Available: Cloud Detection and Response for {{site.data.keyword.cl
 {: #workload-protection-apr2126}
 
 Resource Ownership
-:   {{site.data.keyword.sysdigsecure_short}} now supports Resource Ownership, enabling automatic identification of who is responsible for a specific resource based on infrastructure metadata such as Kubernetes labels or cloud tags. Configure **Owner Keys** (for example, `compliance.owner` or `maintainer`) **Settings > Resource Ownership** to automatically map resources to their owners across your inventory and Graph Search. Ownership information is queryable via SysQL and surfaces in the Inventory view, supporting both operational visibility and ticket routing workflows. You can define up to 10 owner keys and 10 ticket assignee keys per instance. 
+:   {{site.data.keyword.sysdigsecure_short}} now supports Resource Ownership, enabling automatic identification of who is responsible for a specific resource based on infrastructure metadata such as Kubernetes labels or cloud tags. Configure **Owner Keys** (for example, `compliance.owner` or `maintainer`) **Settings > Resource Ownership** to automatically map resources to their owners across your inventory and Graph Search. Ownership information is queryable via SysQL and surfaces in the Inventory view, supporting both operational visibility and ticket routing workflows. You can define up to 10 owner keys and 10 ticket assignee keys per instance.
 
 ## 1 April 2026
 {: #workload-protection-apr0126}
@@ -111,9 +111,9 @@ Threat Intelligence feed
 {: #workload-protection-nov0425}
 
 Image Signature Validation for Admission Control of Kubernetes Workloads
-:    {{site.data.keyword.sysdigsecure_short}} now supports Image Signature Validation to ensure that only trusted and verifiable container images are deployed to your Kubernetes and OpenShift clusters. 
+:    {{site.data.keyword.sysdigsecure_short}} now supports Image Signature Validation to ensure that only trusted and verifiable container images are deployed to your Kubernetes and OpenShift clusters.
 
-    * This new capability, powered by Cosign, lets you enforce signature verification at admission time using trusted sources like Red Hat Trusted Artifact Signer (RHTAS), GitHub + Sigstore, or a self-hosted Sigstore instance. 
+    * This new capability, powered by Cosign, lets you enforce signature verification at admission time using trusted sources like Red Hat Trusted Artifact Signer (RHTAS), GitHub + Sigstore, or a self-hosted Sigstore instance.
     * Available starting with Cluster Shield 1.17.0, Image Signature Validation integrates with the {{site.data.keyword.sysdigsecure_short}} Admission Controller to strengthen supply chain security by preventing unsigned or tampered images before they reach your critical environments.
     * For more information, see the [Image Signature Validation Policy](/docs/sysdig-secure/policies/supply_chain_policies/image-signature-validation/){: external}.
 
@@ -125,7 +125,7 @@ Image Signature Validation for Admission Control of Kubernetes Workloads
 ## 26 September 2025
 
 Resource Group ID is now supported to scope in zones
-:   You can now scope your {{site.data.keyword.cloud_notm}} zones with resource group IDs in {{site.data.keyword.sysdigsecure_short}}. Learn more about setting scope in [posture zones](/docs/workload-protection?topic=workload-protection-posture-zones).
+:   You can now scope your {{site.data.keyword.cloud_notm}} zones with resource group IDs in {{site.data.keyword.sysdigsecure_short}}. Learn more about setting scope in [Zones](https://docs.sysdig.com/en/sysdig-secure/zones/){: external}.
 
 ## August 2025
 {: #workload-protection-aug25}
@@ -133,7 +133,7 @@ Resource Group ID is now supported to scope in zones
 ## 4 August 2025
 
 {{site.data.keyword.cloud_notm}} Framework for Financial Services v2.0
-:   {{site.data.keyword.sysdigsecure_short}} now includes a new posture policy to continuously track compliance of Financial Services v2.0. For more information about this policy, see [the change log](/docs/workload-protection?topic=workload-protection-financial-services).
+:   {{site.data.keyword.sysdigsecure_short}} now includes a new posture policy to continuously track compliance of Financial Services v2.0.
 
 ## July 2025
 {: #workload-protection-july25}
@@ -160,7 +160,7 @@ Automatically detect {{site.data.keyword.cloud_notm}} Virtual Servers for VPC th
 :    {{site.data.keyword.sysdigsecure_short}} now detects Virtual Servers for VPC that are exposed as part of the Network Exposure module. This update enhances visibility for {{site.data.keyword.cloud_notm}} customers by enabling identification and analysis of publicly exposed virtual servers, closing a critical security gap in multi-cloud environments. Exposed virtual servers can be analyzed under Inventory or Search.
 
 Threats module is now available in {{site.data.keyword.sysdigsecure_short}}
-:   Threats combine related security signals into a single, actionable security incident. It provides context driven correlation, such as Kubernetes workloads or attack phases. This consolidation accelerates understanding the scope and criticaly of threats. You can automate responses such as sending notifications when a new threat is discovered by using Automations under Policies. 
+:   Threats combine related security signals into a single, actionable security incident. It provides context driven correlation, such as Kubernetes workloads or attack phases. This consolidation accelerates understanding the scope and criticaly of threats. You can automate responses such as sending notifications when a new threat is discovered by using Automations under Policies.
 
 
 ## May 2025
@@ -266,7 +266,7 @@ Graph Search for {{site.data.keyword.cloud_notm}}
 :   This feature lets you explore and access data on GraphDB by querying entities and relationships with SysQL, including all {{site.data.keyword.cloud_notm}} findings. The intuitive query builder ensures a seamless experience and lets you proactively identify risky patterns before they escalate into full-fledged threats. Start today by accessing your {{site.data.keyword.sysdigsecure_short}} UI and navigating to the **Inventory** page and selecting **Search**.
 
 Posture management for Oracle Cloud Infrastructure (OCI)
-:   {{site.data.keyword.sysdigsecure_short}} now provides out-of-the-box posture policies and controls for Oracle Cloud Infrastructure (OCI), including graph-based security analytics and custom risks. 
+:   {{site.data.keyword.sysdigsecure_short}} now provides out-of-the-box posture policies and controls for Oracle Cloud Infrastructure (OCI), including graph-based security analytics and custom risks.
 
 ### 13 February 2025
 {: #workload-protection-feb25}
@@ -291,7 +291,7 @@ Compliance Readiness Report
 
 Malware Control Policy
 :   SCC {{site.data.keyword.sysdigsecure_short}} is releasing a new Runtime Threat Policy for Malware Detection.
-You can now detect Malware being executed in your environment by detecting the known malware hashes and utilize YARA rules to enhance the detection capabilities. 
+You can now detect Malware being executed in your environment by detecting the known malware hashes and utilize YARA rules to enhance the detection capabilities.
 Create a new **Malware Control Policy** under Policies > Runtime Policies.
 
 ## October 2024

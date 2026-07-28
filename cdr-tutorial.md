@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-01"
+lastupdated: "2026-07-28"
 
 keywords:
 
@@ -51,7 +51,7 @@ The connection between components is secured using two IAM objects: a trusted pr
 
 Before you begin, ensure the following services and permissions are available in your {{site.data.keyword.cloud_notm}} account.
 
-- An existing {{site.data.keyword.sysdigsecure_short}} instance and its CRN. It will be referenced later as `<workload-protection-instance-crn>`. For more information, see [Creating an instance](/docs/workload-protection?topic=workload-protection-provision).
+- An existing {{site.data.keyword.sysdigsecure_short}} instance and its CRN. It will be referenced later as `<workload-protection-instance-crn>`. For more information, see [Setting up {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-getting-started#setup).
 - Your {{site.data.keyword.sysdigsecure_short}} must have CSPM enabled for your {{site.data.keyword.cloud_notm}} account. For more information, see [Implementing CSPM for {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-cspm-implement)
 - Permissions to manage the following services in your {{site.data.keyword.cloud_notm}} account:
    - **{{site.data.keyword.atracker_short}}**: Editor or Administrator platform role.
