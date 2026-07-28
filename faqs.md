@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-24"
+lastupdated: "2026-07-28"
 
 keywords: workload protection faq, security faq, cspm faq, agent faq, compliance faq
 
@@ -32,7 +32,7 @@ The Free Trial plan gives you access to all {{site.data.keyword.sysdigsecure_sho
 
 Your pricing depends on how you use {{site.data.keyword.sysdigsecure_short}}:
 
-- Cloud security posture management (CSPM) for cloud compliance: Priced per compute instance being scanned. For a list of compute instances that incur charges, see [billable resources](/docs/workload-protection?topic=workload-protection-pricing#pricing_pricing-units). Other cloud resources that are scanned for CSPM do not incur charges. 
+- Cloud security posture management (CSPM) for cloud compliance: Priced per compute instance being scanned. For a list of compute instances that incur charges, see [billable resources](/docs/workload-protection?topic=workload-protection-pricing#pricing_pricing-units). Other cloud resources that are scanned for CSPM do not incur charges.
 - Kubernetes protection with agents installed on clusters: Priced per worker node hour.
 - Host protection with agents installed on virtual machines: Priced per virtual machine (VM) node hour.
 
@@ -198,7 +198,7 @@ Yes. For any failing control, you can accept the risk either temporarily (with a
 {: #faq-custom-policies}
 {: faq}
 
-Yes. You can create custom posture policies from scratch or by starting from an existing predefined policy as a template. You can also create custom controls and customize control parameters to tailor compliance evaluation to your organization's specific requirements. For more information, go to [Creating a custom policy](/docs/workload-protection?topic=workload-protection-posture-policy-create) and [Creating custom controls](/docs/workload-protection?topic=workload-protection-custom-controls).
+Yes. You can create custom posture policies from scratch or by starting from an existing predefined policy as a template. You can also create custom controls and customize control parameters to tailor compliance evaluation to your organization's specific requirements. For more information, go to [How compliance posture management works](/docs/workload-protection?topic=workload-protection-compliance#compliance-how-it-works).
 
 ## Who is responsible for managing custom threat detection rules and policies?
 {: #faq-custom-rules-responsibility}
