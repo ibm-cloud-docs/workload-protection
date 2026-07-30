@@ -89,7 +89,10 @@ toc:
       topics:
       - data_portability.md
       - posture-policies-services.md
-      - regions-endpoints.md
+      - topic: supported-regions.md
+        navtitle: Locations
+      - topic: supported-endpoints.md
+        navtitle: Endpoints
       - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
       - topicgroup:
