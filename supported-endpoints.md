@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-30"
 
 keywords:
 
@@ -12,57 +12,15 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Supported regions and endpoints for {{site.data.keyword.sysdigsecure_short}}
-{: #supported-regions}
-
-A list of supported regions and endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service.
-{: shortdesc}
-
-## Regions
-{: #regions}
-
-The {{site.data.keyword.sysdigsecure_full_notm}} service is available in the following regions:
-
-![The image shows the locations where the {{site.data.keyword.sysdigsecure_full_notm}} service is available.](images/locations.svg){: caption="Displays the regions where you can create and manage {{site.data.keyword.sysdigsecure_full_notm}} resources." caption-side="bottom"}
-
-This image is an artistic representation and does not reflect actual political or geographic boundaries.
-{: note}
-
-You can create {{site.data.keyword.sysdigsecure_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} locations, which represent the geographic area where your {{site.data.keyword.sysdigsecure_full_notm}} requests are handled and processed.
-
-The following table lists the locations where the service is available:
-
-| Geography             | Region                   | EU-Supported | HA Status |
-|-----------------------|--------------------------|--------------|-----------|
-| `Asia Pacific`        | `Sydney (au-syd)`        | `N/A`        | `MZR`     |
-| `Asia Pacific`        | `Osaka (jp-osa)`         | `N/A`        | `N/A`     |
-| `Asia Pacific`        | `Tokyo (jp-tok)`         | `N/A`        | `MZR`     |
-| `Europe`              | `Frankfurt (eu-de) (*)`  | `YES`        | `MZR`     |
-| `Europe`              | `London (eu-gb)`         | `NO`         | `MZR`     |
-| `North America`       | `Dallas (us-south)`      | `N/A`        | `MZR`     |
-| `North America`       | `Washington (us-east)`   | `N/A`        | `MZR`     |
-| `North America`       | `Toronto (ca-tor)`       | `N/A`        | `MZR`     |
-| `South America`       | `Sao Paulo (br-sao)`     | `N/A`        | `MZR`     |
-{: caption="Locations where the service is available" caption-side="bottom"}
-
-Geography
-:   A geographic area or larger political body that contains one or more regions.
-
-Region
-:   A defined geographic territory. A region might be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
-
-N/A
-:   Feature that is not applicable to that geography.
-
-`(*)` For more information, see [Enabling EU support for your account](/docs/account?topic=account-eu-supported).
-
-## Endpoints
-{: #endpoints}
+# Endpoints for {{site.data.keyword.sysdigsecure_short}}
+{: #supported-endpoints}
 
 A list of supported public and private endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service.
+{: shortdesc}
 
-### Web UI endpoints
-{: #endpoints_workload_protection}
+
+## Web UI endpoints
+{: #supported-endpoints-web-ui}
 
 To access the {{site.data.keyword.sysdigsecure_full_notm}} web UI, you might need to define a firewall rule in your host.
 
@@ -85,16 +43,16 @@ The following table lists the endpoints that are available for each region:
 | Washington (`US-East`)   | `https://us-east.security-compliance-secure.cloud.ibm.com`       | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82  \n 169.63.183.79 `(*)`  \n 52.117.125.244 `(*)`        | https (TLS) 443 |
 {: caption="Web UI endpoints" caption-side="bottom"}
 
-### REST API endpoints
-{: #endpoints_rest_api}
+## REST API endpoints
+{: #supported-endpoints-rest-api}
 
 To make API calls, you might need to define a firewall rule in your host.
 
 `(*)` Indicates IP addresses that are planned to be supported. These IP addresses must be added to an allowlist, if you use an allowlist, before 1 May 2025 to avoid service interruptions. Be sure to keep the current IP addresses in the allowlist as well. A notification will be sent before the current IP addresses are deprecated.
 {: note}
 
-#### Private REST API endpoints
-{: #endpoints_rest_api_private}
+### Private REST API endpoints
+{: #supported-endpoints-rest-api-private}
 
 The following table lists the private REST API endpoints that are available for each region:
 
@@ -113,8 +71,8 @@ The following table lists the private REST API endpoints that are available for 
 {: caption="Private REST API endpoints" caption-side="bottom"}
 
 
-#### Public REST API endpoints
-{: #endpoints_rest_api_public}
+### Public REST API endpoints
+{: #supported-endpoints-rest-api-public}
 
 The following table lists the public REST API endpoints that are available for each region:
 
@@ -133,13 +91,13 @@ The following table lists the public REST API endpoints that are available for e
 {: caption="Public REST API endpoints" caption-side="bottom"}
 
 
-### Collector endpoints
-{: #endpoints_ingestion}
+## Collector endpoints
+{: #supported-endpoints-collector}
 
 Collector endpoints are ingestion endpoints that you can use to send data.
 
-#### Private Collector endpoints
-{: #endpoints_ingestion_private}
+### Private Collector endpoints
+{: #supported-endpoints-collector-private}
 
 To send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account.
 {: note}
@@ -167,8 +125,8 @@ To successfully connect your infrastructure to your {{site.data.keyword.sysdigse
 | Washington (`US-East`)   | `ingest.private.us-east.security-compliance-secure.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53  \n  \n  166.9.231.240 `(*)`  \n 166.9.232.28 `(*)`  \n 166.9.233.17 `(*)` \n 166.9.231.19 `(*)`  \n 166.9.232.40 `(*)`  \n 166.9.233.36 `(*)`      | TCP 6443  |  TCP 443  |
 {: caption="Private collector endpoints and IP addresses" caption-side="bottom"}
 
-#### Public Collector endpoints
-{: #endpoints_ingestion_public}
+### Public Collector endpoints
+{: #supported-endpoints-collector-public}
 
 The following table lists the public collector endpoints that are available for each region.
 
@@ -191,7 +149,7 @@ The following table lists the public collector endpoints that are available for 
 
 
 ## Subnets for webhook notifications
-{: #endpoints_network_alert_subnets}
+{: #supported-endpoints-subnets}
 
 To receive alert notifications by using webhooks from the {{site.data.keyword.sysdigsecure_full_notm}} service, you might need to define firewall rules for the subnets that are invoking your webhooks.
 
