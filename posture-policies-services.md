@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-01"
+lastupdated: "2026-08-10"
 
 keywords: posture policies, compliance policies, supported services, IBM Cloud services, CSPM policies
 
@@ -118,8 +118,6 @@ Posture policies for other environments such as AWS, Azure, GCP, Kubernetes, Ope
 {: #supported-services-databases}
 
 - [Databases for Elasticsearch](/docs/databases-for-elasticsearch)
-- [Databases for EnterpriseDB](/docs/databases-for-enterprisedb)
-- [Databases for ETCD](/docs/databases-for-etcd)
 - [Databases for MongoDB](/docs/databases-for-mongodb)
 - [Databases for MySQL](/docs/databases-for-mysql)
 - [Databases for PostgreSQL](/docs/databases-for-postgresql)
