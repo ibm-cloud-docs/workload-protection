@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-01"
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -105,7 +105,7 @@ To create a new access key for an {{site.data.keyword.sysdigsecure_short}} insta
 
     Where:
 
-    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints).
+    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-supported-endpoints).
     * `SYSDIG_API_TOKEN` is the API token that you obtained in step 1.
     * `GUID` is the GUID of the instance that is associated with the access key.
 
@@ -227,7 +227,7 @@ To view all of the access keys for an {{site.data.keyword.sysdigsecure_short}} i
 
     Where:
 
-    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints).
+    * `ENDPOINT` is the URL for the region where the instance is available. For more information, see [Endpoints](/docs/workload-protection?topic=workload-protection-supported-endpoints).
     * `SYSDIG_API_TOKEN` is the API token that you obtained in step 1.
     * `GUID` is the GUID of the instance that is associated with the access key.
 

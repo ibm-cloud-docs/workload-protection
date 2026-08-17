@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-28"
+lastupdated: "2026-08-17"
 
 keywords:  release notes, IBM Cloud
 
@@ -194,7 +194,7 @@ Updates to the {{site.data.keyword.sysdigsecure_full_notm}} infrastructure
     * If you have IP-based allowlists or firewall rules running in your environment
     * If you have IP address-specific routing
 
-    For details on the changes and the new IP addresses, check out [Endpoints](/docs/workload-protection?topic=workload-protection-supported-regions&interface=api#endpoints).
+    For details on the changes and the new IP addresses, check out [Endpoints](/docs/workload-protection?topic=workload-protection-supported-endpoints).
 
 
 
@@ -413,7 +413,7 @@ New vulnerability scanning engine available
 {: release-note}
 
 Availability in additional regions
-:   {{site.data.keyword.sysdigsecure_short}} is available for use in [multiple regions.](/docs/workload-protection?topic=workload-protection-supported-regions#endpoints)
+:   {{site.data.keyword.sysdigsecure_short}} is available for use in [multiple regions.](/docs/workload-protection?topic=workload-protection-supported-regions)
 
 ## April 2023
 {: #workload-protection-apr23}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-28"
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -179,7 +179,7 @@ ibmcloud ce secret create --name icr-secret --format registry --server icr.io --
 Make sure to replace the following variables in the command:
 - `<target_account_id>` with the {{site.data.keyword.cloud_notm}} account ID.
 - `<trusted_profile_id>` with the trusted profile created in step 3.
-- `<environment_url>` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-supported-regions&interface=api#endpoints) for your region. For example, if your instance is in Dallas, replace `<environment_url>` with `us-south.security-compliance-secure.cloud.ibm.com`.
+- `<environment_url>` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-supported-endpoints#supported-endpoints-rest-api) for your region. For example, if your instance is in Dallas, replace `<environment_url>` with `us-south.security-compliance-secure.cloud.ibm.com`.
 - `<service_id>` with the Service ID created in step 2.
 
 ```sh
@@ -247,7 +247,7 @@ Make sure to replace the following variables in the command:
 - `<cos_bucket_region>` with the region of the {{site.data.keyword.cos_short}} bucket created in step 1.
 - `<cos_bucket_name>` with the {{site.data.keyword.cos_short}} bucket name created in step 1.
 - `<trusted_profile_id>` with the trusted profile ID saved in step 3.
-- `<environment_url>` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-supported-regions&interface=api#endpoints) for your region.
+- `<environment_url>` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-supported-endpoints#supported-endpoints-rest-api) for your region.
 - `<service_id>` with the Service ID identifier (the `ServiceId-xxx` value) from step 2.
 - `<target_account_id>` with the {{site.data.keyword.cloud_notm}} account ID.
 
