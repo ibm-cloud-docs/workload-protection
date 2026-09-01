@@ -2,9 +2,9 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-09-01"
 
-keywords: workload protection faq, security faq, cspm faq, agent faq, compliance faq
+keywords: IBM Cloud workload protection FAQ, security FAQ, CSPM, agent installation, compliance, pricing
 
 subcollection: workload-protection
 
@@ -14,10 +14,10 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQ for {{site.data.keyword.sysdigsecure_short}}
+# Frequently asked questions for {{site.data.keyword.cloud_notm}} workload protection
 {: #workload-protection-faq}
 
-Frequently asked questions about {{site.data.keyword.sysdigsecure_full_notm}}.
+Get answers to common questions about {{site.data.keyword.sysdigsecure_full_notm}}, including pricing, agent installation, compliance features, and cloud security posture management (CSPM).
 {: shortdesc}
 
 ## What is the difference between the Free Trial and Graduated Tier plans?

@@ -2,9 +2,9 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-30"
+lastupdated: "2026-09-01"
 
-keywords:
+keywords: IBM Cloud regions, service availability, supported regions, EU support, geography
 
 subcollection: workload-protection
 
@@ -12,10 +12,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Regions
+# IBM Cloud service regions and availability for {{site.data.keyword.sysdigsecure_short}}
 {: #supported-regions}
 
-The {{site.data.keyword.sysdigsecure_full_notm}} service is available in the following regions:
+Discover the regions where {{site.data.keyword.sysdigsecure_full_notm}} is available, including geography, multi-zone region (MZR) status, and EU-supported locations.
 {: shortdesc}
 
 

@@ -2,9 +2,9 @@
 
 copyright:
 years: 2024
-lastupdated: "2024-11-15"
+lastupdated: "2026-09-01"
 
-keywords: workload protection, data portability, export
+keywords: data portability, IBM Cloud, workload protection, export digital artifacts, customer content, service providers
 
 subcollection: workload-protection
 
@@ -12,10 +12,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding data portability for {{site.data.keyword.sysdigsecure_short}}
+# Understanding data portability for {{site.data.keyword.cloud_notm}} workload protection
 {: #data-portability}
 
-Data portability involves a set of tools and procedures that enable customers to export the digital artifacts that are needed to implement similar workload and data processing on different service providers or on-premises software. It includes procedures for copying and storing the service customer content, including the related configuration that is used by the service to store and process the data, on the customer’s own location.
+Learn about data portability for {{site.data.keyword.sysdigsecure_full_notm}}, including the tools and procedures to export digital artifacts and customer content for use with different service providers or on-premises software.
 {: shortdesc}
 
 ## Responsibilities

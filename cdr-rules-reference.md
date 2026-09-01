@@ -2,9 +2,9 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-01"
+lastupdated: "2026-09-01"
 
-keywords: cloud detection and response, CDR, ibm cloud, falco, rules, fields, activity tracker
+keywords: CDR threat detection rules, IBM Cloud, Falco rules, cloud detection and response, activity tracker, audit events
 
 subcollection: workload-protection
 
@@ -12,10 +12,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Reference Library for {{site.data.keyword.cloud_notm}} CDR Threat Detection Rules
+# {{site.data.keyword.cloud_notm}} CDR threat detection rules reference library
 {: #cdr-rules-reference}
 
-{{site.data.keyword.sysdigsecure_short}} enables you to create and customize Threat Detection Rules to detect suspicious activity in your {{site.data.keyword.cloud_notm}} environments. This topic provides all the fields available for writing Falco rules against {{site.data.keyword.cloud_notm}} audit events ingested via CDR.
+Create and customize threat detection rules to detect suspicious activity in your {{site.data.keyword.cloud_notm}} environments. This reference covers all fields available for writing Falco rules against {{site.data.keyword.cloud_notm}} audit events ingested via CDR.
 {: shortdesc}
 
 Rules targeting {{site.data.keyword.cloud_notm}} audit events must use `source: ibm_activitytracker`. Fields can be accessed directly by their plugin name (e.g. `ibm.action`) or via the raw JSON path using `jevt.value[/fieldPath]` (for example `jevt.value[/action]`).

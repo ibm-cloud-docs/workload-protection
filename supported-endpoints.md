@@ -2,9 +2,9 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-30"
+lastupdated: "2026-09-01"
 
-keywords:
+keywords: IBM Cloud endpoints, Sysdig Secure, supported endpoints, public endpoints, private endpoints, REST API
 
 subcollection: workload-protection
 
@@ -12,10 +12,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Endpoints for {{site.data.keyword.sysdigsecure_short}}
+# Endpoints for {{site.data.keyword.sysdigsecure_short}} on {{site.data.keyword.cloud_notm}}
 {: #supported-endpoints}
 
-A list of supported public and private endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service.
+Learn about the supported public and private endpoints for the {{site.data.keyword.sysdigsecure_full_notm}} service, including web UI and REST API endpoints across all available regions.
 {: shortdesc}
 
 

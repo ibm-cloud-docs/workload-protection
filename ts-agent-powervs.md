@@ -2,9 +2,9 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-09-01"
 
-keywords: PowerVS AIX agent, dragent service, and PowerVS Linux agent
+keywords: PowerVS agent, IBM Cloud, Linux AIX agent, Sysdig agent, data reporting, workload protection, troubleshooting
 
 subcollection: workload-protection
 
@@ -14,9 +14,12 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why is my {{site.data.keyword.powerSys_notm}} agent not reporting data?
+# Troubleshooting {{site.data.keyword.powerSys_notm}} agent data reporting issues on {{site.data.keyword.cloud_notm}}
 {: #ts-agent-powervs}
 {: troubleshoot}
+
+Resolve issues with the PowerVS agent not reporting data on {{site.data.keyword.cloud_notm}}, including configuration checks and connectivity troubleshooting for Linux and AIX hosts.
+{: shortdesc}
 
 After you deploy the {{site.data.keyword.sysdigsecure_short}} agent on a Linux or AIX host on {{site.data.keyword.powerSys_notm}}, the host does not appear in **Integrations** > **Data Sources** > **Sysdig Agents**, or no posture, vulnerability, or threat data is visible.
 {: tsSymptoms}

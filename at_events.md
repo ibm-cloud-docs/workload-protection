@@ -4,7 +4,7 @@ copyright:
   years:  2023
 lastupdated: "2023-04-14"
 
-keywords: activity tracker for IBM Cloud Monitoring, IBM Cloud, audit, activity tracker, events, audit logs
+keywords: activity tracker, IBM Cloud, security events, audit logs, auditing, CADF, monitoring
 
 subcollection: workload-protection
 
@@ -13,10 +13,10 @@ subcollection: workload-protection
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Auditing events
+# Tracking security events with Activity Tracker in {{site.data.keyword.cloud_notm}}
 {: #at_events}
 
-As a security officer, auditor, or manager, you can use the Activity Tracker service to track how users and applications interact with the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud}}.
+Use the Activity Tracker service to monitor user and application interactions with the {{site.data.keyword.sysdigsecure_full_notm}} service, track security events, and meet regulatory audit requirements.
 {: shortdesc}
 
 {{site.data.keyword.atracker_short}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [getting started tutorial for {{site.data.keyword.atracker_short}}](/docs/atracker?topic=atracker-getting-started).
