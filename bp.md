@@ -2,9 +2,9 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-22"
+lastupdated: "2026-09-01"
 
-keywords: cspm, compliance, agents, zones, policies, enterprise accounts
+keywords: IBM Cloud best practices, cloud security, CSPM, compliance, Sysdig Secure, workload protection
 
 subcollection: workload-protection
 
@@ -12,10 +12,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Best practices for {{site.data.keyword.sysdigsecure_short}}
+# Best practices for {{site.data.keyword.cloud_notm}} workload protection with {{site.data.keyword.sysdigsecure_short}}
 {: #bp}
 
-Review these best practices to help you get the most out of {{site.data.keyword.sysdigsecure_full}}.
+Discover best practices for maximizing the potential of {{site.data.keyword.sysdigsecure_full_notm}}, including cloud security posture management (CSPM), compliance, and agent deployment.
 {: shortdesc}
 
 ## Cloud security posture management (CSPM)
