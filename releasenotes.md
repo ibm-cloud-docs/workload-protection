@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-03"
 
 keywords: release notes, IBM Cloud, workload protection updates, cloud security, Sysdig Secure enhancements
 
@@ -25,6 +25,7 @@ Stay up-to-date with the latest updates and enhancements to {{site.data.keyword.
 
 ## 16 July 2026
 {: #workload-protection-jul1626}
+{: release-note}
 
 Changes to {{site.data.keyword.cloud_notm}} CSPM controls for Context Based Restrictions
 :   All posture controls related to CBR now fail by default. To make them pass, navigate to **Policies > Posture controls**, select the corresponding control, and add the necessary parameters.
@@ -49,7 +50,7 @@ Software Lifecycle and End-of-Life Visibility for OS and Go Runtime
 ## April 2026
 {: #workload-protection-apr26}
 
-## April 26 2026
+## 26 April 2026
 {: #workload-protection-apr2626}
 
 Now Generally Available: Cloud Detection and Response for {{site.data.keyword.cloud_notm}}
