@@ -13,7 +13,7 @@ subcollection: workload-protection
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Tracking security events with Activity Tracker in {{site.data.keyword.cloud_notm}}
+# Auditing events
 {: #at_events}
 
 Use the Activity Tracker service to monitor user and application interactions with the {{site.data.keyword.sysdigsecure_full_notm}} service, track security events, and meet regulatory audit requirements.

@@ -14,7 +14,7 @@ content-type: conref
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using Sysdig Secure documentation with {{site.data.keyword.cloud_notm}}
+# Content references
 {: #conref-sysdig-secure}
 
 {{site.data.keyword.sysdigsecure_full_notm}} implements Sysdig Secure functionality. Information that is provided by the Sysdig Secure documentation applies to {{site.data.keyword.sysdigsecure_short}} as well.

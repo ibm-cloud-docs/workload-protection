@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-04"
 
 keywords: IBM Cloud CDR, cloud detection and response, audit events, trusted profile, CDR not connected, workload protection
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Troubleshooting {{site.data.keyword.cloud_notm}} account not ingesting audit events with CDR
+# Why is my {{site.data.keyword.cloud_notm}} account not ingesting audit events
 {: #ts-cdr}
 {: troubleshoot}
 

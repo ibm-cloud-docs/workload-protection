@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-04"
 
 keywords: PowerVS agent, IBM Cloud, Linux AIX agent, Sysdig agent, data reporting, workload protection, troubleshooting
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Troubleshooting {{site.data.keyword.powerSys_notm}} agent data reporting issues on {{site.data.keyword.cloud_notm}}
+# Why is my {{site.data.keyword.powerSys_notm}} agent not reporting data?
 {: #ts-agent-powervs}
 {: troubleshoot}
 
