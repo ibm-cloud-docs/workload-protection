@@ -2,7 +2,7 @@
 
 copyright:
 years: 2024
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-04"
 
 keywords: data portability, IBM Cloud, workload protection, export digital artifacts, customer content, service providers
 
@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding data portability for {{site.data.keyword.cloud_notm}} workload protection
+# Understanding data portability for {{site.data.keyword.sysdigsecure_short}}
 {: #data-portability}
 
 Learn about data portability for {{site.data.keyword.sysdigsecure_full_notm}}, including the tools and procedures to export digital artifacts and customer content for use with different service providers or on-premises software.

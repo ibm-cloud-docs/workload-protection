@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-04"
 
 keywords: IBM Cloud integration errors, CSPM, trusted profile, IAM, integration not active, workload protection
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Troubleshooting {{site.data.keyword.cloud_notm}} integration errors with CSPM enabled
+# Why is my {{site.data.keyword.cloud_notm}} integration showing errors or not Active?
 {: #troubleshoot-integration-errors}
 {: troubleshoot}
 {: support}

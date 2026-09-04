@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-04"
 
 keywords: IBM Cloud workload protection FAQ, security FAQ, CSPM, agent installation, compliance, pricing
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Frequently asked questions for {{site.data.keyword.cloud_notm}} workload protection
+# Frequently asked questions for {{site.data.keyword.sysdigsecure_short}}
 {: #workload-protection-faq}
 
 Get answers to common questions about {{site.data.keyword.sysdigsecure_full_notm}}, including pricing, agent installation, compliance features, and cloud security posture management (CSPM).
