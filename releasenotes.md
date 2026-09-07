@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-04"
+lastupdated: "2026-09-07"
 
 keywords: release notes, IBM Cloud, workload protection updates, cloud security, Sysdig Secure enhancements
 
@@ -35,6 +35,7 @@ Changes to {{site.data.keyword.cloud_notm}} CSPM controls for Context Based Rest
 
 ## 12 June 2026
 {: #workload-protection-jun1226}
+{: release-note}
 
 Software Lifecycle and End-of-Life Visibility for OS and Go Runtime
 :   {{site.data.keyword.sysdigsecure_short}} Vulnerability Management now surfaces end-of-life (EOL) information for supported operating systems and the Go runtime. Lifecycle status appears in the Resource Details drawer (Components tab), component details, Findings Details drawer, scan result side panel, CLI scanner JSON output, and the Scan Results API.
@@ -52,18 +53,21 @@ Software Lifecycle and End-of-Life Visibility for OS and Go Runtime
 
 ## 26 April 2026
 {: #workload-protection-apr2626}
+{: release-note}
 
 Now Generally Available: Cloud Detection and Response for {{site.data.keyword.cloud_notm}}
 :   {{site.data.keyword.sysdigsecure_short}} now provides near real-time threat detection and response (CDR) for {{site.data.keyword.cloud_notm}} audit logs. CDR ingests Activity Tracker events applying detection rules to identify threats such as privilege escalation, lateral movement, and suspicious API activity. For more information, see [Enabling Detection and Response for {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-cdr-about).
 
 ## 21 April 2026
 {: #workload-protection-apr2126}
+{: release-note}
 
 Resource Ownership
 :   {{site.data.keyword.sysdigsecure_short}} now supports Resource Ownership, enabling automatic identification of who is responsible for a specific resource based on infrastructure metadata such as Kubernetes labels or cloud tags. Configure **Owner Keys** (for example, `compliance.owner` or `maintainer`) **Settings > Resource Ownership** to automatically map resources to their owners across your inventory and Graph Search. Ownership information is queryable via SysQL and surfaces in the Inventory view, supporting both operational visibility and ticket routing workflows. You can define up to 10 owner keys and 10 ticket assignee keys per instance.
 
 ## 1 April 2026
 {: #workload-protection-apr0126}
+{: release-note}
 
 Improved Main Dashboard
 : Introducing an improved main dashboard that provides a clearer separation between day‑to‑day security workflows and administration. This is a navigation‑only update and does not affect existing data, policies, configurations, or functionality.
@@ -73,6 +77,7 @@ Improved Main Dashboard
 
 ## 17 March 2026
 {: #workload-protection-mar1726}
+{: release-note}
 
 AI Agent Threat Detection
 :   You can now detect suspicious behavior from AI agents (Codex, Gemini CLI, Claude Code) using our latest Runtime Policies. Enable these protections today under Policies > Runtime Policies.
@@ -86,8 +91,10 @@ New posture report is now available
 ## December 2025
 {: #workload-protection-dec25}
 
+
 ## 9 December 2025
 {: #workload-protection-dec0925}
+{: release-note}
 
 Vulnerability Management rules now support complex image label validation
 :   {{site.data.keyword.sysdigsecure_short}} vulnerability rule bundles for `Image Label` now allows you to verify the label and its value and ensure no conflicting labels exist.
@@ -98,6 +105,7 @@ Vulnerability Management rules now support complex image label validation
 
 ## 18 November 2025
 {: #workload-protection-nov1825}
+{: release-note}
 
 Vulnerability Management reports are now available in the Scheduler Manager
 :   {{site.data.keyword.sysdigsecure_short}} reporting platform now provides the following vulnerability management reports:
@@ -110,6 +118,7 @@ Threat Intelligence feed
 
 ## 4 November 2025
 {: #workload-protection-nov0425}
+{: release-note}
 
 Image Signature Validation for Admission Control of Kubernetes Workloads
 :    {{site.data.keyword.sysdigsecure_short}} now supports Image Signature Validation to ensure that only trusted and verifiable container images are deployed to your Kubernetes and OpenShift clusters.
@@ -124,6 +133,8 @@ Image Signature Validation for Admission Control of Kubernetes Workloads
 {: #workload-protection-sep25}
 
 ## 26 September 2025
+{: #workload-protection-sep2625}
+{: release-note}
 
 Resource Group ID is now supported to scope in zones
 :   You can now scope your {{site.data.keyword.cloud_notm}} zones with resource group IDs in {{site.data.keyword.sysdigsecure_short}}. Learn more about setting scope in [Zones](https://docs.sysdig.com/en/sysdig-secure/zones/){: external}.
@@ -132,6 +143,8 @@ Resource Group ID is now supported to scope in zones
 {: #workload-protection-aug25}
 
 ## 4 August 2025
+{: #workload-protection-aug0425}
+{: release-note}
 
 {{site.data.keyword.cloud_notm}} Framework for Financial Services v2.0
 :   {{site.data.keyword.sysdigsecure_short}} now includes a new posture policy to continuously track compliance of Financial Services v2.0.
@@ -141,6 +154,7 @@ Resource Group ID is now supported to scope in zones
 
 ## 10 July 2025
 {: #workload-protection-july1025}
+{: release-note}
 
 Now Generally Available: Admission Controller
 :   {{site.data.keyword.sysdigsecure_short}} now provides a new Admission Controller, delivering powerful deploy-time security enforcement across Kubernetes environments. You can use Admission Controller to integrate Kubernetes Security Posture Management (KSPM) and Vulnerability Management (VM) into your deployment workflows. Admission Controller enables a shift-left approach by preventing risky configurations and vulnerable images from reaching production. The Admission Controller has the following features:
