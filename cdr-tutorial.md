@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-04"
+lastupdated: "2026-09-08"
 
 keywords: cloud detection and response, CDR, IBM Cloud audit logs, threat detection, suspicious activity, workload protection
 
@@ -196,7 +196,7 @@ ibmcloud ce application create \
   --env TARGET_ACCOUNT_ID=<target_account_id> \
   --env TRUSTED_PROFILE_ID=<trusted_profile_id> \
   --env FORWARD_URL="https://<environment_url>/api/cloudingestion/webhooks/ibm/v1/<service_id>" \
-  --env API_KEY=cdr-secrets:API_KEY \
+  --env-from-secret cdr-secrets \
   --registry-secret icr-secret
 ```
 {: pre}
