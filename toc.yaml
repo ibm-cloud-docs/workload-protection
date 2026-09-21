@@ -88,11 +88,13 @@ toc:
       id: reference
       topics:
       - data_portability.md
-      - posture-policies-services.md
+      - predefined-posture-policies.md
+      - services.md
       - topic: supported-regions.md
         navtitle: Locations
       - topic: supported-endpoints.md
         navtitle: Endpoints
+      - cspm-fscloud.md
       - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
       - topicgroup:
