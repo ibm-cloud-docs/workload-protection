@@ -57,7 +57,7 @@ The following controls have been updated to {{site.data.keyword.cloud_notm}} Fra
 | Ensure the default network access group (NAG) of every PowerVS workspace restricts all traffic                                                                              | AC-4, SC-3, SC-7(a), SC-7(b), SC-7(c)                       | This control was added |
 {: caption="Summary of the changes for version v2.0 of the {{site.data.keyword.cloud_notm}} for Financial Services policy" caption-side="bottom"}
 
-# Default parameters values based on {{site.data.keyword.cloud_notm}} Framework for Financial Services
+## Default parameters values based on {{site.data.keyword.cloud_notm}} Framework for Financial Services
 {: #default-parameters}
 
 The following {{site.data.keyword.sysdigsecure_full}} posture controls have default parameters based on the {{site.data.keyword.cloud_notm}} Framework for Financial Services:
