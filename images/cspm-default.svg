@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1400 380">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8 {
+        isolation: isolate;
+      }
+
+      .st1, .st3 {
+        font-size: 11px;
+      }
+
+      .st1, .st9 {
+        fill: #fff;
+      }
+
+      .st1, .st7, .st8 {
+        font-family: IBMPlexSans-SmBld, 'IBM Plex Sans';
+      }
+
+      .st2, .st5 {
+        font-size: 10px;
+      }
+
+      .st2, .st5, .st6 {
+        fill: #525252;
+      }
+
+      .st3, .st4, .st5, .st10, .st6 {
+        font-family: IBMPlexSans, 'IBM Plex Sans';
+      }
+
+      .st3, .st7, .st8 {
+        fill: #161616;
+      }
+
+      .st4 {
+        font-size: 9px;
+      }
+
+      .st4, .st11 {
+        fill: #0f62fe;
+      }
+
+      .st6 {
+        font-size: 13px;
+      }
+
+      .st7 {
+        font-size: 20px;
+      }
+
+      .st12 {
+        fill: #edf5ff;
+        stroke: #0f62fe;
+        stroke-width: 2px;
+      }
+
+      .st8 {
+        font-size: 12px;
+      }
+
+      .st13 {
+        fill: #f4f4f4;
+        stroke: #c6c6c6;
+      }
+
+      .st14 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+    </style>
+  </defs>
+  <rect class="st9" y=".29" width="1400" height="380"/>
+  <text class="st7" transform="translate(543.68 38)"><tspan x="0" y="0">CDR for IBM Cloud — Architecture</tspan></text>
+  <text class="st6" transform="translate(494.25 66.58)"><tspan x="0" y="0">Activity Tracker → App Configuration→ SCC Workload Protection</tspan></text>
+  <rect class="st12" x="192.44" y="120.17" width="178" height="90" rx="6" ry="6"/>
+  <rect class="st11" x="192.44" y="120.17" width="178" height="24" rx="6" ry="6"/>
+  <rect class="st11" x="192.44" y="132.17" width="178" height="12"/>
+  <text class="st1" transform="translate(232.7 137.17)"><tspan x="0" y="0">IBM Cloud Account</tspan></text>
+  <text class="st3" transform="translate(250.38 172.17)"><tspan x="0" y="0">Audit Events</tspan></text>
+  <text class="st5" transform="translate(235.69 188.17)"><tspan x="0" y="0">(API calls, IAM, etc.)</tspan></text>
+  <path class="st0" d=""/>
+  <path class="st11" d="M418.44,159.17v12l16-6-16-6Z"/>
+  <path class="st11" d="M430.44,165.17h0Z" marker-end="url(#arrow-blue)"/>
+  <text class="st4" transform="translate(390.17 158.17)"><tspan x="0" y="0">audit</tspan></text>
+  <rect class="st12" x="432.44" y="120.17" width="190" height="90" rx="6" ry="6"/>
+  <rect class="st11" x="432.44" y="120.17" width="190" height="24" rx="6" ry="6"/>
+  <rect class="st11" x="432.44" y="132.17" width="190" height="12"/>
+  <text class="st1" transform="translate(487.59 137.17)"><tspan x="0" y="0">Activity Tracker</tspan></text>
+  <text class="st3" transform="translate(493.23 172.17)"><tspan x="0" y="0">Event Routing</tspan></text>
+  <text class="st5" transform="translate(478.89 188.17)"><tspan x="0" y="0">Target + Route → COS</tspan></text>
+  <path class="st0" d=""/>
+  <path class="st11" d="M670.44,159.17v12l16-6-16-6Z"/>
+  <path class="st11" d="M682.44,165.17h0Z" marker-end="url(#arrow-blue)"/>
+  <text class="st4" transform="translate(637.82 158.17)"><tspan x="0" y="0">archive</tspan></text>
+  <rect class="st12" x="684.44" y="120.17" width="190" height="90" rx="6" ry="6"/>
+  <rect class="st11" x="684.44" y="120.17" width="190" height="24" rx="6" ry="6"/>
+  <rect class="st11" x="684.44" y="132.17" width="190" height="12"/>
+  <text class="st1" transform="translate(725.71 137.17)"><tspan x="0" y="0">App Configuration</tspan></text>
+  <text class="st3" transform="translate(721.16 174.44)"><tspan x="0" y="0">Configuration Aggregator</tspan></text>
+  <text class="st5" transform="translate(724.59 188.17)"><tspan x="0" y="0">Forwards selected </tspan><tspan x="0" y="12">AT events </tspan></text>
+  <path class="st0" d=""/>
+  <path class="st11" d="M1014.44,165.17h0Z" marker-end="url(#arrow-blue)"/>
+  <text class="st1" transform="translate(1079.8 137.17)"><tspan x="0" y="0">Code Engine</tspan></text>
+  <path class="st0" d=""/>
+  <path class="st11" d="M923.56,159.11v12l16-6-16-6Z"/>
+  <path class="st11" d="M935.56,165.11h0Z" marker-end="url(#arrow-blue)"/>
+  <text class="st4" transform="translate(889.87 158.11)"><tspan x="0" y="0">forward</tspan></text>
+  <rect class="st12" x="937.56" y="121.49" width="270" height="90" rx="6" ry="6"/>
+  <rect class="st11" x="937.56" y="120.11" width="270" height="24" rx="6" ry="6"/>
+  <rect class="st11" x="937.56" y="132.11" width="270" height="12"/>
+  <text class="st1" transform="translate(1008.56 137.11)"><tspan x="0" y="0">SCC Workload Protection</tspan></text>
+  <text class="st3" transform="translate(1032.15 172.11)"><tspan x="0" y="0">CSPM</tspan></text>
+  <text/>
+  <text class="st2" transform="translate(254.7 232.17)"><tspan class="st14" x="0" y="0">①</tspan><tspan class="st10" x="10" y="0" xml:space="preserve"> Generates</tspan></text>
+  <text class="st5" transform="translate(253.95 244.17)"><tspan x="0" y="0">audit events</tspan></text>
+  <text class="st2" transform="translate(459.93 232.17)"><tspan class="st14" x="0" y="0">②</tspan><tspan class="st10" x="10" y="0" xml:space="preserve"> Routes to App Configuration</tspan></text>
+  <text class="st5" transform="translate(487.82 245.48)"><tspan x="0" y="0">via target + route</tspan></text>
+  <text class="st2" transform="translate(736.44 232.11)"><tspan class="st14" x="0" y="0">③</tspan><tspan class="st10" x="10" y="0" xml:space="preserve"> Collects IBM Cloud </tspan><tspan class="st10"><tspan x="0" y="12">configurations</tspan></tspan></text>
+  <text class="st2" transform="translate(999.06 232.11)"><tspan class="st14" x="0" y="0">⑤</tspan><tspan class="st10" x="10" y="0" xml:space="preserve"> Scans IBM Cloud resources</tspan><tspan class="st10"><tspan x="0" y="12">for compliance with regulatory frameworks</tspan></tspan></text>
+  <text/>
+  <rect class="st13" x="192.44" y="293.02" width="340" height="60" rx="6" ry="6"/>
+  <text class="st8" transform="translate(354.32 320.47)"><tspan x="0" y="0">Legend</tspan></text>
+  <path class="st0" d=""/>
+  <path class="st11" d="M229.88,327.31v12l16-6-16-6Z"/>
+  <path class="st11" d="M241.88,333.31" marker-end="url(#arrow-blue)"/>
+  <text class="st3" transform="translate(251.88 337.31)"><tspan x="0" y="0">Data flow (event forwarding)</tspan></text>
+  <text/>
+  <text/>
+  <text/>
+</svg>

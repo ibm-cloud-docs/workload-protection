@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-14"
+lastupdated: "2026-09-21"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Enabling cloud compliance with CSPM
+# Enabling CSPM for {{site.data.keyword.cloud_notm}}
 {: #cspm-implement}
 
 Enable cloud security posture management (CSPM) in {{site.data.keyword.sysdigsecure_short}} to scan your {{site.data.keyword.cloud_notm}} resources for compliance with security and regulatory frameworks. With CSPM enabled, {{site.data.keyword.sysdigsecure_short}} continuously evaluates your cloud resources against predefined policies, helping you identify and resolve issues before they become security risks.
@@ -21,7 +21,9 @@ Enable cloud security posture management (CSPM) in {{site.data.keyword.sysdigsec
 This topic focuses on enabling CSPM for {{site.data.keyword.cloud_notm}}. Need to enable CSPM for another cloud provider, like AWS, Azure, GCP, or OCI? See [Connect cloud accounts](https://docs.sysdig.com/en/sysdig-secure/connect-cloud-accounts/){: external} for more information.
 {: tip}
 
-To learn more about CSPM and how it works, go to [About {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-about). To see an example workflow, go to [Analyzing compliance postures from detection to remediation](/docs/workload-protection?topic=workload-protection-compliance). 
+![CSPM for IBM Cloud architecture diagram](images/cspm-default.svg "CSPM for IBM Cloud architecture"){: caption="CDR for IBM Cloud architecture" caption-side="bottom"}
+
+To learn more about CSPM and how it works, go to [About {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-about). To see an example workflow, go to [Analyzing compliance postures from detection to remediation](/docs/workload-protection?topic=workload-protection-compliance).
 
 CSPM for {{site.data.keyword.sysdigsecure_short}} depends on {{site.data.keyword.appconfig_short}}, which collects configuration details from your {{site.data.keyword.cloud_notm}} resources. The [configuration aggregator feature](/docs/app-configuration?topic=app-configuration-ac-configuration-aggregator) in {{site.data.keyword.appconfig_short}} is included at no charge as part of the Lite plan. The integration uses [IAM trusted profiles](/docs/iam?topic=iam-create-trusted-profile&interface=ui) to manage permissions securely.
 
@@ -40,10 +42,10 @@ Before you get started, make sure that you have the following:
 - An existing {{site.data.keyword.sysdigsecure_short}} instance with CSPM disabled. For more information, see [Set up {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-cspm-tutorial-enterprise#setup-wp).
 - [Permissions to create and manage trusted profiles](/docs/iam?topic=iam-create-trusted-profile&interface=ui#tp-roles-reqs).
 - `Editor` role or greater on the {{site.data.keyword.sysdigsecure_short}} service.
-- The CRNs for your {{site.data.keyword.sysdigsecure_short}} and {{site.data.keyword.appconfig_short}} instances. If you don't already have them, you can find the CRNs by completing the following steps: 
-    1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Resource list** and search for the service, either {{site.data.keyword.sysdigsecure_short}} or {{site.data.keyword.appconfig_short}}. 
-    2. After you open your instance of {{site.data.keyword.appconfig_short}}, click **Details** and copy the CRN. 
-    3. After you open your instance of {{site.data.keyword.sysdigsecure_short}}, copy the CRN from the Details panel. 
+- The CRNs for your {{site.data.keyword.sysdigsecure_short}} and {{site.data.keyword.appconfig_short}} instances. If you don't already have them, you can find the CRNs by completing the following steps:
+    1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Resource list** and search for the service, either {{site.data.keyword.sysdigsecure_short}} or {{site.data.keyword.appconfig_short}}.
+    2. After you open your instance of {{site.data.keyword.appconfig_short}}, click **Details** and copy the CRN.
+    3. After you open your instance of {{site.data.keyword.sysdigsecure_short}}, copy the CRN from the Details panel.
 
 If context-based restrictions are enabled for resources in your account, you must create a rule to allow {{site.data.keyword.appconfig_short}} to collect configuration data. When creating the rule, [select {{site.data.keyword.appconfig_short}} as the reference service](/docs/app-configuration?topic=app-configuration-ac-configuration-aggregator#ac-configuration-aggregator-with-workload-protection).
 {: important}
@@ -64,11 +66,11 @@ Before you get started, make sure that you have the following:
 - The CRNs and names of your {{site.data.keyword.sysdigsecure_short}} and {{site.data.keyword.appconfig_short}} instances. You also need the instance ID for your {{site.data.keyword.appconfig_short}} instance. You can find this information by running the [`ibmcloud resource service-instances`](/docs/cli/build/cli-review-output?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances) command.
     - To retrieve the information for your {{site.data.keyword.sysdigsecure_short}} instance, run `ibmcloud resource service-instances --service-name sysdig-secure --long`.
     - To retrieve the information for your {{site.data.keyword.appconfig_short}} instance, run `ibmcloud resource service-instances --service-name apprapp --long`.
-    
-    The instance ID is identified as the `GUID` in the CLI output. 
+
+    The instance ID is identified as the `GUID` in the CLI output.
     {: important}
 
-- Get your {{site.data.keyword.cloud_notm}} account ID. You can find the account ID by running the [`ibmcloud account show`](/docs/cli/build/cli-review-output?topic=cli-ibmcloud_commands_account#ibmcloud_account_show) command. 
+- Get your {{site.data.keyword.cloud_notm}} account ID. You can find the account ID by running the [`ibmcloud account show`](/docs/cli/build/cli-review-output?topic=cli-ibmcloud_commands_account#ibmcloud_account_show) command.
 
 If context-based restrictions are enabled for resources in your account, you must create a rule to allow {{site.data.keyword.appconfig_short}} to collect configuration data. When creating the rule, [select {{siede.data.keyword.appconfig_short}} as the reference service](/docs/app-configuration?topic=app-configuration-ac-configuration-aggregator#ac-configuration-aggregator-with-workload-protection).
 {: important} -->
@@ -76,7 +78,7 @@ If context-based restrictions are enabled for resources in your account, you mus
 ## Creating a trusted profile
 {: #tp-create}
 
-[Create a trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=ui) that allows your instance of {{site.data.keyword.sysdigsecure_short}} access to the {{site.data.keyword.appconfig_short}} service. Completing the following steps: 
+[Create a trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=ui) that allows your instance of {{site.data.keyword.sysdigsecure_short}} access to the {{site.data.keyword.appconfig_short}} service. Completing the following steps:
 
 1. Go to **Manage > Access (IAM) > Trusted profiles** and click **Create**.
 2. After providing a name for the trusted profile, establish trust by selecting **{{site.data.keyword.cloud_notm}} services** as the trusted entity type, and enter the CRN for your {{site.data.keyword.sysdigsecure_short}} instance.
@@ -98,13 +100,13 @@ To start scanning your {{site.data.keyword.cloud_notm}} account for compliance, 
 ## Enabling configuration aggregator in {{site.data.keyword.appconfig_short}}
 {: #cspm-implement-ui-ca}
 
-Your instance of {{site.data.keyword.sysdigsecure_short}} is now connected to your instance of {{site.data.keyword.appconfig_short}}. However, configuration aggregator within {{site.data.keyword.appconfig_short}} must be enabled to gather information from your {{site.data.keyword.cloud_notm}} account and resources. Complete the following steps: 
+Your instance of {{site.data.keyword.sysdigsecure_short}} is now connected to your instance of {{site.data.keyword.appconfig_short}}. However, configuration aggregator within {{site.data.keyword.appconfig_short}} must be enabled to gather information from your {{site.data.keyword.cloud_notm}} account and resources. Complete the following steps:
 
-1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Resource list** and search for `App Configuration`. 
-2. Click the name of the {{site.data.keyword.appconfig_short}} instance to open it. 
-3. Click **Configuration aggregator > Define an aggregation**. 
+1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Resource list** and search for `App Configuration`.
+2. Click the name of the {{site.data.keyword.appconfig_short}} instance to open it.
+3. Click **Configuration aggregator > Define an aggregation**.
 4. Select **All regions** to gather data from all regions, and click **Save**.
-5. Enable **Recording** to begin collecting configuration data. 
+5. Enable **Recording** to begin collecting configuration data.
 
 Compliance scan results appear within 5-10 minutes after provisioning, depending on the number of resources in your account.
 
@@ -135,7 +137,7 @@ ibmcloud resource service-instance-update "<workload_protection_instance_name>" 
 
 
 
-<!-- 
+<!--
 ## Disabling CSPM by using the CLI
 {: #cspm-implement-disable}
 {: cli}

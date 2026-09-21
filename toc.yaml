@@ -34,9 +34,24 @@ toc:
   - navgroup:
       id: howto
       topics:
-      - topic: cspm-implement.md
-        navtitle: Enabling cloud compliance
-      - iam.md
+      - topicgroup:
+          label: Cloud Security Posture Managent (CSPM)
+          topics:
+          - topic: cspm-implement.md
+            navtitle: Enabling CSPM for IBM Cloud
+          - topic: posture-policies-services.md
+            navtitle: Predefined policies
+          - topic: posture-services.md
+            navtitle: Supported IBM Cloud services
+      - topicgroup:
+          label: Cloud Detection and Response (CDR)
+          topics:
+          - topic: cdr-tutorial.md
+            navtitle: Enabling Cloud Detection and Response
+          - topic: cdr-rules-reference.md
+            navtitle: CDR Rules Reference
+      - topic: iam.md
+        navtitle: Managing access with IAM
       - topicgroup:
           label: Securing containers and hosts
           topics:
@@ -65,13 +80,6 @@ toc:
                 navtitle: Protecting Linux hosts
           - vulnerabilities-next.md
       - topicgroup:
-          label: Cloud Detection and Response (CDR)
-          topics:
-          - topic: cdr-tutorial.md
-            navtitle: Enabling Cloud Detection and Response
-          - topic: cdr-rules-reference.md
-            navtitle: CDR Rules Reference
-      - topicgroup:
           label: Observability
           topics:
           - at_events.md
@@ -88,7 +96,6 @@ toc:
       id: reference
       topics:
       - data_portability.md
-      - posture-policies-services.md
       - topic: supported-regions.md
         navtitle: Locations
       - topic: supported-endpoints.md
