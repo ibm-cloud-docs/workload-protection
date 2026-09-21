@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Predefined policies and supported services
+# Predefined policies
 {: #posture-policies-services}
 
 {{site.data.keyword.sysdigsecure_full}} provides predefined posture policies for cloud security posture management (CSPM) and supports a wide range of {{site.data.keyword.cloud_notm}} services.

@@ -34,41 +34,11 @@ toc:
   - navgroup:
       id: howto
       topics:
+      - topic: cspm-implement.md
+        navtitle: Enabling cloud compliance
+      - iam.md
       - topicgroup:
-          label: Cloud Security Posture Managent (CSPM)
-          topics:
-          - topic: cspm-implement.md
-            navtitle: Enabling CSPM for IBM Cloud
-          - topic: posture-policies-services.md
-            navtitle: Predefined policies
-          - topic: posture-services.md
-            navtitle: Supported IBM Cloud services
-          - topicgroup:
-              label: Working with Postures
-              topics:
-              - topic: posture-zones.md
-                navtitle: Managing zones
-              - topic: posture-controls.md
-                navtitle: Accessing posture controls
-              - topic: posture-link-policy-to-zone.md
-                navtitle: Linking a policy to a zone
-              - topic: posture-policies.md
-                navtitle: Managing Posture Policies
-              - topic: posture-policy-create-template.md
-                navtitle: Creating a custom policy from a template
-              - topic: posture-policy-create.md
-                navtitle: Creating a custom policy
-              - topic: posture-requirements.md
-                navtitle: Managing requirements and requirement groups
-      - topicgroup:
-          label: Cloud Detection and Response (CDR)
-          topics:
-          - topic: cdr-tutorial.md
-            navtitle: Enabling Cloud Detection and Response
-          - topic: cdr-rules-reference.md
-            navtitle: CDR Rules Reference
-      - topicgroup:
-          label: Cloud workload protection platform (CWPP)
+          label: Securing containers and hosts
           topics:
           - access_key.md
           - topicgroup:
@@ -94,8 +64,13 @@ toc:
               - topic: manage-linux-agent.md
                 navtitle: Protecting Linux hosts
           - vulnerabilities-next.md
-      - topic: iam.md
-        navtitle: Managing access with IAM
+      - topicgroup:
+          label: Cloud Detection and Response (CDR)
+          topics:
+          - topic: cdr-tutorial.md
+            navtitle: Enabling Cloud Detection and Response
+          - topic: cdr-rules-reference.md
+            navtitle: CDR Rules Reference
       - topicgroup:
           label: Observability
           topics:
@@ -113,6 +88,8 @@ toc:
       id: reference
       topics:
       - data_portability.md
+      - predefined-posture-policies.md
+      - services.md
       - topic: supported-regions.md
         navtitle: Locations
       - topic: supported-endpoints.md
