@@ -94,6 +94,7 @@ toc:
         navtitle: Locations
       - topic: supported-endpoints.md
         navtitle: Endpoints
+      - cspm-fscloud.md
       - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
       - topicgroup:
