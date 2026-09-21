@@ -18,6 +18,8 @@ In this change log, you can learn about the latest changes, improvements, and up
 When controls are edited, removed from, or added to this policy in a way that is not compatible with the current version, a new minor version is released. To take advantage of the changes in a new version, [link the new policy to your zone](https://docs.sysdig.com/en/sysdig-secure/manage_posture_policies/#link-the-policy-to-a-zone){: external}.
 
 ## Version 2.0
+{: #version-2}
+
 The following controls have been updated to {{site.data.keyword.cloud_notm}} Framework for Financial Services v2.0 compared to v1.1.
 
 | Posture control                                                                                                                                                             | Associated requirement(s)                                   | Update                 |
@@ -56,6 +58,8 @@ The following controls have been updated to {{site.data.keyword.cloud_notm}} Fra
 {: caption="Summary of the changes for version v2.0 of the {{site.data.keyword.cloud_notm}} for Financial Services policy" caption-side="bottom"}
 
 # Default parameters values based on {{site.data.keyword.cloud_notm}} Framework for Financial Services
+{: #default-parameters}
+
 The following {{site.data.keyword.sysdigsecure_full}} posture controls have default parameters based on the {{site.data.keyword.cloud_notm}} Framework for Financial Services:
 
 | Control | Default parameter value |
