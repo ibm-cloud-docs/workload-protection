@@ -81,3 +81,4 @@ The following {{site.data.keyword.sysdigsecure_full}} posture controls have defa
 | Check whether there are at least # instances of Direct Link in an account | **2** |
 | Check whether Hyper Protect Crypto Services instance has at least # crypto units | **(2, 3)** |
 | Checks whether Toolchain is configured only with the allowed integration tools | **['appconfig', 'artifactory', 'bitbucketgit', 'cloudobjectstorage', 'customtool', 'draservicebroker', 'eventnotifications', 'githubconsolidated', 'gitlab', 'hashicorpvault', 'hostedgit', 'keyprotect', 'pagerduty', 'pipeline', 'private_worker', 'saucelabs', 'secretsmanager', 'security_compliance', 'slack', 'sonarqube']** |
+{: caption="Default parameter values for {{site.data.keyword.cloud_notm}} Framework for Financial Services posture controls" caption-side="bottom"}
