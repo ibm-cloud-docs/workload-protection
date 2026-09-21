@@ -43,6 +43,23 @@ toc:
             navtitle: Predefined policies
           - topic: posture-services.md
             navtitle: Supported IBM Cloud services
+          - topicgroup:
+              label: Working with Postures
+              topics:
+              - topic: posture-zones.md
+                navtitle: Managing zones
+              - topic: posture-controls.md
+                navtitle: Accessing posture controls
+              - topic: posture-link-policy-to-zone.md
+                navtitle: Linking a policy to a zone
+              - topic: posture-policies.md
+                navtitle: Managing Posture Policies
+              - topic: posture-policy-create-template.md
+                navtitle: Creating a custom policy from a template
+              - topic: posture-policy-create.md
+                navtitle: Creating a custom policy
+              - topic: posture-requirements.md
+                navtitle: Managing requirements and requirement groups
       - topicgroup:
           label: Cloud Detection and Response (CDR)
           topics:
@@ -50,10 +67,8 @@ toc:
             navtitle: Enabling Cloud Detection and Response
           - topic: cdr-rules-reference.md
             navtitle: CDR Rules Reference
-      - topic: iam.md
-        navtitle: Managing access with IAM
       - topicgroup:
-          label: Securing containers and hosts
+          label: Cloud workload protection platform (CWPP)
           topics:
           - access_key.md
           - topicgroup:
@@ -79,6 +94,8 @@ toc:
               - topic: manage-linux-agent.md
                 navtitle: Protecting Linux hosts
           - vulnerabilities-next.md
+      - topic: iam.md
+        navtitle: Managing access with IAM
       - topicgroup:
           label: Observability
           topics:
