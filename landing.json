@@ -39,7 +39,7 @@
   ],
   "section_devtools": {
     "api": "/apidocs/workload-protection",
-    "cli": "/docs/workload-protection?topic=workload-protection-workload-protection-cli&interface=ui",
+    "cli": "/docs/workload-protection?topic=workload-protection-access_key&interface=cli",
     "terraform": "https://registry.terraform.io/modules/terraform-ibm-modules/scc-workload-protection/ibm/latest"
   },
   "section_updates": {
