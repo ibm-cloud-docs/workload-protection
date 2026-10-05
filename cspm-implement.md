@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-28"
+lastupdated: "2026-10-05"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: workload-protection
 # Enabling Cloud Security Posture Management (CSPM) for {{site.data.keyword.cloud_notm}}
 {: #cspm-implement}
 
-Enable CSPM in {{site.data.keyword.sysdigsecure_short}} to scan your {{site.data.keyword.cloud_notm}} resources for compliance with security and regulatory frameworks. With CSPM enabled, {{site.data.keyword.sysdigsecure_short}} continuously evaluates your cloud resources against [predefined policies](/docs/workload-protection?topic=workload-protection-predefined-posture-policies), helping you identify and resolve issues before they become security risks.
+Enable CSPM in {{site.data.keyword.sysdigsecure_short}} to scan your {{site.data.keyword.cloud_notm}} resources for compliance with security and regulatory frameworks. With CSPM enabled, {{site.data.keyword.sysdigsecure_short}} continuously evaluates your cloud resources against [predefined policies](/docs/workload-protection?topic=workload-protection-posture-policies-services#predefined-policies), helping you identify and resolve issues before they become security risks.
 {: shortdesc}
 
 This topic focuses on enabling CSPM for {{site.data.keyword.cloud_notm}}. Need to enable CSPM for another cloud provider, like AWS, Azure, GCP, or OCI? See [Connect cloud accounts](https://docs.sysdig.com/en/sysdig-secure/connect-cloud-accounts/){: external} for more information.

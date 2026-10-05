@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-27"
+lastupdated: "2026-10-05"
 
 keywords: IBM Cloud, disaster recovery, ha, high availability, redundancy
 
@@ -17,6 +17,9 @@ subcollection: workload-protection
 
 {{site.data.keyword.sysdigsecure_full}} is a multi-tenant, regional service that is available in {{site.data.keyword.cloud_notm}}. You can use it to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. {{site.data.keyword.sysdigsecure_short}} provides high availability and disaster recovery.
 {: shortdesc}
+
+This topic contains specific information about the high availability and disaster recovery strategies and configurations for {{site.data.keyword.sysdigsecure_short}}. For more information about how high availability and disaster recovery are handled for the {{site.data.keyword.cloud_notm}} platform, including concepts like cross regions, global services, and fault domains, check out the [Resiliency documentation](/docs/resiliency?topic=resiliency-ha-redundancy).
+{: tip}
 
 ## Availability zones
 {: #ha-dr-locations}

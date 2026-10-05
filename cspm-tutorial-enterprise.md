@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-21"
+lastupdated: "2026-10-05"
 
 keywords: enterprise, compliance, cloud security posture management, app configuration
 
@@ -137,5 +137,5 @@ CSPM is now enabled, but {{site.data.keyword.appconfig_short}} isn't collecting 
 6. Wait 24 hours for initial scanning to complete, then, go to the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Security > Overview** to view a snapshot of your compliance data from {{site.data.keyword.sysdigsecure_short}}.
 
 
-Now that CSPM is set up, explore the [predefined posture policies](/docs/workload-protection?topic=workload-protection-predefined-posture-policies) that {{site.data.keyword.sysdigsecure_short}} uses to evaluate your resources, including which compliance frameworks and controls are covered.
+Now that CSPM is set up, explore the [predefined posture policies](/docs/workload-protection?topic=workload-protection-posture-policies-services#predefined-policies) that {{site.data.keyword.sysdigsecure_short}} uses to evaluate your resources, including which compliance frameworks and controls are covered.
 {: tip}
