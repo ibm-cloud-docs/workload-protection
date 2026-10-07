@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-18"
+lastupdated: "2026-10-07"
 
 keywords: container security, host security, compliance, agent-based protection
 
@@ -25,6 +25,8 @@ subcollection: workload-protection
 
 Cloud security posture management (CSPM)
 :   Assesses and monitors compliance by validating configurations, resource settings, and identity permissions against frameworks such as the {{site.data.keyword.framework-fs_full}}.
+
+
 
 Cloud workload protection platform (CWPP) with agent-based protection
 :   Extends protection into your workloads by using agents to detect vulnerabilities, monitor activity, and respond to threats during runtime.
