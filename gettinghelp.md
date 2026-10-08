@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-04-18"
+  years: 2023, 2026
+lastupdated: "2026-10-08"
 
 
 keywords:
@@ -56,3 +56,47 @@ Tag your questions with **ibm-cloud** and **workload-protection**.
 If you don't find answers to your questions, and you experience problems with {{site.data.keyword.cloud_notm}}, you can use support cases to get help with technical, account and access, billing and invoice or sales inquiry issues.
 
 You can [create](/docs/support?topic=support-open-case&interface=ui){: external} and [manage](/docs/support?topic=support-access-cases) a support case by using the [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}. After you submit a support case, the support team works to investigate and resolve the issue depending on your type of support plan.
+
+## Privacy settings for {{site.data.keyword.cloud_notm}} support access
+{: #privacy_settings}
+
+{{site.data.keyword.cloud_notm}} support might need to access your environment to troubleshoot a support case for your instance of {{site.data.keyword.sysdigsecure_full_notm}}. You can use privacy settings to control how {{site.data.keyword.cloud_notm}} support accesses your environment, in addition to the platform and service access controls that are available.
+
+You must have the **Administrator** role to configure support account access and to grant or revoke temporary access for support engineers.
+{: note}
+
+To access these settings, open your instance of {{site.data.keyword.sysdigsecure_short}} in the {{site.data.keyword.cloud_notm}} console and click **Open dashboard**. For more information, see [Review Privacy Settings](https://docs.sysdig.com/en/administration/privacy-settings/#review-privacy-settings){: external}.
+
+The following privacy settings are available. When you open a support case, {{site.data.keyword.cloud_notm}} support might ask you to enable specific settings to help diagnose and resolve your issue.
+
+### Global User Settings (Service Analytics)
+{: #privacy_global_user_settings}
+
+Global User Settings apply to all users in your account. As an administrator, you can set these settings on behalf of all users. Users can override their own settings if the global settings are enabled.
+
+Usage Data
+:   Allows the service to send data about the parts of the application that your users access. Enable this setting if {{site.data.keyword.cloud_notm}} support requests usage telemetry to help investigate a problem. For more information, see [Review Privacy Settings](https://docs.sysdig.com/en/administration/privacy-settings/#review-privacy-settings){: external}.
+
+Crash Reporting
+:   Allows the service to send crash reports. Enable this setting if {{site.data.keyword.cloud_notm}} support requests crash report data to diagnose application errors. For more information, see [Review Privacy Settings](https://docs.sysdig.com/en/administration/privacy-settings/#review-privacy-settings){: external}.
+
+### Individual User Settings (Service Analytics)
+{: #privacy_individual_user_settings}
+
+If global sharing is enabled by an administrator, individual users can opt out of sharing their own usage and crash data.
+
+Usage Data
+:   Allows the service to send data about the parts of the application that an individual user accesses. This setting is available only when the corresponding global setting is enabled.
+
+Crash Reporting
+:   Allows the service to send crash reports for an individual user. This setting is available only when the corresponding global setting is enabled.
+
+### {{site.data.keyword.cloud_notm}} Support Account setting
+{: #privacy_support_account}
+
+Allows {{site.data.keyword.IBM_notm}} to access your data by using a support account in your environment. When this setting is enabled, an account named **{{site.data.keyword.cloud_notm}} Support** is added to the default team with View Only role. You can manage or remove this account at any time. Enable this setting when {{site.data.keyword.cloud_notm}} support needs persistent read-only access to your environment to investigate a support case. For more information, see [Sysdig Support Account](https://docs.sysdig.com/en/administration/privacy-settings/#sysdig-support-account){: external}.
+
+### Allow User Temporary Access setting
+{: #privacy_temp_access}
+
+Allows {{site.data.keyword.cloud_notm}} support engineers to access your data for a fixed duration of up to 30 days. Access ends automatically when the duration expires. Enable this setting when {{site.data.keyword.cloud_notm}} support requests temporary elevated access to reproduce or investigate a time-sensitive issue. For more information, see [Allow User Temporary Access](https://docs.sysdig.com/en/administration/privacy-settings/#allow-user-temporary-access){: external}.
