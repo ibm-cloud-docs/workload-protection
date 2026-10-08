@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-10-07"
 
 keywords: IBM Cloud best practices, cloud security, CSPM, compliance, Sysdig Secure, workload protection
 
@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Best practices for {{site.data.keyword.cloud_notm}} workload protection with {{site.data.keyword.sysdigsecure_short}}
+# Best practices for using {{site.data.keyword.sysdigsecure_short}}
 {: #bp}
 
 Discover best practices for maximizing the potential of {{site.data.keyword.sysdigsecure_full_notm}}, including cloud security posture management (CSPM), compliance, and agent deployment.
@@ -29,6 +29,8 @@ Cloud security posture management (CSPM) helps you continuously assess and impro
 Enable CSPM to gain visibility into your cloud security posture across all your {{site.data.keyword.cloud_notm}} resources. CSPM automatically discovers and evaluates your cloud resources against security best practices and compliance frameworks.
 
 By default, CSPM is enabled when you create a new {{site.data.keyword.sysdigsecure_short}} instance. Keep CSPM enabled to automatically scan your {{site.data.keyword.cloud_notm}} account and resources for compliance. If you disable CSPM before creating the instance, [you can set up the connection manually later](/docs/workload-protection?topic=workload-protection-cspm-tutorial-enterprise#connect-appconfig).
+
+
 
 ### Use built-in compliance frameworks
 {: #bp-cspm-frameworks}

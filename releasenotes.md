@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-07"
 
 keywords: release notes, IBM Cloud, workload protection updates, cloud security, Sysdig Secure enhancements
 
@@ -19,6 +19,8 @@ content-type: release-note
 
 Stay up-to-date with the latest updates and enhancements to {{site.data.keyword.sysdigsecure_full_notm}}, including new features, improvements, and security fixes.
 {: shortdesc}
+
+
 
 ## July 2026
 {: #workload-protection-jul26}
