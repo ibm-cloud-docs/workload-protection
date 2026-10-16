@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-10-16"
 
 keywords:
 
@@ -47,14 +47,14 @@ Complete the following steps to deploy an agent by using Helm.
 1. Log in to your account. If you have a federated account, include the `--sso` option.
 
     ```sh
-    ibmcloud login [-g <resource_group>] [--sso]
+    ibmcloud login [-g RESOURCE_GROUP] [--sso]
     ```
     {: pre}
 
 2. Download and add the `kubeconfig` configuration file for your cluster to your existing `kubeconfig` in `~/.kube/config` or the last file in the `KUBECONFIG` environment variable.
 
     ```sh
-    ibmcloud oc cluster config --cluster <cluster_name_or_ID>
+    ibmcloud oc cluster config --cluster CLUSTER_NAME_OR_ID
     ```
     {: pre}
 
@@ -77,7 +77,7 @@ Complete the following steps to deploy an agent by using Helm.
     ```
     {: screen}
 
-    If you can't perform operations that require Administrator permissions, such as listing all the worker nodes or pods in a cluster, download the TLS certificates and permission files for the cluster administrator by running the `ibmcloud oc cluster config --cluster <cluster_name_or_ID> --admin` command.
+    If you can't perform operations that require Administrator permissions, such as listing all the worker nodes or pods in a cluster, download the TLS certificates and permission files for the cluster administrator by running the `ibmcloud oc cluster config --cluster CLUSTER_NAME_OR_ID --admin` command.
     {: tip}
 
 ### Set up the Sysdig Helm repository

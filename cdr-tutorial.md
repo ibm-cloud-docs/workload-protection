@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-10-16"
 
 keywords: cloud detection and response, CDR, IBM Cloud audit logs, threat detection, suspicious activity, workload protection
 
@@ -52,7 +52,7 @@ The connection between components is secured using two IAM objects: a trusted pr
 
 Before you begin, ensure the following services and permissions are available in your {{site.data.keyword.cloud_notm}} account.
 
-- An existing {{site.data.keyword.sysdigsecure_short}} instance and its CRN. It will be referenced later as `<workload-protection-instance-crn>`. For more information, see [Setting up {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-getting-started#setup).
+- An existing {{site.data.keyword.sysdigsecure_short}} instance and its CRN. It will be referenced later as `WORKLOAD_PROTECTION_INSTANCE_CRN`. For more information, see [Setting up {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-getting-started#setup).
 - Your {{site.data.keyword.sysdigsecure_short}} must have CSPM enabled for your {{site.data.keyword.cloud_notm}} account. For more information, see [Implementing CSPM for {{site.data.keyword.cloud_notm}}](/docs/workload-protection?topic=workload-protection-cspm-implement)
 - Permissions to manage the following services in your {{site.data.keyword.cloud_notm}} account:
    - **{{site.data.keyword.atracker_short}}**: Editor or Administrator platform role.
@@ -76,9 +76,9 @@ The workflow sends auditing events from {{site.data.keyword.atracker_short}} to 
 Follow the instructions for [Configuring a Cloud Object Storage target](/docs/atracker?topic=atracker-getting-started-target-cos).
 
 After configuring the target, save the following values that will be used in later steps:
-- The {{site.data.keyword.cos_short}} **instance name**. It will be referenced as `<your_cos_instance_name>`.
-- The {{site.data.keyword.cos_short}} **bucket name**. It will be referenced as `<cos_bucket_name>`.
-- The {{site.data.keyword.cos_short}} **bucket region**. It will be referenced as `<cos_bucket_region>`.
+- The {{site.data.keyword.cos_short}} **instance name**. It will be referenced as `YOUR_COS_INSTANCE_NAME`.
+- The {{site.data.keyword.cos_short}} **bucket name**. It will be referenced as `COS_BUCKET_NAME`.
+- The {{site.data.keyword.cos_short}} **bucket region**. It will be referenced as `COS_BUCKET_REGION`.
 
    When you configure the {{site.data.keyword.atracker_short}} route, [ensure that the route rule includes the `global` location in addition to your deployment region](/docs/iam?topic=iam-at_events_iam#at-viewing-iam). IAM events such as account settings changes, MFA modifications, policy deletions, and context-based restriction changes are generated as global events and are not routed unless `global` is explicitly included.
 
@@ -113,38 +113,38 @@ ibmcloud iam service-policy-create send-cdr-events-id --roles Reader --service-n
 ###  Create the trusted profile for reading {{site.data.keyword.cos_short}} events
 {: #create-tp}
 
-Create the trusted profile (you can modify the name). Save the `ID` to be used later. It will be referenced later as `<trusted_profile_id>`:
+Create the trusted profile (you can modify the name). Save the `ID` to be used later. It will be referenced later as `TRUSTED_PROFILE_ID`:
 
 ```sh
 ibmcloud iam trusted-profile-create ibmcdr-wp-cos --description "Trusted profile for Workload Protection interaction with Cloud Object Storage bucket"
 ```
 {: pre}
 
-Assign the trust relationship for the {{site.data.keyword.sysdigsecure_short}} instance. Replace `<workload-protection-instance-crn>` with your {{site.data.keyword.sysdigsecure_short}} CRN:
+Assign the trust relationship for the {{site.data.keyword.sysdigsecure_short}} instance. Replace `WORKLOAD_PROTECTION_INSTANCE_CRN` with your {{site.data.keyword.sysdigsecure_short}} CRN:
 
 ```sh
-ibmcloud iam trusted-profile-identity-create ibmcdr-wp-cos --id <workload-protection-instance-crn> --id-type CRN
+ibmcloud iam trusted-profile-identity-create ibmcdr-wp-cos --id WORKLOAD_PROTECTION_INSTANCE_CRN --id-type CRN
 ```
 {: pre}
 
-Assign the trust relationship for the Service ID created in step 2. Replace `<service_id>` with the Service ID identifier (`ServiceId-xxx`):
+Assign the trust relationship for the Service ID created in step 2. Replace `SERVICE_ID` with the Service ID identifier (`ServiceId-xxx`):
 
 ```sh
-ibmcloud iam trusted-profile-identity-create ibmcdr-wp-cos --id <service_id> --id-type serviceid
+ibmcloud iam trusted-profile-identity-create ibmcdr-wp-cos --id SERVICE_ID --id-type serviceid
 ```
 {: pre}
 
-Create the policy for the trusted profile for the {{site.data.keyword.cos_full_notm}} reader. Replace `<cos_bucket_name>` with the bucket name created in the step 1:
+Create the policy for the trusted profile for the {{site.data.keyword.cos_full_notm}} reader. Replace `COS_BUCKET_NAME` with the bucket name created in the step 1:
 
 ```sh
-ibmcloud iam trusted-profile-policy-create ibmcdr-wp-cos -r "Content Reader,Reader" --service-name cloud-object-storage --resource-type bucket --resource <cos_bucket_name>
+ibmcloud iam trusted-profile-policy-create ibmcdr-wp-cos -r "Content Reader,Reader" --service-name cloud-object-storage --resource-type bucket --resource COS_BUCKET_NAME
 ```
 {: pre}
 
-Create the policy for the trusted profile for accessing the CDR Service ID. Replace `<service_id>` with the Service ID created in step 2:
+Create the policy for the trusted profile for accessing the CDR Service ID. Replace `SERVICE_ID` with the Service ID created in step 2:
 
 ```sh
-ibmcloud iam trusted-profile-policy-create ibmcdr-wp-cos -r Viewer --service-name iam-identity --resource-type serviceid --resource <service_id>
+ibmcloud iam trusted-profile-policy-create ibmcdr-wp-cos -r Viewer --service-name iam-identity --resource-type serviceid --resource SERVICE_ID
 ```
 {: pre}
 
@@ -156,21 +156,21 @@ Create a secret in {{site.data.keyword.codeengineshort}} to inject the api key s
 Create your {{site.data.keyword.codeengineshort}} Project:
 
 ```sh
-ibmcloud ce project create --name <code_engine_project>
+ibmcloud ce project create --name CODE_ENGINE_PROJECT
 ```
 {: pre}
 
-Create the Secret for the application (it will be used as variable). Replace `<your_api_key>` with the key generated in the previous step:
+Create the Secret for the application (it will be used as variable). Replace `YOUR_API_KEY` with the key generated in the previous step:
 
 ```sh
-ibmcloud ce secret create --name cdr-secrets --from-literal API_KEY=<your_api_key>
+ibmcloud ce secret create --name cdr-secrets --from-literal API_KEY=YOUR_API_KEY
 ```
 {: pre}
 
-Create the Secret for pulling images from {{site.data.keyword.registryshort}}. Replace `<your_api_key>` with the key generated in the previous step:
+Create the Secret for pulling images from {{site.data.keyword.registryshort}}. Replace `YOUR_API_KEY` with the key generated in the previous step:
 
 ```sh
-ibmcloud ce secret create --name icr-secret --format registry --server icr.io --username iamapikey --password <your_api_key> --email noreply@cdr-app.ibm.cloud
+ibmcloud ce secret create --name icr-secret --format registry --server icr.io --username iamapikey --password YOUR_API_KEY --email noreply@cdr-app.ibm.cloud
 ```
 {: pre}
 
@@ -178,10 +178,10 @@ ibmcloud ce secret create --name icr-secret --format registry --server icr.io --
 {: #create-codeengine-app}
 
 Make sure to replace the following variables in the command:
-- `<target_account_id>` with the {{site.data.keyword.cloud_notm}} account ID.
-- `<trusted_profile_id>` with the trusted profile created in step 3.
-- `<environment_url>` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-supported-endpoints#supported-endpoints-rest-api) for your region. For example, if your instance is in Dallas, replace `<environment_url>` with `us-south.security-compliance-secure.cloud.ibm.com`.
-- `<service_id>` with the Service ID created in step 2.
+- `TARGET_ACCOUNT_ID` with the {{site.data.keyword.cloud_notm}} account ID.
+- `TRUSTED_PROFILE_ID` with the trusted profile created in step 3.
+- `ENVIRONMENT_URL` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-supported-endpoints#supported-endpoints-rest-api) for your region. For example, if your instance is in Dallas, replace `ENVIRONMENT_URL` with `us-south.security-compliance-secure.cloud.ibm.com`.
+- `SERVICE_ID` with the Service ID created in step 2.
 
 ```sh
 ibmcloud ce application create \
@@ -193,9 +193,9 @@ ibmcloud ce application create \
   --memory 500M \
   --request-timeout 60 \
   --service-account default \
-  --env TARGET_ACCOUNT_ID=<target_account_id> \
-  --env TRUSTED_PROFILE_ID=<trusted_profile_id> \
-  --env FORWARD_URL="https://<environment_url>/api/cloudingestion/webhooks/ibm/v1/<service_id>" \
+  --env TARGET_ACCOUNT_ID=TARGET_ACCOUNT_ID \
+  --env TRUSTED_PROFILE_ID=TRUSTED_PROFILE_ID \
+  --env FORWARD_URL="https://ENVIRONMENT_URL/api/cloudingestion/webhooks/ibm/v1/SERVICE_ID" \
   --env-from-secret cdr-secrets \
   --registry-secret icr-secret
 ```
@@ -223,18 +223,18 @@ The following table describes the key parameters used in the command:
 
 Set up an event subscription to connect {{site.data.keyword.cos_short}} bucket events to {{site.data.keyword.codeengineshort}}.
 
-Grant Permissions to ensure {{site.data.keyword.codeengineshort}} can manage notifications on the {{site.data.keyword.cos_short}} instance. Replace `<code_engine_project>` with the {{site.data.keyword.codeengineshort}} project created in step 4 and `<your_cos_instance_name>` with the {{site.data.keyword.cos_full_notm}} instance name created in step 1:
+Grant Permissions to ensure {{site.data.keyword.codeengineshort}} can manage notifications on the {{site.data.keyword.cos_short}} instance. Replace `CODE_ENGINE_PROJECT` with the {{site.data.keyword.codeengineshort}} project created in step 4 and `YOUR_COS_INSTANCE_NAME` with the {{site.data.keyword.cos_full_notm}} instance name created in step 1:
 
 ```sh
-ibmcloud iam authorization-policy-create codeengine cloud-object-storage "Notifications Manager" --source-service-instance-name <code_engine_project> --target-service-instance-name <your_cos_instance_name>
+ibmcloud iam authorization-policy-create codeengine cloud-object-storage "Notifications Manager" --source-service-instance-name CODE_ENGINE_PROJECT --target-service-instance-name YOUR_COS_INSTANCE_NAME
 ```
 {: pre}
 
-Create Subscription to ensure every time {{site.data.keyword.atracker_short}} archives a log file to the bucket, the application is triggered. Replace `<cos_bucket_name>` with the bucket name from step 1:
+Create Subscription to ensure every time {{site.data.keyword.atracker_short}} archives a log file to the bucket, the application is triggered. Replace `COS_BUCKET_NAME` with the bucket name from step 1:
 
 ```sh
 ibmcloud ce subscription cos create --name cdr-cos-sub \
-   --bucket <cos_bucket_name> \
+   --bucket COS_BUCKET_NAME \
    --destination sccwp-cdr-app \
    --event-type write
 ```
@@ -244,16 +244,16 @@ ibmcloud ce subscription cos create --name cdr-cos-sub \
 {: #enable-cdr}
 
 Make sure to replace the following variables in the command:
-- `<wp_instance_name>` with your {{site.data.keyword.sysdigsecure_short}} instance name or GUID. Using the GUID is recommended to avoid ambiguity if multiple instances share the same name.
-- `<cos_bucket_region>` with the region of the {{site.data.keyword.cos_short}} bucket created in step 1.
-- `<cos_bucket_name>` with the {{site.data.keyword.cos_short}} bucket name created in step 1.
-- `<trusted_profile_id>` with the trusted profile ID saved in step 3.
-- `<environment_url>` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-supported-endpoints#supported-endpoints-rest-api) for your region.
-- `<service_id>` with the Service ID identifier (the `ServiceId-xxx` value) from step 2.
-- `<target_account_id>` with the {{site.data.keyword.cloud_notm}} account ID.
+- `WP_INSTANCE_NAME` with your {{site.data.keyword.sysdigsecure_short}} instance name or GUID. Using the GUID is recommended to avoid ambiguity if multiple instances share the same name.
+- `COS_BUCKET_REGION` with the region of the {{site.data.keyword.cos_short}} bucket created in step 1.
+- `COS_BUCKET_NAME` with the {{site.data.keyword.cos_short}} bucket name created in step 1.
+- `TRUSTED_PROFILE_ID` with the trusted profile ID saved in step 3.
+- `ENVIRONMENT_URL` with the {{site.data.keyword.sysdigsecure_short}} [endpoint](/docs/workload-protection?topic=workload-protection-supported-endpoints#supported-endpoints-rest-api) for your region.
+- `SERVICE_ID` with the Service ID identifier (the `ServiceId-xxx` value) from step 2.
+- `TARGET_ACCOUNT_ID` with the {{site.data.keyword.cloud_notm}} account ID.
 
 ```sh
-ibmcloud resource service-instance-update "<wp_instance_name>" -p '{"enable_cdr": true, "target_cdr_accounts": [{"cdr_bucket_region": "<cos_bucket_region>","cdr_bucket_name": "<cos_bucket_name>","cdr_trusted_profile_id": "<trusted_profile_id>","cdr_service_id": "<service_id>", "cdr_ingestion_url": "https://<environment_url>/api/cloudingestion/webhooks/ibm/v1/<service_id>", "account_id":"<target_account_id>"}]}' -g Default
+ibmcloud resource service-instance-update "WP_INSTANCE_NAME" -p '{"enable_cdr": true, "target_cdr_accounts": [{"cdr_bucket_region": "COS_BUCKET_REGION","cdr_bucket_name": "COS_BUCKET_NAME","cdr_trusted_profile_id": "TRUSTED_PROFILE_ID","cdr_service_id": "SERVICE_ID", "cdr_ingestion_url": "https://ENVIRONMENT_URL/api/cloudingestion/webhooks/ibm/v1/SERVICE_ID", "account_id":"TARGET_ACCOUNT_ID"}]}' -g Default
 ```
 {: pre}
 
