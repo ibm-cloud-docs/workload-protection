@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-10-16"
 
 keywords:
 
@@ -53,11 +53,11 @@ To get the access key for a {{site.data.keyword.sysdigsecure_short}} instance by
 3. Set the resource group where the instance is running by running the [`ibmcloud target`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command:
 
     ```sh
-    ibmcloud target -g <resource_group>
+    ibmcloud target -g RESOURCE_GROUP
     ```
     {: pre}
 
-    Where `<resource_group>` is the name of the resource group. By default, the `default` resource group is set.
+    Where `RESOURCE_GROUP` is the name of the resource group. By default, the `default` resource group is set.
 
 4. Get the instance name by running the [`ibmcloud resource service-instances`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances) command:
 
@@ -69,11 +69,11 @@ To get the access key for a {{site.data.keyword.sysdigsecure_short}} instance by
 5. Get the name of the API key that is associated with the instance by running the [`ibmcloud resource service-keys`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_keys) command:
 
     ```sh
-    ibmcloud resource service-keys --instance-name <instance_name> --output JSON
+    ibmcloud resource service-keys --instance-name INSTANCE_NAME --output JSON
     ```
     {: pre}
 
-    Where `<instance_name>` is the name of the instance that you obtained in the previous step.
+    Where `INSTANCE_NAME` is the name of the instance that you obtained in the previous step.
 
     The output from this command includes the `Sysdig Access Key` field that contains the access key for the instance.
 

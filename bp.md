@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-07"
+lastupdated: "2026-10-08"
 
 keywords: IBM Cloud best practices, cloud security, CSPM, compliance, Sysdig Secure, workload protection
 
@@ -86,6 +86,7 @@ Choose from the following options to add an agent programmatically:
 - [Deploying an agent on an outside Kubernetes or Red Hat OpenShift cluster](/docs/workload-protection?topic=workload-protection-deploy-wp-outside-cloud)
 - [Deploying an agent on Windows](/docs/workload-protection?topic=workload-protection-agent-deploy-windows)
 - [Deploying an agent on a Linux host](/docs/workload-protection?topic=workload-protection-manage-linux-agent)
+
 
 ### Configure agents appropriately
 {: #bp-agents-configure}

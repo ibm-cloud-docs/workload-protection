@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-10-16"
 
 keywords:
 
@@ -51,7 +51,7 @@ Add the {{site.data.keyword.sysdigsecure_short}} Helm repository to your Helm in
 1. Set the cluster context.
 
     ```sh
-    ibmcloud ks cluster config --cluster <CLUSTER_NAME>
+    ibmcloud ks cluster config --cluster CLUSTER_NAME
     ```
     {: pre}
 

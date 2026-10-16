@@ -2,7 +2,7 @@
 
 copyright:
 years: 2024
-lastupdated: "2026-09-04"
+lastupdated: "2026-10-16"
 
 keywords: data portability, IBM Cloud, workload protection, export digital artifacts, customer content, service providers
 
@@ -38,4 +38,4 @@ For more information about your responsibilities for {{site.data.keyword.sysdigs
 
 {{site.data.keyword.sysdigsecure_short}} provides the mechanisms to export your content that’s uploaded, stored, and processed when you use the service.
 
-For more information about how to get data from {{site.data.keyword.sysdigsecure_short}}, including supported data formats, check out the [API docs](/apidocs/workload-protection).
+For more information about how to get data from {{site.data.keyword.sysdigsecure_short}}, including supported data formats, check out the [API docs](/docs/apis/workload-protection).

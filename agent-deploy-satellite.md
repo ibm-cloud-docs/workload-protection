@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-10-16"
 
 keywords: workload protection, satellite, sysdig secure, manage
 
@@ -27,7 +27,7 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
 
    [Helm](https://helm.sh){: external} is a Kubernetes package manager that uses Helm charts to define, install, and upgrade complex Kubernetes apps in your cluster. Helm charts package the specifications to generate YAML files for Kubernetes resources that build your app. These Kubernetes resources are automatically applied in your cluster and assigned to a version by Helm. You can also use Helm to specify and package your own app and let Helm generate the YAML files for your Kubernetes resources.
 
-- Get your {{site.data.keyword.sysdigsecure_short}} `ingest` endpoint. Access your Satellite location, then select **Link endpoints** and **System endpoints**. Copy the `system` endpoint starting with `satellite-sysdig-` that is pointing to `ingest.private.<region>.monitoring.cloud.ibm.com`. You can use this endpoint later as `INGESTION_SATELLITE_ENDPOINT`.
+- Get your {{site.data.keyword.sysdigsecure_short}} `ingest` endpoint. Access your Satellite location, then select **Link endpoints** and **System endpoints**. Copy the `system` endpoint starting with `satellite-sysdig-` that is pointing to `ingest.private.REGION.monitoring.cloud.ibm.com`. You can use this endpoint later as `INGESTION_SATELLITE_ENDPOINT`.
 - Outbound traffic from your cluster to {{site.data.keyword.sysdigsecure_short}} endpoints is required to port `443` and `6443`. 
 - Verify that you have the required access and permissions to deploy the {{site.data.keyword.sysdigsecure_short}} agent on the cluster.
 - Verify that the `ibm-observe` namespace is available in your cluster. The agent is deployed in this namespace. 
@@ -35,7 +35,7 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.s
     To create the namespace, run `oc adm new-project --node-selector='' ibm-observe`.
     {: tip}
 
-- Get your {{site.data.keyword.sysdigsecure_short}} `ingest` endpoint. Access your Satellite location, then select **Link endpoints** and **System endpoints**. Copy the `system` endpoint starting with `satellite-sysdig-` that points to `ingest.private.<region>.monitoring.cloud.ibm.com`. You can use this endpoint later as `INGESTION_SATELLITE_ENDPOINT`.
+- Get your {{site.data.keyword.sysdigsecure_short}} `ingest` endpoint. Access your Satellite location, then select **Link endpoints** and **System endpoints**. Copy the `system` endpoint starting with `satellite-sysdig-` that points to `ingest.private.REGION.monitoring.cloud.ibm.com`. You can use this endpoint later as `INGESTION_SATELLITE_ENDPOINT`.
 - Verify that outbound traffic from your cluster to {{site.data.keyword.sysdigsecure_short}} endpoints is allowed on ports `443` and `6443`.
 
 ## Creating a {{site.data.keyword.sysdigsecure_short}} Satellite link endpoint
@@ -62,14 +62,14 @@ Complete the following steps to deploy an agent by using Helm.
 1. Log in to your account. If you have a federated account, include the `--sso` option.
 
     ```sh
-    ibmcloud login [-g <resource_group>] [--sso]
+    ibmcloud login [-g RESOURCE_GROUP] [--sso]
     ```
     {: pre}
 
 2. Download and add the `kubeconfig` configuration file for your cluster to your existing `kubeconfig` in `~/.kube/config` or the last file in the `KUBECONFIG` environment variable.
 
     ```sh
-    ibmcloud oc cluster config --cluster <cluster_name_or_ID>
+    ibmcloud oc cluster config --cluster CLUSTER_NAME_OR_ID
     ```
     {: pre}
 
@@ -100,7 +100,7 @@ Add the {{site.data.keyword.sysdigsecure_short}} Helm repository to your Helm in
 1. Set the cluster context.
 
     ```sh
-    ibmcloud ks cluster config --cluster <CLUSTER_NAME>
+    ibmcloud ks cluster config --cluster CLUSTER_NAME
     ```
     {: pre}
 
@@ -211,19 +211,19 @@ If you want to directly install the {{site.data.keyword.sysdigsecure_short}} com
 helm install sysdig-agent sysdig/sysdig-deploy --namespace ibm-observe --create-namespace \
     --set agent.ebpf.enabled=true \
     --set agent.ebpf.kind=universal_ebpf \
-    --set global.sysdig.accessKey=<SERVICE_ACCESS_KEY> \
-    --set global.sysdig.apiHost=<API_ENDPOINT> \
-    --set agent.collectorSettings.collectorHost=<INGESTION_SATELLITE_ENDPOINT> \
-    --set agent.collectorSettings.collectorPort=<INGESTION_SATELLITE_ENDPOINT_PORT> \
-    --set nodeAnalyzer.natsUrl=wss://<API_ENDPOINT> \
+    --set global.sysdig.accessKey=SERVICE_ACCESS_KEY \
+    --set global.sysdig.apiHost=API_ENDPOINT \
+    --set agent.collectorSettings.collectorHost=INGESTION_SATELLITE_ENDPOINT \
+    --set agent.collectorSettings.collectorPort=INGESTION_SATELLITE_ENDPOINT_PORT \
+    --set nodeAnalyzer.natsUrl=wss://API_ENDPOINT \
     --set nodeAnalyzer.nodeAnalyzer.runtimeScanner.deploy=false \
     --set nodeAnalyzer.nodeAnalyzer.hostScanner.deploy=false \
     --set nodeAnalyzer.nodeAnalyzer.benchmarkRunner.deploy=false \
     --set nodeAnalyzer.nodeAnalyzer.sslVerifyCertificate=false \
     --set nodeAnalyzer.secure.vulnerabilityManagement.newEngineOnly=true \
     --set global.kspm.deploy=true \
-    --set global.clusterConfig.name=<CLUSTER_NAME> \
-    --set kspmCollector.natsUrl=wss://<API_ENDPOINT> \
+    --set global.clusterConfig.name=CLUSTER_NAME \
+    --set kspmCollector.natsUrl=wss://API_ENDPOINT \
     --set kspmCollector.sslVerifyCertificate=false \
     --set clusterScanner.enabled=true \
     --set clusterScanner.eveEnabled=true \

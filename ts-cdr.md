@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-09-04"
+lastupdated: "2026-10-16"
 
 keywords: IBM Cloud CDR, cloud detection and response, audit events, trusted profile, CDR not connected, workload protection
 
@@ -41,7 +41,7 @@ To resolve this issue, complete the following steps:
 1. Verify that the {{site.data.keyword.atracker_short}} target is writing successfully to the {{site.data.keyword.cos_short}} bucket:
 
    ```sh
-   ibmcloud atracker target get --target <target_name>
+   ibmcloud atracker target get --target TARGET_NAME
    ```
    {: pre}
 
