@@ -36,6 +36,8 @@ toc:
       topics:
       - topic: cspm-implement.md
         navtitle: Enabling cloud compliance
+      - topic: configure_parameters.md
+        navtitle: Configure control parameters
       - iam.md
       - topicgroup:
           label: Securing containers and hosts
