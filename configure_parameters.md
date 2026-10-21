@@ -70,7 +70,7 @@ Rule 3: Location values must match what the resource reports.
 :   Different {{site.data.keyword.cloud_notm}} resources report their location at different levels: region (`eu-de`), zone (`eu-de-1`), data center (for {{site.data.keyword.powerSys_notm}}, such as `dal10`), or `global`. The allowed region parameter must contain every format that your resources use ([Family P1](#cspm-parameter-family-p1)).
 
 Rule 4: Review default parameter behavior.
-:   Some default settings cause a control to fail for every resource until you specify custom values (such as *Approved Registries*, *{{site.data.keyword.secrets-manager_short}} user credentials rotated at least every # days*, or *{{site.data.keyword.appid_short}} access tokens expire within # minutes*). Other defaults cause a control to always pass (such as controls that require at least a specified number of zones when the default is 0).The Default effect column in [Appendix A](#AppendixA) shows this for every control.
+:   Some default settings cause a control to fail for every resource until you specify custom values (such as *Approved Registries*, *{{site.data.keyword.secrets-manager_short}} user credentials rotated at least every # days*, or *{{site.data.keyword.appid_short}} access tokens expire within # minutes*). Other defaults cause a control to always pass (such as controls that require at least a specified number of zones when the default is 0). The Default effect column in [Appendix A](#appendix-parameterized-controls) shows this for every control.
 
 
 Rule 5: Resource names must match exactly.
@@ -479,15 +479,15 @@ The {{site.data.keyword.keymanagementserviceshort}} controls evaluate policies b
 Examples
 :   `myorg-kms-admins` (access group), `ServiceId-kms-rotator` (service ID), `Public Access` (built-in access group, denylist).
 
-# Appendix A: all parameterized controls
-{: #AppendixA}
+## Appendix A: all parameterized controls
+{: #appendix-parameterized-controls}
 
-The following table lists all parameterized controls and default values. List types are chips and values need to be entered individually unless otherwise specified. Number types include an input box where you can provide a numerical value.
+The following table lists all parameterized controls and default values. List types are chips, and you must enter values individually unless otherwise specified. Number types include an input box where you can provide a numerical value.
 
-The default effect indicates the posture behavior the default value is set. Always fails and always passes indicates that the result does not reflect your actual environment security posture until the values are customized.
+The default effect indicates the posture behavior when the default value is set. Always fails and Always passes indicate that the result does not reflect your actual environment security posture until the values are customized.
 
-| # | Control Name | Family | FS 2.0 v2.0 Requirements | Type | Default | Default Effect |
-|---|---|---|---|---|---|---|
+| # | Control name | Family | FS 2.0 v2.0 requirements | Type | Default | Default effect |
+| --- | --- | --- | --- | --- | --- | --- |
 | 1 | Check whether IBM Activity Tracker Event Routing Route is provisioned in allowed region | P1 | SC-7(a), SC-7(5), CM-7(a) | List | `[]` | Always passes |
 | 2 | Check whether IBM Activity Tracker Event Routing Service is provisioned in allowed region | P1 | SC-7(a), SC-7(5), CM-7(a) | List | `[]` | Always passes |
 | 3 | Check whether IBM Activity Tracker Event Routing Target is provisioned in allowed region | P1 | SC-7(a), SC-7(5), CM-7(a) | List | `[]` | Always passes |
@@ -692,4 +692,4 @@ The default effect indicates the posture behavior the default value is set. Alwa
 | 202 | Check whether there are at least # instances of Direct Link in an account | P10 | CP-8 | Number | 0 | Always passes |
 | 203 | Check whether Key Protect Single Tenant can be accessed only through a private endpoint (Context-based restrictions or service) | P11 | SC-7(4)(a) | — | — | No effect |
 | 204 | Check whether Security Groups for VPC contains no outbound rules in security groups that specify destination IP 8.8.8.8/32 to DNS port | P11 | AC-4, SC-7(10)(a), CM-7(b) | Number | 0 | No effect |
-{: caption="Default parameters behaviour for controls" caption-side="top"}
+{: caption="Default parameter behavior for controls" caption-side="bottom"}
