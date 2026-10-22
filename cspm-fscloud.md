@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-10-14"
+lastupdated: "2026-10-22"
 
 keywords:
 
@@ -529,3 +529,94 @@ The following posture controls are not included in the {{site.data.keyword.cloud
 * Check whether at least # instances of Transit Gateway have been created
 * Check whether at least # Virtual Private Cloud (VPC)s have been created
 {: note}
+
+## Understanding Financial Services policy versions
+{: #policy-version}
+
+{{site.data.keyword.sysdigsecure_full}} provides multiple Financial Services policies aligned to the [{{site.data.keyword.cloud_notm}} Framework for Financial Services specification](https://www.ibm.com/products/cloud/financial-services){: external}.
+Policy naming follows this pattern:
+
+`{{site.data.keyword.cloud_notm}} Framework for Financial Services <framework version> v<policy version>`
+* `<framework version>` = {{site.data.keyword.cloud_notm}} Framework for Financial Services specification version.
+* `<policy version>` = Version of the {{site.data.keyword.sysdigsecure_short}} policy implementation for that specification.
+
+If the version is missing, the policy refers to version 1.1 of the {{site.data.keyword.cloud_notm}} Framework for Financial Services.
+{: note}
+
+For example:
+
+* {{site.data.keyword.cloud_notm}} Framework for Financial Services 2.0 v2.0
+  * Framework specification version: 2.0
+  * {{site.data.keyword.sysdigsecure_short}} policy version: v2.0
+
+When changes are introduced that are not compatible with an existing policy implementation, a new {{site.data.keyword.sysdigsecure_short}} policy version is released. Review the [release notes](/docs/workload-protection?topic=workload-protection-release-notes) and policy documentation before you migrate to a newer version.
+
+Configure the required parameters before you run a scan. Some posture controls require customer-specific parameter values before they can be evaluated correctly. Controls that require parameter values fail by default if no customer-specific values are configured. For more information, see [Configuring control parameters](/docs/workload-protection?topic=workload-protection-cspm-configure-control).
+{: important}
+
+Before you use a new Financial Services policy, complete the following steps:
+
+1. Review the [release notes](/docs/workload-protection?topic=workload-protection-release-notes) to understand changes and updates to existing controls and their logic.
+2. Update the required parameter values to match your environment.
+3. Associate the new Financial Services policy with a new or existing zone.
+
+## Migrating to a new policy version
+{: #policy-migration}
+
+When a new Financial Services policy version becomes available, you can adopt it without disrupting your existing compliance monitoring. Review the [release notes](/docs/workload-protection?topic=workload-protection-release-notes) and policy documentation before you migrate to a newer version.
+
+### Recommended approach
+{: #policy-migration-approach}
+
+To migrate to a new policy version, complete the following steps:
+
+1. Identify the new policy version that you want to use.
+2. Review any new controls and required parameters.
+3. Associate the new policy with your existing zone.
+4. Allow the initial compliance scan to complete.
+5. Review the results and remediate any new findings.
+6. After you validate the results, you can optionally remove older policy versions.
+
+You can associate multiple policies with the same zone simultaneously to test and validate a new policy version before you remove the existing policy from the zone. It can take up to 24 hours for the first scan to complete and for the results to become available in the dashboard.
+{: note}
+
+### General steps for using a new Financial Services policy
+{: #policy-migration-steps}
+
+The steps to start using a new Financial Services policy depend on whether you already have a zone configured. Choose the scenario that matches your environment.
+
+#### Scenario 1: New {{site.data.keyword.sysdigsecure_short}} deployment
+{: #scenario-new-deployment}
+
+If a zone is not yet configured for your environment, complete the following steps:
+
+1. Create a {{site.data.keyword.sysdigsecure_short}} instance.
+2. Create a zone that includes:
+   * Your {{site.data.keyword.cloud_notm}} account.
+   * Resource groups.
+   * Workloads.
+   * Any additional resources that must be evaluated.
+3. Associate the desired Financial Services policy with the zone.
+4. Wait for the initial scan to complete.
+5. Review the compliance results in the dashboard.
+
+#### Scenario 2: Existing zone
+{: #scenario-existing-zone}
+
+If you already have a zone and an existing Financial Services policy, complete the following steps:
+
+1. Identify the new Financial Services policy version that you want to evaluate.
+2. Review all new controls and update any required parameters.
+3. Verify parameter values for existing configurable controls.
+4. Associate the new policy with the existing zone.
+5. Allow the first scan to complete.
+6. Review the compliance findings and remediation guidance.
+
+After the first scan completes, you can perform the following actions to remediate findings:
+
+1. Review all failed controls.
+2. Identify the impacted resources.
+3. Review the remediation guidance for each failed control.
+4. Implement the required configuration changes.
+5. Re-run or wait for the next scheduled evaluation.
+6. Confirm that the findings are resolved.
