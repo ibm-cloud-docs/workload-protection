@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-10-07"
+lastupdated: "2026-10-23"
 
 keywords: release notes, IBM Cloud, workload protection updates, cloud security, Sysdig Secure enhancements
 
@@ -249,7 +249,7 @@ Resource Report (CSV) is now available in {{site.data.keyword.sysdigsecure_short
 :   Resource Report generates a CSV that includes Compliance results with the resource details: Name, CRN, Control status, remediation, posture policy, resource labels and many more details. Scope the report to the policy you prefer: Financial Services framework, CIS Benchmark for IBM Cloud or Kubernetes, DORA or PCI that you can schedule daily, weekly or monthly. Start today by accessing your {{site.data.keyword.sysdigsecure_short}} UI and navigating to the **Reporting** page and selecting **New Schedule**.
 
 ## February 2025
-{: #workload-protection-feb25}
+{: #workload-protection-feb2025}
 
 ### 26 February 2025
 {: #workload-protection-feb2625}
@@ -286,17 +286,17 @@ Posture management for Oracle Cloud Infrastructure (OCI)
 :   {{site.data.keyword.sysdigsecure_short}} now provides out-of-the-box posture policies and controls for Oracle Cloud Infrastructure (OCI), including graph-based security analytics and custom risks.
 
 ### 13 February 2025
-{: #workload-protection-feb25}
+{: #workload-protection-feb1325}
 {: release-note}
 
 Information Technology Security Guidance (ITSG-33) now available in {{site.data.keyword.sysdigsecure_short}}
 :   {{site.data.keyword.sysdigsecure_short}} now provides an out-of-the-box policy and controls for Information Technology Security Guidance (ITSG-33). This policy can be leveraged to manage the overall posture for hybrid multicloud environments including {{site.data.keyword.cloud_notm}}, AWS, Azure, GCP, Kubernetes and Linux.
 
 ## January 2025
-{: #workload-protection-jan25}
+{: #workload-protection-jan2025}
 
 ### 13 January 2025
-{: #workload-protection-jan25}
+{: #workload-protection-jan1325}
 {: release-note}
 
 Posture Management for AIX servers on PowerVS

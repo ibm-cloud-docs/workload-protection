@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-10-23"
 
 keywords: dashboard not loading, resource list
 
@@ -22,8 +22,8 @@ content-type: troubleshoot
 When you try to access the {{site.data.keyword.sysdigsecure_short}} dashboard, it does not load, shows a blank page, or displays error messages like:
 {: tsSymptoms}
 
-- > An error has occurred
-- > OPEN_ID_AUTHORIZATION_ERROR
+- `An error has occurred`
+- `OPEN_ID_AUTHORIZATION_ERROR`
 
 
 This can occur due to several reasons:

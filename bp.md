@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-08"
+lastupdated: "2026-10-23"
 
 keywords: IBM Cloud best practices, cloud security, CSPM, compliance, Sysdig Secure, workload protection
 
@@ -50,7 +50,7 @@ Use the [**Inventory**](https://docs.sysdig.com/en/docs/sysdig-secure/inventory/
 ## View and schedule reports
 {: #bp-cspm-reports}
 
-Built in with {{site.data.keyword.sysdigsecure_short}} is a highly scalable and powerful reporting platform. With it, you can create and schedule reports with large amounts of data for audit purposes. For more information, go to [Reporting](https://docs.sysdig.com/en/docs/sysdig-secure/reporting/){: external}.
+Built in with {{site.data.keyword.sysdigsecure_short}} is a highly scalable and powerful reporting platform. With it, you can create and schedule reports with significant volumes of data for audit purposes. For more information, go to [Reporting](https://docs.sysdig.com/en/docs/sysdig-secure/reporting/){: external}.
 
 ## Working with agents
 {: #bp-agents}
@@ -118,7 +118,7 @@ If you use both {{site.data.keyword.sysdigsecure_short}} and {{site.data.keyword
 ## Zones and policies
 {: #bp-zones-policies}
 
-Zones and policies are fundamental to organizing your compliance monitoring and applying the right security controls to your resources.
+Zones and policies are fundamental to organizing your compliance monitoring and applying the appropriate security controls to your resources.
 
 ### Organize resources with zones
 {: #bp-zones-organize}

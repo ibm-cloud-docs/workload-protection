@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-04"
+lastupdated: "2026-10-23"
 
 keywords: IBM Cloud regions, service availability, supported regions, EU support, geography
 
@@ -42,7 +42,7 @@ The following table lists the locations where the service is available:
 {: caption="Locations where the service is available" caption-side="bottom"}
 
 Geography
-:   A geographic area or larger political body that contains one or more regions.
+:   A geographic area or political body that contains one or more regions.
 
 Region
 :   A defined geographic territory. A region might be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.

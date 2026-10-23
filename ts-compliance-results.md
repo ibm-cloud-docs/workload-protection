@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-10-23"
 
 keywords: compliance results,
 
@@ -19,7 +19,7 @@ content-type: troubleshoot
 {: troubleshoot}
 {: support}
 
-You have attached a policy to a zone, but no compliance results appear on the **Compliance** page, or the page shows "0 items evaluated" for all controls.
+You have attached a policy to a zone, but no compliance results appear on the **Compliance** page, or the page shows `0 items evaluated` for all controls.
 {: tsSymptoms}
 
 This can occur due to several reasons:
