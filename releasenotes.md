@@ -20,7 +20,59 @@ content-type: release-note
 Stay up-to-date with the latest updates and enhancements to {{site.data.keyword.sysdigsecure_full_notm}}, including new features, improvements, and security fixes.
 {: shortdesc}
 
+## October 2026
+{: #workload-protection-oct26}
 
+## 1 October 2026
+{: #workload-protection-oct0126}
+{: release-note}
+
+Supply Chain Findings for license and end-of-life risk (Technical Preview)
+:   {{site.data.keyword.sysdigsecure_short}} adds a new **Attack Surface > Supply Chain Findings** page that lists license and end-of-life (EOL) findings across pipeline, registry, and runtime. The page is enabled by default and requires the **Scan Results** (Read) permission.
+
+    Each package license is classified into one of nine categories, and a finding is raised at a fixed severity: **Critical** for Network Copyleft and Commercial Restriction, **Medium** for Proprietary, Restricted Use, and Copyleft, **Low** for Ambiguous, and **Negligible** for unrecognized licenses. Permissive and Weak Copyleft licenses do not raise a finding. When a package declares more than one license, the most restrictive license sets the finding, and the finding details list every license.
+
+    EOL findings are raised for operating systems and the Go runtime that have reached end of life (**High**) or reach it within 90 days (**Medium**).
+
+    You can group findings by package, image, or runtime resource, and filter by severity, stage, finding type, license category, license name (SPDX ID), cluster, namespace, and resource name. A new **Supply Chain Findings** tab is also available in the Resource Details and Component Details drawers.
+
+    License findings currently cover Python, JavaScript, and RPM packages. License findings require Sysdig CLI Scanner v1.30.0, Cluster Shield v1.26.0, Host Shield v14.8.0, or later. Earlier versions do not report licenses.
+
+    For more information, see [Supply Chain Findings](https://docs.sysdig.com/en/sysdig-secure/supply-chain-findings/){: external} and [License classification](https://docs.sysdig.com/en/sysdig-secure/license-classification/){: external}.
+
+
+
+## September 2026
+{: #workload-protection-sep26}
+
+## 22 September 2026
+{: #workload-protection-sep2226}
+{: release-note}
+
+Zones v2 API is now available; v1 Zones APIs are deprecated
+:   {{site.data.keyword.sysdigsecure_short}} introduces a new Zones v2 API for grouping resources into Zones with structured filter expressions. As of September 2026, the v1 Zones APIs are deprecated and will be removed by March 31, 2027. For more information, see the [Zones API reference](/apidocs/workload-protection#tag/Zones). The Terraform provider is updated to use the v2 API through the [`sysdig_secure_zone`](https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs/resources/secure_zone){: external} resource.
+
+## 17 September 2026
+{: #workload-protection-sep1726}
+{: release-note}
+
+Vulnerability Catalog
+:   {{site.data.keyword.sysdigsecure_short}} adds a Vulnerability Catalog that you can use to search for any CVE known to {{site.data.keyword.sysdigsecure_short}}, independent of your scan results. Each CVE is enriched with Sysdig-normalized severity, exploit and CISA Known Exploited Vulnerabilities (KEV) signals, and per-vendor affected package ranges. The catalog is updated automatically with each vulnerability database update.
+
+    To browse the catalog in the UI, go to **Policies > Vulnerability Catalog**. For more information, see the [{{site.data.keyword.sysdigsecure_short}} API reference](/apidocs/workload-protection#list-vulnerability-cves).
+
+## 16 September 2026
+{: #workload-protection-sep1626}
+{: release-note}
+
+Standalone binary scanning
+:   {{site.data.keyword.sysdigsecure_short}} now detects vulnerabilities in executables that were not installed by a package manager, such as Redis, NGINX, OpenSSL, or Node.js binaries copied into a distroless or scratch image. Identified binaries are reported as Application components with a name, version, and hash, and receive vulnerability findings like any other component. The scanner identifies 69 applications, and more are added with each release. Binaries installed by a package manager and Go build metadata were already covered.
+
+    Two new rules are available under **Component Content** in Rule Bundles: **Binary Allow List** fails an asset that contains a binary outside your approved set, and **Binary Deny List** fails an asset that contains a blocked binary. Rules match on the binary name, path, or hash. Entries in a Binary Deny List rule are combined with AND logic, so use one Binary Deny List rule per binary.
+
+    Standalone binary scanning is enabled by default in Sysdig CLI Scanner v1.30.0 or later. Use v1.30.1 or later to avoid false positive vulnerabilities on Python interpreters and shared libraries. Support for other scanners follows in later releases. After you upgrade, finding counts can increase on assets that previously showed none, and assets that passed a policy can start to fail it, including in pipeline gates and the admission controller. Some binaries are identified without any associated vulnerabilities. This feature does not decompile binaries or detect malware.
+
+    For more information, see [Standalone binary scanning](https://docs.sysdig.com/en/sysdig-secure/standalone-binary-scanning/){: external} and [Binary Allow List and Binary Deny List rules](https://docs.sysdig.com/en/sysdig-secure/policies/vulnerability_policies/rules/#binary-allow-list){: external}.
 
 ## July 2026
 {: #workload-protection-jul26}
