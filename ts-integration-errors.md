@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-04"
+lastupdated: "2026-10-23"
 
 keywords: IBM Cloud integration errors, CSPM, trusted profile, IAM, integration not active, workload protection
 
@@ -26,9 +26,9 @@ After connecting your {{site.data.keyword.cloud_notm}} account to {{site.data.ke
 {: tsSymptoms}
 
 Common error messages include:
-- > IBM Token api call failed with error code '500'
-- > Exception while getting IBM {{site.data.keyword.appconfig_short}} Account Token
-- > Failed to connect to database
+- `IBM Token api call failed with error code '500'`
+- `Exception while getting IBM {{site.data.keyword.appconfig_short}} Account Token`
+- `Failed to connect to database`
 
 The {{site.data.keyword.cloud_notm}} integration might not be active for one of the following reasons:
 {: tsCauses}
