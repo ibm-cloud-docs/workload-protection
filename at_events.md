@@ -62,6 +62,89 @@ Use the Activity Tracker service to monitor user and application interactions wi
 | `sysdig-secure.accessKey.delete`          | An event is created when you delete an access key |
 {: caption="AccessKey: List of activity tracker actions" caption-side="top"}
 
+## Customer agreement: List of management events
+{: #at_events_customer_agreement}
+
+| Action                                   | Description                                           |
+|------------------------------------------|-------------------------------------------------------|
+| `sysdig-monitor.customer_agreement.read` | An event is created when a customer agreement is read |
+{: caption="Customer agreement: List of activity tracker actions" caption-side="top"}
+
+### Example: Customer agreement read event
+{: #at_events_customer_agreement_example}
+
+The following example shows an activity tracking event that is generated when {{site.data.keyword.IBM_notm}} support reads a customer agreement by using impersonation.
+
+```json
+{
+  "action": "sysdig-monitor.customer_agreement.read",
+  "correlationId": "00000000-0000-0000-0000-000000000000",
+  "customerCRN": "crn:v1:bluemix:public:sysdig-monitor:us-south:a/{account_id}:{instance_id}::",
+  "dataEvent": false,
+  "eventTime": "2026-01-01T00:00:00.00+0000",
+  "initiator": {
+    "authnId": "{authn_id}",
+    "authnName": "",
+    "credential": {
+      "type": "token"
+    },
+    "host": {
+      "address": "",
+      "agent": ""
+    },
+    "id": "{initiator_id}",
+    "name": "",
+    "typeURI": ""
+  },
+  "message": "IBM Cloud Monitoring: read customer_agreement",
+  "observer": {
+    "name": "ActivityTracker"
+  },
+  "outcome": "success",
+  "reason": {
+    "reasonCode": 200,
+    "reasonType": "OK"
+  },
+  "requestData": {
+    "impersonatedBy": "{support_user_id}",
+    "isImpersonated": true,
+    "payload": "",
+    "queryParams": "",
+    "requestURL": "/api/v1/customer/agreement",
+    "teamId": 1,
+    "teamName": "Monitor Operations"
+  },
+  "saveServiceCopy": true,
+  "serviceName": "sysdig-monitor",
+  "severity": "normal",
+  "target": {
+    "id": "crn:v1:bluemix:public:sysdig-monitor:us-south:a/{account_id}:{instance_id}:customer_agreement:",
+    "name": "",
+    "resourceGroupId": "crn:v1:bluemix:public:resource-controller::a/{account_id}::resource-group:{resource_group_id}",
+    "typeURI": "sysdig-monitor/customer_agreement"
+  }
+}
+```
+{: codeblock}
+
+The `requestData` fields:
+
+`impersonatedBy`
+:   The identity of the {{site.data.keyword.IBM_notm}} support user who performed the impersonated action.
+
+`isImpersonated`
+:   Set to `true` when the request is made by an {{site.data.keyword.IBM_notm}} support user on behalf of a customer.
+
+`requestURL`
+:   The API endpoint that was called during the impersonated session.
+
+`teamId`
+:   The numerical ID of the team context in which the impersonated action was performed.
+
+`teamName`
+:   The name of the team context in which the impersonated action was performed.
+
+
 ## Where to view the events
 {: #ui}
 
