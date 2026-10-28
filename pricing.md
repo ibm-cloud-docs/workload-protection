@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2026
-lastupdated: "2026-09-04"
+lastupdated: "2026-10-28"
 
 keywords: pricing plans, IBM Cloud, free trial, graduated tier, workload protection pricing, CSPM pricing
 
@@ -30,7 +30,7 @@ The following table explains the differences between the free trial and the grau
 ## How pricing units are calculated
 {: #pricing_pricing-units}
 
-All pricing units are calculated based on monthly or hourly cost and prorated based on consumption usage. For more information about pricing, check out [how you're charged](/docs/account?topic=account-charges).
+All pricing units are calculated based on monthly or hourly cost and prorated based on consumption usage. For more information about pricing, check out [how you're charged](/docs/account?topic=account-billing-pricing-charges).
 
 | Use case  | Pricing unit  |  Environment or workload  |  Billable resources |
 |---|---|---|---|
