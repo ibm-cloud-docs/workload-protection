@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-10-28"
+lastupdated: "2026-10-30"
 
 keywords: release notes, IBM Cloud, workload protection updates, cloud security, Sysdig Secure enhancements
 
@@ -23,6 +23,17 @@ Stay up-to-date with the latest updates and enhancements to {{site.data.keyword.
 ## October 2026
 {: #workload-protection-oct26}
 
+## 29 October 2026
+{: #workload-protection-oct2926}
+{: release-note}
+
+{{site.data.keyword.cloud_notm}} Framework for Financial Services v2.0
+:   {{site.data.keyword.sysdigsecure_short}} now includes a new posture policy to continuously track compliance of the {{site.data.keyword.cloud_notm}} Framework for Financial Services v2.0.
+
+
+
+
+
 ## 1 October 2026
 {: #workload-protection-oct0126}
 {: release-note}
@@ -40,8 +51,6 @@ Supply Chain Findings for license and end-of-life risk (Technical Preview)
 
     For more information, see [Supply Chain Findings](https://docs.sysdig.com/en/sysdig-secure/supply-chain-findings/){: external} and [License classification](https://docs.sysdig.com/en/sysdig-secure/license-classification/){: external}.
 
-
-
 ## September 2026
 {: #workload-protection-sep26}
 
@@ -50,7 +59,7 @@ Supply Chain Findings for license and end-of-life risk (Technical Preview)
 {: release-note}
 
 Zones v2 API is now available; v1 Zones APIs are deprecated
-:   {{site.data.keyword.sysdigsecure_short}} introduces a new Zones v2 API for grouping resources into Zones with structured filter expressions. As of September 2026, the v1 Zones APIs are deprecated and will be removed by March 31, 2027. For more information, see the [Zones API reference](/docs/apis/workload-protection#list-platform-zones). The Terraform provider is updated to use the v2 API through the [`sysdig_secure_zone`](https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs/resources/secure_zone){: external} resource.
+:   {{site.data.keyword.sysdigsecure_short}} introduces a new Zones v2 API for grouping resources into Zones with structured filter expressions. As of September 2026, the v1 Zones APIs are deprecated and will be removed by March 31, 2027. For more information, see the [Zones API reference](/docs/apis/workload-protection#list-platform-zones). The Terraform provider is updated to use the v2 API through the [`sysdig_secure_zone`](https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs/resources/secure_zone){: external} resource. 
 
 ## 17 September 2026
 {: #workload-protection-sep1726}

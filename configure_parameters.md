@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-21"
+lastupdated: "2026-10-30"
 
 keywords: posture controls, control parameters, compliance, configuration
 
@@ -166,7 +166,7 @@ What it checks
 
     If CBR rules allow no public IP addresses, the control passes regardless of parameter values.
 
-Although "with MFA enabled" appears in control names, the MFA setting is not evaluated. {{site.data.keyword.cloud_notm}} reports endpoints as unrestricted when public endpoints are accessible without MFA.
+Although the phrase `with MFA enabled` appears in control names, the MFA setting is not evaluated. {{site.data.keyword.cloud_notm}} reports endpoints as unrestricted when public endpoints are accessible without MFA.
 {: note}
 
 What to enter
@@ -238,7 +238,7 @@ What it checks
     1. The netmask prefix length reported for the allowlist (`max_netmask_bits_length`) must be greater than or equal to the specified number.
 
 What to enter
-:   The smallest CIDR prefix length that you accept. The prefix length is the number following the slash: `/24` corresponds to `24`, and a single IP address corresponds to `32`.
+:   The minimum CIDR prefix length that you accept. The prefix length is the number following the slash: `/24` corresponds to `24`, and a single IP address corresponds to `32`.
 
 Where to find values in {{site.data.keyword.cloud_notm}}
 :   Check IP addresses and subnets in **Manage** > **Context-based restrictions** > **Network zones**.
@@ -254,7 +254,7 @@ The default value is `0`, which applies only the wildcard validation check. Ente
 ### P5: IP allowlists compared as exact text
 {: #cspm-parameter-family-p5}
 
-For the following five controls, each IP address or CIDR block configured in {{site.data.keyword.cloud_notm}} must appear in the parameter written exactly the same way. CIDR ranges do not cover smaller ranges or individual IP addresses. Use one chip per IP address or CIDR block.
+For the following five controls, each IP address or CIDR block configured in {{site.data.keyword.cloud_notm}} must appear in the parameter written exactly the same way. CIDR ranges do not cover narrower ranges or individual IP addresses. Use one chip per IP address or CIDR block.
 
 | Control | UI label | What it checks | Default effect | Location in {{site.data.keyword.cloud_notm}} console |
 | --- | --- | --- | --- | --- |
@@ -486,7 +486,7 @@ The following table lists all parameterized controls and default values. List ty
 
 The default effect indicates the posture behavior when the default value is set. Always fails and Always passes indicate that the result does not reflect your actual environment security posture until the values are customized.
 
-| # | Control name | Family | FS 2.0 v2.0 requirements | Type | Default | Default effect |
+| No. | Control name | Family | FS 2.0 v2.0 requirements | Type | Default | Default effect |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Check whether IBM Activity Tracker Event Routing Route is provisioned in allowed region | P1 | SC-7(a), SC-7(5), CM-7(a) | List | `[]` | Always passes |
 | 2 | Check whether IBM Activity Tracker Event Routing Service is provisioned in allowed region | P1 | SC-7(a), SC-7(5), CM-7(a) | List | `[]` | Always passes |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-06-19"
+lastupdated: "2026-10-30"
 
 keywords: compliance scanning, security, vulnerability scanning, threat detection
 
@@ -42,7 +42,7 @@ The {{site.data.keyword.cloud_notm}} account owner can create, view, and delete 
 
 To add security features with {{site.data.keyword.sysdigsecure_short}} in {{site.data.keyword.cloud_notm}}, you must create an instance of the service.
 
-Instances are created in a resource group. A resource group organizes your services for access control and billing purposes. You can create the {{site.data.keyword.sysdigsecure_short}} instance in the defautl resource group or in a custom resource group.
+Instances are created in a resource group. A resource group organizes your services for access control and billing purposes. You can create the {{site.data.keyword.sysdigsecure_short}} instance in the default resource group or in a custom resource group.
 
 Complete the following steps:
 
