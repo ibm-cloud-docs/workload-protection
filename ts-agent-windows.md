@@ -2,9 +2,9 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-04"
 
-keywords: Windows Server, Windows agent, and collector endpoint
+keywords: Windows Server, Windows agent, collector endpoint, workload protection, IBM Cloud
 
 subcollection: workload-protection
 
@@ -14,9 +14,12 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why is my Windows agent not reporting data to the dashboard?
+# Why is my {{site.data.keyword.sysdigsecure_short}} Windows agent not reporting data?
 {: #ts-agent-windows}
 {: troubleshoot}
+
+Resolve Windows agent data reporting issues in {{site.data.keyword.sysdigsecure_short}} on {{site.data.keyword.cloud_notm}} by checking the service, access key, and collector endpoint.
+{: shortdesc}
 
 After you install the {{site.data.keyword.sysdigsecure_short}} agent on a Windows host, the host does not appear in **Integrations** > **Data Sources** > **Sysdig Agents**, or no data appears in the dashboard.
 {: tsSymptoms}

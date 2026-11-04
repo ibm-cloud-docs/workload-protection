@@ -2,9 +2,9 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-04"
 
-keywords: agent installation, dragent service, agent troubleshooting, and kernel headers.
+keywords: agent installation, dragent service, agent troubleshooting, kernel headers, workload protection, IBM Cloud
 
 subcollection: workload-protection
 
@@ -14,9 +14,12 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why does my agent fail to install or start after deployment?
+# Why does my {{site.data.keyword.sysdigsecure_short}} agent fail to install or start?
 {: #ts-agent-install}
 {: troubleshoot}
+
+Resolve {{site.data.keyword.sysdigsecure_short}} agent installation and startup failures on {{site.data.keyword.cloud_notm}} by checking the access key, collector endpoint, and kernel headers.
+{: shortdesc}
 
 The {{site.data.keyword.sysdigsecure_short}} agent does not start after installation, or the agent process is not visible in the host process list.
 {: tsSymptoms}

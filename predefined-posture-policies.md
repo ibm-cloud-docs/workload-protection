@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-21"
+lastupdated: "2026-11-04"
 
 keywords: posture policies, compliance policies, supported services, IBM Cloud services, CSPM policies
 
@@ -15,7 +15,7 @@ subcollection: workload-protection
 # Predefined policies
 {: #posture-policies-services}
 
-{{site.data.keyword.sysdigsecure_full}} provides predefined posture policies for cloud security posture management (CSPM) and supports a wide range of {{site.data.keyword.cloud_notm}} services.
+{{site.data.keyword.sysdigsecure_short}} provides predefined posture policies for cloud security posture management (CSPM) and supports a wide range of {{site.data.keyword.cloud_notm}} services.
 {: shortdesc}
 
 ## Predefined policies for {{site.data.keyword.cloud_notm}} CSPM

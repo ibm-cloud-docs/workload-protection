@@ -15,7 +15,7 @@ subcollection: workload-protection
 # Using cURL
 {: #using-curl}
 
-You can use cURL, a command line tool, from a terminal to manage the {{site.data.keyword.sysdigsecure_short}} service by using URL syntax.
+Use cURL, a command line tool, from a terminal to manage the {{site.data.keyword.sysdigsecure_short}} service on {{site.data.keyword.cloud_notm}} by using URL syntax and IAM token authentication.
 {: shortdesc}
 
 

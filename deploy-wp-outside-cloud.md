@@ -2,9 +2,9 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-11-04"
 
-keywords: IBM Cloud, deploy, Kubernetes, OpenShift
+keywords: IBM Cloud, deploy, Kubernetes, OpenShift, workload protection agent, Helm chart, on premises
 
 subcollection: workload-protection
 
@@ -16,8 +16,10 @@ subcollection: workload-protection
 # Deploying the agent in an outside Kubernetes or {{site.data.keyword.redhat_openshift_notm}} cluster
 {: #deploy-wp-outside-cloud}
 
-In addition to its ability to run in {{site.data.keyword.cloud_notm}}, the centralized security and compliance framework that {{site.data.keyword.sysdigsecure_full}} provides can also be run in other clouds and on premises by using Helm charts to install the {{site.data.keyword.sysdigsecure_short}} agent onto Kubernetes or {{site.data.keyword.redhat_openshift_notm}} clusters.
+Deploy the {{site.data.keyword.sysdigsecure_short}} agent on Kubernetes or {{site.data.keyword.redhat_openshift_notm}} clusters in other clouds or on premises by using Helm charts.
 {: shortdesc}
+
+In addition to its ability to run in {{site.data.keyword.cloud_notm}}, the centralized security and compliance framework that {{site.data.keyword.sysdigsecure_full}} provides can also be run in other clouds and on premises.
 
 ## Before you begin
 {: #deploy-wp-outside-cloud-before-begin}

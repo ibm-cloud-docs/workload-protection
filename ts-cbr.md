@@ -2,9 +2,9 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-11-04"
 
-keywords: context-based restrictions, App Configuration, network zone, and IAM
+keywords: context-based restrictions, App Configuration, network zone, IAM, workload protection, IBM Cloud
 
 subcollection: workload-protection
 
@@ -17,6 +17,9 @@ content-type: troubleshoot
 # Why are context-based restrictions blocking access to Workload Protection or CSPM data collection?
 {: #ts-cbr}
 {: troubleshoot}
+
+Resolve context-based restrictions that block access to the {{site.data.keyword.sysdigsecure_short}} UI or API, or CSPM data collection, on {{site.data.keyword.cloud_notm}}.
+{: shortdesc}
 
 After you configure context-based restrictions, you cannot access the {{site.data.keyword.sysdigsecure_short}} UI or API, or CSPM stops collecting {{site.data.keyword.cloud_notm}} resource data.
 {: tsSymptoms}

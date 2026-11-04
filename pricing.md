@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2026
-lastupdated: "2026-10-28"
+lastupdated: "2026-11-04"
 
 keywords: pricing plans, IBM Cloud, free trial, graduated tier, workload protection pricing, CSPM pricing
 
@@ -19,7 +19,7 @@ subcollection: workload-protection
 Learn about {{site.data.keyword.sysdigsecure_short}} pricing plan options, including the free trial and graduated tier plans, and how charges are calculated based on usage and consumption.
 {: shortdesc}
 
-The following table explains the differences between the free trial and the graudated tier pricing plan.
+The following table explains the differences between the free trial and the graduated tier pricing plan.
 
 | Pricing plan  |  Description |
 |---|---|

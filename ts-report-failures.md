@@ -2,9 +2,9 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-11-04"
 
-keywords: report download failed, reports manager
+keywords: report download failed, reports manager, workload protection, IBM Cloud
 
 subcollection: workload-protection
 
@@ -14,10 +14,13 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why is my report failing to generate or download?
+# Why can't I generate or download {{site.data.keyword.sysdigsecure_short}} reports?
 {: #ts-report-failures}
 {: troubleshoot}
 {: support}
+
+Resolve {{site.data.keyword.sysdigsecure_short}} report generation and download failures on {{site.data.keyword.cloud_notm}} by checking permissions, available data, and your browser.
+{: shortdesc}
 
 You cannot generate compliance reports, or the **Download Report** button fails with an error message.
 {: tsSymptoms}

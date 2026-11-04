@@ -2,9 +2,9 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-04"
 
-keywords: workload protection, deploy, linux
+keywords: workload protection, deploy, linux, linux hosts, IBM Cloud, agent
 
 subcollection: workload-protection
 
@@ -12,11 +12,13 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# On other Linux hosts
+# Deploying the {{site.data.keyword.sysdigsecure_short}} agent on Linux hosts
 {: #manage-linux-agent}
 
-After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts to collect events and protect your workloads. You can configure which threats you want to detect in each environment and conduct forensic processes to understand security breaches.
+Deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts to collect events, protect your workloads, and detect threats in {{site.data.keyword.cloud_notm}} or other environments.
 {: shortdesc}
+
+After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the agent on your Linux hosts. You can configure which threats you want to detect in each environment and conduct forensic processes to understand security breaches.
 
 You can protect your hosts running on {{site.data.keyword.cloud_notm}}, other cloud providers such as Amazon Web Services, Azure, Google Cloud Platform, or on-premises by using {{site.data.keyword.sysdigsecure_short}}. Support exists for installing the {{site.data.keyword.sysdigsecure_short}} agent using a package on Debian, Ubuntu, CentOS, RHEL, Fedora, Amazon AMI, and Amazon Linux 2. For information about deploying the agent on Linux hosts running on {{site.data.keyword.powerSysFull}}, see [Managing the {{site.data.keyword.sysdigsecure_short}} agent on Linux on {{site.data.keyword.powerSys_notm}}](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
 {: tip}

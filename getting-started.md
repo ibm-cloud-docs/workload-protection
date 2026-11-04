@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-10-30"
+lastupdated: "2026-11-04"
 
 keywords: compliance scanning, security, vulnerability scanning, threat detection
 
@@ -23,10 +23,12 @@ completion-time: 30m
 {: toc-services="workload-protection"}
 {: toc-completion-time="30m"}
 
-Start with {{site.data.keyword.sysdigsecure_full}} to establish a strong security foundation across hybrid multicloud and on-premises environments, including AI workloads. With cloud-native application protection platform (CNAPP) capabilities, you can assess risk, prioritize vulnerabilities, detect threats, and consistently manage security and compliance across the application lifecycle.
+Establish a security foundation for hybrid multicloud and on-premises environments, including AI workloads, with {{site.data.keyword.sysdigsecure_short}} on {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-{{site.data.keyword.sysdigsecure_short}} uses functionality from Sysdig Secure. You might see links to [Sysdig Secure documentation](https://docs.sysdig.com/en/docs/sysdig-secure/){: external} throughout this content because that information also applies to {{site.data.keyword.sysdigsecure_short}}.
+{{site.data.keyword.sysdigsecure_full}} provides cloud-native application protection platform (CNAPP) capabilities that you can use to assess risk, prioritize vulnerabilities, detect threats, and consistently manage security and compliance across the application lifecycle.
+
+{{site.data.keyword.sysdigsecure_short}} uses functionality from Sysdig Secure. This content includes links to [Sysdig Secure documentation](https://docs.sysdig.com/en/docs/sysdig-secure/){: external} throughout this content because that information also applies to {{site.data.keyword.sysdigsecure_short}}.
 {: note}
 
 ## Before you begin

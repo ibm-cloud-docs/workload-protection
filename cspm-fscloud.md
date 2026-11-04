@@ -2,18 +2,23 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-10-23"
+lastupdated: "2026-11-04"
 
-keywords:
+keywords: IBM Cloud Framework for Financial Services, financial services policy, change log, posture controls, workload protection
 
 subcollection: workload-protection
 
 ---
 
-# {{site.data.keyword.cloud_notm}} Framework for Financial Services
+{{site.data.keyword.attribute-definition-list}}
+
+# {{site.data.keyword.cloud_notm}} Framework for Financial Services policy change log
 {: #financial-services}
 
-In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.cloud_notm}} Framework for Financial Services policy. The change log lists changes that were made, ordered by the version number.
+Review the change log for the {{site.data.keyword.cloud_notm}} Framework for Financial Services policy in {{site.data.keyword.sysdigsecure_short}}, including new and updated security controls.
+{: shortdesc}
+
+The change log lists changes that were made, ordered by the version number.
 
 When controls are edited, removed from, or added to this policy in a way that is not compatible with the current version, a new minor version is released. To take advantage of the changes in a new version, [link the new policy to your zone](https://docs.sysdig.com/en/sysdig-secure/manage_posture_policies/#link-the-policy-to-a-zone){: external}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-21"
+lastupdated: "2026-11-04"
 
 keywords:
 
@@ -155,7 +155,7 @@ This is the same command you used to [connect your {{site.data.keyword.cloud_not
 
 After enabling CSPM, verify that compliance scanning is working correctly.
 
-1. In your {{site.data.keyword.sysdigsecure_short}} instance, click **Sources**, then select **{{site.data.keyword.cloud_notm}} Account**. Your account should display an `Active` status. The status might take a few minutes to update.
+1. In your {{site.data.keyword.sysdigsecure_short}} instance, click **Sources**, then select **{{site.data.keyword.cloud_notm}} Account**. Your account should display an `Active` status. The status can take a few minutes to update.
 2. Click **Open dashboard**. Your account is listed under **Integrations > Environments > {{site.data.keyword.cloud_notm}}**.
 3. Click **Inventory** to view your {{site.data.keyword.cloud_notm}} resources. Use the predefined filters or search box to find specific resource types or names. Click any resource to view its configuration, the compliance controls applied to it, and the evaluation results.
 4. Click **Posture > Compliance** to review compliance results for available frameworks, such as the {{site.data.keyword.cloud_notm}} Framework for Financial Services. -->
