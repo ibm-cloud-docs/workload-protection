@@ -14,10 +14,10 @@ content-type: conref
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Content references
+# Using Sysdig Secure documentation with {{site.data.keyword.sysdigsecure_short}}
 {: #conref-sysdig-secure}
 
-{{site.data.keyword.sysdigsecure_full_notm}} implements Sysdig Secure functionality. Information that is provided by the Sysdig Secure documentation applies to {{site.data.keyword.sysdigsecure_short}} as well.
+{{site.data.keyword.sysdigsecure_short}} implements Sysdig Secure functionality, so information in the Sysdig Secure documentation also applies to {{site.data.keyword.sysdigsecure_short}}.
 {: shortdesc}
 {: note}
 {: #sysdig-doc}

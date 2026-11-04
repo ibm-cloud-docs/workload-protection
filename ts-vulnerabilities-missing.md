@@ -2,9 +2,9 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-11-04"
 
-keywords: vulnerabilities not visible, runtime
+keywords: vulnerabilities not visible, runtime, workload protection, IBM Cloud
 
 subcollection: workload-protection
 
@@ -18,6 +18,9 @@ content-type: troubleshoot
 {: #ts-vulnerabilities-missing}
 {: troubleshoot}
 {: support}
+
+Resolve missing vulnerabilities in {{site.data.keyword.sysdigsecure_short}} on {{site.data.keyword.cloud_notm}} by checking the agent configuration, scan status, and resource inventory.
+{: shortdesc}
 
 The **Vulnerabilities** menu is missing from the dashboard, or vulnerabilities are not showing for your resources even though the agent is reporting them.
 {: tsSymptoms}

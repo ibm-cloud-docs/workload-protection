@@ -2,9 +2,9 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-04"
 
-keywords: inventory missing, data synchronization
+keywords: inventory missing, data synchronization, workload protection, IBM Cloud
 
 subcollection: workload-protection
 
@@ -14,10 +14,13 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why are my resources missing from Inventory?
+# Why are resources missing from {{site.data.keyword.sysdigsecure_short}} Inventory?
 {: #ts-inventory-missing}
 {: troubleshoot}
 {: support}
+
+Resolve resources missing from the {{site.data.keyword.sysdigsecure_short}} Inventory tab on {{site.data.keyword.cloud_notm}} by checking agent connections, access keys, and integrations.
+{: shortdesc}
 
 Your agents are running successfully, but hosts or resources do not appear in the **Inventory** tab.
 {: tsSymptoms}

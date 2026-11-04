@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-05"
+lastupdated: "2026-11-04"
 
 keywords: enterprise, compliance, cloud security posture management, app configuration
 
@@ -17,14 +17,16 @@ completion-time: 2h
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Setting up {{site.data.keyword.sysdigsecure_short}} to scan an enterprise for compliance
+# Scanning an enterprise for compliance with {{site.data.keyword.sysdigsecure_short}}
 {: #cspm-tutorial-enterprise}
 {: toc-content-type="tutorial"}
 {: toc-services="workload-protection, appconfig, openshift"}
 {: toc-completion-time="2h"}
 
-If you're an Administrator of an enterprise account, you can set up {{site.data.keyword.sysdigsecure_full}} to scan all of your enterprise's child accounts for compliance. By completing this tutorial, you learn how to set up your own instance of {{site.data.keyword.sysdigsecure_short}}, add an agent to a {{site.data.keyword.redhat_openshift_notm}} cluster to scan for vulnerabilities within that cluster, and set up {{site.data.keyword.appconfig_short}} so {{site.data.keyword.sysdigsecure_short}} can scan your enterprise account and all child accounts for compliance.
+Set up {{site.data.keyword.sysdigsecure_short}} to scan your {{site.data.keyword.cloud_notm}} enterprise account and its child accounts for compliance, and add an agent to scan a cluster.
 {: shortdesc}
+
+If you're an Administrator of an enterprise account, you can set up {{site.data.keyword.sysdigsecure_full}} to scan all of your enterprise's child accounts for compliance. By completing this tutorial, you learn how to set up your own instance of {{site.data.keyword.sysdigsecure_short}}, add an agent to a {{site.data.keyword.redhat_openshift_notm}} cluster to scan for vulnerabilities within that cluster, and set up {{site.data.keyword.appconfig_short}} so {{site.data.keyword.sysdigsecure_short}} can scan your enterprise account and all child accounts for compliance.
 
 This topic focuses on enabling CSPM for {{site.data.keyword.cloud_notm}}. Need to enable CSPM for another cloud provider, like AWS, Azure, GCP, or OCI? See [Connect cloud accounts](https://docs.sysdig.com/en/sysdig-secure/connect-cloud-accounts/){: external} for more information.
 {: tip}

@@ -2,8 +2,8 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-10-23"
-keywords:
+lastupdated: "2026-11-04"
+keywords: context-based restrictions, access control, IAM, IBM Cloud, workload protection
 
 subcollection: workload-protection
 
@@ -11,11 +11,13 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Protecting {{site.data.keyword.sysdigsecure_short}} resources with context-based restrictions
+# Protecting {{site.data.keyword.sysdigsecure_short}} with context-based restrictions
 {: #cbr}
 
-Context-based restrictions give account owners and administrators the ability to define and enforce access restrictions for {{site.data.keyword.cloud}} resources based on the context of access requests. Access to {{site.data.keyword.sysdigsecure_full}} resources can be controlled with context-based restrictions and identity and access management (IAM) policies.
+Use context-based restrictions and IAM policies to define and enforce access restrictions for {{site.data.keyword.sysdigsecure_short}} resources on {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
+
+Context-based restrictions give account owners and administrators the ability to define and enforce access restrictions for {{site.data.keyword.cloud}} resources based on the context of access requests. Access to {{site.data.keyword.sysdigsecure_full}} resources can be controlled with context-based restrictions and identity and access management (IAM) policies.
 
 These restrictions work with traditional IAM policies, which are based on identity, to provide an additional layer of protection. Unlike IAM policies, context-based restrictions don't assign access. Context-based restrictions check that an access request comes from an allowed context that you configure. Since both IAM access and context-based restrictions enforce access, context-based restrictions offer protection even in the face of compromised or mismanaged credentials. For more information, see [What are context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis).
 

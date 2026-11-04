@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-10-07"
+lastupdated: "2026-11-04"
 
 keywords: container security, host security, compliance, agent-based protection
 
@@ -12,13 +12,15 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# About {{site.data.keyword.sysdigsecure_short}}
+# About {{site.data.keyword.sysdigsecure_short}} for securing {{site.data.keyword.cloud_notm}} workloads
 {: #about}
 
-{{site.data.keyword.sysdigsecure_full}} is a cloud-native application protection platform (CNAPP) that helps secure workloads across hybrid multicloud and on-premises environments, including AI workloads. You can identify vulnerabilities, validate configurations, permissions, and compliance, detect and block runtime threats, and respond to incidents. {{site.data.keyword.sysdigsecure_short}} supports diverse platforms, including cloud, on-premises infrastructure, hosts, virtual machines, and container environments.
+{{site.data.keyword.sysdigsecure_short}} is a cloud-native application protection platform (CNAPP) that secures workloads across hybrid multicloud and on-premises environments.
 {: shortdesc}
 
-{{site.data.keyword.sysdigsecure_short}} uses functionality from Sysdig Secure. You might see links to [Sysdig Secure documentation](https://docs.sysdig.com/en/docs/sysdig-secure/){: external} throughout this content because that information also applies to {{site.data.keyword.sysdigsecure_short}}.
+{{site.data.keyword.sysdigsecure_full}} helps you secure workloads, including AI workloads. You can identify vulnerabilities, validate configurations, permissions, and compliance, detect and block runtime threats, and respond to incidents. {{site.data.keyword.sysdigsecure_short}} supports diverse platforms, including cloud, on-premises infrastructure, hosts, virtual machines, and container environments.
+
+{{site.data.keyword.sysdigsecure_short}} uses functionality from Sysdig Secure. This content includes links to [Sysdig Secure documentation](https://docs.sysdig.com/en/docs/sysdig-secure/){: external} throughout this content because that information also applies to {{site.data.keyword.sysdigsecure_short}}.
 {: note}
 
 {{site.data.keyword.sysdigsecure_short}} supports your {{site.data.keyword.cloud_notm}} account and resources in two main ways:

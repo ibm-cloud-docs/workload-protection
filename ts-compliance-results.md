@@ -2,9 +2,9 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-23"
+lastupdated: "2026-11-04"
 
-keywords: compliance results,
+keywords: compliance results, compliance scan, workload protection, IBM Cloud
 
 subcollection: workload-protection
 
@@ -14,10 +14,13 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why are my compliance scan results not showing?
+# Why are my {{site.data.keyword.sysdigsecure_short}} compliance results not showing?
 {: #ts-compliance-results}
 {: troubleshoot}
 {: support}
+
+Resolve missing compliance scan results in {{site.data.keyword.sysdigsecure_short}} on {{site.data.keyword.cloud_notm}} by checking your integration, trusted profile, and zones.
+{: shortdesc}
 
 You have attached a policy to a zone, but no compliance results appear on the **Compliance** page, or the page shows `0 items evaluated` for all controls.
 {: tsSymptoms}

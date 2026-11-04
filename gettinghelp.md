@@ -2,10 +2,10 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-10-08"
+lastupdated: "2026-11-04"
 
 
-keywords:
+keywords: getting help, support, support case, IBM Cloud, workload protection
 
 subcollection: workload-protection
 
@@ -17,8 +17,10 @@ subcollection: workload-protection
 # Getting help and support
 {: #gettinghelp}
 
-If you have problems or questions when using the {{site.data.keyword.sysdigsecure_full_notm}} service, you have several options to get help with determining the cause of the problem and finding a solution. If you're logged in, you can go directly to the [Support center](https://{DomainName}/unifiedsupport/supportcenter) to review common FAQs, open a support case, or search community content.
+Get help with {{site.data.keyword.sysdigsecure_short}} on {{site.data.keyword.cloud_notm}} by using the [Support center](https://{DomainName}/unifiedsupport/supportcenter), searching forums, or opening a support case.
 {: shortdesc}
+
+If you have problems or questions when using the {{site.data.keyword.sysdigsecure_full_notm}} service, you have several options to get help with determining the cause of the problem and finding a solution. If you're logged in, you can go directly to the Support center to review common FAQs, open a support case, or search community content.
 
 
 ## Using the Support Center search field
@@ -60,14 +62,14 @@ You can [create](/docs/support?topic=support-open-case&interface=ui){: external}
 ## Privacy settings for {{site.data.keyword.cloud_notm}} support access
 {: #privacy_settings}
 
-{{site.data.keyword.cloud_notm}} support might need to access your environment to troubleshoot a support case for your instance of {{site.data.keyword.sysdigsecure_full_notm}}. You can use privacy settings to control how {{site.data.keyword.cloud_notm}} support accesses your environment, in addition to the platform and service access controls that are available.
+{{site.data.keyword.cloud_notm}} support can access your environment to troubleshoot a support case for your instance of {{site.data.keyword.sysdigsecure_full_notm}}. You can use privacy settings to control how {{site.data.keyword.cloud_notm}} support accesses your environment, in addition to the platform and service access controls that are available.
 
 You must have the **Administrator** role to configure support account access and to grant or revoke temporary access for support engineers.
 {: note}
 
 To access these settings, open your instance of {{site.data.keyword.sysdigsecure_short}} in the {{site.data.keyword.cloud_notm}} console and click **Open dashboard**. For more information, see [Review Privacy Settings](https://docs.sysdig.com/en/administration/privacy-settings/#review-privacy-settings){: external}.
 
-The following privacy settings are available. When you open a support case, {{site.data.keyword.cloud_notm}} support might ask you to enable specific settings to help diagnose and resolve your issue.
+The following privacy settings are available. When you open a support case, {{site.data.keyword.cloud_notm}} support can ask you to enable specific settings to help diagnose and resolve your issue.
 
 ### Global User Settings (Service Analytics)
 {: #privacy_global_user_settings}
