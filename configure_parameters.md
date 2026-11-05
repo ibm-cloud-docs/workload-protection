@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-30"
+lastupdated: "2026-11-05"
 
 keywords: posture controls, control parameters, compliance, configuration
 
@@ -162,15 +162,15 @@ What it checks
 :   For each evaluated resource:
 
     1. Context-based restrictions (CBR) must restrict service endpoints.
-    1. If CBR rules allow public IP addresses, each allowed IP address must appear in your list.
+    1. If the CBR rules allow any IP addresses, each IP address must appear in your list. For some services, {{site.data.keyword.sysdigsecure_short}} receives the private and public allow lists together, so include both. If the CBR rules allow no IP addresses, the control passes regardless of the parameter value.
 
     If CBR rules allow no public IP addresses, the control passes regardless of parameter values.
 
-Although the phrase `with MFA enabled` appears in control names, the MFA setting is not evaluated. {{site.data.keyword.cloud_notm}} reports endpoints as unrestricted when public endpoints are accessible without MFA.
+{{site.data.keyword.sysdigsecure_short}} does not read a separate MFA setting, but MFA still affects the result. When a CBR rule allows public IP addresses and MFA is not enabled on the public endpoint, {{site.data.keyword.cloud_notm}} reports the service endpoints as not restricted. In this case, the control fails even if you include all IP addresses in your parameter. To pass the control, remove the public IP addresses from the rule, or enable MFA on the public endpoint.
 {: note}
 
 What to enter
-:   All public IP addresses, IP ranges, and CIDR blocks permitted in your CBR network zones in a single chip, separated by commas. Spaces after commas are permitted.
+:   All IP addresses, IP ranges, and CIDR blocks that are permitted in the CBR network zones that the CBR rule uses, both private and public, in a single chip, separated by commas. Spaces after commas are permitted.
 
 Where to find values in {{site.data.keyword.cloud_notm}}
 :   Go to **Manage** > **Context-based restrictions** > **Network zones**, or run `ibmcloud cbr zones`. To verify which zones apply to a service, check **Manage** > **Context-based restrictions** > **Rules** or run `ibmcloud cbr rules`.
@@ -187,6 +187,9 @@ Examples
 Additional considerations
 :   * With an empty parameter, the control passes only for resources whose CBR rules allow no public IP addresses.
     * {{site.data.keyword.bpshort}} is evaluated on the {{site.data.keyword.bpshort}} workspace resource.
+
+If you already have MFA set up with an external identity provider, you must also enable the native MFA of {{site.data.keyword.cloud_notm}}. {{site.data.keyword.cloud_notm}} recognizes and enforces MFA only through its own mechanisms: {{site.data.keyword.appid_short}} and IAM account-level MFA. As a result, you must set up MFA in both places.
+{: note}
 
 ### P3: CBR enforcement and allowed public IPs (two entries)
 {: #cspm-parameter-family-p3}
@@ -208,7 +211,10 @@ What it checks
 
 What to enter
 :   * Chip 1: The literal text `cbr` (lowercase).
-    * Chip 2 (only if CBR rules allow public IP addresses): All permitted public IP addresses and CIDR blocks in one chip, separated by commas, entered exactly as defined in the network zone.
+    * Chip 2 (only if CBR rules allow IP addresses): All permitted IP addresses and CIDR blocks, both private and public, in one chip, separated by commas, entered exactly as defined in the network zone.
+
+You can also include private IP addresses for all services. The control checks only whether each IP address on the resource is included in the list, so additional entries do not cause a failure.
+{: note}
 
 Where to find values in {{site.data.keyword.cloud_notm}}
 :   Go to **Manage** > **Context-based restrictions**.
@@ -220,6 +226,9 @@ Examples
     * Incorrect: Chip 1 `cbr`, Chip 2 `203.0.113.10`, Chip 3 `198.51.100.0/24`. Any chips after the second chip are ignored.
 
 For the {{site.data.keyword.keymanagementserviceshort}} control in this family, specify only Chip 1 (`cbr`). {{site.data.keyword.keymanagementserviceshort}} instances with an enforced CBR rule that restricts endpoints then pass evaluation.
+{: note}
+
+{{site.data.keyword.sysdigsecure_short}} does not read a separate MFA setting, but MFA still affects the result. When a CBR rule allows public IP addresses and MFA is not enabled on the public endpoint, {{site.data.keyword.cloud_notm}} reports the service endpoints as not restricted. In this case, the control fails even if you include all IP addresses in your parameter. To pass the control, remove the public IP addresses from the rule, or enable MFA on the public endpoint.
 {: note}
 
 ### P4: CBR allowlist: wildcards and wide flows
@@ -440,7 +449,7 @@ The following table lists the parameters for account and endpoint settings contr
 | Control | UI label | Value to enter | Default | Notes |
 | --- | --- | --- | --- | --- |
 | Check whether an Account has Direct Link enabled following your company policy | *Organizational Policy to see if directlink should be disabled/enabled (only the first parameter will be considered)* | Exactly one chip: `disabled` or `enabled` | `disabled` | `disabled`: fails if the account has any {{site.data.keyword.dl_short}}. `enabled`: passes if {{site.data.keyword.dl_short}} is present. |
-| Check whether Key Protect can be accessed only through a private endpoint (Context-based restrictions or service) | *Check For Cbr Enforcement* | `cbr` or `service` (one per chip) | Empty value: always fails | `cbr`: passes when an enforced CBR rule restricts {{site.data.keyword.keymanagementserviceshort}} to private endpoints. `service`: passes when the instance enforces private endpoints at the service level. Recommended: both `cbr` and `service` chips. |
+| Check whether Key Protect can be accessed only through a private endpoint (Context-based restrictions or service) | *Check For Cbr Enforcement* | `cbr` or `service` (one per chip) | Empty value: always fails | `cbr`: passes when an enforced CBR rule restricts {{site.data.keyword.keymanagementserviceshort}} to private endpoints. `service`: passes when the instance enforces private endpoints at the service level. Recommended: `cbr` only. Do not use `service`. Because of a known issue, this value can pass instances that still allow public access. |
 {: caption="Parameters for account and endpoint settings" caption-side="bottom"}
 
 #### Agent controls (Kubernetes workloads)
@@ -670,14 +679,14 @@ The default effect indicates the posture behavior when the default value is set.
 | 180 | Check whether Access Policy grants full Key Protect permissions only to desired users/groups/serviceIds | P9 | AC-6(1)(a) | List | `[]` | Always passes |
 | 181 | Check whether App ID Cloud Directory lockout period is set to at least # minute(s) | P10 | AC-7(b) | Number | 0 | Always passes |
 | 182 | Check whether App ID Cloud Directory minimum period between password changes policy is set to greater than 0 | P10 | IA-5(f) | Number | 0 | Meaningful |
-| 183 | Check whether App ID access tokens are configured to expire within # minutes | P10 | SC-10 | Number | 0 | Always fails |
+| 183 | Check whether App ID access tokens are configured to expire within # minutes | P10 | SC-10 | Number | 60 | Meaningful |
 | 184 | Check whether Container Registry Vulnerability Advisor scans for critical or high vulnerabilities in the system at least every # day(s) | P10 | SI-2(a), SI-2(2), RA-5(a), CM-7(1)(a), SA-3(a), SA-3(d), SA-10(e), CA-2(2), CA-7(d) | Number | 7 | Meaningful |
-| 185 | Check whether Hyper Protect Crypto Services encryption keys that are generated by the service are rotated automatically at least every # months | P10 | SC-12 | Number | 3 | Meaningful |
+| 185 | Check whether Hyper Protect Crypto Services encryption keys that are generated by the service are rotated automatically at least every # months | P10 | SC-12 | Number | 12 | Meaningful |
 | 186 | Check whether Hyper Protect Crypto Services instance has at least # crypto units | P10 | SC-6, SC-12(2), CP-7(a) | Number | 1 | Meaningful |
 | 187 | Check whether IBM Cloud Logs instance log retention is set to at least # days | P10 | AU-11, SI-12, CM-3(e) | Number | 7 | Meaningful |
 | 188 | Check whether IBM Log Analysis instance log retention is set to at least # days | P10 | AU-11, SI-12 | Number | 0 | Always passes |
 | 189 | Check whether Secrets Manager arbitrary secrets are rotated at least every # days | P10 | IA-5(f) | Number | 90 | Meaningful |
-| 190 | Check whether Secrets Manager user credentials are rotated at least every # days | P10 | IA-5(f) | Number | 0 | Always fails |
+| 190 | Check whether Secrets Manager user credentials are rotated at least every # days | P10 | IA-5(f) | Number | 90 | Meaningful |
 | 191 | Check whether VPN for VPC authentication is configured with a strong pre-shared key with at least # characters | P10 | IA-5(c) | Number | 0 | Always passes |
 | 192 | Check whether VPN for VPC has a Diffie-Hellman group set to at least group # | P10 | SC-13(b) | Number | 0 | Always passes |
 | 193 | Check whether Virtual Servers for VPC instance has the minimum # interfaces | P10 | CM-7(a) | Number | 0 | Always passes |
