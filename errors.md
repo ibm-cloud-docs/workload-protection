@@ -3,7 +3,7 @@
 copyright:
 
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-11-06"
 
 keywords: error messages, errors, message ID
 
@@ -13,10 +13,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.sysdigsecure_short}} error messages
+# {{site.data.keyword.sysdigsecure_short}} error messages and troubleshooting
 {: #bxn-error-messages}
 
-When you receive an error message from {{site.data.keyword.cloud_notm}} or {{site.data.keyword.sysdigsecure_short}}, you can use the message to find more information about how to resolve the problem.
+When you receive an error message from {{site.data.keyword.cloud_notm}} or {{site.data.keyword.sysdigsecure_short}}, use the message to troubleshoot and find out how to resolve the problem.
 {: shortdesc}
 
 ## Cannot verify credentials

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-11-04"
+lastupdated: "2026-11-06"
 
 keywords: dashboard not loading, resource list, workload protection, IBM Cloud
 
@@ -19,7 +19,7 @@ content-type: troubleshoot
 {: troubleshoot}
 {: support}
 
-Resolve {{site.data.keyword.sysdigsecure_short}} dashboard loading issues and errors on {{site.data.keyword.cloud_notm}} by checking permissions, browser cache, and instance status.
+Resolve {{site.data.keyword.sysdigsecure_short}} dashboard loading issues and errors on {{site.data.keyword.cloud_notm}} by checking permissions, browser cache, and instance status, and then reload.
 {: shortdesc}
 
 When you try to access the {{site.data.keyword.sysdigsecure_short}} dashboard, it does not load, shows a blank page, or displays error messages like:

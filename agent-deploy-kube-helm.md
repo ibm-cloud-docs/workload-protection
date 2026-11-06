@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-10-16"
+lastupdated: "2026-11-06"
 
 keywords:
 
@@ -12,10 +12,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing the {{site.data.keyword.sysdigsecure_short}} agent in a Kubernetes cluster by using a Helm chart
+# Managing {{site.data.keyword.sysdigsecure_short}} agents on Kubernetes with Helm
 {: #agent-deploy-kube-helm}
 
-You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.sysdigsecure_short}} agent on a Kubernetes cluster.
+Use a Helm chart to install, upgrade, and delete the {{site.data.keyword.sysdigsecure_short}} agent on a Kubernetes cluster in {{site.data.keyword.cloud_notm}} or in other cloud environments.
 {: shortdesc}
 
 You can also use the console to connect an existing {{site.data.keyword.redhat_openshift_notm}} or Kubernetes cluster to your instance of {{site.data.keyword.sysdigsecure_short}}. In the {{site.data.keyword.cloud_notm}} console, go to **Containers > Clusters** to access the existing cluster. Then, click **Connect** in the {{site.data.keyword.sysdigsecure_short}} widget to connect your cluster to {{site.data.keyword.sysdigsecure_short}}.

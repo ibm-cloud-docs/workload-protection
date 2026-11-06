@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-10-16"
+lastupdated: "2026-11-06"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: workload-protection
 # Managing access keys
 {: #access_key}
 
-An access key is a token that you must use to configure agents to successfully forward data to your {{site.data.keyword.sysdigsecure_short}} instance in {{site.data.keyword.cloud_notm}}.
+Manage access keys for your {{site.data.keyword.sysdigsecure_short}} instance in {{site.data.keyword.cloud_notm}} by using the console, CLI, or API, and configure agents to forward data.
 {: shortdesc}
 
 

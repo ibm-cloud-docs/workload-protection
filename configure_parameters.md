@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-11-05"
+lastupdated: "2026-11-06"
 
 keywords: posture controls, control parameters, compliance, configuration
 
@@ -15,7 +15,7 @@ subcollection: workload-protection
 # Configuring {{site.data.keyword.sysdigsecure_short}} control parameters
 {: #cspm-configure-control}
 
-Learn how to update {{site.data.keyword.sysdigsecure_full}} posture control parameters, understand where parameter values apply, and review best practices for customizing parameter values.
+Learn how to update {{site.data.keyword.sysdigsecure_short}} posture control parameters on {{site.data.keyword.cloud_notm}}, understand where values apply, and review customization best practices.
 {: shortdesc}
 
 Many {{site.data.keyword.sysdigsecure_short}} posture controls use configurable parameters to evaluate compliance. These parameters allow organizations to define approved locations, IP addresses, registries, credential rotation periods, encryption settings, and other control-specific requirements. The {{site.data.keyword.framework-fs_notm}} 2.0 v2.0 policy relies on configurable posture control parameters to evaluate compliance. This guide focuses on the parameters associated with the policy and how to configure them to align compliance assessments with your organization's security and regulatory requirements.

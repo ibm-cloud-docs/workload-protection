@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-11-04"
+lastupdated: "2026-11-06"
 
 keywords: enterprise, compliance, cloud security posture management, app configuration
 
@@ -17,13 +17,13 @@ completion-time: 2h
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Scanning an enterprise for compliance with {{site.data.keyword.sysdigsecure_short}}
+# Scanning enterprise compliance with {{site.data.keyword.sysdigsecure_short}}
 {: #cspm-tutorial-enterprise}
 {: toc-content-type="tutorial"}
 {: toc-services="workload-protection, appconfig, openshift"}
 {: toc-completion-time="2h"}
 
-Set up {{site.data.keyword.sysdigsecure_short}} to scan your {{site.data.keyword.cloud_notm}} enterprise account and its child accounts for compliance, and add an agent to scan a cluster.
+Set up {{site.data.keyword.sysdigsecure_short}} to scan your {{site.data.keyword.cloud_notm}} enterprise and child accounts for compliance, and add an agent to scan a cluster for vulnerabilities.
 {: shortdesc}
 
 If you're an Administrator of an enterprise account, you can set up {{site.data.keyword.sysdigsecure_full}} to scan all of your enterprise's child accounts for compliance. By completing this tutorial, you learn how to set up your own instance of {{site.data.keyword.sysdigsecure_short}}, add an agent to a {{site.data.keyword.redhat_openshift_notm}} cluster to scan for vulnerabilities within that cluster, and set up {{site.data.keyword.appconfig_short}} so {{site.data.keyword.sysdigsecure_short}} can scan your enterprise account and all child accounts for compliance.

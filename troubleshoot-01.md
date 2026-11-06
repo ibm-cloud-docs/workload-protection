@@ -19,7 +19,7 @@ content-type: troubleshoot
 {: troubleshoot}
 {: support}
 
-When you run an {{site.data.keyword.sysdigsecure_full}} command, a message is returned that credentials cannot be verified along with a 401 status.
+Resolve the 401 status error when you run an {{site.data.keyword.cloud_notm}} {{site.data.keyword.sysdigsecure_short}} command and a message is returned that credentials cannot be verified.
 {: shortdesc}
 
 

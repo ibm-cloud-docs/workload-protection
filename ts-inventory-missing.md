@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-11-04"
+lastupdated: "2026-11-06"
 
 keywords: inventory missing, data synchronization, workload protection, IBM Cloud
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why are resources missing from {{site.data.keyword.sysdigsecure_short}} Inventory?
+# Why are resources missing in {{site.data.keyword.sysdigsecure_short}} Inventory?
 {: #ts-inventory-missing}
 {: troubleshoot}
 {: support}

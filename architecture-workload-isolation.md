@@ -12,10 +12,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Learning about {{site.data.keyword.sysdigsecure_short}} architecture and workload isolation
+# Understanding {{site.data.keyword.sysdigsecure_short}} architecture and isolation
 {: #compute-isolation}
 
-Review the following sample architecture for {{site.data.keyword.sysdigsecure_full_notm}}, and learn more about the workload isolation level that the service offers in the cloud.
+Review a sample architecture for {{site.data.keyword.cloud_notm}} {{site.data.keyword.sysdigsecure_short}} and learn about the workload isolation level that the service offers in the cloud.
 {: shortdesc}
 
 ## {{site.data.keyword.sysdigsecure_full_notm}} architecture

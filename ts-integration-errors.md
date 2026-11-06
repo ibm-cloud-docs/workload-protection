@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-23"
+lastupdated: "2026-11-06"
 
 keywords: IBM Cloud integration errors, CSPM, trusted profile, IAM, integration not active, workload protection
 
@@ -14,12 +14,12 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why is my {{site.data.keyword.cloud_notm}} integration showing errors or not Active?
+# Why is my {{site.data.keyword.cloud_notm}} integration in error or not Active?
 {: #troubleshoot-integration-errors}
 {: troubleshoot}
 {: support}
 
-Resolve {{site.data.keyword.cloud_notm}} integration issues showing error status or not active after connecting your account with CSPM enabled, including trusted profile and IAM access policy checks.
+Resolve {{site.data.keyword.cloud_notm}} integration issues that show an error status or are not active after you enable CSPM, including trusted profile and IAM checks.
 {: shortdesc}
 
 After connecting your {{site.data.keyword.cloud_notm}} account to {{site.data.keyword.sysdigsecure_short}} with CSPM enabled, the **Integrations > {{site.data.keyword.cloud_notm}}** page shows your account in **Error** status with error messages, the account connection status isn't `Connected`, or no {{site.data.keyword.cloud_notm}} resources appear on the **Inventory** page.

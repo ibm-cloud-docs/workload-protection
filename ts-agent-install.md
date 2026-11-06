@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-11-04"
+lastupdated: "2026-11-06"
 
 keywords: agent installation, dragent service, agent troubleshooting, kernel headers, workload protection, IBM Cloud
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why does my {{site.data.keyword.sysdigsecure_short}} agent fail to install or start?
+# Why can't my {{site.data.keyword.sysdigsecure_short}} agent install or start?
 {: #ts-agent-install}
 {: troubleshoot}
 

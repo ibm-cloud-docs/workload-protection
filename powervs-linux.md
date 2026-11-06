@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-06"
 
 keywords: linux, powervs
 
@@ -12,10 +12,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing the {{site.data.keyword.sysdigsecure_short}} agent in Linux on {{site.data.keyword.powerSys_notm}}
+# Managing {{site.data.keyword.sysdigsecure_short}} on Linux in {{site.data.keyword.powerSys_notm}}
 {: #agent-deploy-linux-powervs}
 
-After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts on [{{site.data.keyword.powerSysFull}}](/docs/power-iaas?topic=power-iaas-getting-started) to collect events and protect your workloads.
+Deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts on [{{site.data.keyword.powerSysFull}}](/docs/power-iaas?topic=power-iaas-getting-started) to collect events and protect your workloads in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 ## Adding an agent to a Linux host on {{site.data.keyword.powerSys_notm}}
