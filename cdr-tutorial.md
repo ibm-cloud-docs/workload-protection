@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-16"
+lastupdated: "2026-11-06"
 
 keywords: cloud detection and response, CDR, IBM Cloud audit logs, threat detection, suspicious activity, workload protection
 
@@ -15,7 +15,7 @@ subcollection: workload-protection
 # Configuring cloud detection and response for {{site.data.keyword.cloud_notm}}
 {: #cdr-about}
 
-Enable cloud detection and response for {{site.data.keyword.cloud_notm}} to investigate suspicious activity in your cloud accounts in near real-time. {{site.data.keyword.sysdigsecure_short}} ingests and analyzes {{site.data.keyword.cloud_notm}} audit logs to detect potential threats.
+Enable cloud detection and response for {{site.data.keyword.cloud_notm}} to investigate suspicious activity in near real-time by analyzing {{site.data.keyword.cloud_notm}} audit logs.
 {: shortdesc}
 
 The {{site.data.keyword.sysdigsecure_short}} detection and response module supports {{site.data.keyword.cloud_notm}}, multi-cloud environments (Amazon Web Services, Azure and Google Cloud), inside hosts, virtual machines (VSIs for VPC, VMware, PowerVS and IBM Z with Linux), Kubernetes, and OpenShift.

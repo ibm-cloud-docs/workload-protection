@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-11-04"
+lastupdated: "2026-11-06"
 
 keywords: Windows Server, Windows agent, collector endpoint, workload protection, IBM Cloud
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why is my {{site.data.keyword.sysdigsecure_short}} Windows agent not reporting data?
+# Why isn't my Windows agent reporting to {{site.data.keyword.sysdigsecure_short}}?
 {: #ts-agent-windows}
 {: troubleshoot}
 

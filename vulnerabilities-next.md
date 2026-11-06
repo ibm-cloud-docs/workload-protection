@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-11-06"
 
 keywords: vulnerabilities, agent, security scanning
 
@@ -15,7 +15,7 @@ subcollection: workload-protection
 # Completing agent setup
 {: #vulnerabilities-next}
 
-Configure security policies, verify agent installation, and schedule reports after you add the {{site.data.keyword.sysdigsecure_short}} agent to your environment.
+Configure security policies, verify agent installation, and schedule reports after you add the {{site.data.keyword.sysdigsecure_short}} agent to your environment on {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 ## Verifying agent installation

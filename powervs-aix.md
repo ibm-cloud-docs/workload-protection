@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2026
-lastupdated: "2026-07-01"
+lastupdated: "2026-11-06"
 
 keywords: aix, powervs
 
@@ -12,10 +12,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing the {{site.data.keyword.sysdigsecure_short}} agent on AIX on {{site.data.keyword.powerSys_notm}}
+# Managing {{site.data.keyword.sysdigsecure_short}} on AIX on {{site.data.keyword.powerSys_notm}}
 {: #agent-deploy-aix-powervs}
 
-After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your AIX hosts on [{{site.data.keyword.powerSysFull}}](/docs/power-iaas?topic=power-iaas-getting-started) to validate your AIX operating system security.
+Deploy the {{site.data.keyword.sysdigsecure_short}} agent on your AIX hosts on [{{site.data.keyword.powerSysFull}}](/docs/power-iaas?topic=power-iaas-getting-started) to validate your AIX operating system security in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 ## Adding an agent to an AIX host on {{site.data.keyword.powerSys_notm}}

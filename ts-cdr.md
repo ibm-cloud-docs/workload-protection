@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026
-lastupdated: "2026-10-16"
+lastupdated: "2026-11-06"
 
 keywords: IBM Cloud CDR, cloud detection and response, audit events, trusted profile, CDR not connected, workload protection
 
@@ -18,7 +18,7 @@ content-type: troubleshoot
 {: #ts-cdr}
 {: troubleshoot}
 
-Resolve issues with your {{site.data.keyword.cloud_notm}} account not ingesting audit events after enabling cloud detection and response (CDR), including verifying the trusted profile and IAM access policies.
+Resolve {{site.data.keyword.cloud_notm}} accounts not ingesting audit events after you enable cloud detection and response (CDR), including trusted profile and IAM policy checks.
 {: shortdesc}
 
 After enabling CDR for your {{site.data.keyword.cloud_notm}} account, the account does not appear as `Connected` under Integrations > Environments > {{site.data.keyword.cloud_notm}} in your {{site.data.keyword.sysdigsecure_short}} instance.

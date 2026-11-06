@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-11-04"
+lastupdated: "2026-11-06"
 
 keywords: vulnerabilities not visible, runtime, workload protection, IBM Cloud
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why are vulnerabilities not appearing?
+# Why are vulnerabilities missing in {{site.data.keyword.sysdigsecure_short}}?
 {: #ts-vulnerabilities-missing}
 {: troubleshoot}
 {: support}

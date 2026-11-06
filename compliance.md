@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-07-28"
+lastupdated: "2026-11-06"
 
 keywords: compliance, posture management, security posture, compliance evaluation, remediation, controls, policies, zones, CSPM, KSPM
 
@@ -15,7 +15,7 @@ subcollection: workload-protection
 # Analyzing compliance postures from detection to remediation
 {: #compliance}
 
-{{site.data.keyword.sysdigsecure_full}} provides comprehensive compliance posture management capabilities that help security teams, compliance officers, and DevOps engineers continuously monitor, evaluate, and improve their security posture across cloud environments. The platform enables organizations to detect compliance violations, understand their security posture, and drive remediation through to resolution.
+{{site.data.keyword.sysdigsecure_short}} on {{site.data.keyword.cloud_notm}} helps security teams monitor and improve compliance posture, detect violations, and drive remediation to resolution.
 {: shortdesc}
 
 Information about your compliance posture is included in an [inventory](https://docs.sysdig.com/en/docs/sysdig-secure/inventory/){: external}, which enhances resource visibility and provides full-context prioritization. This information helps you drive remediation and resolution of compliance violations. To access your inventory and other compliance-related information, open the {{site.data.keyword.sysdigsecure_short}} UI. In the console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Security > Compliance** and click the name of your instance of {{site.data.keyword.sysdigsecure_short}}. Then, click **Open dashboard** to open the {{site.data.keyword.sysdigsecure_short}} UI.

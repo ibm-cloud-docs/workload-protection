@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-06"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: workload-protection
 # Managing the {{site.data.keyword.sysdigsecure_short}} agent on Windows servers
 {: #agent-deploy-windows}
 
-After you provision an instance of the {{site.data.keyword.sysdigsecure_full}} service in {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Windows servers to collect events and protect your workloads.
+Deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Windows servers to collect events and protect your workloads, and verify the agent connection to {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 For examples of threat detection on Windows and troubleshooting detected events, see [Windows Threat Detection with {{site.data.keyword.sysdigsecure_full_notm}}](https://community.ibm.com/community/user/blogs/victor-guerrero/2024/01/11/windows-threat-detection-with-ibm-security-and-com?CommunityKey=dd1ee2bc-c83b-4afb-bd1c-9095ff0c3bc1){: external}.

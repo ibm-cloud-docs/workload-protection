@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-16"
+lastupdated: "2026-11-06"
 
 keywords: workload protection, satellite, sysdig secure, manage
 
@@ -12,10 +12,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing the {{site.data.keyword.sysdigsecure_short}} agent in a Satellite cluster by using a Helm chart
+# Managing {{site.data.keyword.sysdigsecure_short}} agents on Satellite with Helm
 {: #agent-deploy-satellite}
 
-You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.sysdigsecure_short}} agent on your Satellite clusters.
+Use a Helm chart to install, upgrade, and delete the {{site.data.keyword.sysdigsecure_short}} agent on your Satellite clusters in {{site.data.keyword.cloud_notm}} or other environments.
 {: shortdesc}
 
 ## Before you begin

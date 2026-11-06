@@ -12,7 +12,7 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using cURL
+# Using cURL to manage {{site.data.keyword.sysdigsecure_short}} in {{site.data.keyword.cloud_notm}}
 {: #using-curl}
 
 Use cURL, a command line tool, from a terminal to manage the {{site.data.keyword.sysdigsecure_short}} service on {{site.data.keyword.cloud_notm}} by using URL syntax and IAM token authentication.

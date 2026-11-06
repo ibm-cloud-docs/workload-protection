@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-11-04"
+lastupdated: "2026-11-06"
 keywords: context-based restrictions, access control, IAM, IBM Cloud, workload protection
 
 subcollection: workload-protection
@@ -11,10 +11,10 @@ subcollection: workload-protection
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Protecting {{site.data.keyword.sysdigsecure_short}} with context-based restrictions
+# Securing {{site.data.keyword.sysdigsecure_short}} with context-based restrictions
 {: #cbr}
 
-Use context-based restrictions and IAM policies to define and enforce access restrictions for {{site.data.keyword.sysdigsecure_short}} resources on {{site.data.keyword.cloud_notm}}.
+Use context-based restrictions and IAM policies to define and enforce access restrictions for {{site.data.keyword.sysdigsecure_short}} resources on {{site.data.keyword.cloud_notm}} by context.
 {: shortdesc}
 
 Context-based restrictions give account owners and administrators the ability to define and enforce access restrictions for {{site.data.keyword.cloud}} resources based on the context of access requests. Access to {{site.data.keyword.sysdigsecure_full}} resources can be controlled with context-based restrictions and identity and access management (IAM) policies.
